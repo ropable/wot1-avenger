@@ -1,0 +1,6 @@
+/* app css stylesheet */
+html {
+    margin: 0;
+    padding: 0;
+    background: #eee9df url('/img/washi.png') repeat;
+}
