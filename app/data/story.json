@@ -2,51 +2,128 @@
     {
         "entry": 1,
         "data": {
-            "description": "The dawn rays of the sun greet you as you begin your preparations for the time of trial. Today you will become the youngest ever to challenge for the title of Grandmaster of the Five Winds. When your foster father, Naijishi, was murdered by Yaemon, the second Grandmaster stepped into his place. Now, many seasons later another of the Grandmasters has died and the position is open once more for there must always be five who lead the order. You have been invited to challenge for it because of your consummate mastery of the Way of the Tiger.\nAt the appointed hour you walk, alone, across the sands to the Temple of the Rock. It is a huge pillared hall built into the side of an enormous boulder of red granite brought to rest on the Island of Tranquil Dreams by the ice floes of the age of snow, which carved out the Great Valley Reaches of the far north. As you approach the Temple, you see that the monks and a large number of villagers have assembled to watch the combat between you and the other challenger, Gorobei.\nLike you, Gorobei is an Initiate of the Inner Circle, a devout worshipper of Kwon and a capable fighter. He is older, heavier and stronger than you and has been unsuccessful in one previous challenge, but he is a skilful wrestler. You walk into the Temple and bow to the Grandmaster of the Dawn, a man who looks younger than his fifty years, slim and taut with piercing dark eyes. Beside you, Gorobei also bows, his face a mask showing no emotion. He is clad only in a loin cloth and his rippling muscles gleam with an oil that will make it difficult to keep a grip on him. You must defeat him in unarmed combat in order to be allowed to undertake the spiritual test which will show whether you are ready to become a Grandmaster.\nGorobei turns to you and bows and you return the courtesy. The Grandmaster of the Dawn reminds you that this is not a fight to the death and you may not use Inner Force. He signals for you to begin. Gorobei advances warily across the polished granite floor, his big hands ready to grapple you.",
             "image": "1.jpg",
-            "opponent": "Gorobei",
             "options": [
-                [null, "Feint a punch and then use the Leaping Tiger kick?", 17, ["offense", "kick", 0]],
-                [null, "Pretend to grapple but instead use the Cobra Strike jab?", 35, ["offense", "punch", 0]],
-                [null, "Raise your foot as if to kick but side-step and use the Whirlpool throw?", 61, null],
-                [["skill", "Acrobatics"], "Somersault to Gorobei's side before attacking.", 80, null]
-            ]
+                [
+                    null,
+                    "Feint a punch and then use the Leaping Tiger kick?",
+                    17,
+                    [
+                        "offense",
+                        "kick",
+                        0
+                    ]
+                ],
+                [
+                    null,
+                    "Pretend to grapple but instead use the Cobra Strike jab?",
+                    35,
+                    [
+                        "offense",
+                        "punch",
+                        0
+                    ]
+                ],
+                [
+                    null,
+                    "Raise your foot as if to kick but side-step and use the Whirlpool throw?",
+                    61,
+                    null
+                ],
+                [
+                    [
+                        "skill",
+                        "Acrobatics"
+                    ],
+                    "Somersault to Gorobei's side before attacking.",
+                    80,
+                    null
+                ]
+            ],
+            "description": "The dawn rays of the sun greet you as you begin your preparations for the time of trial. Today you will become the youngest ever to challenge for the title of Grandmaster of the Five Winds. When your foster father, Naijishi, was murdered by Yaemon, the second Grandmaster stepped into his place. Now, many seasons later another of the Grandmasters has died and the position is open once more for there must always be five who lead the order. You have been invited to challenge for it because of your consummate mastery of the Way of the Tiger.\nAt the appointed hour you walk, alone, across the sands to the Temple of the Rock. It is a huge pillared hall built into the side of an enormous boulder of red granite brought to rest on the Island of Tranquil Dreams by the ice floes of the age of snow, which carved out the Great Valley Reaches of the far north. As you approach the Temple, you see that the monks and a large number of villagers have assembled to watch the combat between you and the other challenger, Gorobei.\nLike you, Gorobei is an Initiate of the Inner Circle, a devout worshipper of Kwon and a capable fighter. He is older, heavier and stronger than you and has been unsuccessful in one previous challenge, but he is a skilful wrestler. You walk into the Temple and bow to the Grandmaster of the Dawn, a man who looks younger than his fifty years, slim and taut with piercing dark eyes. Beside you, Gorobei also bows, his face a mask showing no emotion. He is clad only in a loin cloth and his rippling muscles gleam with an oil that will make it difficult to keep a grip on him. You must defeat him in unarmed combat in order to be allowed to undertake the spiritual test which will show whether you are ready to become a Grandmaster.\nGorobei turns to you and bows and you return the courtesy. The Grandmaster of the Dawn reminds you that this is not a fight to the death and you may not use Inner Force. He signals for you to begin. Gorobei advances warily across the polished granite floor, his big hands ready to grapple you.",
+            "opponent": "Gorobei"
         }
     },
     {
         "entry": 17,
         "data": {
-            "description": "You step forward as if to punch, then, leaping in the air you lash the ball of your foot toward Gorobei's head with a speed that defies belief. Gorobei, although not quick, knows your style of combat.",
-            "victory": 110,
-            "defeat": 95,
             "opponent_offense": "punch",
+            "defeat": 95,
             "options": [
-                [null, "Feint and punch?", 35, ["offense", "punch", 0]],
-                [null, "Feint and throw?", 61, null],
-                [null, "Kick again?", 17, ["offense", "kick", 0]]
-            ]
+                [
+                    null,
+                    "Feint and punch?",
+                    35,
+                    [
+                        "offense",
+                        "punch",
+                        0
+                    ]
+                ],
+                [
+                    null,
+                    "Feint and throw?",
+                    61,
+                    null
+                ],
+                [
+                    null,
+                    "Kick again?",
+                    17,
+                    [
+                        "offense",
+                        "kick",
+                        0
+                    ]
+                ]
+            ],
+            "description": "You step forward as if to punch, then, leaping in the air you lash the ball of your foot toward Gorobei's head with a speed that defies belief. Gorobei, although not quick, knows your style of combat.",
+            "victory": 110
         }
     },
     {
         "entry": 35,
         "data": {
-            "description": "You crouch as if to wrestle with Gorobei who tenses, ready to throw his extra weight against yours, but you jab unexpectedly towards his midriff. Gorobei's reach is long and he is skilled in punching and blocking, though he is not as fast as you.",
-            "victory": 110,
-            "defeat": 95,
             "opponent_offense": "punch",
+            "defeat": 95,
             "options": [
-                [null, "Feint and kick?", 17, ["offense", "kick", 0]],
-                [null, "Feint and throw?", 61, null],
-                [null, "Punch again?", 35, ["offense", "punch", 0]]
-            ]
+                [
+                    null,
+                    "Feint and kick?",
+                    17,
+                    [
+                        "offense",
+                        "kick",
+                        0
+                    ]
+                ],
+                [
+                    null,
+                    "Feint and throw?",
+                    61,
+                    null
+                ],
+                [
+                    null,
+                    "Punch again?",
+                    35,
+                    [
+                        "offense",
+                        "punch",
+                        0
+                    ]
+                ]
+            ],
+            "description": "You crouch as if to wrestle with Gorobei who tenses, ready to throw his extra weight against yours, but you jab unexpectedly towards his midriff. Gorobei's reach is long and he is skilled in punching and blocking, though he is not as fast as you.",
+            "victory": 110
         }
     },
     {
         "entry": 61,
         "data": {
-            "description": "You raise your foot as if to kick Gorobei in the chest, but spin to his side instead and take hold of his arm to throw him over your hip. You rapidly learn your mistake, however, as your grip slides on the oil which covers him and he uses his skill as a wrestler to grab you and lock your arm behind your back whilst he grips you around the throat. His strength is enormous. You try to somersault backwards over him and break the grip but he is ready for you and pins you to the floor before delivering a heavy blow.",
             "opponent_remove": "Gorobei",
-            "next_entry": 95
+            "next_entry": 95,
+            "description": "You raise your foot as if to kick Gorobei in the chest, but spin to his side instead and take hold of his arm to throw him over your hip. You rapidly learn your mistake, however, as your grip slides on the oil which covers him and he uses his skill as a wrestler to grab you and lock your arm behind your back whilst he grips you around the throat. His strength is enormous. You try to somersault backwards over him and break the grip but he is ready for you and pins you to the floor before delivering a heavy blow."
         }
     },
     {
@@ -54,17 +131,40 @@
         "data": {
             "description": "You step forward to attack but then somersault suddenly, landing at Gorobei's side as his fist flails the air at the spot from which you leapt. He turns but you have surprised him and will find it easier to attack him than if you merely stood before him to trade blows.",
             "options": [
-                [null, "Feint a punch and then use the Leaping Tiger kick?", 17, ["offense", "kick", 2]],
-                [null, "Pretend to grapple but instead use the Cobra Strike jab?", 35, ["offense", "punch", 2]],
-                [null, "Raise your foot as if to kick but side-step and use the Whirlpool throw?", 61, null]
+                [
+                    null,
+                    "Feint a punch and then use the Leaping Tiger kick?",
+                    17,
+                    [
+                        "offense",
+                        "kick",
+                        2
+                    ]
+                ],
+                [
+                    null,
+                    "Pretend to grapple but instead use the Cobra Strike jab?",
+                    35,
+                    [
+                        "offense",
+                        "punch",
+                        2
+                    ]
+                ],
+                [
+                    null,
+                    "Raise your foot as if to kick but side-step and use the Whirlpool throw?",
+                    61,
+                    null
+                ]
             ]
         }
     },
     {
         "entry": 95,
         "data": {
-            "description": "Gorobei has used the Iron Fist, punching you so hard in the back of the neck that you slump to the granite floor, senseless. A young village boy is pouring water onto your forehead when you regain your wits. A few of the younger acolytes murmur condolences as you rub your neck. An hour later, Gorobei returns from the robing chamber and you applaud with the others as he is ordained as a Grandmaster.",
-            "next_entry": 191
+            "next_entry": 191,
+            "description": "Gorobei has used the Iron Fist, punching you so hard in the back of the neck that you slump to the granite floor, senseless. A young village boy is pouring water onto your forehead when you regain your wits. A few of the younger acolytes murmur condolences as you rub your neck. An hour later, Gorobei returns from the robing chamber and you applaud with the others as he is ordained as a Grandmaster."
         }
     },
     {
@@ -72,10 +172,30 @@
         "data": {
             "description": "Your last blow sent Gorobei tumbling senseless to the granite floor. A ripple of applause greets your victory and the Grandmaster of the Dawn compliments you on your fighting prowess and beckons you into the robing chamber. You step beyond the Temple Hall through silken drapes into a small dark room, completely bare of furnishing save for two enormous copper chests. Incense is burning in a censer which swings from the ceiling like a pendulum. The room is lit by white candles.\nYou kneel on the rush matting facing the three Grandmasters who stare ahead, unseeing, waiting for you to break the silence which you are determined to keep. After an hour-candle has sputtered its last, during which time none of you has moved so much as a muscle, the Grandmaster of the Dawn looks into your eyes and says, 'Kwon knows that you desire in your heart to serve him but I must ask you two questions. Do you truly desire to serve Kwon above all other things or do you desire to avenge the death of your foster-father, Naijishi, more even than to serve your God? What should a Ninja fear most - the failure of a mission or capture by an enemy who will use torture to gain secrets?'\nYou know that in your heart of hearts you would rather avenge Naijishi than anything else in Orb but a Grandmaster should dedicate his life to Kwon. As for the second question, you can only let your good sense guide you.",
             "options": [
-                [null, "'I desire to serve Kwon above all else and I fear only the failure of a mission.'", 139, null],
-                [null, "'I desire to avenge the father who loved me and I fear torture above all.'", 151, null],
-                [null, "'I desire to avenge the father who loved me and I fear only the failure of a mission.'", 177, null],
-                [null, "'I desire to serve Kwon above all else and I fear torture above all.'", 128, null]
+                [
+                    null,
+                    "'I desire to serve Kwon above all else and I fear only the failure of a mission.'",
+                    139,
+                    null
+                ],
+                [
+                    null,
+                    "'I desire to avenge the father who loved me and I fear torture above all.'",
+                    151,
+                    null
+                ],
+                [
+                    null,
+                    "'I desire to avenge the father who loved me and I fear only the failure of a mission.'",
+                    177,
+                    null
+                ],
+                [
+                    null,
+                    "'I desire to serve Kwon above all else and I fear torture above all.'",
+                    128,
+                    null
+                ]
             ]
         }
     }
