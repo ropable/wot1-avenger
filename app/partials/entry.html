@@ -1,0 +1,6 @@
+<p>This is the partial for the entry page.</p>
+<p>{{entry.data.description}}</p>
+<p>Will you:</p>
+<ul>
+    <li ng-repeat="option in entry.data.options"><a href="#/story/{{option.entry}}">{{option.text}}</a></li>
+</ul>
