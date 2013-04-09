@@ -1,5 +1,54 @@
-<p>This is the partial for the new game page.</p>
-<ul>
-    <li><a href="#/story">Story</a></li>
-    <li><a href="#/background">Background</a></li>
-</ul
+<div class="container">
+    <h1>New game</h1>
+    <p>You begin the game with standard equipment and training.</p>
+    <p>Choose three additional skills:</p>
+    <form name="skillsForm" ng-submit="submit()" ng-controller="NewGameCtrl">
+        <label class="checkbox">
+            <input type="checkbox" name="arrow_cutting">
+            Arrow cutting
+        </label>
+        <label class="checkbox">
+            <input type="checkbox" value="acrobatics">
+            Acrobatics
+        </label>
+        <label class="checkbox">
+            <input type="checkbox" value="immunity_to_poisons">
+            Immunity to Poisons
+        </label>
+        <label class="checkbox">
+            <input type="checkbox" value="feigning_death">
+            Feigning Death
+        </label>
+        <label class="checkbox">
+            <input type="checkbox" value="escapology">
+            Escapology
+        </label>
+        <label class="checkbox">
+            <input type="checkbox" value="poison_needles">
+            Poison Needles
+        </label>
+        <label class="checkbox">
+            <input type="checkbox" value="picking_locks">
+            Picking Locks, Detecting and Disarming Traps
+        </label>
+        <label class="checkbox">
+            <input type="checkbox" value="Climbing">
+            Climbing
+        </label>
+        <div class="form-actions">
+            <button type="submit" class="btn btn-primary">Save and begin</button>
+        </div>
+        <pre>list={{list}}</pre>
+    </form>
+</div>
+<script>
+    $(function(){
+        var max = 3;
+        var checkboxes = $('input[type="checkbox"]');
+
+        checkboxes.change(function(){
+            var current = checkboxes.filter(':checked').length;
+            checkboxes.filter(':not(:checked)').prop('disabled', current >= max);
+        });
+    });
+</script>
