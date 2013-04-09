@@ -5,15 +5,11 @@
 function TitleCtrl() {}
 
 
-function NewGameCtrl($scope) {
-    $scope.skills = [];
-    $scope.submit = function() {
-        console.log('foo');
-        if (this.arrow_cutting) {
-            console.log('foo');
-            this.list.push(this.arrow_cutting);
-        };
-    }
+function NewGameCtrl($scope, $http) {
+    $http.get('data/skills.json').success(function(data) {
+        $scope.skills = data;
+    });
+    $scope.skillsForm = {};
 }
 //MyCtrl2.$inject = [];
 
@@ -22,7 +18,6 @@ function StoryCtrl($scope, $http, Story) {
     $scope.story = Story.query();
 }
 //StoryCtrl.$inject = [];
-
 
 function EntryCtrl($scope, $routeParams, $http) {
     // Use the low-level $http service instead of $resource.
