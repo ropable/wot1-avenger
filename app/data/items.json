@@ -1,0 +1,10 @@
+[
+{"name": "Ninja costume", "desc": "During the day you would normally be disguised as a traveller, beggar or suchlike. At night when on a mission, you would wear this costume. This consists of a few pieces of black cloth. One piece is worn as a jacket covering the chest and arms, two others are wound around each leg and held in at the waist. Finally, a long piece of cloth is wrapped around the head, leaving only the eyes exposed. The reverse side of the costume can be white, for travel on snowy ground or green, for travel in woods or grasslands.", "consumable": false},
+{"name": "Breathing tube", "desc": "Made from bamboo, this can be used as a snorkel allowing you to remain under water for long periods of time. It can also be used as a blow-pipe in conjunction with the Poison Needles skill, for added range.", "consumable": false},
+{"name": "Iron sleeves", "desc": "Sewn into the sleeves of your costume are four thin strips of iron, the length of your forearm. These allow you to parry or block blows from swords and other cutting weapons.", "consumable": false},
+{"name": "Garotte", "desc": "A specialised killing tool of the Ninja, this is a length of wire used to assassinate enemies by strangulation.", "consumable": false},
+{"name": "Flash powder", "desc": "This powder, when thrown in any source of flame, causes a blinding flash.", "consumable": true},
+{"name": "Flint and tinder", "desc": "Used for making fires.", "consumable": false},
+{"name": "Spiderfish", "desc": "Salted and cured, this highly venomous fish is used as a source for the deadly poison used in conjuntion with the Poison Needles skill, and as a useful way of removing any guardian beasts.", "consumable": false},
+{"name": "Blood of Nil", "desc": "The most virulent poison known on Orb. This venom is extremely difficult and very dangerous to collect for it is taken from the barb of a scorpion son of the God, Nil, Mouth of the Void.", "consumable": true}
+]
