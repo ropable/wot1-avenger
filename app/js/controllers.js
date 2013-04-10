@@ -10,7 +10,7 @@ function NewGameCtrl($scope, $http) {
         $scope.skills = data;
     });
     $scope.chosenSkills = [];
-    $scope.skillsForm = {};
+    $scope.selectedCount = 0;
 
     $scope.selectSkill = function($event, skill) {
         var checkbox = event.target;
@@ -19,6 +19,12 @@ function NewGameCtrl($scope, $http) {
         } else {
             $scope.chosenSkills.splice($scope.chosenSkills.indexOf(skill), 1);
         }
+        $scope.selectedCount = 0;
+        angular.forEach($scope.skills, function(c) {
+            $scope.selectedCount += (c.checked ? 1 : 0);
+        });
+
+        console.log($scope.chosenSkills.length);
     };
     $scope.isSelected = function(skill) {
         return $scope.chosenSkills.indexOf(skill) >= 0;

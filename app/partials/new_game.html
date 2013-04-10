@@ -3,14 +3,17 @@
     <p>You begin the game with standard equipment and training.</p>
     <p>Please choose three additional skills:</p>
     <pre>{{chosenSkills}}</pre>
-    <form name="skillsForm">
+    <pre>{{selectedCount}}</pre>
+    <form>
         <label ng-repeat="skill in skills" class="checkbox">
-            <input type="checkbox" value="{{skill.name}}"
-                ng-checked="isSelected(skill)" ng-click="selectSkill($event, skill)">
+            <input type="checkbox" value="{{skill.name}}" ng-checked="isSelected(skill)"
+            ng-click="selectSkill($event, skill)" ng-model="skill.checked" ng-disabled="selectedCount>=3 && !skill.checked">
                 <a href="" data-toggle="tooltip" title="{{skill.desc}}">{{skill.name}}</a>
         </label>
         <div class="form-actions">
-            <button type="submit" class="btn btn-primary" ng-click="update()">Begin</button>
+            <button type="submit" class="btn btn-primary" ng-click="update()" ng-disabled="chosenSkills.length<3">
+                Begin
+            </button>
         </div>
     </form>
 </div>
