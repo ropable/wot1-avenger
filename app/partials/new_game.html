@@ -1,25 +1,16 @@
-<div class="container">
+<div class="container" ng-controller="NewGameCtrl">
     <h1>New game</h1>
     <p>You begin the game with standard equipment and training.</p>
     <p>Please choose three additional skills:</p>
-    <form name="skillsForm" ng-submit="submit()" ng-controller="NewGameCtrl">
+    <pre>{{chosenSkills}}</pre>
+    <form name="skillsForm">
         <label ng-repeat="skill in skills" class="checkbox">
-            <input type="checkbox" ng-model="skill">
-            {{skill.name}}
+            <input type="checkbox" value="{{skill.name}}"
+                ng-checked="isSelected(skill)" ng-click="selectSkill($event, skill)">
+                <a href="" data-toggle="tooltip" title="{{skill.desc}}">{{skill.name}}</a>
         </label>
         <div class="form-actions">
-            <button type="submit" class="btn btn-primary" ng-click="update()">Save and begin</button>
+            <button type="submit" class="btn btn-primary" ng-click="update()">Begin</button>
         </div>
     </form>
 </div>
-<script>
-    $(function (){
-        var max = 3;
-        var checkboxes = $('input[type="checkbox"]');
-        checkboxes.change(function(){
-            var current = checkboxes.filter(':checked').length;
-            console.log(current);
-            checkboxes.filter(':not(:checked)').prop('disabled', current >= max);
-        });
-    });
-</script>
