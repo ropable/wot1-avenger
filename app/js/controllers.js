@@ -2,10 +2,14 @@
 
 /* Controllers */
 
-function TitleCtrl() {}
+function TitleCtrl() {
+
+}
+//TitleCtrl.$inject = [];
 
 
 function NewGameCtrl($scope, $http) {
+    // Get JSON for available skills to choose.
     $http.get('data/skills.json').success(function(data) {
         $scope.skills = data;
     });
@@ -19,13 +23,12 @@ function NewGameCtrl($scope, $http) {
         } else {
             $scope.chosenSkills.splice($scope.chosenSkills.indexOf(skill), 1);
         }
-        $scope.selectedCount = 0;
+        $scope.selectedCount = 0;  // Reset the count.
         angular.forEach($scope.skills, function(c) {
             $scope.selectedCount += (c.checked ? 1 : 0);
         });
-
-        console.log($scope.chosenSkills.length);
     };
+
     $scope.isSelected = function(skill) {
         return $scope.chosenSkills.indexOf(skill) >= 0;
     };

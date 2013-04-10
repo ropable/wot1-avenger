@@ -6,8 +6,10 @@
     "fate": 0,
     "inner_force": 5,
     "shuriken": 5,
-    "skills": ["Shurikenjitsu"],
-    "items": ["Ninja costume", "Breathing tube", "Iron sleeves", "Garotte", "Flash powder", "Flint tinder", "Spiderfish", "Blood of Nil"],
-    "encounters" : {},
-    "history": {}
+    "skills": [
+        {"name": "Shurikenjitsu", "desc": ""}
+    ],
+    "items": [],
+    "encounters" : [],
+    "history": []
 }
