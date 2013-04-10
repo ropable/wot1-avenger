@@ -18,6 +18,7 @@
         var checkboxes = $('input[type="checkbox"]');
         checkboxes.change(function(){
             var current = checkboxes.filter(':checked').length;
+            console.log(current);
             checkboxes.filter(':not(:checked)').prop('disabled', current >= max);
         });
     });
