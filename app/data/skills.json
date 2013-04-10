@@ -1,11 +1,11 @@
 [
-{"name": "Shurikenjitsu", "desc": ""},
-{"name": "Arrow Cutting", "desc": ""},
-{"name": "Acrobatics", "desc": ""},
-{"name": "Immunity to Poisons", "desc": ""},
-{"name": "Feigning Death", "desc": ""},
-{"name": "Escapology", "desc": ""},
-{"name": "Poison Needles", "desc": ""},
-{"name": "Picking Locks", "desc": ""},
-{"name": "Climbing", "desc": ""}
+{"name": "Shurikenjitsu", "desc": "Foo"},
+{"name": "Arrow Cutting", "desc": "Foo"},
+{"name": "Acrobatics", "desc": "Foo"},
+{"name": "Immunity to Poisons", "desc": "Foo"},
+{"name": "Feigning Death", "desc": "Foo"},
+{"name": "Escapology", "desc": "Foo"},
+{"name": "Poison Needles", "desc": "Foo"},
+{"name": "Picking Locks", "desc": "Foo"},
+{"name": "Climbing", "desc": "Foo"}
 ]

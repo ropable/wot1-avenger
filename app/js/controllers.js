@@ -9,7 +9,20 @@ function NewGameCtrl($scope, $http) {
     $http.get('data/skills.json').success(function(data) {
         $scope.skills = data;
     });
+    $scope.chosenSkills = [];
     $scope.skillsForm = {};
+
+    $scope.selectSkill = function($event, skill) {
+        var checkbox = event.target;
+        if (checkbox.checked) {
+            $scope.chosenSkills.push(skill);
+        } else {
+            $scope.chosenSkills.splice($scope.chosenSkills.indexOf(skill), 1);
+        }
+    };
+    $scope.isSelected = function(skill) {
+        return $scope.chosenSkills.indexOf(skill) >= 0;
+    };
 }
 //MyCtrl2.$inject = [];
 
