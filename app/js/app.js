@@ -1,6 +1,6 @@
 'use strict';
 
-var app = angular.module('wot1', ['wot1.services']).
+var wot1app = angular.module('wot1', ['wot1app.services']).
   config(['$routeProvider', '$locationProvider', function($routeProvider, $locationProvider) {
     $routeProvider.
       when('/new-game', {templateUrl: 'partials/new_game.html', controller: NewGameCtrl}).
