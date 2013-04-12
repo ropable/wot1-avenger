@@ -15,6 +15,7 @@ function NewGameCtrl($scope, $http, $location, gameState) {
         $scope.shurikenSkill = data.splice(0, 1);
         $scope.skills = data;
     });
+    $scope.gameState = gameState;
     $scope.chosenSkills = [];
     $scope.selectedCount = 0;
 
@@ -53,6 +54,7 @@ function StoryCtrl($scope, $http, Story) {
 //StoryCtrl.$inject = [];
 
 function EntryCtrl($scope, $routeParams, $http, gameState) {
+    $scope.gameState = gameState;
     // Use the low-level $http service instead of $resource.
     $http.get('data/story.json').success(function(data) {
         // Each item in story.json is a dict of an entry's details.
