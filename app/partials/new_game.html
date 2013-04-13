@@ -1,0 +1,25 @@
+<div class="container-fluid" ng-controller="NewGameCtrl">
+    <div class="row">
+        <div class="span3 charsheet">
+            <ng-include src="'partials/charsheet.html'" ng-controller="NewGameCtrl"></ng-include>
+        </div>
+        <div class="span9">
+            <h1>New game</h1>
+            <p>You begin the game with standard equipment and training.</p>
+            <p>Please choose three additional skills, and then click "Begin":</p>
+            <form>
+                <label ng-repeat="skill in skills" class="checkbox">
+                    <input type="checkbox" value="{{skill.name}}" ng-checked="isSelected(skill)"
+                    ng-click="selectSkill($event, skill)" ng-model="skill.checked" ng-disabled="selectedCount>=3 && !skill.checked">
+                        <a href="" data-toggle="tooltip" title="{{skill.desc}}">{{skill.name}}</a>
+                </label>
+                <!-- Disable the "begin" button until three skills are chosen -->
+                <button type="submit" class="btn btn-primary" ng-click="beginGame()" ng-disabled="chosenSkills.length<3">
+                    Begin
+                </button>
+            </form>
+            <pre>{{chosenSkills}}</pre>
+            <pre>{{selectedCount}}</pre>
+        </div>
+    </div>
+</div>
