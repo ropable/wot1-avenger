@@ -6,7 +6,9 @@
         </div>
         <div class="span9">
             <br>
-            <img src="img/{{entry.data.image}}" class="pull-right"/>
+            <div ng-switch="entryImage">
+                <img ng-switch-on="true" src="img/{{entry.data.image}}" class="pull-right"/>
+            </div>
             <p>{{entry.data.description}}</p>
             <p>Will you:</p>
             <ul>
