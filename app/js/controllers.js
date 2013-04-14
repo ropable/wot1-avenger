@@ -58,11 +58,22 @@ function EntryCtrl($scope, $routeParams, $http, gameState) {
     // Use the low-level $http service instead of $resource.
     $http.get('data/story.json').success(function(data) {
         // Each item in story.json is a dict of an entry's details.
+        var entry;
         angular.forEach(data, function(item) {
             // Obtain the req'd entry no from the routeParams.
-            if (item.entry == $routeParams.entry)
-                $scope.entry = item;
+            if (item.entry == $routeParams.entry) {
+                entry = item;
+            };
         });
+        $scope.entry = entry;
+        if ('image' in entry.data) {
+            $scope.entryImage = true;
+        } else {
+            $scope.entryImage = false;
+        };
+        $scope.render = function(condition) {
+           return condition ? '<img src="img/' + entry.data.image + '" class="pull-right"/>' : '';
+        };
     });
 }
 //EntryCtrl.$inject = [];
