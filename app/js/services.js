@@ -8,6 +8,7 @@ angular.module('wot1app.services', ['ngResource'])
     });
 
 wot1app.factory('gameState', function($http) {
+    // TODO: gameState should persist data via localstorage, unless initialised.
     var gameState = {};
     gameState.started = false;
     gameState.punch = 0;

@@ -1,9 +1,12 @@
 <div class="container-fluid" ng-controller="EntryCtrl">
+    <ng-include src="'partials/navbar.html'"></ng-include>
     <div class="row">
         <div class="span3 charsheet">
             <ng-include src="'partials/charsheet.html'" ng-controller="EntryCtrl"></ng-include>
         </div>
         <div class="span9">
+            <br>
+            <img src="img/{{entry.data.image}}" class="pull-right"/>
             <p>{{entry.data.description}}</p>
             <p>Will you:</p>
             <ul>
