@@ -7,7 +7,7 @@ var wot1app = angular.module('wot1', ['wot1app.services']).
       when('/background', {templateUrl: 'partials/background.html', controller: BackgroundCtrl}).
       when('/story', {templateUrl: 'partials/story.html', controller: StoryCtrl}).
       when('/story/:entry', {templateUrl: 'partials/entry.html', controller: EntryCtrl}).
-      when('/title', {templateUrl: 'partials/title.html', controller: TitleCtrl}).
+      when('/title', {templateUrl: 'partials/title.html'}).
       otherwise({redirectTo: '/title'});
 
     //$locationProvider.html5Mode(true);
