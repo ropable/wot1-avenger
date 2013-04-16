@@ -1,17 +1,21 @@
 <div class="container-fluid" ng-controller="StoryCtrl">
     <ng-include src="'partials/navbar.html'"></ng-include>
     <div class="row">
-        <div class="span3 charsheet">
+        <div class="span2 charsheet">
             <ng-include src="'partials/charsheet.html'"></ng-include>
         </div>
-        <div class="span9">
+        <div class="span8">
             <br>
             <button class="btn btn-primary" ng-click="swapEntry(1)">1</button>
-            <p>{{entry.data.description}}</p>
+            <p>{{gameState.entry.description}}</p>
             <p>Will you:</p>
             <ul>
-                <li ng-repeat="option in entry.data.options"><a href="" ng-click="swapEntry(option.entry)">{{option.text}}</a></li>
+                <li ng-repeat="option in gameState.entry.options"><a href="" ng-click="swapEntry(option.entry)">{{option.text}}</a></li>
             </ul>
+        </div>
+        <div class="span2">
+            <h4>Opponents</h4>
+            {{gameState}}
         </div>
     </div>
 </div>
