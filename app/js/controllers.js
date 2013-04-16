@@ -2,8 +2,9 @@
 
 /* Controllers */
 
-function NewGameCtrl($scope, $http, $location, gameState) {
+function NewGameCtrl($scope, $http, Story, $location, gameState) {
     // Get JSON for available skills to choose.
+    var storyjson = Story.get();
     $http.get('data/skills.json').success(function(data) {
         // Remove the first element: we always get Shurikenjutsu.
         $scope.shurikenSkill = data.splice(0, 1);
@@ -36,18 +37,20 @@ function NewGameCtrl($scope, $http, $location, gameState) {
         gameState.skills = $scope.chosenSkills;
         // Add Shurikenjutsu to the skills array.
         gameState.skills.push($scope.shurikenSkill[0]);
-        $location.path("/story/1");
+        gameState.entry = storyjson[gameState.currentEntry];
+        $location.path("/story");
     };
 }
 //MyCtrl2.$inject = [];
 
 
 function StoryCtrl($scope, $http, gameState, Story) {
-    var storyjson = Story.get();
     $scope.gameState = gameState;
+    var storyjson = Story.get();
 
     $scope.swapEntry = function(entryID) {
-        $scope.entry = storyjson[entryID];
+        gameState.entry = storyjson[entryID.toString()];
+        $scope.gameState = gameState;
     };
 }
 //StoryCtrl.$inject = [];
