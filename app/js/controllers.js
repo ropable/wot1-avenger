@@ -38,40 +38,28 @@ function NewGameCtrl($scope, $http, Story, $location, gameState) {
         // Add Shurikenjutsu to the skills array.
         gameState.skills.push($scope.shurikenSkill[0]);
         gameState.entry = storyjson[gameState.currentEntry];
+        // TODO: Persist gameState using localstorage.
         $location.path("/story");
     };
 }
-//MyCtrl2.$inject = [];
+//NewGameCtrl.$inject = [];
 
 
 function StoryCtrl($scope, $http, gameState, Story) {
-    $scope.gameState = gameState;
     var storyjson = Story.get();
+    $scope.gameState = gameState;
+    $scope.entryImage = 'image' in gameState.entry;
 
     $scope.swapEntry = function(entryID) {
         gameState.entry = storyjson[entryID.toString()];
         $scope.gameState = gameState;
+        $scope.entryImage = 'image' in gameState.entry;
     };
 }
 //StoryCtrl.$inject = [];
 
-function EntryCtrl($scope, $routeParams, $http, gameState) {
-    $scope.gameState = gameState;
-    // Use the low-level $http service instead of $resource.
-    $http.get('data/story.json').success(function(data) {
-        // Each item in story.json is a dict of an entry's details.
-        angular.forEach(data, function(item) {
-            // Obtain the req'd entry no from the routeParams.
-            if (item.entry == $routeParams.entry) {
-                $scope.entry = item;
-            };
-        });
-    });
-}
-//EntryCtrl.$inject = [];
-
 
 function BackgroundCtrl() {}
-//MyCtrl1.$inject = [];
+//BackgroundCtrl.$inject = [];
 
 
