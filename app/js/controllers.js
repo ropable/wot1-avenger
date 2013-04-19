@@ -2,9 +2,11 @@
 
 /* Controllers */
 
-function NewGameCtrl($scope, $http, Story, $location, gameState) {
+function NewGameCtrl($scope, $http, Story, Opponents, $location, gameState) {
     // Get JSON for available skills to choose.
     var storyjson = Story.get();
+    var opponentsjson = Opponents.get();
+    var converter = new Showdown.converter();
     $http.get('data/skills.json').success(function(data) {
         // Remove the first element: we always get Shurikenjutsu.
         $scope.shurikenSkill = data.splice(0, 1);
@@ -38,6 +40,14 @@ function NewGameCtrl($scope, $http, Story, $location, gameState) {
         // Add Shurikenjutsu to the skills array.
         gameState.skills.push($scope.shurikenSkill[0]);
         gameState.entry = storyjson[gameState.currentEntry];
+        gameState.entryText = converter.makeHtml(gameState.entry.description);
+        gameState.hasEntryImage = 'image' in gameState.entry;
+        // Add opponents
+        angular.forEach(gameState.entry.opponents, function(o) {
+            if (o in opponentsjson) {
+                gameState.currentOpponents.push(opponentsjson[o]);
+            };
+        });
         // TODO: Persist gameState using localstorage.
         $location.path("/story");
     };
@@ -45,17 +55,16 @@ function NewGameCtrl($scope, $http, Story, $location, gameState) {
 //NewGameCtrl.$inject = [];
 
 
-function StoryCtrl($scope, $http, gameState, Story) {
+function StoryCtrl($scope, $http, gameState, Story, Opponents) {
     var storyjson = Story.get();
-    $scope.gameState = gameState;
-    $scope.entryImage = 'image' in gameState.entry;
     var converter = new Showdown.converter();
-    $scope.entryText = converter.makeHtml(gameState.entry.description);
+    $scope.gameState = gameState;
 
-    $scope.swapEntry = function(entryID) {
+    $scope.chooseEntry = function(entryID) {
         gameState.entry = storyjson[entryID.toString()];
+        gameState.entryText = converter.makeHtml(gameState.entry.description);
+        gameState.hasEntryImage = 'image' in gameState.entry;
         $scope.gameState = gameState;
-        $scope.entryImage = 'image' in gameState.entry;
     };
 }
 //StoryCtrl.$inject = [];

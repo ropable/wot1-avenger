@@ -7,20 +7,24 @@
         <div class="span8">
             <div class="row">
                 <br>
-                <img ng-show="entryImage" src="img/{{gameState.entry.image}}" class="pull-right"/>
-                <button class="btn btn-primary" ng-click="swapEntry(1)">1</button>
-                <div ng-bind-html-unsafe="entryText"></div>
+                <img ng-show="gameState.hasEntryImage" src="img/{{gameState.entry.image}}" class="pull-right"/>
+                <div ng-bind-html-unsafe="gameState.entryText"></div>
+            </div>
+            <div class="row">
+                <!-- This is where attack and response text is displayed -->
             </div>
             <div class="row">
                 <p>Will you:</p>
                 <ul>
-                    <li ng-repeat="option in gameState.entry.options"><a href="" ng-click="swapEntry(option.entry)">{{option.text}}</a></li>
+                    <li ng-repeat="option in gameState.entry.options"><a href="" ng-click="chooseEntry(option.entry)">{{option.text}}</a></li>
                 </ul>
             </div>
         </div>
         <div class="span2">
             <h4>Opponents</h4>
-            {{gameState}}
+            <div ng-repeat="o in gameState.currentOpponents">
+                {{o.name}}
+            </div>
         </div>
     </div>
 </div>
