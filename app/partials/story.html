@@ -9,7 +9,7 @@
                 <br>
                 <img ng-show="entryImage" src="img/{{gameState.entry.image}}" class="pull-right"/>
                 <button class="btn btn-primary" ng-click="swapEntry(1)">1</button>
-                <p>{{gameState.entry.description}}</p>
+                <div ng-bind-html-unsafe="entryText"></div>
             </div>
             <div class="row">
                 <p>Will you:</p>
