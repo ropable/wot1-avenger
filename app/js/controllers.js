@@ -49,6 +49,8 @@ function StoryCtrl($scope, $http, gameState, Story) {
     var storyjson = Story.get();
     $scope.gameState = gameState;
     $scope.entryImage = 'image' in gameState.entry;
+    var converter = new Showdown.converter();
+    $scope.entryText = converter.makeHtml(gameState.entry.description);
 
     $scope.swapEntry = function(entryID) {
         gameState.entry = storyjson[entryID.toString()];
