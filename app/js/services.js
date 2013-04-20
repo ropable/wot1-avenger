@@ -31,5 +31,6 @@ wot1app.factory('gameState', function($http) {
     });
     gameState.skills = [];
     gameState.currentOpponents = [];
+    gameState.actionText = null;
     return gameState;
 });

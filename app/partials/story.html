@@ -10,13 +10,14 @@
                 <img ng-show="gameState.hasEntryImage" src="img/{{gameState.entry.image}}" class="pull-right"/>
                 <div ng-bind-html-unsafe="gameState.entryText"></div>
             </div>
-            <div class="row">
+            <div class="row" ng-show="gameState.actionText">
                 <!-- This is where attack and response text is displayed -->
+                <p>{{gameState.actionText}}</p>
             </div>
             <div class="row">
                 <p>Will you:</p>
                 <ul>
-                    <li ng-repeat="option in gameState.entry.options"><a href="" ng-click="chooseEntry(option.entry)">{{option.text}}</a></li>
+                    <li ng-repeat="option in gameState.entry.options"><a href="" ng-click="chooseEntry(option)">{{option.text}}</a></li>
                 </ul>
             </div>
         </div>
