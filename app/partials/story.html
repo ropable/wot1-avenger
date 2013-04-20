@@ -6,7 +6,7 @@
         </div>
         <div class="span8">
             <div class="row">
-                <br>
+                <h4>{{gameState.currentEntry}}</h4>
                 <img ng-show="gameState.hasEntryImage" src="img/{{gameState.entry.image}}" class="pull-right"/>
                 <div ng-bind-html-unsafe="gameState.entryText"></div>
             </div>
