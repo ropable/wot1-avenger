@@ -6,21 +6,15 @@
                 "prereq": null,
                 "text": "Feint a punch and then use the Leaping Tiger kick?",
                 "entry": 17,
-                "type": [
-                    "offense",
-                    "kick",
-                    0
-                ]
+                "type": "offense",
+                "action": "kick"
             },
             {
                 "prereq": null,
                 "text": "Pretend to grapple but instead use the Cobra Strike jab?",
                 "entry": 35,
-                "type": [
-                    "offense",
-                    "punch",
-                    0
-                ]
+                "type": "offense",
+                "action": "punch"
             },
             {
                 "prereq": null,
@@ -29,10 +23,7 @@
                 "type": null
             },
             {
-                "prereq": [
-                    "skill",
-                    "Acrobatics"
-                ],
+                "prereq": ["skill", "Acrobatics"],
                 "text": "Somersault to Gorobei's side before attacking.",
                 "entry": 80,
                 "type": null
@@ -45,16 +36,13 @@
             "opponent_offense": "punch",
             "defeat": 95,
             "options": [
-                [
-                    null,
-                    "Feint and punch?",
-                    35,
-                    [
-                        "offense",
-                        "punch",
-                        0
-                    ]
-                ],
+                {
+                "prereq": null,
+                "text": "Feint and punch?",
+                "entry" : 35,
+                "type": "offense",
+                "action": "punch"
+                },
                 [
                     null,
                     "Feint and throw?",

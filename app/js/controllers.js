@@ -60,8 +60,23 @@ function StoryCtrl($scope, $http, gameState, Story, Opponents) {
     var converter = new Showdown.converter();
     $scope.gameState = gameState;
 
-    $scope.chooseEntry = function(entryID) {
-        gameState.entry = storyjson[entryID.toString()];
+    $scope.chooseEntry = function(option) {
+        // Handle different types of options.
+        // type == null indicates a change of entry (no action).
+        if (option.type == 'offense') {
+            // TODO: handle modifers.
+            if (option.action == 'punch') {
+                gameState.actionText = 'You punch the guy!';
+            } else if (option.action == 'kick') {
+                gameState.actionText = 'You kick the guy!';
+            } else {
+                gameState.actionText = 'You throw the guy!';
+            };
+        };
+        // TODO:: opponent is still alive, they attack back.
+
+        // Set gameState to the new entry.
+        gameState.entry = storyjson[option.entry.toString()];
         gameState.entryText = converter.makeHtml(gameState.entry.description);
         gameState.hasEntryImage = 'image' in gameState.entry;
         $scope.gameState = gameState;
