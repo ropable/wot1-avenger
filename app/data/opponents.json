@@ -2,9 +2,10 @@
     "Gorobei": {
         "name": "Gorobei",
         "endurance": 14,
-        "damage": "1d",
+        "damage": [1, 0],
         "defence_punch": 7,
         "defence_kick": 6,
-        "offense": {"punch": 7}
+        "damage_mod": 0,
+        "effects": null
     }
 }

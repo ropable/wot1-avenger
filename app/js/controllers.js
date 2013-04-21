@@ -57,7 +57,6 @@ function NewGameCtrl($scope, $http, Story, Opponents, $location, gameState) {
                 gameState.currentOpponents.push(opponentsjson[o]);
             };
         });
-        console.log(dieRoll(2));
         // TODO: Persist gameState using localstorage.
         $location.path("/story");
     };
@@ -73,23 +72,72 @@ function StoryCtrl($scope, $http, gameState, Story, Opponents) {
         // Set gameState to the new entry.
         gameState.currentEntry = option.entry;
         gameState.entry = storyjson[option.entry.toString()];
+        var actionText = '';
         // Handle different types of options.
         // type == null indicates a change of entry (no action).
-        if (option.type == 'offence') {
-            // TODO: handle persistent modifers.
+        if (option.type == 'offence') {  // Offence can be punch, kick or throw.
+            var target = gameState.currentOpponents[0];  // TODO: allow player to choose target.
+            // TODO: handle persistent modifers, such as modifier following a block.
             if (option.action == 'punch') {
-                gameState.actionText = 'You punch the guy!';
+                // Check 2d6 + attack modifer against target defence.
+                if ((dieRoll(2) + gameState.punch) > target.defence_punch) {
+                    // TODO: handle Inner Force modifer.
+                    var damage = dieRoll(1);
+                    if (target.damage_mod) { // i.e. damage_mod is not 0.
+                        damage += target.damage_mod;
+                        gameState.currentOpponents[0].damage_mod = 0;
+                    };
+                    gameState.currentOpponents[0].endurance -= damage;
+                    actionText = 'You punch {0} and hit for {1} damage!';
+                    actionText = actionText.replace('{0}', target.name);
+                    actionText = actionText.replace('{1}', damage.toString());
+                } else {
+                    actionText = 'You punch at {0}...and miss!'.replace('{0}', target.name);
+                };
             } else if (option.action == 'kick') {
-                gameState.actionText = 'You kick the guy!';
+                // Check 2d6 + attack modifer against target defence.
+                if ((dieRoll(2) + gameState.kick) > target.defence_kick) {
+                    // TODO: handle Inner Force modifer.
+                    var damage = dieRoll(1) + 2;  // Kicks do more damage.
+                    if (target.damage_mod) { // i.e. damage_mod is not 0.
+                        damage += target.damage_mod;
+                        gameState.currentOpponents[0].damage_mod = 0;
+                    };
+                    gameState.currentOpponents[0].endurance -= damage;
+                    actionText = 'You kick {0} and hit for {1} damage!';
+                    actionText = actionText.replace('{0}', target.name);
+                    actionText = actionText.replace('{1}', damage.toString());
+                } else {
+                    actionText = 'You kick at {0}...and miss!'.replace('{0}', target.name);
+                };
             } else {
-                gameState.actionText = 'You throw the guy!';
+                if ((dieRoll(2) + gameState.throw) > target.defence_throw) {
+                    actionText = 'You throw {0} to the ground!'.replace('{0}', target.name);
+                    gameState.currentOpponents[0].damage_mod = 2;  // Next attack will do more damage.
+                } else {
+                    actionText = 'You try to throw {0}...and fail!'.replace('{0}', target.name);
+                };
+            };
+            // Target's endurance is reduced to 0 or less.
+            if (gameState.currentOpponents[0].endurance <= 0) {
+                // TODO: handle difference targets.
+                gameState.currentOpponents.splice(0, 1);
             };
         };
-        // TODO: handle victory - replace options with "Continue", etc.
-        // TODO:: opponent(s) still alive, they attack back.
+        // TODO: opponent(s) still alive, they attack back.
         angular.forEach(gameState.currentOpponents, function(o) {
-            console.log(o);
+            // Check 2d6 against player_defence.
+            if (dieRoll(2) > gameState.entry.player_defence) {
+                var damage = (dieRoll(o.damage[0]) + o.damage[1]);
+                actionText += '<br>{0} hits you for {1} damage!'.replace('{0}', o.name);
+                actionText = actionText.replace('{1}', damage.toString());
+                gameState.endurance -= damage;
+            } else {
+                actionText += '<br>{0} tries to hit you...but misses!'.replace('{0}', o.name);
+            };
         });
+        gameState.actionText = actionText;
+        // TODO: handle victory - replace options with "Continue", etc.
         gameState.entryText = converter.makeHtml(gameState.entry.description);
         gameState.hasEntryImage = 'image' in gameState.entry;
         // Finally, set scope gameState.
