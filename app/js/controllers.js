@@ -1,7 +1,16 @@
 'use strict';
 
-/* Controllers */
+var dieRoll = function(n) {
+    // Return the total of nd6.
+    var total = 0;
+    for (var i = 0; i < n; i++){
+        total += Math.floor(Math.random() * 6 + 1);
+    }
+    return total;
+};
 
+
+/* Controllers */
 function NewGameCtrl($scope, $http, Story, Opponents, $location, gameState) {
     // Get JSON for available skills to choose.
     var storyjson = Story.get();
@@ -48,12 +57,12 @@ function NewGameCtrl($scope, $http, Story, Opponents, $location, gameState) {
                 gameState.currentOpponents.push(opponentsjson[o]);
             };
         });
+        console.log(dieRoll(2));
         // TODO: Persist gameState using localstorage.
         $location.path("/story");
     };
 }
 //NewGameCtrl.$inject = [];
-
 
 function StoryCtrl($scope, $http, gameState, Story, Opponents) {
     var storyjson = Story.get();
@@ -61,10 +70,13 @@ function StoryCtrl($scope, $http, gameState, Story, Opponents) {
     $scope.gameState = gameState;
 
     $scope.chooseEntry = function(option) {
+        // Set gameState to the new entry.
+        gameState.currentEntry = option.entry;
+        gameState.entry = storyjson[option.entry.toString()];
         // Handle different types of options.
         // type == null indicates a change of entry (no action).
-        if (option.type == 'offense') {
-            // TODO: handle modifers.
+        if (option.type == 'offence') {
+            // TODO: handle persistent modifers.
             if (option.action == 'punch') {
                 gameState.actionText = 'You punch the guy!';
             } else if (option.action == 'kick') {
@@ -73,12 +85,14 @@ function StoryCtrl($scope, $http, gameState, Story, Opponents) {
                 gameState.actionText = 'You throw the guy!';
             };
         };
-        // TODO:: opponent is still alive, they attack back.
-
-        // Set gameState to the new entry.
-        gameState.entry = storyjson[option.entry.toString()];
+        // TODO: handle victory - replace options with "Continue", etc.
+        // TODO:: opponent(s) still alive, they attack back.
+        angular.forEach(gameState.currentOpponents, function(o) {
+            console.log(o);
+        });
         gameState.entryText = converter.makeHtml(gameState.entry.description);
         gameState.hasEntryImage = 'image' in gameState.entry;
+        // Finally, set scope gameState.
         $scope.gameState = gameState;
     };
 }

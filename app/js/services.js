@@ -17,7 +17,6 @@ wot1app.factory('gameState', function($http) {
     gameState.currentEntry = '1';
     gameState.entry = null;
     gameState.options = [];
-    gameState.started = false;
     gameState.punch = 0;
     gameState.kick = 0;
     gameState.throw = 0;
@@ -32,5 +31,6 @@ wot1app.factory('gameState', function($http) {
     gameState.skills = [];
     gameState.currentOpponents = [];
     gameState.actionText = null;
+    gameState.actionModifiers = [];
     return gameState;
 });
