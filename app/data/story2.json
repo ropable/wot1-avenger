@@ -6,14 +6,14 @@
                 "prereq": null,
                 "text": "Feint a punch and then use the Leaping Tiger kick?",
                 "entry": 17,
-                "type": "offense",
+                "type": "offence",
                 "action": "kick"
             },
             {
                 "prereq": null,
                 "text": "Pretend to grapple but instead use the Cobra Strike jab?",
                 "entry": 35,
-                "type": "offense",
+                "type": "offence",
                 "action": "punch"
             },
             {
@@ -33,38 +33,35 @@
         "opponents": ["Gorobei"]
     },
     "17": {
-            "opponent_offense": "punch",
+            "opponent_offence": "punch",
             "defeat": 95,
             "options": [
                 {
                 "prereq": null,
                 "text": "Feint and punch?",
                 "entry" : 35,
-                "type": "offense",
+                "type": "offence",
                 "action": "punch"
                 },
-                [
-                    null,
-                    "Feint and throw?",
-                    61,
-                    null
-                ],
-                [
-                    null,
-                    "Kick again?",
-                    17,
-                    [
-                        "offense",
-                        "kick",
-                        0
-                    ]
-                ]
+                {
+                "prereq": null,
+                "text": "Feint and throw?",
+                "entry": 61,
+                "type": null
+                },
+                {
+                "prereq": null,
+                "text": "Kick again?",
+                "entry": 17,
+                "type": "offence",
+                "action": "kick"
+                }
             ],
             "description": "You step forward as if to punch, then, leaping in the air you lash the ball of your foot toward Gorobei's head with a speed that defies belief. Gorobei, although not quick, knows your style of combat.",
             "victory": 110
     },
     "35": {
-            "opponent_offense": "punch",
+            "opponent_offence": "punch",
             "defeat": 95,
             "options": [
                 [
@@ -72,7 +69,7 @@
                     "Feint and kick?",
                     17,
                     [
-                        "offense",
+                        "offence",
                         "kick",
                         0
                     ]
@@ -88,7 +85,7 @@
                     "Punch again?",
                     35,
                     [
-                        "offense",
+                        "offence",
                         "punch",
                         0
                     ]
@@ -118,7 +115,7 @@
                     "Feint a punch and then use the Leaping Tiger kick?",
                     17,
                     [
-                        "offense",
+                        "offence",
                         "kick",
                         2
                     ]
@@ -128,7 +125,7 @@
                     "Pretend to grapple but instead use the Cobra Strike jab?",
                     35,
                     [
-                        "offense",
+                        "offence",
                         "punch",
                         2
                     ]

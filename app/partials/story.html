@@ -24,7 +24,8 @@
         <div class="span2">
             <h4>Opponents</h4>
             <div ng-repeat="o in gameState.currentOpponents">
-                {{o.name}}
+                <strong>{{o.name}}</strong><br>
+                Endurance: {{o.endurance}}<br>
             </div>
         </div>
     </div>
