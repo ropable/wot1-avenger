@@ -34,6 +34,7 @@
     },
     "17": {
             "opponent_offence": "punch",
+            "victory": 110,
             "defeat": 95,
             "options": [
                 {
@@ -57,42 +58,37 @@
                 "action": "kick"
                 }
             ],
-            "description": "You step forward as if to punch, then, leaping in the air you lash the ball of your foot toward Gorobei's head with a speed that defies belief. Gorobei, although not quick, knows your style of combat.",
-            "victory": 110
+            "description": "You step forward as if to punch, then, leaping in the air you lash the ball of your foot toward Gorobei's head with a speed that defies belief. Gorobei, although not quick, knows your style of combat."
     },
     "35": {
+            "combat": true,
             "opponent_offence": "punch",
+            "player_defence": 7,
             "defeat": 95,
+            "victory": 110,
             "options": [
-                [
-                    null,
-                    "Feint and kick?",
-                    17,
-                    [
-                        "offence",
-                        "kick",
-                        0
-                    ]
-                ],
-                [
-                    null,
-                    "Feint and throw?",
-                    61,
-                    null
-                ],
-                [
-                    null,
-                    "Punch again?",
-                    35,
-                    [
-                        "offence",
-                        "punch",
-                        0
-                    ]
-                ]
+                {
+                "prereq": null,
+                "text": "Feint and kick?",
+                "entry" : 17,
+                "type": "offence",
+                "action": "kick"
+                },
+                {
+                "prereq": null,
+                "text": "Feint and throw?",
+                "entry": 61,
+                "type": null
+                },
+                {
+                "prereq": null,
+                "text": "Punch again?",
+                "entry": 35,
+                "type": "offence",
+                "action": "punch"
+                }
             ],
-            "description": "You crouch as if to wrestle with Gorobei who tenses, ready to throw his extra weight against yours, but you jab unexpectedly towards his midriff. Gorobei's reach is long and he is skilled in punching and blocking, though he is not as fast as you.",
-            "victory": 110
+            "description": "You crouch as if to wrestle with Gorobei who tenses, ready to throw his extra weight against yours, but you jab unexpectedly towards his midriff. Gorobei's reach is long and he is skilled in punching and blocking, though he is not as fast as you."
     },
     "61": {
         "opponent_remove": "Gorobei",
