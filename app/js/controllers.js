@@ -12,8 +12,30 @@ var dieRoll = function(n) {
 var textMarkup = function(text) {
     // Accepts Markdown-formatted text string, returns HTML.
     var converter = new Showdown.converter();
-    var html = converter.makeHtml(text);
-    return html;
+    return converter.makeHtml(text);
+};
+
+var validEntryChoices = function(gameState) {
+    // Accepts gameState, and returns it with options for which
+    // all of the prerequisites are met.
+    // Assumes that gameState.entry has been set.
+    gameState.options = [];
+    angular.forEach(gameState.entry.options, function(option) {
+        if (option.prereq) {
+            // Skill preqrequesites.
+            if (option.prereq[0] == 'skill') {
+                // Iterate over the chosenSkills array
+                angular.forEach(gameState.chosenSkills, function(skill, option) {
+                    if (gameState.chosenSkills[1] == skill.name) {
+                        gameState.options.push(option);
+                    };
+                };
+            };
+        } else {
+            // No prerequesites.
+            gameState.options.push(option);
+        };
+    };
 };
 
 /* Controllers */
@@ -21,7 +43,6 @@ function NewGameCtrl($scope, $http, Story, Opponents, $location, gameState) {
     // Get JSON for available skills to choose.
     var storyjson = Story.get();
     var opponentsjson = Opponents.get();
-    var converter = new Showdown.converter();
     $http.get('data/skills.json').success(function(data) {
         // Remove the first element: we always get Shurikenjutsu.
         $scope.shurikenSkill = data.splice(0, 1);
@@ -74,7 +95,6 @@ function NewGameCtrl($scope, $http, Story, Opponents, $location, gameState) {
 function StoryCtrl($scope, $http, gameState, Story, Opponents) {
     var storyjson = Story.get();
     var opponentsjson = Opponents.get();
-    var converter = new Showdown.converter();
     $scope.gameState = gameState;
 
     $scope.chooseEntry = function(option, useInnerForce) {
