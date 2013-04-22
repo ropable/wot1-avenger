@@ -74,6 +74,11 @@ function StoryCtrl($scope, $http, gameState, Story, Opponents) {
         gameState.currentEntry = option.entry;
         gameState.entry = storyjson[option.entry.toString()];
         gameState.hasEntryImage = 'image' in gameState.entry;
+        gameState.options = gameState.entry.options;
+        // Apply any attack modifers gained/lost to gameState.
+        if (gameState.entry.attack_modifier) {
+            gameState.attackModifierTemp = gameState.entry.attack_modifier;
+        };
         var actionText = '';
         // Handle different types of options.
         // type == null indicates a change of entry (no action).
@@ -82,7 +87,7 @@ function StoryCtrl($scope, $http, gameState, Story, Opponents) {
             // TODO: handle persistent modifers, such as modifier following a block.
             if (option.action == 'punch') {
                 // Check 2d6 + attack modifer against target defence.
-                if ((dieRoll(2) + gameState.punch) > target.defence_punch) {
+                if ((dieRoll(2) + gameState.punch + gameState.attackModifierTemp) > target.defence_punch) {
                     var damage = dieRoll(1);
                     // Handle Inner Force modifer.
                     if (useInnerForce) {
@@ -101,7 +106,7 @@ function StoryCtrl($scope, $http, gameState, Story, Opponents) {
                 };
             } else if (option.action == 'kick') {
                 // Check 2d6 + attack modifer against target defence.
-                if ((dieRoll(2) + gameState.kick) > target.defence_kick) {
+                if ((dieRoll(2) + gameState.kick + gameState.attackModifierTemp) > target.defence_kick) {
                     var damage = dieRoll(1) + 2;  // Kicks do more damage.
                     // Handle Inner Force modifer.
                     if (useInnerForce) {
@@ -126,9 +131,11 @@ function StoryCtrl($scope, $http, gameState, Story, Opponents) {
                     actionText = 'You try to throw {0}...and fail!'.replace('{0}', target.name);
                 };
             };
+            // Subtract Inner Force.
             if (useInnerForce) {
                 gameState.innerForce -= 1;
             };
+            gameState.attackModifierTemp = 0;  // Always resets, after an attack.
             // Target's endurance is reduced to 0 or less.
             if (gameState.currentOpponents[0].endurance <= 0) {
                 // TODO: handle difference targets.
@@ -138,27 +145,25 @@ function StoryCtrl($scope, $http, gameState, Story, Opponents) {
             // then we must have won!
             // Replace entry options with a single "Continue".
             if (gameState.currentOpponents.length == 0) {
-                gameState.options = [];
-                //gameState.options = [{"text": "Continue", "entry" : gameState.entry.victory}];
-                console.log(gameState.options);
+                gameState.options = [{"text": "Continue", "entry" : gameState.entry.victory}];
+                actionText += '<br>You have won this combat!';
             };
+            // Opponent offence.
+            angular.forEach(gameState.currentOpponents, function(o) {
+                // Check 2d6 against player_defence.
+                if (dieRoll(2) > gameState.entry.player_defence) {
+                    var damage = (dieRoll(o.damage[0]) + o.damage[1]);
+                    actionText += '<br>{0} hits you for {1} damage!'.replace('{0}', o.name);
+                    actionText = actionText.replace('{1}', damage.toString());
+                    gameState.endurance -= damage;
+                } else {
+                    actionText += '<br>{0} tries to hit you...but misses!'.replace('{0}', o.name);
+                };
+            });  // End opponent offence.
         };  // End player offence.
-        // Opponent offence.
-        angular.forEach(gameState.currentOpponents, function(o) {
-            // Check 2d6 against player_defence.
-            if (dieRoll(2) > gameState.entry.player_defence) {
-                var damage = (dieRoll(o.damage[0]) + o.damage[1]);
-                actionText += '<br>{0} hits you for {1} damage!'.replace('{0}', o.name);
-                actionText = actionText.replace('{1}', damage.toString());
-                gameState.endurance -= damage;
-            } else {
-                actionText += '<br>{0} tries to hit you...but misses!'.replace('{0}', o.name);
-            };
-        });  // End opponent offence.
         gameState.actionText = actionText;
         // TODO: handle victory - replace options with "Continue", etc.
         gameState.entryText = converter.makeHtml(gameState.entry.description);
-        gameState.options = gameState.entry.options;
         // Finally, set scope gameState.
         $scope.gameState = gameState;
     };
