@@ -138,7 +138,8 @@ function StoryCtrl($scope, $http, gameState, Story, Opponents) {
             gameState.attackModifierTemp = 0;  // Always resets, after an attack.
             // Target's endurance is reduced to 0 or less.
             if (gameState.currentOpponents[0].endurance <= 0) {
-                // TODO: handle difference targets.
+                // TODO: handle different targets.
+                // For now we jsut attack the first in line.
                 gameState.currentOpponents.splice(0, 1);
             };
             // If we've taken an offensive action and there are no opponents left alive,
@@ -156,14 +157,23 @@ function StoryCtrl($scope, $http, gameState, Story, Opponents) {
                     actionText += '<br>{0} hits you for {1} damage!'.replace('{0}', o.name);
                     actionText = actionText.replace('{1}', damage.toString());
                     gameState.endurance -= damage;
+                    // TODO: handle player defeat/death.
                 } else {
                     actionText += '<br>{0} tries to hit you...but misses!'.replace('{0}', o.name);
                 };
             });  // End opponent offence.
         };  // End player offence.
+        // Render any additional text for actions.
         gameState.actionText = actionText;
-        // TODO: handle victory - replace options with "Continue", etc.
         gameState.entryText = converter.makeHtml(gameState.entry.description);
+        // Entries may occasionally manually remove opponents.
+        if (gameState.entry.opponent_remove) {
+            for (var i = 0; i < gameState.currentOpponents.length; i++) {
+                if (gameState.currentOpponents[i].name == gameState.entry.opponent_remove) {
+                    gameState.currentOpponents.splice(i, 1);
+                };
+            };
+        };
         // Finally, set scope gameState.
         $scope.gameState = gameState;
     };
