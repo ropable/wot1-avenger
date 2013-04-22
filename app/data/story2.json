@@ -42,7 +42,8 @@
                 "text": "Feint and punch?",
                 "entry" : 35,
                 "type": "offence",
-                "action": "punch"
+                "action": "punch",
+                "inner_force": true
                 },
                 {
                 "prereq": null,
@@ -55,7 +56,8 @@
                 "text": "Kick again?",
                 "entry": 17,
                 "type": "offence",
-                "action": "kick"
+                "action": "kick",
+                "inner_force": true
                 }
             ],
             "description": "You step forward as if to punch, then, leaping in the air you lash the ball of your foot toward Gorobei's head with a speed that defies belief. Gorobei, although not quick, knows your style of combat."
@@ -72,7 +74,8 @@
                 "text": "Feint and kick?",
                 "entry" : 17,
                 "type": "offence",
-                "action": "kick"
+                "action": "kick",
+                "inner_force": true
                 },
                 {
                 "prereq": null,
@@ -85,7 +88,8 @@
                 "text": "Punch again?",
                 "entry": 35,
                 "type": "offence",
-                "action": "punch"
+                "action": "punch",
+                "inner_force": true
                 }
             ],
             "description": "You crouch as if to wrestle with Gorobei who tenses, ready to throw his extra weight against yours, but you jab unexpectedly towards his midriff. Gorobei's reach is long and he is skilled in punching and blocking, though he is not as fast as you."

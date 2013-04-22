@@ -51,6 +51,7 @@ function NewGameCtrl($scope, $http, Story, Opponents, $location, gameState) {
         gameState.entry = storyjson[gameState.currentEntry];
         gameState.entryText = converter.makeHtml(gameState.entry.description);
         gameState.hasEntryImage = 'image' in gameState.entry;
+        gameState.options = gameState.entry.options;
         // Add opponents
         angular.forEach(gameState.entry.opponents, function(o) {
             if (o in opponentsjson) {
@@ -68,10 +69,11 @@ function StoryCtrl($scope, $http, gameState, Story, Opponents) {
     var converter = new Showdown.converter();
     $scope.gameState = gameState;
 
-    $scope.chooseEntry = function(option) {
+    $scope.chooseEntry = function(option, useInnerForce) {
         // Set gameState to the new entry.
         gameState.currentEntry = option.entry;
         gameState.entry = storyjson[option.entry.toString()];
+        gameState.hasEntryImage = 'image' in gameState.entry;
         var actionText = '';
         // Handle different types of options.
         // type == null indicates a change of entry (no action).
@@ -81,8 +83,11 @@ function StoryCtrl($scope, $http, gameState, Story, Opponents) {
             if (option.action == 'punch') {
                 // Check 2d6 + attack modifer against target defence.
                 if ((dieRoll(2) + gameState.punch) > target.defence_punch) {
-                    // TODO: handle Inner Force modifer.
                     var damage = dieRoll(1);
+                    // Handle Inner Force modifer.
+                    if (useInnerForce) {
+                        damage *= 2;
+                    };
                     if (target.damage_mod) { // i.e. damage_mod is not 0.
                         damage += target.damage_mod;
                         gameState.currentOpponents[0].damage_mod = 0;
@@ -97,8 +102,11 @@ function StoryCtrl($scope, $http, gameState, Story, Opponents) {
             } else if (option.action == 'kick') {
                 // Check 2d6 + attack modifer against target defence.
                 if ((dieRoll(2) + gameState.kick) > target.defence_kick) {
-                    // TODO: handle Inner Force modifer.
                     var damage = dieRoll(1) + 2;  // Kicks do more damage.
+                    // Handle Inner Force modifer.
+                    if (useInnerForce) {
+                        damage *= 2;
+                    };
                     if (target.damage_mod) { // i.e. damage_mod is not 0.
                         damage += target.damage_mod;
                         gameState.currentOpponents[0].damage_mod = 0;
@@ -118,13 +126,24 @@ function StoryCtrl($scope, $http, gameState, Story, Opponents) {
                     actionText = 'You try to throw {0}...and fail!'.replace('{0}', target.name);
                 };
             };
+            if (useInnerForce) {
+                gameState.innerForce -= 1;
+            };
             // Target's endurance is reduced to 0 or less.
             if (gameState.currentOpponents[0].endurance <= 0) {
                 // TODO: handle difference targets.
                 gameState.currentOpponents.splice(0, 1);
             };
-        };
-        // TODO: opponent(s) still alive, they attack back.
+            // If we've taken an offensive action and there are no opponents left alive,
+            // then we must have won!
+            // Replace entry options with a single "Continue".
+            if (gameState.currentOpponents.length == 0) {
+                gameState.options = [];
+                //gameState.options = [{"text": "Continue", "entry" : gameState.entry.victory}];
+                console.log(gameState.options);
+            };
+        };  // End player offence.
+        // Opponent(s) still alive? They attack you.
         angular.forEach(gameState.currentOpponents, function(o) {
             // Check 2d6 against player_defence.
             if (dieRoll(2) > gameState.entry.player_defence) {
@@ -139,7 +158,7 @@ function StoryCtrl($scope, $http, gameState, Story, Opponents) {
         gameState.actionText = actionText;
         // TODO: handle victory - replace options with "Continue", etc.
         gameState.entryText = converter.makeHtml(gameState.entry.description);
-        gameState.hasEntryImage = 'image' in gameState.entry;
+        gameState.options = gameState.entry.options;
         // Finally, set scope gameState.
         $scope.gameState = gameState;
     };
