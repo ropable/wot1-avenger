@@ -43,7 +43,7 @@
                 "entry" : 35,
                 "type": "offence",
                 "action": "punch",
-                "inner_force": true
+                "inner_force": false
                 },
                 {
                 "prereq": null,
@@ -57,7 +57,7 @@
                 "entry": 17,
                 "type": "offence",
                 "action": "kick",
-                "inner_force": true
+                "inner_force": false
                 }
             ],
             "description": "You step forward as if to punch, then, leaping in the air you lash the ball of your foot toward Gorobei's head with a speed that defies belief. Gorobei, although not quick, knows your style of combat."
@@ -75,7 +75,7 @@
                 "entry" : 17,
                 "type": "offence",
                 "action": "kick",
-                "inner_force": true
+                "inner_force": false
                 },
                 {
                 "prereq": null,
@@ -89,14 +89,12 @@
                 "entry": 35,
                 "type": "offence",
                 "action": "punch",
-                "inner_force": true
+                "inner_force": false
                 }
             ],
             "description": "You crouch as if to wrestle with Gorobei who tenses, ready to throw his extra weight against yours, but you jab unexpectedly towards his midriff. Gorobei's reach is long and he is skilled in punching and blocking, though he is not as fast as you."
     },
     "61": {
-        "opponent_remove": "Gorobei",
-        "next_entry": 95,
         "options": [
             {
                 "prereq": null,
@@ -136,44 +134,44 @@
         ]
     },
     "95": {
-        "next_entry": 191,
+        "opponent_remove": "Gorobei",
         "options": [
             {
                 "prereq": null,
                 "text": "Continue",
                 "entry": 191,
-                "type": ["move"]
+                "type": null
             }
         ],
         "description": "Gorobei has used the Iron Fist, punching you so hard in the back of the neck that you slump to the granite floor, senseless. A young village boy is pouring water onto your forehead when you regain your wits. A few of the younger acolytes murmur condolences as you rub your neck. An hour later, Gorobei returns from the robing chamber and you applaud with the others as he is ordained as a Grandmaster."
     },
     "110": {
-            "description": "Your last blow sent Gorobei tumbling senseless to the granite floor. A ripple of applause greets your victory and the Grandmaster of the Dawn compliments you on your fighting prowess and beckons you into the robing chamber. You step beyond the Temple Hall through silken drapes into a small dark room, completely bare of furnishing save for two enormous copper chests. Incense is burning in a censer which swings from the ceiling like a pendulum. The room is lit by white candles.\n\nYou kneel on the rush matting facing the three Grandmasters who stare ahead, unseeing, waiting for you to break the silence which you are determined to keep. After an hour-candle has sputtered its last, during which time none of you has moved so much as a muscle, the Grandmaster of the Dawn looks into your eyes and says, 'Kwon knows that you desire in your heart to serve him but I must ask you two questions. Do you truly desire to serve Kwon above all other things or do you desire to avenge the death of your foster-father, Naijishi, more even than to serve your God? What should a Ninja fear most - the failure of a mission or capture by an enemy who will use torture to gain secrets?'\n\nYou know that in your heart of hearts you would rather avenge Naijishi than anything else in Orb but a Grandmaster should dedicate his life to Kwon. As for the second question, you can only let your good sense guide you.",
-            "options": [
-                [
-                    null,
-                    "'I desire to serve Kwon above all else and I fear only the failure of a mission.'",
-                    139,
-                    null
-                ],
-                [
-                    null,
-                    "'I desire to avenge the father who loved me and I fear torture above all.'",
-                    151,
-                    null
-                ],
-                [
-                    null,
-                    "'I desire to avenge the father who loved me and I fear only the failure of a mission.'",
-                    177,
-                    null
-                ],
-                [
-                    null,
-                    "'I desire to serve Kwon above all else and I fear torture above all.'",
-                    128,
-                    null
-                ]
-            ]
+        "description": "Your last blow sent Gorobei tumbling senseless to the granite floor. A ripple of applause greets your victory and the Grandmaster of the Dawn compliments you on your fighting prowess and beckons you into the robing chamber. You step beyond the Temple Hall through silken drapes into a small dark room, completely bare of furnishing save for two enormous copper chests. Incense is burning in a censer which swings from the ceiling like a pendulum. The room is lit by white candles.\n\nYou kneel on the rush matting facing the three Grandmasters who stare ahead, unseeing, waiting for you to break the silence which you are determined to keep. After an hour-candle has sputtered its last, during which time none of you has moved so much as a muscle, the Grandmaster of the Dawn looks into your eyes and says, 'Kwon knows that you desire in your heart to serve him but I must ask you two questions. Do you truly desire to serve Kwon above all other things or do you desire to avenge the death of your foster-father, Naijishi, more even than to serve your God? What should a Ninja fear most - the failure of a mission or capture by an enemy who will use torture to gain secrets?'\n\nYou know that in your heart of hearts you would rather avenge Naijishi than anything else in Orb but a Grandmaster should dedicate his life to Kwon. As for the second question, you can only let your good sense guide you.",
+        "options": [
+            {
+                "prereq": null,
+                "text": "'I desire to serve Kwon above all else and I fear only the failure of a mission.'",
+                "entry": 139,
+                "type": null
+            },
+            {
+                "prereq": null,
+                "text": "'I desire to avenge the father who loved me and I fear torture above all.'",
+                "entry": 151,
+                "type": null
+            },
+            {
+                "prereq": null,
+                "text": "'I desire to avenge the father who loved me and I fear only the failure of a mission.'",
+                "entry": 177,
+                "type": null
+            },
+            {
+                "prereq": null,
+                "text": "'I desire to serve Kwon above all else and I fear torture above all.'",
+                "entry": 128,
+                "type": null
+            }
+        ]
     }
 }
