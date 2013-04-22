@@ -143,7 +143,7 @@ function StoryCtrl($scope, $http, gameState, Story, Opponents) {
                 console.log(gameState.options);
             };
         };  // End player offence.
-        // Opponent(s) still alive? They attack you.
+        // Opponent offence.
         angular.forEach(gameState.currentOpponents, function(o) {
             // Check 2d6 against player_defence.
             if (dieRoll(2) > gameState.entry.player_defence) {
@@ -154,7 +154,7 @@ function StoryCtrl($scope, $http, gameState, Story, Opponents) {
             } else {
                 actionText += '<br>{0} tries to hit you...but misses!'.replace('{0}', o.name);
             };
-        });
+        });  // End opponent offence.
         gameState.actionText = actionText;
         // TODO: handle victory - replace options with "Continue", etc.
         gameState.entryText = converter.makeHtml(gameState.entry.description);
