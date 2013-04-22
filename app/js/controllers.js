@@ -9,6 +9,12 @@ var dieRoll = function(n) {
     return total;
 };
 
+var textMarkup = function(text) {
+    // Accepts Markdown-formatted text string, returns HTML.
+    var converter = new Showdown.converter();
+    var html = converter.makeHtml(text);
+    return html;
+};
 
 /* Controllers */
 function NewGameCtrl($scope, $http, Story, Opponents, $location, gameState) {
@@ -49,8 +55,9 @@ function NewGameCtrl($scope, $http, Story, Opponents, $location, gameState) {
         // Add Shurikenjutsu to the skills array.
         gameState.skills.push($scope.shurikenSkill[0]);
         gameState.entry = storyjson[gameState.currentEntry];
-        gameState.entryText = converter.makeHtml(gameState.entry.description);
+        gameState.entryText = textMarkup(gameState.entry.description);
         gameState.hasEntryImage = 'image' in gameState.entry;
+        // Set options for which the prerequisites are met.
         gameState.options = gameState.entry.options;
         // Add opponents
         angular.forEach(gameState.entry.opponents, function(o) {
@@ -66,6 +73,7 @@ function NewGameCtrl($scope, $http, Story, Opponents, $location, gameState) {
 
 function StoryCtrl($scope, $http, gameState, Story, Opponents) {
     var storyjson = Story.get();
+    var opponentsjson = Opponents.get();
     var converter = new Showdown.converter();
     $scope.gameState = gameState;
 
@@ -165,7 +173,7 @@ function StoryCtrl($scope, $http, gameState, Story, Opponents) {
         };  // End player offence.
         // Render any additional text for actions.
         gameState.actionText = actionText;
-        gameState.entryText = converter.makeHtml(gameState.entry.description);
+        gameState.entryText = textMarkup(gameState.entry.description);
         // Entries may occasionally manually remove opponents.
         if (gameState.entry.opponent_remove) {
             for (var i = 0; i < gameState.currentOpponents.length; i++) {
