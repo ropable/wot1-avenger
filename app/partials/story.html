@@ -14,9 +14,12 @@
                 <!-- This is where attack and response text is displayed -->
             </div>
             <div class="row">
-                <p>Will you:</p>
+                <p ng-show="gameState.options.length() > 1">Will you:</p>
                 <ul>
-                    <li ng-repeat="option in gameState.entry.options"><a href="" ng-click="chooseEntry(option)">{{option.text}}</a></li>
+                    <li ng-repeat="option in gameState.options">
+                        <a href="" ng-click="chooseEntry(option, false)">{{option.text}}</a>
+                        <a href="" ng-show="option.inner_force && gameState.innerForce > 0" ng-click="chooseEntry(option, true)">(use Inner Force)</a>
+                    </li>
                 </ul>
             </div>
         </div>
