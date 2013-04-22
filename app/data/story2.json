@@ -102,41 +102,38 @@
                 "prereq": null,
                 "text": "Continue",
                 "entry": 95,
-                "type": ["move"]
+                "type": "move"
             }
         ],
         "description": "You raise your foot as if to kick Gorobei in the chest, but spin to his side instead and take hold of his arm to throw him over your hip. You rapidly learn your mistake, however, as your grip slides on the oil which covers him and he uses his skill as a wrestler to grab you and lock your arm behind your back whilst he grips you around the throat. His strength is enormous. You try to somersault backwards over him and break the grip but he is ready for you and pins you to the floor before delivering a heavy blow."
     },
     "80": {
-            "description": "You step forward to attack but then somersault suddenly, landing at Gorobei's side as his fist flails the air at the spot from which you leapt. He turns but you have surprised him and will find it easier to attack him than if you merely stood before him to trade blows.",
-            "options": [
-                [
-                    null,
-                    "Feint a punch and then use the Leaping Tiger kick?",
-                    17,
-                    [
-                        "offence",
-                        "kick",
-                        2
-                    ]
-                ],
-                [
-                    null,
-                    "Pretend to grapple but instead use the Cobra Strike jab?",
-                    35,
-                    [
-                        "offence",
-                        "punch",
-                        2
-                    ]
-                ],
-                [
-                    null,
-                    "Raise your foot as if to kick but side-step and use the Whirlpool throw?",
-                    61,
-                    null
-                ]
-            ]
+        "description": "You step forward to attack but then somersault suddenly, landing at Gorobei's side as his fist flails the air at the spot from which you leapt. He turns but you have surprised him and will find it easier to attack him than if you merely stood before him to trade blows.",
+        "attack_modifier": 2,
+        "options": [
+            {
+                "prereq": null,
+                "text": "Feint a punch and then use the Leaping Tiger kick?",
+                "entry" : 17,
+                "type": "offence",
+                "action": "kick",
+                "inner_force": false
+            },
+            {
+                "prereq": null,
+                "text": "Pretend to grapple but instead use the Cobra Strike jab?",
+                "entry": 35,
+                "type": "offence",
+                "action": "punch",
+                "inner_force": false
+            },
+            {
+                "prereq": null,
+                "text": "Raise your foot as if to kick but side-step and use the Whirlpool throw?",
+                "entry": 61,
+                "type": null
+            }
+        ]
     },
     "95": {
         "next_entry": 191,
