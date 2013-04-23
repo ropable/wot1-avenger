@@ -11,9 +11,13 @@ Combat ratings:
 <p>Shuriken: {{gameState.shuriken}}</p>
 Items:
 <ul>
-    <li ng-repeat="item in gameState.items">{{item.name}}</li>
+    <li ng-repeat="item in gameState.items">
+    <a href="" data-toggle="tooltip" title="{{item.desc}}">{{item.name}}</a>
+    </li>
 </ul>
 Skills:
 <ul>
-    <li ng-repeat="skill in gameState.skills">{{skill.name}}</li>
+    <li ng-repeat="skill in gameState.skills">
+    <a href="" data-toggle="tooltip" title="{{skill.desc}}">{{skill.name}}</a>
+    </li>
 </ul>
