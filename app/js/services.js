@@ -15,6 +15,7 @@ wot1app.factory('gameState', function($http) {
     // TODO: gameState should persist data via localstorage, unless initialised.
     var gameState = {};
     gameState.currentEntry = '1';
+    gameState.cheatMode = true;
     gameState.entry = null;
     gameState.options = [];
     gameState.punch = 0;

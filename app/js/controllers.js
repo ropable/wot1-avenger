@@ -21,21 +21,21 @@ var validEntryChoices = function(gameState) {
     // Assumes that gameState.entry has been set.
     gameState.options = [];
     angular.forEach(gameState.entry.options, function(option) {
-        if (option.prereq) {
-            // Skill preqrequesites.
-            if (option.prereq[0] == 'skill') {
-                // Iterate over the chosenSkills array
-                angular.forEach(gameState.chosenSkills, function(skill, option) {
-                    if (gameState.chosenSkills[1] == skill.name) {
-                        gameState.options.push(option);
-                    };
+        if (gameState.cheatMode) {
+            // If we're cheating, enable all options always.
+            gameState.options.push(option);
+        } else if (option.prereq && option.prereq[0] == 'skill') {
+            // Iterate over the chosenSkills array
+            angular.forEach(gameState.skills, function(skill) {
+                if (option.prereq[1] == skill.name) {
+                    gameState.options.push(option);
                 };
-            };
+            });
         } else {
             // No prerequesites.
             gameState.options.push(option);
         };
-    };
+    });
 };
 
 /* Controllers */
@@ -79,7 +79,8 @@ function NewGameCtrl($scope, $http, Story, Opponents, $location, gameState) {
         gameState.entryText = textMarkup(gameState.entry.description);
         gameState.hasEntryImage = 'image' in gameState.entry;
         // Set options for which the prerequisites are met.
-        gameState.options = gameState.entry.options;
+        //gameState.options = gameState.entry.options;
+        validEntryChoices(gameState);
         // Add opponents
         angular.forEach(gameState.entry.opponents, function(o) {
             if (o in opponentsjson) {
@@ -102,7 +103,7 @@ function StoryCtrl($scope, $http, gameState, Story, Opponents) {
         gameState.currentEntry = option.entry;
         gameState.entry = storyjson[option.entry.toString()];
         gameState.hasEntryImage = 'image' in gameState.entry;
-        gameState.options = gameState.entry.options;
+        validEntryChoices(gameState);
         // Apply any attack modifers gained/lost to gameState.
         if (gameState.entry.attack_modifier) {
             gameState.attackModifierTemp = gameState.entry.attack_modifier;
@@ -160,7 +161,7 @@ function StoryCtrl($scope, $http, gameState, Story, Opponents) {
                 };
             };
             // Subtract Inner Force.
-            if (useInnerForce) {
+            if (useInnerForce && !gameState.cheatMode) {
                 gameState.innerForce -= 1;
             };
             gameState.attackModifierTemp = 0;  // Always resets, after an attack.
@@ -180,7 +181,7 @@ function StoryCtrl($scope, $http, gameState, Story, Opponents) {
             // Opponent offence.
             angular.forEach(gameState.currentOpponents, function(o) {
                 // Check 2d6 against player_defence.
-                if (dieRoll(2) > gameState.entry.player_defence) {
+                if (dieRoll(2) > gameState.entry.player_defence && !gameState.cheatMode) {
                     var damage = (dieRoll(o.damage[0]) + o.damage[1]);
                     actionText += '<br>{0} hits you for {1} damage!'.replace('{0}', o.name);
                     actionText = actionText.replace('{1}', damage.toString());
