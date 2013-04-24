@@ -1,5 +1,6 @@
 'use strict';
 
+/* Utility functions */
 var dieRoll = function(n) {
     // Return the total of nd6.
     var total = 0;
@@ -79,7 +80,6 @@ function NewGameCtrl($scope, $http, Story, Opponents, $location, gameState) {
         gameState.entryText = textMarkup(gameState.entry.description);
         gameState.hasEntryImage = 'image' in gameState.entry;
         // Set options for which the prerequisites are met.
-        //gameState.options = gameState.entry.options;
         validEntryChoices(gameState);
         // Add opponents
         angular.forEach(gameState.entry.opponents, function(o) {
@@ -102,7 +102,9 @@ function StoryCtrl($scope, $http, gameState, Story, Opponents) {
         // Set gameState to the new entry.
         gameState.currentEntry = option.entry;
         gameState.entry = storyjson[option.entry.toString()];
+        gameState.entryText = textMarkup(gameState.entry.description);
         gameState.hasEntryImage = 'image' in gameState.entry;
+        // Set options for which the prerequisites are met.
         validEntryChoices(gameState);
         // Apply any attack modifers gained/lost to gameState.
         if (gameState.entry.attack_modifier) {
@@ -194,7 +196,6 @@ function StoryCtrl($scope, $http, gameState, Story, Opponents) {
         };  // End player offence.
         // Render any additional text for actions.
         gameState.actionText = actionText;
-        gameState.entryText = textMarkup(gameState.entry.description);
         // Entries may occasionally manually remove opponents.
         if (gameState.entry.opponent_remove) {
             for (var i = 0; i < gameState.currentOpponents.length; i++) {
@@ -212,5 +213,3 @@ function StoryCtrl($scope, $http, gameState, Story, Opponents) {
 
 function BackgroundCtrl() {}
 //BackgroundCtrl.$inject = [];
-
-
