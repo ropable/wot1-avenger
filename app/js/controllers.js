@@ -184,6 +184,7 @@ function StoryCtrl($scope, $http, gameState, Story, Opponents) {
             angular.forEach(gameState.currentOpponents, function(o) {
                 // Check 2d6 against player_defence.
                 if (dieRoll(2) > gameState.entry.player_defence && !gameState.cheatMode) {
+                    // TODO: handle option for player to try to block attacks.
                     var damage = (dieRoll(o.damage[0]) + o.damage[1]);
                     actionText += '<br>{0} hits you for {1} damage!'.replace('{0}', o.name);
                     actionText = actionText.replace('{1}', damage.toString());
