@@ -4,7 +4,7 @@
 
 angular.module('wot1app.services', ['ngResource'])
     .factory('Story', function($resource) {
-        return $resource('data/story2.json', {}, {});
+        return $resource('data/story.json', {}, {});
     })
     .factory('Opponents', function($resource) {
         return $resource('data/opponents.json', {}, {});
