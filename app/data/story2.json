@@ -24,7 +24,7 @@
             },
             {
                 "prereq": ["skill", "Acrobatics"],
-                "text": "Somersault to Gorobei's side before attacking.",
+                "text": "[Acrobatics] Somersault to Gorobei's side before attacking?",
                 "entry": 80,
                 "type": null
             }
