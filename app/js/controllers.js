@@ -95,7 +95,7 @@ function NewGameCtrl($scope, $http, localStorageService, Story, Opponents, $loca
 
     $scope.beginGame = function() {
         localStorageService.clearAll();
-        gameState.currentEntry = '1';
+        gameState.currentEntry = '110';
         gameState.skills = $scope.chosenSkills;
         // Add Shurikenjutsu to the skills array.
         gameState.skills.push($scope.shurikenSkill[0]);
@@ -105,6 +105,7 @@ function NewGameCtrl($scope, $http, localStorageService, Story, Opponents, $loca
         // Set options for which the prerequisites are met.
         validEntryChoices(gameState);
         // Add opponents
+        gameState.currentOpponents = [];
         angular.forEach(gameState.entry.opponents, function(o) {
             if (o in opponentsjson) {
                 gameState.currentOpponents.push(opponentsjson[o]);
@@ -117,9 +118,11 @@ function NewGameCtrl($scope, $http, localStorageService, Story, Opponents, $loca
 }
 //NewGameCtrl.$inject = [];
 
-function StoryCtrl($scope, $http, localStorageService, gameState, Story, Opponents) {
+function StoryCtrl($scope, $http, localStorageService, gameState, Story, Opponents, Loot, Notes) {
     var storyjson = Story.get();
     var opponentsjson = Opponents.get();
+    var lootjson = Loot.get();
+    var notesjson = Notes.get();
     readGameState(gameState, localStorageService);
     $scope.gameState = gameState;
 
@@ -231,11 +234,17 @@ function StoryCtrl($scope, $http, localStorageService, gameState, Story, Opponen
         };
         // Phat loot!
         if (gameState.entry.loot_add) {
-            //TODO
+            angular.forEach(gameState.entry.loot_add, function(loot) {
+                gameState.items.push(lootjson[loot]);
+            });
         };
+        console.log(gameState.entry.note_add);
         if (gameState.entry.note_add) {
-            //TODO
+            angular.forEach(gameState.entry.note_add, function(note) {
+                gameState.notes.push(notesjson[note]);
+            });
         };
+        console.log(gameState.notes);
         if (gameState.entry.event_add) {
             //TODO
         };
