@@ -195,8 +195,7 @@ function StoryCtrl($scope, $http, gameState, Story, Opponents) {
                 };
             });  // End opponent offence.
         };  // End player offence.
-        // Render any additional text for actions.
-        gameState.actionText = actionText;
+        // HANDLING EVENTS BEGINS HERE.
         // Entries may occasionally manually remove opponents.
         if (gameState.entry.opponent_remove) {
             for (var i = 0; i < gameState.currentOpponents.length; i++) {
@@ -205,6 +204,19 @@ function StoryCtrl($scope, $http, gameState, Story, Opponents) {
                 };
             };
         };
+        // Phat loot!
+        if (gameState.entry.loot_add) {
+            //TODO
+        };
+        if (gameState.entry.note_add) {
+            //TODO
+        };
+        if (gameState.entry.event_add) {
+            //TODO
+        };
+        // HANDLING EVENTS END.
+        // Render any additional text for actions (beneath the entry description text).
+        gameState.actionText = actionText;
         // Finally, set scope gameState.
         $scope.gameState = gameState;
     };

@@ -1,4 +1,5 @@
 <h4>Character sheet</h4>
+<p ng-show="gameState.cheatMode" class="text-error">CHEAT MODE</p>
 <p>Endurance: {{gameState.endurance}}</p>
 Combat ratings:
 <ul>
@@ -9,15 +10,26 @@ Combat ratings:
 </ul>
 <p>Inner Force: {{gameState.innerForce}}</p>
 <p>Shuriken: {{gameState.shuriken}}</p>
-Items:
-<ul>
-    <li ng-repeat="item in gameState.items">
-    <a href="" data-toggle="tooltip" title="{{item.desc}}">{{item.name}}</a>
-    </li>
-</ul>
+<div ng-show="gameState.items">
+    Items:
+    <ul>
+        <li ng-repeat="item in gameState.items">
+        <a href="" data-toggle="tooltip" title="{{item.desc}}">{{item.name}}</a>
+        </li>
+    </ul>
+</div>
+<div ng-show="gameState.skills">
 Skills:
-<ul>
-    <li ng-repeat="skill in gameState.skills">
-    <a href="" data-toggle="tooltip" title="{{skill.desc}}">{{skill.name}}</a>
-    </li>
-</ul>
+    <ul>
+        <li ng-repeat="skill in gameState.skills">
+        <a href="" data-toggle="tooltip" title="{{skill.desc}}">{{skill.name}}</a>
+        </li>
+    </ul>
+</div>
+<div ng-show="gameState.notes">
+    Notes:
+    <ul>
+        <li ng-repeat="note in gameState.notes">{{note.name}}
+        </li>
+    </ul>
+</div>
