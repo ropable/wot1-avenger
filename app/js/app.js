@@ -1,6 +1,6 @@
 'use strict';
 
-var wot1app = angular.module('wot1', ['wot1app.services']).
+var wot1app = angular.module('wot1', ['wot1app.services', 'LocalStorageModule']).
   config(['$routeProvider', '$locationProvider', function($routeProvider, $locationProvider) {
     $routeProvider.
       when('/title', {templateUrl: 'partials/title.html'}).

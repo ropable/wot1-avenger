@@ -39,8 +39,29 @@ var validEntryChoices = function(gameState) {
     });
 };
 
+var persistGameState = function(gameState, localStorageService) {
+    // Write gameState dictionary to localstorage.
+    for (var key in gameState) {
+        if (gameState.hasOwnProperty(key)) {
+            //console.log(JSON.stringify(gameState[key]));
+            localStorageService.add(key, JSON.stringify(gameState[key]));
+        };
+    };
+};
+
+var readGameState = function(gameState, localStorageService) {
+    // Read gameState dictionary from localstorage.
+    for (var key in gameState) {
+        if (gameState.hasOwnProperty(key)) {
+            //console.log(JSON.parse(localStorageService.get(key)));
+            gameState[key] = JSON.parse(localStorageService.get(key));
+        };
+    };
+};
+
+
 /* Controllers */
-function NewGameCtrl($scope, $http, Story, Opponents, $location, gameState) {
+function NewGameCtrl($scope, $http, localStorageService, Story, Opponents, $location, gameState) {
     // Get JSON for available skills to choose.
     var storyjson = Story.get();
     var opponentsjson = Opponents.get();
@@ -73,6 +94,8 @@ function NewGameCtrl($scope, $http, Story, Opponents, $location, gameState) {
     };
 
     $scope.beginGame = function() {
+        localStorageService.clearAll();
+        gameState.currentEntry = '1';
         gameState.skills = $scope.chosenSkills;
         // Add Shurikenjutsu to the skills array.
         gameState.skills.push($scope.shurikenSkill[0]);
@@ -87,15 +110,17 @@ function NewGameCtrl($scope, $http, Story, Opponents, $location, gameState) {
                 gameState.currentOpponents.push(opponentsjson[o]);
             };
         });
-        // TODO: Persist gameState using localstorage.
+        // Persist gameState using localstorage.
+        persistGameState(gameState, localStorageService);
         $location.path("/story");
     };
 }
 //NewGameCtrl.$inject = [];
 
-function StoryCtrl($scope, $http, gameState, Story, Opponents) {
+function StoryCtrl($scope, $http, localStorageService, gameState, Story, Opponents) {
     var storyjson = Story.get();
     var opponentsjson = Opponents.get();
+    readGameState(gameState, localStorageService);
     $scope.gameState = gameState;
 
     $scope.chooseEntry = function(option, useInnerForce) {
@@ -170,7 +195,7 @@ function StoryCtrl($scope, $http, gameState, Story, Opponents) {
             // Target's endurance is reduced to 0 or less.
             if (gameState.currentOpponents[0].endurance <= 0) {
                 // TODO: handle different targets.
-                // For now we jsut attack the first in line.
+                // For now we just attack the first in line.
                 gameState.currentOpponents.splice(0, 1);
             };
             // If we've taken an offensive action and there are no opponents left alive,
@@ -217,8 +242,9 @@ function StoryCtrl($scope, $http, gameState, Story, Opponents) {
         // HANDLING EVENTS END.
         // Render any additional text for actions (beneath the entry description text).
         gameState.actionText = actionText;
-        // Finally, set scope gameState.
-        $scope.gameState = gameState;
+        persistGameState(gameState, localStorageService);
     };
+    // Finally, set scope gameState.
+    $scope.gameState = gameState;
 }
 //StoryCtrl.$inject = [];
