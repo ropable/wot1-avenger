@@ -210,7 +210,3 @@ function StoryCtrl($scope, $http, gameState, Story, Opponents) {
     };
 }
 //StoryCtrl.$inject = [];
-
-
-function BackgroundCtrl() {}
-//BackgroundCtrl.$inject = [];
