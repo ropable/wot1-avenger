@@ -14,9 +14,12 @@ angular.module('wot1app.services', ['ngResource'])
 wot1app.factory('gameState', function($http) {
     // TODO: gameState should persist data via localstorage, unless initialised.
     var gameState = {};
-    gameState.currentEntry = '1';
-    gameState.cheatMode = true;
+    gameState.currentEntry = null;
+    gameState.cheatMode = false;
     gameState.entry = null;
+    gameState.entryText = null;
+    gameState.hasEntryImage = false;
+    gameState.actionText = null;
     gameState.options = [];
     gameState.punch = 0;
     gameState.kick = 0;
@@ -30,6 +33,8 @@ wot1app.factory('gameState', function($http) {
         gameState.items = data;
     });
     gameState.skills = [];
+    gameState.notes = [];
+    gameState.events = [];
     gameState.currentOpponents = [];
     gameState.actionText = null;
     gameState.attackModifierTemp = 0;
