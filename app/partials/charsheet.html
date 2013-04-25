@@ -19,7 +19,7 @@ Combat ratings:
     </ul>
 </div>
 <div ng-show="gameState.skills">
-Skills:
+    Skills:
     <ul>
         <li ng-repeat="skill in gameState.skills">
         <a href="" data-toggle="tooltip" title="{{skill.desc}}">{{skill.name}}</a>
@@ -29,7 +29,8 @@ Skills:
 <div ng-show="gameState.notes">
     Notes:
     <ul>
-        <li ng-repeat="note in gameState.notes">{{note.name}}
+        <li ng-repeat="note in gameState.notes">
+        <a href="" data-toggle="tooltip" title="{{note.text}}">{{note.name}}</a>
         </li>
     </ul>
 </div>
