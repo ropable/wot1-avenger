@@ -11,8 +11,12 @@
             <form class="newgameform">
                 <label ng-repeat="skill in skills" class="checkbox">
                     <input type="checkbox" value="{{skill.name}}" ng-checked="isSelected(skill)"
-                    ng-click="selectSkill($event, skill)" ng-model="skill.checked" ng-disabled="selectedCount>=3 && !skill.checked">
+                    ng-click="selectSkill($event, skill)" ng-model="skill.checked" ng-disabled="selectedCount>=3 && !skill.checked" />
                         <a href="" data-toggle="tooltip" title="{{skill.desc}}">{{skill.name}}</a>
+                </label>
+                <hr>
+                <label class="checkbox">
+                    <input type="checkbox" ng-model="gameState.cheatMode" />Cheat?
                 </label>
                 <!-- Disable the "begin" button until three skills are chosen -->
                 <button type="submit" class="btn btn-primary" ng-click="beginGame()" ng-disabled="chosenSkills.length<3">
