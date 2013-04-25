@@ -5,7 +5,7 @@ var wot1app = angular.module('wot1', ['wot1app.services']).
     $routeProvider.
       when('/title', {templateUrl: 'partials/title.html'}).
       when('/new-game', {templateUrl: 'partials/new_game.html', controller: NewGameCtrl}).
-      when('/background', {templateUrl: 'partials/background.html', controller: BackgroundCtrl}).
+      when('/background', {templateUrl: 'partials/background.html'}).
       when('/story', {templateUrl: 'partials/story.html', controller: StoryCtrl}).
       otherwise({redirectTo: '/title'});
 
