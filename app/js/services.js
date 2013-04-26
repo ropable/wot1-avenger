@@ -26,6 +26,7 @@ wot1app.factory('gameState', function($http) {
     gameState.entryText = null;
     gameState.hasEntryImage = false;
     gameState.actionText = null;
+    gameState.actions = [];
     gameState.options = [];
     gameState.punch = 0;
     gameState.kick = 0;

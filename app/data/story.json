@@ -40,6 +40,7 @@
     "17": {
         "image": "1.png",
         "opponent_offence": "punch",
+        "player_defence": 7,
         "victory": 110,
         "defeat": 95,
         "options": [
