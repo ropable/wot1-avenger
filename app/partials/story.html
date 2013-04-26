@@ -10,8 +10,13 @@
                 <img ng-show="gameState.hasEntryImage" src="img/{{gameState.entry.image}}" class="pull-right"/>
                 <div ng-bind-html-unsafe="gameState.entryText"></div>
             </div>
-            <div class="row" ng-show="gameState.actionText" ng-bind-html-unsafe="gameState.actionText">
-                <!-- This is where attack and response text is displayed -->
+            <!-- This is where attack and response text is displayed -->
+            <div class="row" ng-show="gameState.actions">
+                <div ng-repeat="action in gameState.actions">
+                    <span ng-bind-html-unsafe="action[0]"></span>
+                    <!-- Conditional block choice -->
+                    <span ng-show="action[1]"><a href="" ng-click="blockAttack(action)">Try to block? (your defence: {{action[3]}})</a></span>
+                </div>
             </div>
             <div class="row">
                 <p ng-show="gameState.options.length > 1">Will you:</p>

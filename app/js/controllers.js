@@ -95,7 +95,8 @@ function NewGameCtrl($scope, $http, localStorageService, Story, Opponents, $loca
 
     $scope.beginGame = function() {
         localStorageService.clearAll();
-        gameState.currentEntry = '110';
+        gameState.currentEntry = '1';
+        gameState.endurance = 20;
         gameState.skills = $scope.chosenSkills;
         // Add Shurikenjutsu to the skills array.
         gameState.skills.push($scope.shurikenSkill[0]);
@@ -139,11 +140,11 @@ function StoryCtrl($scope, $http, localStorageService, gameState, Story, Opponen
             gameState.attackModifierTemp = gameState.entry.attack_modifier;
         };
         var actionText = '';
+        gameState.actions = [];
         // Handle different types of options.
         // type == null indicates a change of entry (no action).
         if (option.type == 'offence') {  // Offence can be punch, kick or throw.
             var target = gameState.currentOpponents[0];  // TODO: allow player to choose target.
-            // TODO: handle persistent modifers, such as modifier following a block.
             if (option.action == 'punch') {
                 // Check 2d6 + attack modifer against target defence.
                 if ((dieRoll(2) + gameState.punch + gameState.attackModifierTemp) > target.defence_punch) {
@@ -160,8 +161,10 @@ function StoryCtrl($scope, $http, localStorageService, gameState, Story, Opponen
                     actionText = 'You punch {0} and hit for {1} damage!';
                     actionText = actionText.replace('{0}', target.name);
                     actionText = actionText.replace('{1}', damage.toString());
+                    gameState.actions.push([actionText])
                 } else {
                     actionText = 'You punch at {0}...and miss!'.replace('{0}', target.name);
+                    gameState.actions.push([actionText])
                 };
             } else if (option.action == 'kick') {
                 // Check 2d6 + attack modifer against target defence.
@@ -179,15 +182,19 @@ function StoryCtrl($scope, $http, localStorageService, gameState, Story, Opponen
                     actionText = 'You kick {0} and hit for {1} damage!';
                     actionText = actionText.replace('{0}', target.name);
                     actionText = actionText.replace('{1}', damage.toString());
+                    gameState.actions.push([actionText])
                 } else {
                     actionText = 'You kick at {0}...and miss!'.replace('{0}', target.name);
+                    gameState.actions.push([actionText])
                 };
             } else {
                 if ((dieRoll(2) + gameState.throw) > target.defence_throw) {
                     actionText = 'You throw {0} to the ground!'.replace('{0}', target.name);
                     gameState.currentOpponents[0].damage_mod = 2;  // Next attack will do more damage.
+                    gameState.actions.push([actionText])
                 } else {
                     actionText = 'You try to throw {0}...and fail!'.replace('{0}', target.name);
+                    gameState.actions.push([actionText])
                 };
             };
             // Subtract Inner Force.
@@ -206,20 +213,23 @@ function StoryCtrl($scope, $http, localStorageService, gameState, Story, Opponen
             // Replace entry options with a single "Continue".
             if (gameState.currentOpponents.length == 0) {
                 gameState.options = [{"text": "Continue", "entry" : gameState.entry.victory}];
-                actionText += '<br>You have won this combat!';
+                gameState.actions.push(['You have won this combat!'])
             };
             // Opponent offence.
+            actionText = '';
             angular.forEach(gameState.currentOpponents, function(o) {
                 // Check 2d6 against player_defence.
                 if (dieRoll(2) > gameState.entry.player_defence && !gameState.cheatMode) {
-                    // TODO: handle option for player to try to block attacks.
                     var damage = (dieRoll(o.damage[0]) + o.damage[1]);
-                    actionText += '<br>{0} hits you for {1} damage!'.replace('{0}', o.name);
+                    actionText += '{0} hits you for {1} damage!'.replace('{0}', o.name);
                     actionText = actionText.replace('{1}', damage.toString());
                     gameState.endurance -= damage;
                     // TODO: handle player defeat/death.
+                    // Push to actions: [actionText, true, damage, player_defence]
+                    gameState.actions.push([actionText, true, damage, gameState.entry.player_defence])
                 } else {
-                    actionText += '<br>{0} tries to hit you...but misses!'.replace('{0}', o.name);
+                    actionText += '{0} tries to hit you...but misses!'.replace('{0}', o.name);
+                    gameState.actions.push([actionText])
                 };
             });  // End opponent offence.
         };  // End player offence.
@@ -238,22 +248,40 @@ function StoryCtrl($scope, $http, localStorageService, gameState, Story, Opponen
                 gameState.items.push(lootjson[loot]);
             });
         };
-        console.log(gameState.entry.note_add);
+        // Notes
         if (gameState.entry.note_add) {
             angular.forEach(gameState.entry.note_add, function(note) {
                 gameState.notes.push(notesjson[note]);
             });
         };
-        console.log(gameState.notes);
+        // Events
         if (gameState.entry.event_add) {
-            //TODO
+            //TODO: add events to gameState.
         };
         // HANDLING EVENTS END.
-        // Render any additional text for actions (beneath the entry description text).
-        gameState.actionText = actionText;
         persistGameState(gameState, localStorageService);
     };
+
+    $scope.blockAttack = function(action) {
+        // Handle blocking: the action array contains the action text plus the damage taken.
+        // action: [actionText, true, damage, player_defence]
+        // Test if the block in successful (player_defence). If so, reverse the damage and update the action text.
+        var roll = dieRoll(2);
+        //console.log(roll);
+        if (roll < action[3]) {
+            gameState.endurance += action[2];  // Success!
+            //Gorobei hits you for 5 damage!
+            action[0] += ' You blocked the attack!';
+        } else {
+            action[0] += ' You failed to block the attack!';
+        }
+        action[1] = false;
+        gameState.attackModifierTemp = -2;  // Blocking penalises your next attack action.
+        persistGameState(gameState, localStorageService);
+    };
+
     // Finally, set scope gameState.
     $scope.gameState = gameState;
+
 }
 //StoryCtrl.$inject = [];
