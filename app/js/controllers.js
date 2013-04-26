@@ -178,7 +178,8 @@ function StoryCtrl($scope, $http, localStorageService, gameState, Story, Opponen
                         damage += target.damage_mod;
                         gameState.currentOpponents[0].damage_mod = 0;
                     };
-                    gameState.currentOpponents[0].endurance -= damage;
+                    //TODO
+                    //gameState.currentOpponents[0].endurance -= damage;
                     actionText = 'You kick {0} and hit for {1} damage!';
                     actionText = actionText.replace('{0}', target.name);
                     actionText = actionText.replace('{1}', damage.toString());
@@ -212,7 +213,7 @@ function StoryCtrl($scope, $http, localStorageService, gameState, Story, Opponen
             // then we must have won!
             // Replace entry options with a single "Continue".
             if (gameState.currentOpponents.length == 0) {
-                gameState.options = [{"text": "Continue", "entry" : gameState.entry.victory}];
+                gameState.options = [{"text": "Continue", "entry": gameState.entry.victory}];
                 gameState.actions.push(['You have won this combat!'])
             };
             // Opponent offence.
@@ -220,16 +221,25 @@ function StoryCtrl($scope, $http, localStorageService, gameState, Story, Opponen
             angular.forEach(gameState.currentOpponents, function(o) {
                 // Check 2d6 against player_defence.
                 if (dieRoll(2) > gameState.entry.player_defence && !gameState.cheatMode) {
-                    var damage = (dieRoll(o.damage[0]) + o.damage[1]);
+                    var damage = (dieRoll(o.damage[0]) + o.damage[1]) * 3;
                     actionText += '{0} hits you for {1} damage!'.replace('{0}', o.name);
                     actionText = actionText.replace('{1}', damage.toString());
                     gameState.endurance -= damage;
-                    // TODO: handle player defeat/death.
                     // Push to actions: [actionText, true, damage, player_defence]
                     gameState.actions.push([actionText, true, damage, gameState.entry.player_defence])
                 } else {
                     actionText += '{0} tries to hit you...but misses!'.replace('{0}', o.name);
                     gameState.actions.push([actionText])
+                };
+                // Handle player defeat.
+                if (gameState.endurance <= 0) {
+                    gameState.actions.push(['You have been defeated!'])
+                    if (gameState.entry.defeat) {  // Defeat leads to another entry.
+                        gameState.options = [{"text": "Continue", "entry": gameState.entry.defeat}];
+                    } else {  // Defeat == death,
+                        gameState.options = [{"text": "Continue", "entry": 'death'}];
+                        gameState.endurance = 0;
+                    };
                 };
             });  // End opponent offence.
         };  // End player offence.

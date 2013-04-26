@@ -228,5 +228,9 @@
                 "type": null
             }
         ]
+    },
+    "death": {
+        "description": "You have been killed before completing your quest and recovering the Scrolls of Kettsuin.\n\n[Start a new game](/#/new-game).",
+        "options": []
     }
 }
