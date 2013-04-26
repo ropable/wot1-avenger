@@ -16,7 +16,7 @@
                 </label>
                 <hr>
                 <label class="checkbox">
-                    <input type="checkbox" ng-model="gameState.cheatMode" />Cheat?
+                    <input type="checkbox" ng-model="gameState.cheatMode" />Cheat mode? (All skills, invulnerability in combat)
                 </label>
                 <!-- Disable the "begin" button until three skills are chosen -->
                 <button type="submit" class="btn btn-primary" ng-click="beginGame()" ng-disabled="chosenSkills.length<3">
