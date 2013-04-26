@@ -266,7 +266,9 @@ function StoryCtrl($scope, $http, localStorageService, gameState, Story, Opponen
         };
         // Events
         if (gameState.entry.event_add) {
-            //TODO: add events to gameState.
+            angular.forEach(gameState.entry.event_add, function(evt) {
+                gameState.events.push(evt);
+            });
         };
         // HANDLING EVENTS END.
         persistGameState(gameState, localStorageService);
