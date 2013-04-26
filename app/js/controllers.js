@@ -252,6 +252,15 @@ function StoryCtrl($scope, $http, localStorageService, gameState, Story, Opponen
                 };
             };
         };
+        // Restore endurance.
+        if (gameState.entry.heal_player) {
+            var total = gameState.entry.heal_player + gameState.endurance;
+            if (total >= 20) {
+                gameState.endurance = 20;
+            } else {
+                gameState.endurance = total;
+            };
+        };
         // Phat loot!
         if (gameState.entry.loot_add) {
             angular.forEach(gameState.entry.loot_add, function(loot) {
