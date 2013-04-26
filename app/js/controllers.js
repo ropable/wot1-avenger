@@ -179,7 +179,7 @@ function StoryCtrl($scope, $http, localStorageService, gameState, Story, Opponen
                         gameState.currentOpponents[0].damage_mod = 0;
                     };
                     //TODO
-                    //gameState.currentOpponents[0].endurance -= damage;
+                    gameState.currentOpponents[0].endurance -= damage;
                     actionText = 'You kick {0} and hit for {1} damage!';
                     actionText = actionText.replace('{0}', target.name);
                     actionText = actionText.replace('{1}', damage.toString());
@@ -221,7 +221,7 @@ function StoryCtrl($scope, $http, localStorageService, gameState, Story, Opponen
             angular.forEach(gameState.currentOpponents, function(o) {
                 // Check 2d6 against player_defence.
                 if (dieRoll(2) > gameState.entry.player_defence && !gameState.cheatMode) {
-                    var damage = (dieRoll(o.damage[0]) + o.damage[1]) * 3;
+                    var damage = (dieRoll(o.damage[0]) + o.damage[1]);
                     actionText += '{0} hits you for {1} damage!'.replace('{0}', o.name);
                     actionText = actionText.replace('{1}', damage.toString());
                     gameState.endurance -= damage;
@@ -233,7 +233,7 @@ function StoryCtrl($scope, $http, localStorageService, gameState, Story, Opponen
                 };
                 // Handle player defeat.
                 if (gameState.endurance <= 0) {
-                    gameState.actions.push(['You have been defeated!'])
+                    gameState.actions.push(['You have been defeated!']);
                     if (gameState.entry.defeat) {  // Defeat leads to another entry.
                         gameState.options = [{"text": "Continue", "entry": gameState.entry.defeat}];
                     } else {  // Defeat == death,
@@ -276,11 +276,13 @@ function StoryCtrl($scope, $http, localStorageService, gameState, Story, Opponen
         // Handle blocking: the action array contains the action text plus the damage taken.
         // action: [actionText, true, damage, player_defence]
         // Test if the block in successful (player_defence). If so, reverse the damage and update the action text.
-        var roll = dieRoll(2);
-        //console.log(roll);
-        if (roll < action[3]) {
-            gameState.endurance += action[2];  // Success!
-            //Gorobei hits you for 5 damage!
+        if (dieRoll(2) < action[3]) {
+            // Success!
+            if (gameState.endurance <= 0) {  // We blocked a potentially fatal attack.
+                gameState.actions.pop();  // Remove "You have been defeated!" from actions.
+                gameState.options = gameState.entry.options;  // Restore the entry options.
+            };
+            gameState.endurance += action[2];
             action[0] += ' You blocked the attack!';
         } else {
             action[0] += ' You failed to block the attack!';
