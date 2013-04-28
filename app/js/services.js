@@ -6,6 +6,9 @@ angular.module('wot1app.services', ['ngResource'])
     .factory('Story', function($resource) {
         return $resource('data/story.json', {}, {});
     })
+    .factory('Items', function($resource) {
+        return $resource('data/items.json', {}, {});
+    })
     .factory('Opponents', function($resource) {
         return $resource('data/opponents.json', {}, {});
     })
@@ -36,10 +39,7 @@ wot1app.factory('gameState', function($http) {
     gameState.innerForce = 5;
     gameState.endurance = 20;
     gameState.shuriken = 5;
-    // Get JSON for starting items.
-    $http.get('data/items.json').success(function(data) {
-        gameState.items = data;
-    });
+    gameState.items = [];
     gameState.skills = [];
     gameState.notes = [];
     gameState.events = [];

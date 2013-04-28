@@ -10,11 +10,13 @@ Combat ratings:
 </ul>
 <p>Inner Force: {{gameState.innerForce}}</p>
 <p>Shuriken: {{gameState.shuriken}}</p>
+<!-- TODO: show totals for consumable items (e.g. Flash powder (2)) -->
 <div ng-show="gameState.items">
     Items:
     <ul>
         <li ng-repeat="item in gameState.items">
         <a href="" data-toggle="tooltip" title="{{item.desc}}">{{item.name}}</a>
+        <span ng-show="item.count>1"> ({{item.count}})</span>
         </li>
     </ul>
 </div>
