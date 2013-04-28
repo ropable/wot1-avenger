@@ -61,9 +61,10 @@ var readGameState = function(gameState, localStorageService) {
 
 
 /* Controllers */
-function NewGameCtrl($scope, $http, localStorageService, Story, Opponents, $location, gameState) {
+function NewGameCtrl($scope, $http, localStorageService, Story, Items, Opponents, $location, gameState) {
     // Get JSON for available skills to choose.
     var storyjson = Story.get();
+    var itemsjson = Items.get();
     var opponentsjson = Opponents.get();
     $http.get('data/skills.json').success(function(data) {
         // Remove the first element: we always get Shurikenjutsu.
@@ -97,6 +98,13 @@ function NewGameCtrl($scope, $http, localStorageService, Story, Opponents, $loca
         localStorageService.clearAll();
         gameState.currentEntry = '1';
         gameState.endurance = 20;
+        // Get starting items.
+        angular.forEach(itemsjson, function(item) {
+            if (item.start) {
+                item.count = 1;
+                gameState.items.push(item);
+            }
+        });
         gameState.skills = $scope.chosenSkills;
         // Add Shurikenjutsu to the skills array.
         gameState.skills.push($scope.shurikenSkill[0]);
@@ -120,10 +128,10 @@ function NewGameCtrl($scope, $http, localStorageService, Story, Opponents, $loca
 }
 //NewGameCtrl.$inject = [];
 
-function StoryCtrl($scope, $http, localStorageService, gameState, Story, Opponents, Loot, Notes) {
+function StoryCtrl($scope, $http, localStorageService, gameState, Story, Items, Opponents, Notes) {
     var storyjson = Story.get();
     var opponentsjson = Opponents.get();
-    var lootjson = Loot.get();
+    var itemsjson = Items.get();
     var notesjson = Notes.get();
     readGameState(gameState, localStorageService);
     $scope.gameState = gameState;
@@ -265,8 +273,9 @@ function StoryCtrl($scope, $http, localStorageService, gameState, Story, Opponen
         };
         // Phat loot!
         if (gameState.entry.loot_add) {
-            angular.forEach(gameState.entry.loot_add, function(loot) {
-                gameState.items.push(lootjson[loot]);
+            angular.forEach(gameState.entry.loot_add, function(item) {
+                // TODO: handle incrementing the count of items already in the inventory.
+                gameState.items.push(itemsjson[item]);
             });
         };
         // Notes
