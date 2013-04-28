@@ -7,5 +7,15 @@
         "defence_kick": 6,
         "damage_mod": 0,
         "effects": null
+    },
+    "Ogre pirate": {
+        "name": "Ogre pirate",
+        "endurance": 16,
+        "damage": [2, 0],
+        "defence_punch": 4,
+        "defence_kick": 5,
+        "defence_throw": 8,
+        "damage_mod": 0,
+        "effects": null
     }
 }
