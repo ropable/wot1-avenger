@@ -164,13 +164,36 @@ function StoryCtrl($scope, $http, localStorageService, gameState, Story, Items, 
         };
         // Apply damage to opponents or player.
         if (gameState.entry.damage_opponent) {
-            angular.forEach(gameState.entry.damage_opponent, function(name) {
+            angular.forEach(gameState.entry.damage_opponent, function(damage) {
+                console.log(damage);
                 angular.forEach(gameState.currentOpponents, function(opp) {
-                    if (name[0] == opp.name) {
-                        var damage = dieRoll(name[1][0]) + name[1][1];
-                        opp.endurance -= damage;
+                    console.log(opp);
+                    if (damage[0] == opp.name) {
+                        // Damage might be random, or fixed.
+                        if (damage[1] == 'random') {
+                            var dam = dieRoll(damage[2][0]) + damage[2][1];
+                        } else {
+                            var dam = damage[2];
+                        };
+                        opp.endurance -= dam;
                     };
                 });
+            });
+        };
+        if (gameState.entry.damage_player && !gameState.cheatMode) {
+            angular.forEach(gameState.entry.damage_player, function(damage) {
+                // Damage might be random, or fixed.
+                if (damage[1] == 'random') {
+                    var dam = dieRoll(damage[2][0]) + damage[2][1];
+                } else {
+                    var dam = damage[2];
+                };
+                // Damage might be to endurance, or combat modifiers.
+                if (damage[0] == "endurance") {
+                    gameState.endurance -= dam;
+                } else if (damage[0] == "kick") {
+                    gameState.kick -= dam;
+                };
             });
         };
         // Handle different types of options.

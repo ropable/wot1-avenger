@@ -275,7 +275,16 @@
     "257": {
         "description": "Your Shuriken glints in the sun as it hurtles towards its mark in the Ogre's chest. As you leap down from the rigging a volley of arrows is let loose from the stern castle of the Reaver's ship. The Ogre grunts with pain as the Shuriken lodges in its chest.\n\nOne of the pirate's arrows is coming at you.",
         "image": "232.png",
-        "damage_opponent": [["Ogre pirate", [1, 0]]],
+        "damage_opponent": [
+            [
+                "Ogre pirate",
+                "random",
+                [
+                    1,
+                    0
+                ]
+            ]
+        ],
         "options": [
             {
                 "prereq": [
@@ -288,9 +297,75 @@
             },
             {
                 "prereq": null,
-                "text": "Continue",
+                "text": "Continue?",
                 "entry": 396,
                 "type": null
+            }
+        ]
+    },
+    "380": {
+        "description": "The arrow reaches you as you are in mid-air between the rigging and the deck but you whip your hand up and snatch it out of the air inches before your chest, and throw it aside. The Ogre, enraged, raises its spiked hammer to smash you.",
+        "image": "232.png",
+        "options": [
+            {
+                "prereq": null,
+                "text": "Try the Winged Horse kick?",
+                "entry": 332,
+                "type": "offence",
+                "action": "kick"
+            },
+            {
+                "prereq": null,
+                "text": "Attempt the Iron Fist punch?",
+                "entry": 332,
+                "type": "offence",
+                "action": "punch"
+            },
+            {
+                "prereq": null,
+                "text": "Slide across the deck and use the Dragon's Tail throw?",
+                "entry": 345,
+                "type": "offence",
+                "action": "throw"
+            }
+        ]
+    },
+    "396": {
+        "description": "Before you reach the deck an arrow pierces your thigh and you stumble. You pull the barbed arrow from your flesh but the muscle is badly torn. The Ogre, enraged, raises its spiked hammer to smash you.",
+        "image": "232.png",
+        "damage_player": [
+            [
+                "endurance",
+                "fixed",
+                4
+            ],
+            [
+                "kick",
+                "fixed",
+                1
+            ]
+        ],
+        "options": [
+            {
+                "prereq": null,
+                "text": "Try the Winged Horse kick?",
+                "entry": 332,
+                "type": "offence",
+                "action": "kick"
+            },
+            {
+                "prereq": null,
+                "text": "Attempt the Iron Fist punch?",
+                "entry": 332,
+                "type": "offence",
+                "action": "punch"
+            },
+            {
+                "prereq": null,
+                "text": "Slide across the deck and use the Dragon's Tail throw?",
+                "entry": 345,
+                "type": "offence",
+                "action": "throw"
             }
         ]
     },
