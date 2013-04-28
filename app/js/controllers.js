@@ -150,6 +150,12 @@ function StoryCtrl($scope, $http, localStorageService, gameState, Story, Items, 
         gameState.hasEntryImage = 'image' in gameState.entry;
         // Set options for which the prerequisites are met.
         validEntryChoices(gameState);
+        // Add any new opponents.
+        angular.forEach(gameState.entry.opponents, function(o) {
+            if (o in opponentsjson) {
+                gameState.currentOpponents.push(opponentsjson[o]);
+            };
+        });
         // Apply any attack modifers gained/lost to gameState.
         if (gameState.entry.attack_modifier) {
             gameState.attackModifierTemp = gameState.entry.attack_modifier;
