@@ -303,6 +303,91 @@
             }
         ]
     },
+    "280": {
+        "description": "The Ogre tramples the wooden rail, and raises its hammer to smash you as you land nimbly before it. A volley of arrows from the pirate ship's stern-castle whistles above you.",
+        "image": "232.png",
+        "options": [
+            {
+                "prereq": null,
+                "text": "Try to deliver a Winged Horse kick?",
+                "entry": 332,
+                "type": "offence",
+                "action": "kick"
+            },
+            {
+                "prereq": null,
+                "text": "Attempt the Iron Fist punch?",
+                "entry": 310,
+                "type": "offence",
+                "action": "punch"
+            },
+            {
+                "prereq": null,
+                "text": "Slide across the deck and use the Dragon's Tail throw?",
+                "entry": 345,
+                "type": "offence",
+                "action": "throw"
+            }
+        ]
+    },
+    "310": {
+        "description": "Your clenched fist audibly parts the air as you drive it towards the Ogre's body. He tries to crush you with his spiked hammer.",
+        "image": "232.png",
+        "player_defence": 8,
+        "victory": 360,
+        "options": [
+            {
+                "prereq": null,
+                "text": "Spin sideways and use the Winged Horse kick?",
+                "entry": 332,
+                "type": "offence",
+                "action": "kick"
+            },
+            {
+                "prereq": null,
+                "text": "Sweep the Ogre's legs from under him with Dragon's Tail throw?",
+                "entry": 345,
+                "type": "offence",
+                "action": "throw"
+            },
+            {
+                "prereq": null,
+                "text": "Use the Iron Fist punch again?",
+                "entry": 310,
+                "type": "offence",
+                "action": "punch"
+            }
+        ]
+    },
+    "332": {
+        "description": "You spin and drive the outside of your foot towards the Ogre's purple-veined throat as it tries to swat you aside with its hammer.",
+        "image": "232.png",
+        "player_defence": 7,
+        "victory": 360,
+        "options": [
+            {
+                "prereq": null,
+                "text": "Use the Iron Fist punch?",
+                "entry": 310,
+                "type": "offence",
+                "action": "punch"
+            },
+            {
+                "prereq": null,
+                "text": "Sweep the Ogre's legs from under him with Dragon's Tail throw?",
+                "entry": 345,
+                "type": "offence",
+                "action": "throw"
+            },
+            {
+                "prereq": null,
+                "text": "Kick again?",
+                "entry": 332,
+                "type": "offence",
+                "action": "kick"
+            }
+        ]
+    },
     "380": {
         "description": "The arrow reaches you as you are in mid-air between the rigging and the deck but you whip your hand up and snatch it out of the air inches before your chest, and throw it aside. The Ogre, enraged, raises its spiked hammer to smash you.",
         "image": "232.png",
@@ -317,7 +402,7 @@
             {
                 "prereq": null,
                 "text": "Attempt the Iron Fist punch?",
-                "entry": 332,
+                "entry": 310,
                 "type": "offence",
                 "action": "punch"
             },
