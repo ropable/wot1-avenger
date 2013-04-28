@@ -102,7 +102,7 @@ function NewGameCtrl($scope, $http, localStorageService, Story, Items, Opponents
     $scope.beginGame = function() {
         localStorageService.clearAll();
         // Set starting entry number.
-        gameState.currentEntry = '191';
+        gameState.currentEntry = '232';
         gameState.endurance = 20;
         // Get starting items.
         angular.forEach(itemsjson, function(item) {
@@ -148,6 +148,8 @@ function StoryCtrl($scope, $http, localStorageService, gameState, Story, Items, 
         gameState.entry = storyjson[option.entry.toString()];
         gameState.entryText = textMarkup(gameState.entry.description);
         gameState.hasEntryImage = 'image' in gameState.entry;
+        var actionText = '';
+        gameState.actions = [];
         // Set options for which the prerequisites are met.
         validEntryChoices(gameState);
         // Add any new opponents.
@@ -160,8 +162,17 @@ function StoryCtrl($scope, $http, localStorageService, gameState, Story, Items, 
         if (gameState.entry.attack_modifier) {
             gameState.attackModifierTemp = gameState.entry.attack_modifier;
         };
-        var actionText = '';
-        gameState.actions = [];
+        // Apply damage to opponents or player.
+        if (gameState.entry.damage_opponent) {
+            angular.forEach(gameState.entry.damage_opponent, function(name) {
+                angular.forEach(gameState.currentOpponents, function(opp) {
+                    if (name[0] == opp.name) {
+                        var damage = dieRoll(name[1][0]) + name[1][1];
+                        opp.endurance -= damage;
+                    };
+                });
+            });
+        };
         // Handle different types of options.
         // type == null indicates a change of entry (no action).
         if (option.type == 'offence') {  // Offence can be punch, kick or throw.

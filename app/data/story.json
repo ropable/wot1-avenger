@@ -272,6 +272,28 @@
             }
         ]
     },
+    "257": {
+        "description": "Your Shuriken glints in the sun as it hurtles towards its mark in the Ogre's chest. As you leap down from the rigging a volley of arrows is let loose from the stern castle of the Reaver's ship. The Ogre grunts with pain as the Shuriken lodges in its chest.\n\nOne of the pirate's arrows is coming at you.",
+        "image": "232.png",
+        "damage_opponent": [["Ogre pirate", [1, 0]]],
+        "options": [
+            {
+                "prereq": [
+                    "skill",
+                    "Arrow Cutting"
+                ],
+                "text": "Deflect the arrow [Arrow Cutting]?",
+                "entry": 380,
+                "type": null
+            },
+            {
+                "prereq": null,
+                "text": "Continue",
+                "entry": 396,
+                "type": null
+            }
+        ]
+    },
     "death": {
         "description": "You have been killed before completing your quest and recovering the Scrolls of Kettsuin.\n\n[Start a new game](#/new-game).",
         "options": []
