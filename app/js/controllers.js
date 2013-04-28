@@ -32,6 +32,11 @@ var validEntryChoices = function(gameState) {
                     gameState.options.push(option);
                 };
             });
+        } else if (option.prereq && option.prereq[0] == 'item') {
+            // Exception: test if you have any Shuriken left.
+            if (option.prereq[1] == 'Shuriken' && gameState.shuriken > 0) {
+                gameState.options.push(option);
+            }
         } else {
             // No prerequesites.
             gameState.options.push(option);
@@ -96,7 +101,8 @@ function NewGameCtrl($scope, $http, localStorageService, Story, Items, Opponents
 
     $scope.beginGame = function() {
         localStorageService.clearAll();
-        gameState.currentEntry = '1';
+        // Set starting entry number.
+        gameState.currentEntry = '191';
         gameState.endurance = 20;
         // Get starting items.
         angular.forEach(itemsjson, function(item) {
