@@ -112,6 +112,7 @@ function NewGameCtrl($scope, $http, localStorageService, Story, Opponents, $loca
                 gameState.currentOpponents.push(opponentsjson[o]);
             };
         });
+        gameState.inProgress = true;
         // Persist gameState using localstorage.
         persistGameState(gameState, localStorageService);
         $location.path("/story");
@@ -236,9 +237,10 @@ function StoryCtrl($scope, $http, localStorageService, gameState, Story, Opponen
                     gameState.actions.push(['You have been defeated!']);
                     if (gameState.entry.defeat) {  // Defeat leads to another entry.
                         gameState.options = [{"text": "Continue", "entry": gameState.entry.defeat}];
-                    } else {  // Defeat == death,
+                    } else {  // Defeat results in death.
                         gameState.options = [{"text": "Continue", "entry": 'death'}];
                         gameState.endurance = 0;
+                        gameState.inProgress = false;
                     };
                 };
             });  // End opponent offence.
