@@ -408,6 +408,23 @@
             }
         ]
     },
+    "360": {
+        "description": "The Ogre buckles at the knees and topples backwards between the two ships, a plume of spray rising from where he plummets into the water. Looking quickly around you can see that the Reavers, with their ear-rings and scimitars are more than a match for the crew of the Aquamarin. Glaivas' swordsmanship is startling but they are slowly penning him in. With a punishing sidekick you knock a new attacker to the floor, where he lies inert. Another huge wart-faced Half-orc lunges at you with his cutlass. With incredible speed, you clap your hands together, trapping the blade between them, inches from your face. He has time to gape in astonishment before you smash the top of your right foot into his temple.",
+        "options": [
+            {
+                "prereq": null,
+                "text": "Try to fight your way through to Glaivas?",
+                "entry": 371,
+                "type": null
+            },
+            {
+                "prereq": null,
+                "text": "Jump to the Reavers' ship to attack the pirate Captain?",
+                "entry": 352,
+                "type": null
+            }
+        ]
+    },
     "380": {
         "description": "The arrow reaches you as you are in mid-air between the rigging and the deck but you whip your hand up and snatch it out of the air inches before your chest, and throw it aside. The Ogre, enraged, raises its spiked hammer to smash you.",
         "image": "232.png",
