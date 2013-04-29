@@ -21,27 +21,37 @@ var validEntryChoices = function(gameState) {
     // all of the prerequisites are met.
     // Assumes that gameState.entry has been set.
     gameState.options = [];
-    angular.forEach(gameState.entry.options, function(option) {
-        if (gameState.cheatMode) {
-            // If we're cheating, enable all options always.
-            gameState.options.push(option);
-        } else if (option.prereq && option.prereq[0] == 'skill') {
-            // Iterate over the chosenSkills array
-            angular.forEach(gameState.skills, function(skill) {
-                if (option.prereq[1] == skill.name) {
-                    gameState.options.push(option);
-                };
-            });
-        } else if (option.prereq && option.prereq[0] == 'item') {
-            // Exception: test if you have any Shuriken left.
-            if (option.prereq[1] == 'Shuriken' && gameState.shuriken > 0) {
-                gameState.options.push(option);
-            }
+    // Handle Fate rolls.
+    if (gameState.entry.fate_roll) {
+        if ((dieRoll(2) + gameState.fate) > 7 || gameState.cheatMode) {
+            // First option is always the success.
+            gameState.options.push(gameState.entry.options[0]);
         } else {
-            // No prerequesites.
-            gameState.options.push(option);
+            gameState.options.push(gameState.entry.options[1]);
         };
-    });
+    } else {
+        angular.forEach(gameState.entry.options, function(option) {
+            if (gameState.cheatMode) {
+                // If we're cheating, enable all options always.
+                gameState.options.push(option);
+            } else if (option.prereq && option.prereq[0] == 'skill') {
+                // Iterate over the chosenSkills array
+                angular.forEach(gameState.skills, function(skill) {
+                    if (option.prereq[1] == skill.name) {
+                        gameState.options.push(option);
+                    };
+                });
+            } else if (option.prereq && option.prereq[0] == 'item') {
+                // Exception: test if you have any Shuriken left.
+                if (option.prereq[1] == 'Shuriken' && gameState.shuriken > 0) {
+                    gameState.options.push(option);
+                }
+            } else {
+                // No prerequesites.
+                gameState.options.push(option);
+            };
+        });
+    };
 };
 
 var persistGameState = function(gameState, localStorageService) {
@@ -102,7 +112,7 @@ function NewGameCtrl($scope, $http, localStorageService, Story, Items, Opponents
     $scope.beginGame = function() {
         localStorageService.clearAll();
         // Set starting entry number.
-        gameState.currentEntry = '232';
+        gameState.currentEntry = '352';
         gameState.endurance = 20;
         // Get starting items.
         angular.forEach(itemsjson, function(item) {

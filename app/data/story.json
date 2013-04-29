@@ -408,6 +408,24 @@
             }
         ]
     },
+    "352": {
+        "description": "You run a few steps along the Aquamarin's deck before leaping the rail and landing against the side of the pirate ship, hanging from the scuppers by your hands. You wait for a moment before edging your way, hand over hand, towards the red stern of the Watery Grave. Will Fate decide if one of the Reavers spotted you jumping onto their ship?",
+        "fate_roll": true,
+        "options": [
+            {
+                "prereq": null,
+                "text": "Fate smiles on you.",
+                "entry": 107,
+                "type": null
+            },
+            {
+                "prereq": null,
+                "text": "Fate turns her back on you.",
+                "entry": 97,
+                "type": null
+            }
+        ]
+    },
     "360": {
         "description": "The Ogre buckles at the knees and topples backwards between the two ships, a plume of spray rising from where he plummets into the water. Looking quickly around you can see that the Reavers, with their ear-rings and scimitars are more than a match for the crew of the Aquamarin. Glaivas' swordsmanship is startling but they are slowly penning him in. With a punishing sidekick you knock a new attacker to the floor, where he lies inert. Another huge wart-faced Half-orc lunges at you with his cutlass. With incredible speed, you clap your hands together, trapping the blade between them, inches from your face. He has time to gape in astonishment before you smash the top of your right foot into his temple.",
         "options": [
