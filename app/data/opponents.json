@@ -17,5 +17,15 @@
         "defence_throw": 8,
         "damage_mod": 0,
         "effects": null
+    },
+    "Buccaneer Captain": {
+        "name": "Buccaneer Captain",
+        "endurance": 12,
+        "damage": [1, 2],
+        "defence_punch": 6,
+        "defence_kick": 6,
+        "defence_throw": 6,
+        "damage_mod": 0,
+        "effects": null
     }
 }

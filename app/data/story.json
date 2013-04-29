@@ -154,6 +154,62 @@
         ],
         "description": "Gorobei has used the Iron Fist, punching you so hard in the back of the neck that you slump to the granite floor, senseless. A young village boy is pouring water onto your forehead when you regain your wits. A few of the younger acolytes murmur condolences as you rub your neck. An hour later, Gorobei returns from the robing chamber and you applaud with the others as he is ordained as a Grandmaster."
     },
+    "97": {
+        "description": "One of the buccaneers has seen you and he creeps along the deck of the Watery Grave, intent on severing your hands from your wrists with his cutlass. The faintest jingling of his many ear-rings alerts you and you nimbly vault over the rail onto the deck, and catch his arm with your left hand as he swings his cutlass at your head. Then you use the Whirlpool to throw him over the side.\n\nTurning, you run up the stairway to the stern castle from where the pirate Captain is directing his men. You bound up the last steps to appear from nowhere before him. He steps back in surprise but soon regains his composure. He is a large man, with a grizzled beard and gold armbands which cause the veins of his massive arms to stand out like cords.\n\nHe swings his morning star at you as you move in to attack.",
+        "opponents": [
+            "Buccaneer Captain"
+        ],
+        "options": [
+            {
+                "text": "Use the Leaping Tiger kick?",
+                "entry": 67,
+                "type": "offence",
+                "action": "kick"
+            },
+            {
+                "prereq": null,
+                "text": "Use the Cobra Strike punch?",
+                "entry": 77,
+                "type": "offence",
+                "action": "punch"
+            },
+            {
+                "prereq": null,
+                "text": "Use the Teeth of the Tiger throw?",
+                "entry": 87,
+                "type": "offence",
+                "action": "throw"
+            }
+        ]
+    },
+    "107": {
+        "description": "You swing up over the rail, unseen, and run up the stairway to the stern castle from where the pirate Captain is directing his men. You bound up the last steps, to appear from nowhere before him. He steps back in surprise but soon regains his composure. He is a large man, with a grizzled beard and gold armbands, which cause the veins of his massive arms to stand out like cords. He swings his morning star at you as you move in to attack.",
+        "opponents": [
+            "Buccaneer Captain"
+        ],
+        "options": [
+            {
+                "text": "Use the Leaping Tiger kick?",
+                "entry": 67,
+                "type": "offence",
+                "action": "kick"
+            },
+            {
+                "prereq": null,
+                "text": "Use the Cobra Strike punch?",
+                "entry": 77,
+                "type": "offence",
+                "action": "punch"
+            },
+            {
+                "prereq": null,
+                "text": "Use the Teeth of the Tiger throw?",
+                "entry": 87,
+                "type": "offence",
+                "action": "throw"
+            }
+        ]
+    },
     "110": {
         "description": "Your last blow sent Gorobei tumbling senseless to the granite floor. A ripple of applause greets your victory and the Grandmaster of the Dawn compliments you on your fighting prowess and beckons you into the robing chamber. You step beyond the Temple Hall through silken drapes into a small dark room, completely bare of furnishing save for two enormous copper chests. Incense is burning in a censer which swings from the ceiling like a pendulum. The room is lit by white candles.\n\nYou kneel on the rush matting facing the three Grandmasters who stare ahead, unseeing, waiting for you to break the silence which you are determined to keep. After an hour-candle has sputtered its last, during which time none of you has moved so much as a muscle, the Grandmaster of the Dawn looks into your eyes and says, 'Kwon knows that you desire in your heart to serve him but I must ask you two questions. Do you truly desire to serve Kwon above all other things or do you desire to avenge the death of your foster-father, Naijishi, more even than to serve your God? What should a Ninja fear most - the failure of a mission or capture by an enemy who will use torture to gain secrets?'\n\nYou know that in your heart of hearts you would rather avenge Naijishi than anything else in Orb but a Grandmaster should dedicate his life to Kwon. As for the second question, you can only let your good sense guide you.",
         "options": [
@@ -439,6 +495,17 @@
                 "prereq": null,
                 "text": "Jump to the Reavers' ship to attack the pirate Captain?",
                 "entry": 352,
+                "type": null
+            }
+        ]
+    },
+    "371": {
+        "description": "You fight on, felling two more of the swarthy buccaneers. But the crew are rapidly being overpowered, some fools are even surrendering. You are surrounded but no one can close with you past the flashing blows of your fists and feet. Suddenly one of them looks above you and grins.\n\nTurning your eyes to the heavens you see the rigging collapsing on you. One of them has shinned up the mast and cut the rigging down. You can hardly move beneath it and a torrent of pirate bodies bears you, struggling, to the ground. You are carried below. Your Ninja equipment is taken from you and you are roped to one of the Aquamarin’s oars.",
+        "options": [
+            {
+                "prereq": null,
+                "text": "Continue",
+                "entry": 19,
                 "type": null
             }
         ]
