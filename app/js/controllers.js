@@ -112,7 +112,7 @@ function NewGameCtrl($scope, $http, localStorageService, Story, Items, Opponents
     $scope.beginGame = function() {
         localStorageService.clearAll();
         // Set starting entry number.
-        gameState.currentEntry = '360';
+        gameState.currentEntry = '352';
         gameState.endurance = 20;
         // Get starting items.
         angular.forEach(itemsjson, function(item) {
@@ -168,6 +168,10 @@ function StoryCtrl($scope, $http, localStorageService, gameState, Story, Items, 
                 gameState.currentOpponents.push(opponentsjson[o]);
             };
         });
+        // Set combat timer, if required.
+        if (gameState.entry.combat_timer) {
+            gameState.combatTimer = gameState.entry.combat_timer;
+        };
         // Apply any attack modifers gained/lost to gameState.
         if (gameState.entry.attack_modifier) {
             gameState.attackModifierTemp = gameState.entry.attack_modifier;
@@ -175,9 +179,7 @@ function StoryCtrl($scope, $http, localStorageService, gameState, Story, Items, 
         // Apply damage to opponents or player.
         if (gameState.entry.damage_opponent) {
             angular.forEach(gameState.entry.damage_opponent, function(damage) {
-                console.log(damage);
                 angular.forEach(gameState.currentOpponents, function(opp) {
-                    console.log(opp);
                     if (damage[0] == opp.name) {
                         // Damage might be random, or fixed.
                         if (damage[1] == 'random') {
@@ -211,6 +213,10 @@ function StoryCtrl($scope, $http, localStorageService, gameState, Story, Items, 
         if (option.type == 'offence') {  // Offence can be punch, kick or throw.
             // TODO: allow player to choose a target if several exist.
             var target = gameState.currentOpponents[0];
+            // Decrement combat timer, if required.
+            if (gameState.combatTimer) {
+                gameState.combatTimer -= 1;
+            };
             if (option.action == 'punch') {
                 // Check 2d6 + attack modifer against target defence.
                 if ((dieRoll(2) + gameState.punch + gameState.attackModifierTemp) > target.defence_punch) {
@@ -225,11 +231,11 @@ function StoryCtrl($scope, $http, localStorageService, gameState, Story, Items, 
                     };
                     gameState.currentOpponents[0].endurance -= damage;
                     actionText = 'You punch {0} and hit for {1} damage!';
-                    actionText = actionText.replace('{0}', target.name);
+                    actionText = actionText.replace('{0}', target.action_desc);
                     actionText = actionText.replace('{1}', damage.toString());
                     gameState.actions.push([actionText])
                 } else {
-                    actionText = 'You punch at {0}...and miss!'.replace('{0}', target.name);
+                    actionText = 'You punch at {0}...and miss!'.replace('{0}', target.action_desc);
                     gameState.actions.push([actionText])
                 };
             } else if (option.action == 'kick') {
@@ -246,22 +252,29 @@ function StoryCtrl($scope, $http, localStorageService, gameState, Story, Items, 
                     };
                     gameState.currentOpponents[0].endurance -= damage;
                     actionText = 'You kick {0} and hit for {1} damage!';
-                    actionText = actionText.replace('{0}', target.name);
+                    actionText = actionText.replace('{0}', target.action_desc);
                     actionText = actionText.replace('{1}', damage.toString());
                     gameState.actions.push([actionText])
                 } else {
-                    actionText = 'You kick at {0}...and miss!'.replace('{0}', target.name);
+                    actionText = 'You kick at {0}...and miss!'.replace('{0}', target.action_desc);
                     gameState.actions.push([actionText])
                 };
             } else {
                 if ((dieRoll(2) + gameState.throw) > target.defence_throw) {
-                    actionText = 'You throw {0} to the ground!'.replace('{0}', target.name);
-                    gameState.attackModifierTemp = 2;  // Next attack will be easier.
-                    gameState.currentOpponents[0].damage_mod = 2;  // Next attack will do more damage.
-                    gameState.currentOpponents[0].effects = 'thrown';  // Thrown opponents can't attack.
-                    gameState.actions.push([actionText])
+                    // Occasionally, throws can result in your one-shotting opponents.
+                    if (gameState.entry.instakill) {
+                        gameState.actions.push([gameState.entry.instakill_desc]);
+                        gameState.currentOpponents[0].endurance = 0;
+                        gameState.options = [];
+                    } else {
+                        actionText = 'You throw {0} to the ground!'.replace('{0}', target.action_desc);
+                        gameState.attackModifierTemp = 2;  // Next attack will be easier.
+                        gameState.currentOpponents[0].damage_mod = 2;  // Next attack will do more damage.
+                        gameState.currentOpponents[0].effects = 'thrown';  // Thrown opponents can't attack.
+                        gameState.actions.push([actionText]);
+                    };
                 } else {
-                    actionText = 'You try to throw {0}...and fail!'.replace('{0}', target.name);
+                    actionText = 'You try to throw {0}...and fail!'.replace('{0}', target.action_desc);
                     gameState.actions.push([actionText])
                 };
             };
@@ -286,23 +299,27 @@ function StoryCtrl($scope, $http, localStorageService, gameState, Story, Items, 
             // Opponent offence.
             actionText = '';
             angular.forEach(gameState.currentOpponents, function(o) {
-                if (o.effects != 'thrown') {  // Thrown opponents can't attack.
+                if (o.effects == 'thrown') {  // Thrown opponents can't attack.
                     o.effects = null;
                 } else {
                     // Check 2d6 against player_defence.
                     if (dieRoll(2) > gameState.entry.player_defence && !gameState.cheatMode) {
                         var damage = (dieRoll(o.damage[0]) + o.damage[1]);
-                        actionText += '{0} hits you for {1} damage!'.replace('{0}', o.name);
+                        actionText += '{0} hits you for {1} damage!'.replace('{0}', o.action_desc);
                         actionText = actionText.replace('{1}', damage.toString());
                         gameState.endurance -= damage;
                         // Push to actions: [actionText, true, damage, player_defence]
                         gameState.actions.push([actionText, true, damage, gameState.entry.player_defence])
                     } else {
-                        actionText += '{0} tries to hit you...but misses!'.replace('{0}', o.name);
+                        actionText += '{0} tries to hit you...but misses!'.replace('{0}', o.action_desc);
                         gameState.actions.push([actionText])
                     };
                 };
-                // Handle player defeat.
+                // Handle player defeat (endurance/combat timer).
+                if (gameState.combatTimer == 0 && gameState.currentOpponents.length > 0) {
+                    gameState.actions.push(['You have run out of time!']);
+                    gameState.options = [{"text": "Continue", "entry": gameState.entry.defeat}];
+                };
                 if (gameState.endurance <= 0) {
                     gameState.actions.push(['You have been defeated!']);
                     if (gameState.entry.defeat) {  // Defeat leads to another entry.
