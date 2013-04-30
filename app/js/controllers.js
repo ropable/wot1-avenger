@@ -112,7 +112,7 @@ function NewGameCtrl($scope, $http, localStorageService, Story, Items, Opponents
     $scope.beginGame = function() {
         localStorageService.clearAll();
         // Set starting entry number.
-        gameState.currentEntry = '352';
+        gameState.currentEntry = '232';
         gameState.endurance = 20;
         // Get starting items.
         angular.forEach(itemsjson, function(item) {
@@ -219,7 +219,7 @@ function StoryCtrl($scope, $http, localStorageService, gameState, Story, Items, 
             };
             if (option.action == 'punch') {
                 // Check 2d6 + attack modifer against target defence.
-                if ((dieRoll(2) + gameState.punch + gameState.attackModifierTemp) > target.defence_punch) {
+                if ((dieRoll(2) + gameState.punch + gameState.attackModifierTemp) > target.defence_punch || gameState.cheatMode) {
                     var damage = dieRoll(1);
                     // Handle Inner Force modifer.
                     if (useInnerForce) {
@@ -240,7 +240,7 @@ function StoryCtrl($scope, $http, localStorageService, gameState, Story, Items, 
                 };
             } else if (option.action == 'kick') {
                 // Check 2d6 + attack modifer against target defence.
-                if ((dieRoll(2) + gameState.kick + gameState.attackModifierTemp) > target.defence_kick) {
+                if ((dieRoll(2) + gameState.kick + gameState.attackModifierTemp) > target.defence_kick || gameState.cheatMode) {
                     var damage = dieRoll(1) + 2;  // Kicks do more damage.
                     // Handle Inner Force modifer.
                     if (useInnerForce) {
@@ -260,7 +260,7 @@ function StoryCtrl($scope, $http, localStorageService, gameState, Story, Items, 
                     gameState.actions.push([actionText])
                 };
             } else {
-                if ((dieRoll(2) + gameState.throw) > target.defence_throw) {
+                if ((dieRoll(2) + gameState.throw) > target.defence_throw || gameState.cheatMode) {
                     // Occasionally, throws can result in your one-shotting opponents.
                     if (gameState.entry.instakill) {
                         gameState.actions.push([gameState.entry.instakill_desc]);

@@ -111,6 +111,26 @@
         ],
         "description": "You crouch as if to wrestle with Gorobei who tenses, ready to throw his extra weight against yours, but you jab unexpectedly towards his midriff. Gorobei's reach is long and he is skilled in punching and blocking, though he is not as fast as you."
     },
+    "45": {
+        "description": "You duck the Captain’s swirling morning star, then dodge as he tries to surprise you by driving the heavy gold rings on his left fist into your face. Before you can attack him again a chain net descends upon you and you fall, struggling, to the boards. Two buccaneers had seen you attacking their Captain and being his favourites, they rush to his aid, flinging a chain net from the stairway.\n\nThey tie you up and drag you back to the Aquamarin where your Ninja tools are taken and you are roped to an oar.",
+        "options": [
+            {
+                "text": "Continue",
+                "entry": 19,
+                "type": null
+            }
+        ]
+    },
+    "58": {
+        "description": "The buccaneer Captain falls to the planks, dead. Two of his men are on the stairway behind you but seeing that you have killed the man they feared single-handed, they back away, calling the news to the other reavers. The pirates abandon the Aquamarin, returning to the Watery Grave, and begin fighting in earnest to deade who shall become the new tyrant captain.\n\nYou dive from the stern castle into the sea and swim strongly towards the Aquamarin, which is already under way. Your lungs bursting, you catch onto a moving oar at last, and haul yourself up over the side.",
+        "options": [
+            {
+                "text": "Continue",
+                "entry": 26,
+                "type": null
+            }
+        ]
+    },
     "61": {
         "image": "1.png",
         "options": [
@@ -139,13 +159,15 @@
                 "text": "Use a Cobra Strike punch?",
                 "entry": 77,
                 "type": "offence",
-                "action": "punch"
+                "action": "punch",
+                "inner_force": true
             },
             {
                 "text": "Kick again?",
                 "entry": 67,
                 "type": "offence",
-                "action": "kick"
+                "action": "kick",
+                "inner_force": true
             }
         ]
     },
@@ -165,13 +187,15 @@
                 "text": "Use the Leaping Tiger kick?",
                 "entry": 67,
                 "type": "offence",
-                "action": "kick"
+                "action": "kick",
+                "inner_force": true
             },
             {
                 "text": "Punch again?",
                 "entry": 77,
                 "type": "offence",
-                "action": "punch"
+                "action": "punch",
+                "inner_force": true
             }
         ]
     },
@@ -216,13 +240,15 @@
                 "text": "Use the Cobra Strike punch?",
                 "entry": 77,
                 "type": "offence",
-                "action": "punch"
+                "action": "punch",
+                "inner_force": true
             },
             {
                 "text": "Use the Leaping Tiger kick?",
                 "entry": 67,
                 "type": "offence",
-                "action": "kick"
+                "action": "kick",
+                "inner_force": true
             }
         ]
     },
@@ -278,17 +304,17 @@
                 "text": "Use the Leaping Tiger kick?",
                 "entry": 67,
                 "type": "offence",
-                "action": "kick"
+                "action": "kick",
+                "inner_force": true
             },
             {
-                "prereq": null,
                 "text": "Use the Cobra Strike punch?",
                 "entry": 77,
                 "type": "offence",
-                "action": "punch"
+                "action": "punch",
+                "inner_force": true
             },
             {
-                "prereq": null,
                 "text": "Use the Teeth of the Tiger throw?",
                 "entry": 87,
                 "type": "offence",
@@ -450,21 +476,20 @@
         "image": "232.png",
         "options": [
             {
-                "prereq": null,
                 "text": "Try to deliver a Winged Horse kick?",
                 "entry": 332,
                 "type": "offence",
-                "action": "kick"
+                "action": "kick",
+                "inner_force": true
             },
             {
-                "prereq": null,
                 "text": "Attempt the Iron Fist punch?",
                 "entry": 310,
                 "type": "offence",
-                "action": "punch"
+                "action": "punch",
+                "inner_force": true
             },
             {
-                "prereq": null,
                 "text": "Slide across the deck and use the Dragon's Tail throw?",
                 "entry": 345,
                 "type": "offence",
@@ -479,25 +504,24 @@
         "victory": 360,
         "options": [
             {
-                "prereq": null,
                 "text": "Spin sideways and use the Winged Horse kick?",
                 "entry": 332,
                 "type": "offence",
-                "action": "kick"
+                "action": "kick",
+                "inner_force": true
             },
             {
-                "prereq": null,
                 "text": "Sweep the Ogre's legs from under him with Dragon's Tail throw?",
                 "entry": 345,
                 "type": "offence",
                 "action": "throw"
             },
             {
-                "prereq": null,
                 "text": "Use the Iron Fist punch again?",
                 "entry": 310,
                 "type": "offence",
-                "action": "punch"
+                "action": "punch",
+                "inner_force": true
             }
         ]
     },
@@ -508,25 +532,24 @@
         "victory": 360,
         "options": [
             {
-                "prereq": null,
                 "text": "Use the Iron Fist punch?",
                 "entry": 310,
                 "type": "offence",
-                "action": "punch"
+                "action": "punch",
+                "inner_force": true
             },
             {
-                "prereq": null,
                 "text": "Sweep the Ogre's legs from under him with Dragon's Tail throw?",
                 "entry": 345,
                 "type": "offence",
                 "action": "throw"
             },
             {
-                "prereq": null,
                 "text": "Kick again?",
                 "entry": 332,
                 "type": "offence",
-                "action": "kick"
+                "action": "kick",
+                "inner_force": true
             }
         ]
     },
@@ -569,16 +592,14 @@
         ]
     },
     "360": {
-        "description": "The Ogre buckles at the knees and topples backwards between the two ships, a plume of spray rising from where he plummets into the water. Looking quickly around you can see that the Reavers, with their ear-rings and scimitars are more than a match for the crew of the Aquamarin. Glaivas' swordsmanship is startling but they are slowly penning him in. With a punishing sidekick you knock a new attacker to the floor, where he lies inert. Another huge wart-faced Half-orc lunges at you with his cutlass. With incredible speed, you clap your hands together, trapping the blade between them, inches from your face. He has time to gape in astonishment before you smash the top of your right foot into his temple.",
+        "description": "The Ogre buckles at the knees and topples backwards between the two ships, a plume of spray rising from where he plummets into the water. Looking quickly around you can see that the Reavers, with their ear-rings and scimitars are more than a match for the crew of the Aquamarin. Glaivas' swordsmanship is startling but they are slowly penning him in.\n\nWith a punishing sidekick you knock a new attacker to the floor, where he lies inert. Another huge wart-faced Half-orc lunges at you with his cutlass. With incredible speed, you clap your hands together, trapping the blade between them, inches from your face. He has time to gape in astonishment before you smash the top of your right foot into his temple.",
         "options": [
             {
-                "prereq": null,
                 "text": "Try to fight your way through to Glaivas?",
                 "entry": 371,
                 "type": null
             },
             {
-                "prereq": null,
                 "text": "Jump to the Reavers' ship to attack the pirate Captain?",
                 "entry": 352,
                 "type": null
@@ -589,7 +610,6 @@
         "description": "You fight on, felling two more of the swarthy buccaneers. But the crew are rapidly being overpowered, some fools are even surrendering. You are surrounded but no one can close with you past the flashing blows of your fists and feet. Suddenly one of them looks above you and grins.\n\nTurning your eyes to the heavens you see the rigging collapsing on you. One of them has shinned up the mast and cut the rigging down. You can hardly move beneath it and a torrent of pirate bodies bears you, struggling, to the ground. You are carried below. Your Ninja equipment is taken from you and you are roped to one of the Aquamarin’s oars.",
         "options": [
             {
-                "prereq": null,
                 "text": "Continue",
                 "entry": 19,
                 "type": null
