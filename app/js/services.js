@@ -46,5 +46,6 @@ wot1app.factory('gameState', function($http) {
     gameState.currentOpponents = [];
     gameState.actionText = null;
     gameState.attackModifierTemp = 0;
+    gameState.combatTimer = null;
     return gameState;
 });

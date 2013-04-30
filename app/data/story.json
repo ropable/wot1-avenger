@@ -69,6 +69,16 @@
         ],
         "description": "You step forward as if to punch, then, leaping in the air you lash the ball of your foot toward Gorobei's head with a speed that defies belief. Gorobei, although not quick, knows your style of combat."
     },
+    "34": {
+        "description": "Crash! The Captain’s head hits the deck on the way down and his skull is staved in before the waves engulf him. The news spreads quickly through the reavers and they break off the battle, jumping back to the Watery Death and begin fighting in earnest to decide who shall become the new tyrant captain.\n\nYou dive from the stern castle and swim strongly towards the Aquamarin which is already under way. Your lungs bursting, you catch onto a moving oar at last, and haul yourself up over the side.",
+        "options": [
+            {
+                "text": "Contine",
+                "entry": 26,
+                "type": null
+            }
+        ]
+    },
     "35": {
         "image": "1.png",
         "opponent_offence": "punch",
@@ -113,6 +123,58 @@
         ],
         "description": "You raise your foot as if to kick Gorobei in the chest, but spin to his side instead and take hold of his arm to throw him over your hip. You rapidly learn your mistake, however, as your grip slides on the oil which covers him and he uses his skill as a wrestler to grab you and lock your arm behind your back whilst he grips you around the throat. His strength is enormous. You try to somersault backwards over him and break the grip but he is ready for you and pins you to the floor before delivering a heavy blow."
     },
+    "67": {
+        "description": "Before the morning start makes contact you snap your leg upwards, driving the ball of your foot at the Captain's face.",
+        "victory": 58,
+        "defeat": 45,
+        "player_defence": 7,
+        "options": [
+            {
+                "text": "Try the Teeth of the Tiger throw?",
+                "entry": 87,
+                "type": "offence",
+                "action": "throw"
+            },
+            {
+                "text": "Use a Cobra Strike punch?",
+                "entry": 77,
+                "type": "offence",
+                "action": "punch"
+            },
+            {
+                "text": "Kick again?",
+                "entry": 67,
+                "type": "offence",
+                "action": "kick"
+            }
+        ]
+    },
+    "77": {
+        "description": "Before the morning star connects you drive your fingers at the evil Captain's throat.",
+        "victory": 58,
+        "defeat": 45,
+        "player_defence": 8,
+        "options": [
+            {
+                "text": "Try the Teeth of the Tiger throw?",
+                "entry": 87,
+                "type": "offence",
+                "action": "throw"
+            },
+            {
+                "text": "Use the Leaping Tiger kick?",
+                "entry": 67,
+                "type": "offence",
+                "action": "kick"
+            },
+            {
+                "text": "Punch again?",
+                "entry": 77,
+                "type": "offence",
+                "action": "punch"
+            }
+        ]
+    },
     "80": {
         "image": "1.png",
         "description": "You step forward to attack but then somersault suddenly, landing at Gorobei's side as his fist flails the air at the spot from which you leapt. He turns but you have surprised him and will find it easier to attack him than if you merely stood before him to trade blows.",
@@ -142,6 +204,28 @@
             }
         ]
     },
+    "87": {
+        "description": "Ducking beneath the flailing chain and ball you jump into the air, and try to clamp your feet around his neck and, by twisting vigorously, throw him into the sea.",
+        "victory": 34,
+        "defeat": 45,
+        "player_defence": 7,
+        "instakill": true,
+        "instakill_desc": "You whip him over the edge of the stern castle and into the sea!",
+        "options": [
+            {
+                "text": "Use the Cobra Strike punch?",
+                "entry": 77,
+                "type": "offence",
+                "action": "punch"
+            },
+            {
+                "text": "Use the Leaping Tiger kick?",
+                "entry": 67,
+                "type": "offence",
+                "action": "kick"
+            }
+        ]
+    },
     "95": {
         "opponent_remove": "Gorobei",
         "options": [
@@ -159,6 +243,7 @@
         "opponents": [
             "Buccaneer Captain"
         ],
+        "combat_timer": 4,
         "options": [
             {
                 "text": "Use the Leaping Tiger kick?",
@@ -187,6 +272,7 @@
         "opponents": [
             "Buccaneer Captain"
         ],
+        "combat_timer": 4,
         "options": [
             {
                 "text": "Use the Leaping Tiger kick?",
