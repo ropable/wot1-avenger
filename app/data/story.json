@@ -69,6 +69,26 @@
         ],
         "description": "You step forward as if to punch, then, leaping in the air you lash the ball of your foot toward Gorobei's head with a speed that defies belief. Gorobei, although not quick, knows your style of combat."
     },
+    "19": {
+        "description": "The Aquamarin’s huge oars are each manned by two. At your side a rower, until recently free but now roped by the reavers to the oar shaft, stares blankly at you. You can tell by the white scars on his back that he is one of the two who has been in slave galleys before. His upper body is huge, his chest unnaturally deep and his legs squat and tapering to small feet, giving him the appearance of a toad. He tells you that he had been enslaved as a boy and knows no other life than that of the oar deck. He groans quietly at the savage twist of Fate that has befallen him and tells you that he was the only one on his last slave ship to live longer than a year.\n\nThe buccaneers appoint an Overseer and two whip hands to patrol the Aquamarin's oar deck. It seems they are going to sell her and her crew at some lawless port.",
+        "options": [
+            {
+                "prereq": [
+                    "skill",
+                    "Escapology"
+                ],
+                "text": "Wait until night, and then make your escape [Escapology]",
+                "entry": 126,
+                "type": null
+            },
+            {
+                "prereq": null,
+                "text": "Continue",
+                "entry": 115,
+                "type": null
+            }
+        ]
+    },
     "34": {
         "description": "Crash! The Captain’s head hits the deck on the way down and his skull is staved in before the waves engulf him. The news spreads quickly through the reavers and they break off the battle, jumping back to the Watery Death and begin fighting in earnest to decide who shall become the new tyrant captain.\n\nYou dive from the stern castle and swim strongly towards the Aquamarin which is already under way. Your lungs bursting, you catch onto a moving oar at last, and haul yourself up over the side.",
         "options": [
@@ -347,6 +367,17 @@
                 "prereq": null,
                 "text": "'I desire to serve Kwon above all else and I fear torture above all.'",
                 "entry": 128,
+                "type": null
+            }
+        ]
+    },
+    "115": {
+        "description": "After nightfall you strain at your bonds but the only reward for your efforts is the kiss of the whip. Exhausted, you fall asleep before dawn and awake to find iron manacles around your wrists and a girdle around your middle by which you are chained to the oar. They are heavy and unbreakable and will not be struck off until your body is spent and lifeless after years at the oar. You have failed.",
+        "options": [
+            {
+                "prereq": null,
+                "text": "Continue",
+                "entry": "death",
                 "type": null
             }
         ]
@@ -683,7 +714,7 @@
         ]
     },
     "death": {
-        "description": "You have been killed before completing your quest and recovering the Scrolls of Kettsuin.\n\n[Start a new game](#/new-game).",
+        "description": "You have died before completing your quest and recovering the Scrolls of Kettsuin.\n\n[Start a new game](#/new-game).",
         "options": []
     }
 }
