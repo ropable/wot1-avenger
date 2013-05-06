@@ -48,5 +48,6 @@ wot1app.factory('gameState', function($http) {
     gameState.attackModifierTemp = 0;
     gameState.combatTimer = null;
     gameState.lost_equipment = [];
+    gameState.lost_shuriken = 0;
     return gameState;
 });
