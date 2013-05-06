@@ -112,7 +112,7 @@ function NewGameCtrl($scope, $http, localStorageService, Story, Items, Opponents
     $scope.beginGame = function() {
         localStorageService.clearAll();
         // Set starting entry number.
-        gameState.currentEntry = '19';
+        gameState.currentEntry = '360';
         gameState.endurance = 20;
         // Get starting items.
         angular.forEach(itemsjson, function(item) {
@@ -368,6 +368,17 @@ function StoryCtrl($scope, $http, localStorageService, gameState, Story, Items, 
             angular.forEach(gameState.entry.event_add, function(evt) {
                 gameState.events.push(evt);
             });
+        };
+        // Losing equipment (captured, etc).
+        if (gameState.entry.lose_equipment) {
+            // Place equipment in a holding variable.
+            gameState.lost_equipment = gameState.items;
+            gameState.items = [];
+        };
+        // Regaining equipment.
+        if (gameState.entry.regain_equipment) {
+            gameState.items = gameState.lost_equipment;
+            gameState.lost_equipment = [];
         };
         // HANDLING EVENTS END.
         persistGameState(gameState, localStorageService);
