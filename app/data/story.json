@@ -394,7 +394,7 @@
                 "entry": 153
             },
             {
-                "text": "Kick the door to smash it open?",
+                "text": "Smash the door open.",
                 "entry": 137
             }
         ]
@@ -407,6 +407,20 @@
                 "text": "Continue",
                 "entry": 191,
                 "type": null
+            }
+        ]
+    },
+    "137": {
+        "description": "You stand, legs apart, in front of the door, taking three slow deep breaths. Then when you are ready, you use the Iron Fist with a grunting cry as the Inner Force escapes you. There is a crash and the door flies off its hinges. You leap over it as it falls to the floor. The buccaneer Captain is inside having forsaken his ship for the comfort of the Aquarmarin. Woken from his sleep by the crash of the door he rolls off the bed, pulling his cutlass from under the pillow and tries to throw some blankets at you. You whip out a Shuriken and with a deft flick of the wrist, send it hurtling towards him before he can cry out.",
+        "shuriken_roll": 5,
+        "options": [
+            {
+                "text": "Continue",
+                "entry": 164
+            },
+            {
+                "text": "Continue",
+                "entry": 175
             }
         ]
     },
@@ -438,6 +452,24 @@
             {
                 "text": "Continue",
                 "entry": 26
+            }
+        ]
+    },
+    "164": {
+        "description": "The spinning Shuriken takes the pirate Captain in the throat and the shout which was on his lips dies to a bloody gurgle as he slumps lifeless to the planks. You shout the signal and the crew rush up from the oar deck whirling lengths of chain and the cutlasses of their guards. You lead the attack and the rum-sodden pirates are taken by surprise. Many jump into the sea, forgetting that their ship is a mile away in darkness. You are glad to see Glaivas, freed by one of the crew, despatching an ugly pirate who was proving troublesome. The few remaining alive surrender to him and he orders them put to the oar, for a taste of their own medicine. In the morning, you set sail again and make good speed.",
+        "options": [
+            {
+                "text": "Continue",
+                "entry": 26
+            }
+        ]
+    },
+    "175": {
+        "description": "The Captain shouts for help as the Shuriken is caught in the blankets and he throws them at you as you leap to attack. You cast them aside and duck a cutlass swipe before hearing a sound behind you. You whirl and block but are too late to catch the throwing knife of the Reaver's first mate. It lodges in your heart and you know no more.",
+        "options": [
+            {
+                "text": "Continue",
+                "entry": "death"
             }
         ]
     },

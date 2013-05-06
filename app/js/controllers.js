@@ -29,6 +29,14 @@ var validEntryChoices = function(gameState) {
         } else {
             gameState.options.push(gameState.entry.options[1]);
         };
+    // Handle Shuriken rolls.
+    } else if (gameState.entry.shuriken_roll) {
+        if (dieRoll(2) > gameState.entry.shuriken_roll || gameState.cheatMode) {
+            // First option is always the success.
+            gameState.options.push(gameState.entry.options[0]);
+        } else {
+            gameState.options.push(gameState.entry.options[1]);
+        };
     } else {
         angular.forEach(gameState.entry.options, function(option) {
             if (gameState.cheatMode) {
@@ -374,11 +382,15 @@ function StoryCtrl($scope, $http, localStorageService, gameState, Story, Items, 
             // Place equipment in a holding variable.
             gameState.lost_equipment = gameState.items;
             gameState.items = [];
+            gameState.lost_shuriken = gameState.shuriken;
+            gameState.shuriken = 0;
         };
         // Regaining equipment.
         if (gameState.entry.regain_equipment) {
             gameState.items = gameState.lost_equipment;
             gameState.lost_equipment = [];
+            gameState.shuriken = gameState.lost_shuriken;
+            gameState.lost_shuriken = 0;
         };
         // HANDLING EVENTS END.
         persistGameState(gameState, localStorageService);
