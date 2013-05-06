@@ -133,11 +133,11 @@
     },
     "45": {
         "description": "You duck the Captain’s swirling morning star, then dodge as he tries to surprise you by driving the heavy gold rings on his left fist into your face. Before you can attack him again a chain net descends upon you and you fall, struggling, to the boards. Two buccaneers had seen you attacking their Captain and being his favourites, they rush to his aid, flinging a chain net from the stairway.\n\nThey tie you up and drag you back to the Aquamarin where your Ninja tools are taken and you are roped to an oar.",
+        "lose_equipment": true,
         "options": [
             {
                 "text": "Continue",
-                "entry": 19,
-                "type": null
+                "entry": 19
             }
         ]
     },
@@ -146,8 +146,7 @@
         "options": [
             {
                 "text": "Continue",
-                "entry": 26,
-                "type": null
+                "entry": 26
             }
         ]
     },
@@ -382,6 +381,24 @@
             }
         ]
     },
+    "126": {
+        "description": "Using your Escapologist's skill you had tensed your body and held your limbs so that, though the buccaneers bound you tightly, when you relaxed the ropes were loosened. You wriggle and twist, using the amazing suppleness of your body to loosen the bonds further. Dislocating a shoulder, you succeed in freeing an arm and then quickly dispose of the ropes which confine you. In the darkness of the oar deck you are thankful for the diet which has given you unusual powers of seeing in the dark. The duty guard doesn't hear you as you steal past the sleeping bodies at the oars, until you are close enough to wrap a handy piece of chain around his neck and choke him into unconsciousness.\n\nHe crumples without a sound and you step over his body to the locker where they have stowed your Ninja tools and retrieve them. One by one you free the crew and tell them to wait quietly for your signal, whilst you go to the main cabin to see if the buccaneer Captain is sleeping aboard his prize. Silently, you climb the stairs to the main deck and wait for the moon to pass behind a cloud. You reach the door of the main cabin unnoticed.",
+        "regain_equipment": true,
+        "options": [
+            {
+                "prereq": [
+                    "skill",
+                    "Picking Locks"
+                ],
+                "text": "[Picking Locks] Pick the lock on the door to open it?",
+                "entry": 153
+            },
+            {
+                "text": "Kick the door to smash it open?",
+                "entry": 137
+            }
+        ]
+    },
     "128": {
         "description": "The Grandmaster shakes his head.\n\n'You have answered neither truthfully nor wisely. You cannot hide your wish to avenge Naijishi who loved you and taught you to love our Lord Kwon, from we who have known you near all of your short life. It is not wrong that you should wish to avenge Naijishi but you must wait patiently for your time to come and never forget that the service of Kwon is the helping of all mankind. As for torture, it is only through failing a mission that a true Ninja could be captured and there is always time to bite one's tongue from one's head and bleed to death rather than risk betraying secrets. You need fear only the failure of a mission. You have failed the spiritual test and you are not yet worthy to become Grandmaster of the Five Winds. Go back to the Temple Hall and ask Gorobei to come in to us.'\n\nDejectedly, you return to the main temple and there is a low moan from the villagers as you ask Gorobei to go into the robing room. He places his arm on your shoulder and says, 'Next time,' before moving past the silken curtain. An hour later he returns and you applaud with the others as he is ordained as a Grandmaster.",
         "options": [
@@ -412,6 +429,15 @@
                 "text": "Continue",
                 "entry": 191,
                 "type": null
+            }
+        ]
+    },
+    "153": {
+        "description": "It is the work of a few moments to pick the lock with a small file. It clicks quietly and the well-oiled hinges make no sound as you open the cabin door. Inside the buccaneer Captain is sleeping, having forsaken his own cabin for the comfort of the Aquamarin. He is snoring heavily, dead drunk. Taking your time, you smear poison on the lockpick before jabbing it into his jugular vein. Turning, you shout the signal for the crew to break out as the Reaver Captain is wracked by death spasms. You lead the attack and the rum-sodden pirates are taken by surprise. Many jump into the sea, forgetting that their ship is a mile away in darkness.\n\nYou are glad to see Glaivas, freed by one of the crew, despatching an ugly pirate who was proving troublesome. The few remaining alive surrender to him and he orders them put to the oar, for a taste of their own medicine. In the morning, you set sail again and make good speed.",
+        "options": [
+            {
+                "text": "Continue",
+                "entry": 26
             }
         ]
     },
@@ -627,23 +653,21 @@
         "options": [
             {
                 "text": "Try to fight your way through to Glaivas?",
-                "entry": 371,
-                "type": null
+                "entry": 371
             },
             {
                 "text": "Jump to the Reavers' ship to attack the pirate Captain?",
-                "entry": 352,
-                "type": null
+                "entry": 352
             }
         ]
     },
     "371": {
         "description": "You fight on, felling two more of the swarthy buccaneers. But the crew are rapidly being overpowered, some fools are even surrendering. You are surrounded but no one can close with you past the flashing blows of your fists and feet. Suddenly one of them looks above you and grins.\n\nTurning your eyes to the heavens you see the rigging collapsing on you. One of them has shinned up the mast and cut the rigging down. You can hardly move beneath it and a torrent of pirate bodies bears you, struggling, to the ground. You are carried below. Your Ninja equipment is taken from you and you are roped to one of the Aquamarin’s oars.",
+        "lose_equipment": true,
         "options": [
             {
                 "text": "Continue",
-                "entry": 19,
-                "type": null
+                "entry": 19
             }
         ]
     },
