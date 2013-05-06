@@ -89,6 +89,24 @@
             }
         ]
     },
+    "26": {
+        "description": "By midday of the next day, the Aquamarin has left the islands behind and ahead of you looms the Greater Continent. You turn north and hug the rocky coast for some days; you regain much lost Endurance as you rest, gliding over the still calm seas. It begins to rain slightly on the next day, as you follow the shore of a vast bay. Glaivas comes to talk to you and points to a large estuary where the Greybones empties into the sea. He tells you that his home city, Tor, lies up river. You ask him whether there is a temple to Kwon there and he shakes his head but freely tells you that his goddess is the Allmother, Preserver of Life. You ask him of the cities which lie beyond Tor on the Greybones river but a look of pain crosses his face.\n\n'Let me tell you, instead, of Doomover, for that is our port of call,' he says. 'It is one of the largest cities in the Manmarch, perhaps four hundred thousand souls, and it is ruled by the Legion of the Sword of Doom. Most spit when they hear the name but they are one of the best armies on Orb. They worship the Wargod, Vasch-Ro, He who sows for the Reaper, and they spread fear about them in battle. There are temples to other gods but the Cathedral to the Wargod overshadows them all. The Marshal of the Legion of the Sword of Doom is Honoric, a blackheart who has never been defeated in combat. It is said that he once slew a storm giant, single handed. He is without doubt a peerless swordsman. The order of the Scarlet Mantis has a temple there, too. They send their acolytes to the Far Snows for training, where they become used to hardship of all kinds. Yaemon is the greatest warrior they have ever had to lead them. They use the cross of Avatar, the Supreme Principle of Good as a symbol, but with a serpent twining round it. In this way you may know one if you see one.'\n\nOn the next day, you sight the fortified harbour walls of Doomover and two long blackwood ships dart out to meet you. They fly the flag of the Barbican, the Doomover navy. As they approach, a tall man in black ringed mail orders you to heave to. The captain obeys and the sails are slackened. He answers various questions but when the naval commander asks what business he has at Doomover, he looks nervously at Glaivas, licking his lips. Glaivas answers for him, saying that he has come to sell galley slaves.\n\nThe commander grins, 'I was going to confiscate your ship but as you bring men we have need of, you may pass through the Barbican.' With that, you are allowed on your way.\n\nThe Barbican itself is a huge gatehouse, like a fort, which spans the ends of the harbour walls in an arc. The ship glides beneath it and is tied up at the busy wharf. You thank Glaivas for his help and jump lithely to the land. He is returning to Tor to organise the defence against the forces of Vile should your mission fail. He throws you a pouch containing ten gold pieces, saying, 'Here, you need this. May Fate smile on you, Ninja.' You pocket the pouch and turn to the city.\n\nTwo gates stand side by side. The larger is a huge arch of black obsidian like a rainbow of dark glass. The other, much smaller, consists of two pairs of white marble pillars topped by a portico on which the words 'Portal of the Gods' are written in gold leaf.",
+        "image": "26.png",
+        "heal_player": 10,
+        "loot_add": [
+            "Pouch of gold coins"
+        ],
+        "options": [
+            {
+                "text": "Enter through the Obsidian Gate?",
+                "entry": 6
+            },
+            {
+                "text": "Enter via the Portal of the Gods?",
+                "entry": 208
+            }
+        ]
+    },
     "34": {
         "description": "Crash! The Captain’s head hits the deck on the way down and his skull is staved in before the waves engulf him. The news spreads quickly through the reavers and they break off the battle, jumping back to the Watery Death and begin fighting in earnest to decide who shall become the new tyrant captain.\n\nYou dive from the stern castle and swim strongly towards the Aquamarin which is already under way. Your lungs bursting, you catch onto a moving oar at last, and haul yourself up over the side.",
         "options": [

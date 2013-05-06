@@ -51,5 +51,10 @@
         "name": "Opal ring",
         "desc": "Given to you by the Grandmaster of the Dawn.",
         "consumable": false
+    },
+    "Pouch of gold coins": {
+        "name": "Pouch of gold coins",
+        "desc": "A small pouch of gold.",
+        "consumable": "false"
     }
 }
