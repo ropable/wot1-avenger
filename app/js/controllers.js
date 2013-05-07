@@ -120,7 +120,7 @@ function NewGameCtrl($scope, $http, localStorageService, Story, Items, Opponents
     $scope.beginGame = function() {
         localStorageService.clearAll();
         // Set starting entry number.
-        gameState.currentEntry = '360';
+        gameState.currentEntry = '1';
         gameState.endurance = 20;
         // Get starting items.
         angular.forEach(itemsjson, function(item) {
@@ -360,9 +360,22 @@ function StoryCtrl($scope, $http, localStorageService, gameState, Story, Items, 
         };
         // Phat loot!
         if (gameState.entry.loot_add) {
-            angular.forEach(gameState.entry.loot_add, function(item) {
-                // TODO: handle incrementing the count of items already in the inventory.
-                gameState.items.push(itemsjson[item]);
+            angular.forEach(gameState.entry.loot_add, function(loot) {
+                var owned = false;
+                // Find out if the loot exists in the inventory already.
+                // If so, increment the count.
+                angular.forEach(gameState.items, function(item) {
+                    if (item.name == loot[0]) {
+                        item.count += loot[1];
+                        owned = true;
+                    };
+                });
+                // We don't already own this.
+                if (!owned) {
+                    var newitem = itemsjson[loot[0]];
+                    newitem.count = loot[1];
+                    gameState.items.push(newitem);
+                };
             });
         };
         // Notes
