@@ -37,6 +37,36 @@
             "Gorobei"
         ]
     },
+    "6": {
+        "description": "You pass through the archway of purple-black glass and on into the city of Doomover itself. You cannot remember ever having seen so many buildings, solid and tall, their roofs of sloping slates, not thatch, and there are shops everywhere, selling fish, wine, and grain and there is even a slave market. Near the Obsidian Gate a town-crier begins to ring his bell.\n\nHe is dressed in orange and green to attract attention, and he begins to shout loudly about a brave adventurer who lived in Doomover who has reaped rich rewards and found a secret way into the death-city of Mortavalon, having entered a cave in the hills which encircle that city. Next he proclaims loudly that the army is paying well for recruits, that there is no war but men are needed for manoeuvres on the Plain of Feet. There are rows of barracks not far from the harbour.",
+        "options": [
+            {
+                "text": "Decide to enlist in the army to see what information you can gain?",
+                "entry": 16
+            },
+            {
+                "text": "Ignore the town crier and walk on through the city?",
+                "entry": 408
+            }
+        ]
+    },
+    "16": {
+        "description": "You walk to the barracks and join a queue of people, some young and fit, others older, looking a little down on their luck. You are chosen with a few of the others to demonstrate your skill with the sword, which you manage adequately but not well, never having been trained in sword play. You are grouped together and given drill practice for some hours before being marched to your night barracks. You manage to discover that the Legion of the Sword of Doom is going to attack the people of the Spires of Foreshadowing but that there is plenty of time to be trained for battle, because its leader, Honoric, has left the city and journeyed north.\n\nAs you all settle down to sleep, they begin to talk of pillaging the Spires and the loot that they will bring home. The barracks are guarded in case any of the new recruits think better of joining up but you decide that there is nothing more of interest here and try to desert in the quiet hours before dawn. You wrap your black Ninja headgear around your head until only the slits of your eyes are visible and don your black costume.",
+        "options": [
+            {
+                "prereq": [
+                    "skill",
+                    "Climbing"
+                ],
+                "text": "[Climbing] Leave the barracks from the roof?",
+                "entry": 75
+            },
+            {
+                "text": "Creep up behind the guard whilst the others sleep.",
+                "entry": 86
+            }
+        ]
+    },
     "17": {
         "image": "1.png",
         "opponent_offence": "punch",
@@ -94,7 +124,10 @@
         "image": "26.png",
         "heal_player": 10,
         "loot_add": [
-            ["Gold coin", 10]
+            [
+                "Gold coin",
+                10
+            ]
         ],
         "options": [
             {
@@ -494,7 +527,10 @@
     "177": {
         "description": "The Grandmaster of the Dawn smiles and says,\n\n'You pass the test for you have answered both truthfully and rightly. It is not wrong that you should wish to avenge Naijishi who loved you and taught you to love our Lord Kwon but you must wait patiently for your time to come and never forget that the service of Kwon is the helping of all mankind. It is only through failing a mission that a true Ninja would be captured and there is always time to bite off one's tongue from one's head and bleed to death rather than risk betraying secrets under torture.'\n\nHe continues, 'We have never seen one who shows such promise nor one who has mastered so ably the Way of the Tiger. I am going to recite to you the secret litany of the Ninja Grandmaster - remember it, for one day it may be of use to you.'\n\n> I AM NINJA  \nMy parents are the Heaven and the Earth  \nMy Home is my Body  \nMy Power is Loyalty  \nMy Magic is Training  \nMy Life and my Death is Breathing  \nMy Body is Control  \nMy Eyes are the Sun and the Moon  \nMy Ears are Sensitivity  \nMy Laws are Self-Protection  \nMy Strength is Adaptability  \nMy Ambition is taking every Opportunity with Fullness  \nMy Friend is my Mind  \nMy Enemy is Carelessness  \nMy Protection is Right Action  \nMy Weapons are Everything that Exists  \nMy Strategy is One Foot in front of the Other  \nMy Trust is in Kwon  \nMY WAY IS THE WAY OF THE TIGER\n\nHis words are etched in your memory. Next, he pulls an Opal Ring from his finger and passes it to you. 'This may be of use to you,' he says and you slip it onto your own finger. When the echoing words of the Grandmaster have died away they lead you back to the Temple Hall where the monks and villagers have waited to see whether you would pass the test. Prayers to Kwon are offered up as part of the ceremony at which you are ordained as a Grandmaster of the Five Winds. Gorobei applauds with the others. For now he remains an Adept of the Inner Circle but his time will come, for he is a great warrior and a good monk. Should you die he will probably take your place.",
         "loot_add": [
-            ["Opal ring", 1]
+            [
+                "Opal ring",
+                1
+            ]
         ],
         "note_add": [
             "Litany of Dawn"
