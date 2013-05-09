@@ -1,10 +1,7 @@
 <div class="container" ng-controller="NewGameCtrl">
     <ng-include src="'partials/navbar.html'"></ng-include>
     <div class="row">
-        <div class="span3 charsheet">
-            <ng-include src="'partials/charsheet.html'" ng-controller="NewGameCtrl"></ng-include>
-        </div>
-        <div class="span9">
+        <div class="span12">
             <h1>New game</h1>
             <p>You begin the game with standard equipment and training.</p>
             <p>Please choose three additional skills (hover for a description of each one), and then click "Begin":</p>
@@ -19,10 +16,11 @@
                     <input type="checkbox" ng-model="gameState.cheatMode" />Cheat mode? (All skills, invulnerability in combat)
                 </label>
                 <!-- Disable the "begin" button until three skills are chosen -->
-                <button type="submit" class="btn btn-primary" ng-click="beginGame()" ng-disabled="chosenSkills.length<3">
+                <button type="submit" class="btn btn-primary" ng-click="beginGame()" ng-disabled="chosenSkills.length < 3">
                     Begin
                 </button>
             </form>
+            <p ng-show="gameState.inProgress">Please note that you have a current game in progress.</p>
         </div>
     </div>
 </div>

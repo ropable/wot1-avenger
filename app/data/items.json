@@ -47,6 +47,11 @@
         "start": true,
         "consumable": true
     },
+    "Shuriken": {
+        "name": "Shuriken",
+        "desc": "Razor sharp start-shaped discs of metals, thrown at targets to devasting effect.",
+        "consumable": false
+    },
     "Opal ring": {
         "name": "Opal ring",
         "desc": "Given to you by the Grandmaster of the Dawn.",

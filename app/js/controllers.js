@@ -50,10 +50,11 @@ var validEntryChoices = function(gameState) {
                     };
                 });
             } else if (option.prereq && option.prereq[0] == 'item') {
-                // Exception: test if you have any Shuriken left.
-                if (option.prereq[1] == 'Shuriken' && gameState.shuriken > 0) {
-                    gameState.options.push(option);
-                }
+                angular.forEach(gameState.items, function(item) {
+                    if (option.prereq[1] == item.name && item.count > 0) {
+                        gameState.options.push(option);
+                    };
+                });
             } else {
                 // No prerequesites.
                 gameState.options.push(option);
@@ -82,13 +83,44 @@ var readGameState = function(gameState, localStorageService) {
     };
 };
 
+var newGame = function(storyjson, itemsjson, opponentsjson, gameState, localStorageService) {
+    localStorageService.clearAll();
+    // Set starting entry number.
+    gameState.currentEntry = '26';
+    gameState.endurance = 20;
+    gameState.inProgress = true;
+    // Get starting items.
+    gameState.items = [];
+    angular.forEach(itemsjson, function(item) {
+        if (item.start) {
+            item.count = 1;
+            gameState.items.push(item);
+        } else if (item.name == 'Shuriken') {
+            // Start with 5 Shuriken.
+            item.count = 5;
+            gameState.items.push(item);
+        };
+    });
+    gameState.entry = storyjson[gameState.currentEntry];
+    gameState.entryText = textMarkup(gameState.entry.description);
+    gameState.hasEntryImage = 'image' in gameState.entry;
+    // Set options for which the prerequisites are met.
+    validEntryChoices(gameState);
+    // Add opponents
+    gameState.currentOpponents = [];
+    angular.forEach(gameState.entry.opponents, function(o) {
+        if (o in opponentsjson) {
+            gameState.currentOpponents.push(opponentsjson[o]);
+        };
+    });
+};
 
 /* Controllers */
 function NewGameCtrl($scope, $http, localStorageService, Story, Items, Opponents, $location, gameState) {
-    // Get JSON for available skills to choose.
     var storyjson = Story.get();
     var itemsjson = Items.get();
     var opponentsjson = Opponents.get();
+    // Get JSON for available skills to choose.
     $http.get('data/skills.json').success(function(data) {
         // Remove the first element: we always get Shurikenjutsu.
         $scope.shurikenSkill = data.splice(0, 1);
@@ -118,33 +150,10 @@ function NewGameCtrl($scope, $http, localStorageService, Story, Items, Opponents
     };
 
     $scope.beginGame = function() {
-        localStorageService.clearAll();
-        // Set starting entry number.
-        gameState.currentEntry = '26';
-        gameState.endurance = 20;
-        // Get starting items.
-        angular.forEach(itemsjson, function(item) {
-            if (item.start) {
-                item.count = 1;
-                gameState.items.push(item);
-            }
-        });
+        newGame(storyjson, itemsjson, opponentsjson, gameState, localStorageService);
         gameState.skills = $scope.chosenSkills;
         // Add Shurikenjutsu to the skills array.
         gameState.skills.push($scope.shurikenSkill[0]);
-        gameState.entry = storyjson[gameState.currentEntry];
-        gameState.entryText = textMarkup(gameState.entry.description);
-        gameState.hasEntryImage = 'image' in gameState.entry;
-        // Set options for which the prerequisites are met.
-        validEntryChoices(gameState);
-        // Add opponents
-        gameState.currentOpponents = [];
-        angular.forEach(gameState.entry.opponents, function(o) {
-            if (o in opponentsjson) {
-                gameState.currentOpponents.push(opponentsjson[o]);
-            };
-        });
-        gameState.inProgress = true;
         // Persist gameState using localstorage.
         persistGameState(gameState, localStorageService);
         $location.path("/story");
@@ -395,15 +404,11 @@ function StoryCtrl($scope, $http, localStorageService, gameState, Story, Items, 
             // Place equipment in a holding variable.
             gameState.lost_equipment = gameState.items;
             gameState.items = [];
-            gameState.lost_shuriken = gameState.shuriken;
-            gameState.shuriken = 0;
         };
         // Regaining equipment.
         if (gameState.entry.regain_equipment) {
             gameState.items = gameState.lost_equipment;
             gameState.lost_equipment = [];
-            gameState.shuriken = gameState.lost_shuriken;
-            gameState.lost_shuriken = 0;
         };
         // HANDLING EVENTS END.
         persistGameState(gameState, localStorageService);
