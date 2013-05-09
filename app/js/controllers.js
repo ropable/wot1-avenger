@@ -358,11 +358,14 @@ function StoryCtrl($scope, $http, localStorageService, gameState, Story, Items, 
                 };
             };
         };
-        // Restore endurance.
-        if (gameState.entry.heal_player) {
-            var total = gameState.entry.heal_player + gameState.endurance;
-            if (total >= 20) {
+        // Restore or reduce endurance.
+        // TODO: handle player death.
+        if (gameState.entry.modify_endurance) {
+            var total = gameState.endurance + gameState.entry.modify_endurance;
+            if (total > 20) {
                 gameState.endurance = 20;
+            } else if (total < 0) {
+                gameState.endurance = 0;
             } else {
                 gameState.endurance = total;
             };
@@ -409,6 +412,18 @@ function StoryCtrl($scope, $http, localStorageService, gameState, Story, Items, 
         if (gameState.entry.regain_equipment) {
             gameState.items = gameState.lost_equipment;
             gameState.lost_equipment = [];
+        };
+        // Alter player modifiers.
+        if (gameState.entry.player_modifier) {
+            if (gameState.entry.player_modifier[0] == "fate") {
+                gameState.fate += gameState.entry.player_modifier[1];
+            } else if (gameState.entry.player_modifier[0] == "punch") {
+                gameState.punch += gameState.entry.player_modifier[1];
+            } else if (gameState.entry.player_modifier[0] == "kick") {
+                gameState.kick += gameState.entry.player_modifier[1];
+            } else if (gameState.entry.player_modifier[0] == "throw") {
+                gameState.throw += gameState.entry.player_modifier[1];
+            };
         };
         // HANDLING EVENTS END.
         persistGameState(gameState, localStorageService);

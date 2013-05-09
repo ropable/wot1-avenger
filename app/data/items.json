@@ -61,5 +61,10 @@
         "name": "Gold coin",
         "desc": "A small golden coin.",
         "consumable": "false"
+    },
+    "Healing potion": {
+        "name": "Healing potion",
+        "desc": "A small bottle of clear blue liquid, able to restore up to ten Endurance points.",
+        "consumable": "false"
     }
 }

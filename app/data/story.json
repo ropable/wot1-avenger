@@ -1,6 +1,10 @@
 {
     "1": {
+        "description": "The dawn rays of the sun greet you as you begin your preparations for the time of trial. Today you will become the youngest ever to challenge for the title of Grandmaster of the Five Winds. When your foster father, Naijishi, was murdered by Yaemon, the second Grandmaster stepped into his place. Now, many seasons later another of the Grandmasters has died and the position is open once more for there must always be five who lead the order. You have been invited to challenge for it because of your consummate mastery of the Way of the Tiger.\n\nAt the appointed hour you walk, alone, across the sands to the Temple of the Rock. It is a huge pillared hall built into the side of an enormous boulder of red granite brought to rest on the Island of Tranquil Dreams by the ice floes of the age of snow, which carved out the Great Valley Reaches of the far north. As you approach the Temple, you see that the monks and a large number of villagers have assembled to watch the combat between you and the other challenger, Gorobei.\n\nLike you, Gorobei is an Initiate of the Inner Circle, a devout worshipper of Kwon and a capable fighter. He is older, heavier and stronger than you and has been unsuccessful in one previous challenge, but he is a skillful wrestler. You walk into the Temple and bow to the Grandmaster of the Dawn, a man who looks younger than his fifty years, slim and taut with piercing dark eyes. Beside you, Gorobei also bows, his face a mask showing no emotion. He is clad only in a loin cloth and his rippling muscles gleam with an oil that will make it difficult to keep a grip on him. You must defeat him in unarmed combat in order to be allowed to undertake the spiritual test which will show whether you are ready to become a Grandmaster.\n\nGorobei turns to you and bows and you return the courtesy. The Grandmaster of the Dawn reminds you that this is not a fight to the death and you may not use Inner Force. He signals for you to begin. Gorobei advances warily across the polished granite floor, his big hands ready to grapple you.",
         "image": "1.png",
+        "opponents": [
+            "Gorobei"
+        ],
         "options": [
             {
                 "prereq": null,
@@ -31,10 +35,6 @@
                 "entry": 80,
                 "type": null
             }
-        ],
-        "description": "The dawn rays of the sun greet you as you begin your preparations for the time of trial. Today you will become the youngest ever to challenge for the title of Grandmaster of the Five Winds. When your foster father, Naijishi, was murdered by Yaemon, the second Grandmaster stepped into his place. Now, many seasons later another of the Grandmasters has died and the position is open once more for there must always be five who lead the order. You have been invited to challenge for it because of your consummate mastery of the Way of the Tiger.\n\nAt the appointed hour you walk, alone, across the sands to the Temple of the Rock. It is a huge pillared hall built into the side of an enormous boulder of red granite brought to rest on the Island of Tranquil Dreams by the ice floes of the age of snow, which carved out the Great Valley Reaches of the far north. As you approach the Temple, you see that the monks and a large number of villagers have assembled to watch the combat between you and the other challenger, Gorobei.\n\nLike you, Gorobei is an Initiate of the Inner Circle, a devout worshipper of Kwon and a capable fighter. He is older, heavier and stronger than you and has been unsuccessful in one previous challenge, but he is a skillful wrestler. You walk into the Temple and bow to the Grandmaster of the Dawn, a man who looks younger than his fifty years, slim and taut with piercing dark eyes. Beside you, Gorobei also bows, his face a mask showing no emotion. He is clad only in a loin cloth and his rippling muscles gleam with an oil that will make it difficult to keep a grip on him. You must defeat him in unarmed combat in order to be allowed to undertake the spiritual test which will show whether you are ready to become a Grandmaster.\n\nGorobei turns to you and bows and you return the courtesy. The Grandmaster of the Dawn reminds you that this is not a fight to the death and you may not use Inner Force. He signals for you to begin. Gorobei advances warily across the polished granite floor, his big hands ready to grapple you.",
-        "opponents": [
-            "Gorobei"
         ]
     },
     "6": {
@@ -122,7 +122,7 @@
     "26": {
         "description": "By midday of the next day, the Aquamarin has left the islands behind and ahead of you looms the Greater Continent. You turn north and hug the rocky coast for some days; you regain much lost Endurance as you rest, gliding over the still calm seas. It begins to rain slightly on the next day, as you follow the shore of a vast bay. Glaivas comes to talk to you and points to a large estuary where the Greybones empties into the sea. He tells you that his home city, Tor, lies up river. You ask him whether there is a temple to Kwon there and he shakes his head but freely tells you that his goddess is the Allmother, Preserver of Life. You ask him of the cities which lie beyond Tor on the Greybones river but a look of pain crosses his face.\n\n'Let me tell you, instead, of Doomover, for that is our port of call,' he says. 'It is one of the largest cities in the Manmarch, perhaps four hundred thousand souls, and it is ruled by the Legion of the Sword of Doom. Most spit when they hear the name but they are one of the best armies on Orb. They worship the Wargod, Vasch-Ro, He who sows for the Reaper, and they spread fear about them in battle. There are temples to other gods but the Cathedral to the Wargod overshadows them all. The Marshal of the Legion of the Sword of Doom is Honoric, a blackheart who has never been defeated in combat. It is said that he once slew a storm giant, single handed. He is without doubt a peerless swordsman. The order of the Scarlet Mantis has a temple there, too. They send their acolytes to the Far Snows for training, where they become used to hardship of all kinds. Yaemon is the greatest warrior they have ever had to lead them. They use the cross of Avatar, the Supreme Principle of Good as a symbol, but with a serpent twining round it. In this way you may know one if you see one.'\n\nOn the next day, you sight the fortified harbour walls of Doomover and two long blackwood ships dart out to meet you. They fly the flag of the Barbican, the Doomover navy. As they approach, a tall man in black ringed mail orders you to heave to. The captain obeys and the sails are slackened. He answers various questions but when the naval commander asks what business he has at Doomover, he looks nervously at Glaivas, licking his lips. Glaivas answers for him, saying that he has come to sell galley slaves.\n\nThe commander grins, 'I was going to confiscate your ship but as you bring men we have need of, you may pass through the Barbican.' With that, you are allowed on your way.\n\nThe Barbican itself is a huge gatehouse, like a fort, which spans the ends of the harbour walls in an arc. The ship glides beneath it and is tied up at the busy wharf. You thank Glaivas for his help and jump lithely to the land. He is returning to Tor to organise the defence against the forces of Vile should your mission fail. He throws you a pouch containing ten gold pieces, saying, 'Here, you need this. May Fate smile on you, Ninja.' You pocket the pouch and turn to the city.\n\nTwo gates stand side by side. The larger is a huge arch of black obsidian like a rainbow of dark glass. The other, much smaller, consists of two pairs of white marble pillars topped by a portico on which the words 'Portal of the Gods' are written in gold leaf.",
         "image": "26.png",
-        "heal_player": 10,
+        "modify_endurance": 10,
         "loot_add": [
             [
                 "Gold coin",
@@ -137,6 +137,20 @@
             {
                 "text": "Enter via the Portal of the Gods?",
                 "entry": 208
+            }
+        ]
+    },
+    "27": {
+        "description": "The girl looks at you scornfully, as if you were in some way unworthy. The old man screams at you, 'May Fate never smile on you again.' He has cursed you.\n\nYou leave the chapel quickly and decide to pass through the Obsidian Gate into the main part of the city.",
+        "image": "36.png",
+        "player_modifier": [
+            "fate",
+            -1
+        ],
+        "options": [
+            {
+                "text": "Continue",
+                "entry": 6
             }
         ]
     },
@@ -182,6 +196,20 @@
         ],
         "description": "You crouch as if to wrestle with Gorobei who tenses, ready to throw his extra weight against yours, but you jab unexpectedly towards his midriff. Gorobei's reach is long and he is skilled in punching and blocking, though he is not as fast as you."
     },
+    "36": {
+        "description": "The Seer is shuffling towards a porch at the entrance of the small wooden chapel that lies beyond the temple to Béatan the Free. He turns towards you and beckons you inside. The chapel is small and dark but to your surprise it is clean and well kept. Scrolls are neatly stacked in racks along the walls. The old man calls a girl’s name and his acolyte appears, a surprisingly pretty girl of no more, than eighteen seasons. Whilst you wonder what she is doing with the stooped old man in a chapel that is too small to hold more than twenty people, he produces a long and wicked looking sacrificial knife.\n\nIn the darkness of the chapel his features look more gaunt and powerful than they did when he raved at the priests. He tells you to lie down on what looks like a small marble tomb with a silver ewer beside it. The young girl reaches to guide you to it.",
+        "image": "36.png",
+        "options": [
+            {
+                "text": "Trust them and allow her to guide you?",
+                "entry": 50
+            },
+            {
+                "text": "Decide to take your leave hastily?",
+                "entry": 27
+            }
+        ]
+    },
     "45": {
         "description": "You duck the Captain’s swirling morning star, then dodge as he tries to surprise you by driving the heavy gold rings on his left fist into your face. Before you can attack him again a chain net descends upon you and you fall, struggling, to the boards. Two buccaneers had seen you attacking their Captain and being his favourites, they rush to his aid, flinging a chain net from the stairway.\n\nThey tie you up and drag you back to the Aquamarin where your Ninja tools are taken and you are roped to an oar.",
         "lose_equipment": true,
@@ -189,6 +217,39 @@
             {
                 "text": "Continue",
                 "entry": 19
+            }
+        ]
+    },
+    "46": {
+        "description": "'We are always ready to help a follower of the Preserver of Life,' says the priest. You ask him if a monk, a follower of Vile called Yaemon, is in Doomover. The priest tells you that the talk of the town is that Honoric, the Marshal of the Legion of the Sword of Doom, left the city a tenday since, just when his men were expecting him to lead them in battle against the people of the Spires of Foreshadowing. He continues, 'I don’t know why he left so suddenly, but it must be important.' He pauses.\n\n'But what of Yaemon?’ you ask.\n\n'Ah yes, well, the monks of the Scarlet Mantis have always been on good terms with the reverencers of Vasch-Ro the Wargod. Yaemon went with him on the road to Mortavalon.' He can tell you no more other than that they rode and were alone. You thank him and leave the temple.",
+        "options": [
+            {
+                "text": "Go through the Obsidian Gate?",
+                "entry": 6
+            },
+            {
+                "text": "Leave Doomover out of the harbour gate and head for Mortavalon?",
+                "entry": 65
+            }
+        ]
+    },
+    "50": {
+        "description": "The girl takes your hand in hers and leads you to the marble slab. The old man explains that he must let some of your blood into the silver chalice if he is to show you the future. He cuts a vein in your arm and the blood pumps into the ewer. You look at him in alarm as he lets it flow until you have lost half a pint and your arm begins to tingle. Then he seals the wound with a spell.\n\nThe girl pours a green potion into the ewer. You feel faint and obey him when he tells you to look at a mirror which hangs on the wall above you. He begins to chant and produces a crystal prism which he holds over the ewer. The blood and potion bubble and the Seer's chanting grows louder. A picture forms in the mirror of two men leaving a city on horseback. The larger is dressed in black plate mail and carries a black shield upon which is emblazoned a silver sword hanging from a silver thread, the Sword of Doom. His face is arrogant and cruel. The other is dressed in the clothes of a martial monk, scarlet with a thin black belt. They are riding towards you in silence and the monk's piercing black eyes gaze unwavering, into yours.\n\nThe Seer informs you that the vision shows Yaemon Grandmaster of Flame, riding with Honoric, Marshal of the Legion of the Sword of Doom, north from Mortavalon. He tells you that they are travelling to the Pillars of Change, each to speak a word which will imprison a god and a goddess in Inferno. Honoric seeks to rule the whole of the Manmarch. You fall into a trance and when you wake up you find yourself outside Doomover, walking on the road to Mortavalon.\n\nYou wonder what the Seer may have done whilst you were entranced. Has he told anyone of your vision? At any rate, the vision suggested that Honoric and Yaemon were far ahead. You realise that you must travel to Mortavalon to find out where Yaemon and Honoric are.",
+        "image": "36.png",
+        "modify_endurance": -2,
+        "options": [
+            {
+                "text": "Continue",
+                "entry": 65
+            }
+        ]
+    },
+    "56": {
+        "description": "He asks you to give the sign of the many ways to freedom and you cannot. He prepares to cast a spell, but you beg his pardon and, saying that you will seek help elsewhere, quickly leave the temple. The Seer is nowhere to be seen so you walk out of the Sanctuary and through the Obsidian Gate.",
+        "options": [
+            {
+                "text": "Continue",
+                "entry": 6
             }
         ]
     },
@@ -547,15 +608,49 @@
             }
         ]
     },
+    "183": {
+        "description": "The priest replies, 'Even if we were not busy with healing we would not help you, for those who follow the strict laws of a monastery, as you must, hinder freedom and prevent paradise on Orb.'\n\nYou realise from the look of zeal in his eyes that theological argument would not sway him.",
+        "options": [
+            {
+                "text": "Tell him of your quest and ask for his help again?",
+                "entry": 297
+            },
+            {
+                "text": "Leave the temple and the Sanctuary and pass through the Obsidian Gate into Doomover?",
+                "entry": 6
+            }
+        ]
+    },
     "191": {
         "description": "After the ceremony you all file out of the temple onto the golden sands and there is a frugal feast of rice and fruits shared by the villagers and the monks. You eat sparingly and take your leave early, wishing to meditate before you sleep. Relaxed from the meditation which frees your spirit from the shackles of your aching body your eyes close as soon as you lay yourself down on the straw-filled sacking that is your bed. You drift into a deep but troubled sleep.\n\nYou see a sleek-oared ship setting sail from the Land of Plenty. A tall, resolute-looking man is on the high stern castle, his legs braced against the swell. He wears a thick cloak of dark green against the weather and the sun flashes so vividly on the buckle of his sword belt that you believe this is not a dream but a vision. A sailor calls him by name, 'Glaivas', and he turns to look at you but then the vision fades and the brilliant blue sky is replaced by sombre purple clouds against which a large and dark castle looms. Three turrets on a great black Keep seem to pierce the douds. You are walking towards it, bent on completing a difficult and important mission.\n\nWhen ou awake you remember the dreams as if they were pictures painted on the wall of your monastic cell, but your sleep has at least restored any Endurance you lost in your contest with Gorobei. You are walking towards the Temple when there is a commotion on the beach and two fishermen run up to you with the news that a ship is riding at anchor offshore. A man rows himself to the beach and steps out, as the Grandmasters walk to the strand to greet him. He introduces himself as Glaivas and, bowing respectfully, he asks to talk to the Grandmaster of Grandmasters.\n\n'You may address us all,' says the Grandmaster of the Dawn, 'for we have no secrets on the Island of Tranquil Dreams.'\n\n'Not since you lost the Scrolls of Kettsuin,' Glaivas returns darkly.\n\n'What do you know of the Scrolls of Kettsuin?', asks the Grandmaster. The monks wait tensely as Glaivas looks around carefully before replying.\n\n'The Scrolls of Kettsuin hold the secret to the Word of Power which will bind Kwon himself in Inferno if it is spoken at the Pillars of Change in the great snow-wastes of the north. Yaemon, Grandmaster of Flame, of the order of the Scarlet Mantis stole it from you many years ago and he has deciphered the Word. It is the month of All-Mother Splendour and for three days the moon will turn red during the Great Conjunction of the Planets - something that occurs only once every five hundred years. If the Word is spoken by the Pillars of Change at this time your God, Kwon, will be imprisoned in the bottomless pit of fire, leaving the monks who worship Vile free to spread their dominion over the lands of men.'\n\nAt the mention of Yaemon's name there is uproar but as Glaivas continues an unnatural quiet descends.\n\n'Yaemon is preparing to set out even now from the city of Doomover on the long journey to the Ice Wastes. Though a Ranger long used to patrolling the wilderness on the edge of the Rift, I am no match for such as he. Is there one among you who will try to stop him?'\n\nAs Glaivas spoke you felt the burning need to be revenged on Yaemon flare within your breast. Your dream of Glaivas, for it was he you saw astride the deck of the ship which now rides at anchor near the sands, has convinced you that you are destined for this quest and you step forward saying, 'I  shall stop him.'\n\n'You are young,' says Glaivas, 'Can you succeed where I, a Ranger Lord, would fail?'\n\n'I am Ninja,' you reply.\n\nGlaivas starts. The Grandmaster of the Dawn sighs and says, 'Yes, I rename you Avenger, for if anyone can succeed, and you must for the sake of all mankind, it will be you.' With that he turns towards the Temple, and prayer.\n\nThe city of Doomover lies on the western coast of the Manmarch and Glaivas gifts you a map which shows the many cities and strange lands which stretch north to the snow wastes. You spend the rest of the day preparing, lacing the iron sleeves to your dark hued costume and gathering together the tools of the Ninja, before spending some hours in quiet meditation. You board Glaivas' ship in time to sail on the evening tide. You must find Yaemon and kill him before he reaches the Pillars of Change or all will be lost.",
-        "heal_player": 20,
+        "modify_endurance": 20,
         "options": [
             {
                 "prereq": null,
                 "text": "Continue",
                 "entry": 232,
                 "type": null
+            }
+        ]
+    },
+    "196": {
+        "description": "You walk up the steps and into the Temple. The wooden pews seem to be placed at random within, but the roof is pierced with rose-windows and the inside is bright and cheerful. Crystals reflect the sun's rays against a painting showing a demolished castle, and soldiers and peasants dancing in the meadows before it. There is no sign of the decapitated priest or the young warrior. One of the priests walks towards you and you ask him if he can help you with some information. He asks you whether you are a worshipper of Béatan. Which god will you say you worship?",
+        "options": [
+            {
+                "text": "Tell him 'Kwon'?",
+                "entry": 183
+            },
+            {
+                "text": "Tell him 'The Allmother'?",
+                "entry": 46
+            },
+            {
+                "text": "Tell him 'Béatan'?",
+                "entry": 56
+            },
+            {
+                "text": "Instead hasten from the Temple to follow the old man who called himself a Seer?",
+                "entry": 36
             }
         ]
     },
@@ -655,6 +750,25 @@
                 "entry": 345,
                 "type": "offence",
                 "action": "throw"
+            }
+        ]
+    },
+    "297": {
+        "description": "You tell the priest of your quest to stop Yaemon causing the imprisonment of your god, Kwon, in Inferno. His brow is furrowed as he says, 'I would not be so worried if it were not for the fact that Yaemon's monks of the Scarlet Mantis are in league with the accursed Legion of the Sword of Doom.' He goes on to say that Honoric, Marshal of the Legion, has left Doomover just when his men were expecting him to lead them in battle against the people of the Spires of Foreshadowing. He left with Yaemon and they rode alone, towards Mortavalon.\n\n'Surely you don't think that you alone can stop them. Honoric slew forty men, battle-hardened veterans, at the battle of the Hollow Tower. Three Tools of Fate died beneath his eldritch blade, Sorcerak, that day. You have no weapons. No man can stand against Yaemon in unarmed combat, he has been Grandmaster for a hundred seasons.'\n\n'What you say may be true, but I have sworn to try.' He can tell you no more but he gives you a small flask containing a dear blue liquid. It is a Potion of Healing and you may use it once, at any time when you are not in combat. You thank the priest and, intent on catching up with Yaemon, leave the temple.",
+        "loot_add": [
+            [
+                "Healing potion",
+                1
+            ]
+        ],
+        "options": [
+            {
+                "text": "Leave the city by the harbour gate and head for Mortavalon?",
+                "entry": 65
+            },
+            {
+                "text": "Go through the Obsidian Gate into Doomover?",
+                "entry": 6
             }
         ]
     },
