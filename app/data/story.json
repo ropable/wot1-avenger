@@ -559,6 +559,24 @@
             }
         ]
     },
+    "208": {
+        "description": "As you step between the pillars of white marble a voice speaks as if from the stones, 'Welcome to the Sanctuary, draw no swords here.' You can't see anyone nearby but ahead of you, a huge young warrior clad in russet and grey is crawling painfully up the steps of a temple. A priest in yellow robes comes out to help him but, as he leans down, a mounted knight in a black surcoat rides up the temple steps and lops the priest's head off. Another priest casts a spell, the horse rears backwards and then two other horsemen wearing the same coat of arms, a silver sword hanging by a silver thread on a black background, ride up and take the reins from their friend. He curses the young warrior in a rage but seems helpless as they lead him past you and gallop out through the marble gate. Priests carry their decapitated colleague and the young warrior, who has left a trail of blood on the steps, into the temple.\n\nAs they do so a wizened, stooped old man with a necklace of crystal which clicks as he sways, croaks, 'I foretold it but did you heed me, the Seer? No! Will Béatan the Free smile on you now, false priests?'\n\nHe turns and shuffles towards a small wooden chapel. The dead priest served Béaten, whose followers seek to bring nearer paradise on Orb by living lives of capricious goodness mocking all laws that constrict the free spirit.",
+        "image": "208.png",
+        "options": [
+            {
+                "text": "Follow the priests into the temple of Béatan the Free?",
+                "entry": 196
+            },
+            {
+                "text": "Leave the Sanctuary and pass through the Obsidian Gate?",
+                "entry": 6
+            },
+            {
+                "text": "Follow the old man who claimed to be a Seer?",
+                "entry": 36
+            }
+        ]
+    },
     "232": {
         "description": "The ship which Glaivas has chartered, the 'Aquamarin', has a hundred oars and two masts. The winds are kind to you as you scud across the azure plain. The sea is so calm that after two weeks without the tang of salt spray on your lips you forget that it is composed of water at all. The oarsmen row for ten hours a day but they are free men, not chained to their oars. Two bear the scars of a pirate's persuader; captured by buccaneers, they are of the lucky few who have lived to see the sky again. All of them have the heavy upper body of the oarsman, some who turned to the sea for their livelihood too young are squat and mis-shapen, moulded by life at the oar into grotesque travesties of the mountain dwarves.\n\nThe Land of Plenty passes to the south and you are in sight of the Isle of the Magical Goddess when the lookout cries a warning. The helmsman steers a new course and the drum-beat quickens as the oarsmen redouble their efforts. The ship that is approaching is long and low, painted green and red and flying a red pennant at the top of its mast. Glaivas, standing next to you at the rail, says, 'That ship is from Port o' Reavers, we’ll never outrun it.' So saying, he draws his sword.\n\nThe oarsmen strain, sweating with effort but they cannot match the pace of the slaves on the Reavers' ship, galvanized into a frenzied spurt by the barbed whips of their overseers. At last the Captain gives the order 'Prepare to repel boarders', and you ready yourself for combat. The pirate ship carries a spiked ram but they are obviously trying to take the Aquamarin as a prize for they grapple and come alongside. The Reavers carry scimitars and chain nets and are led in their rush to attack by a nine-foot monster whose body is covered in knobbles of mis-grown bone, an Ogre with a large spiked hammer. The Aquamarin's crew look no match for the battle-scarred buccaneers.",
         "image": "232.png",
