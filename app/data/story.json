@@ -302,6 +302,20 @@
             }
         ]
     },
+    "75": {
+        "description": "You climb to the ceiling using your Cat's Claws and noiselessly open a trapdoor that leads to the roof. You climb out under the eaves and onto the slates of the barracks roof before jumping down to the street below.",
+        "fate_roll": true,
+        "options": [
+            {
+                "text": "Fate smiles on you.",
+                "entry": 94
+            },
+            {
+                "text": "Fate turns her back on you.",
+                "entry": 125
+            }
+        ]
+    },
     "77": {
         "description": "Before the morning star connects you drive your fingers at the evil Captain's throat.",
         "victory": 58,
@@ -359,6 +373,19 @@
             }
         ]
     },
+    "86": {
+        "description": "You slink soundlessly as a blaçk panther towards the unsuspecting guard, who is leaning against the doorpost lost in thought.",
+        "options": [
+            {
+                "text": "Creep along the wall and garotte him?",
+                "entry": 116
+            },
+            {
+                "text": "Send a Shuriken spinning towards his throat?",
+                "entry": 105
+            }
+        ]
+    },
     "87": {
         "description": "Ducking beneath the flailing chain and ball you jump into the air, and try to clamp your feet around his neck and, by twisting vigorously, throw him into the sea.",
         "victory": 34,
@@ -380,6 +407,15 @@
                 "type": "offence",
                 "action": "kick",
                 "inner_force": true
+            }
+        ]
+    },
+    "94": {
+        "description": "You drop head-first towards the ground twenty feet below, and turning in mid-air land on your feet like a cat. No one has noticed you and you glide through the night to the city gate like a shadow. At the gate you distract the attention of the guards by throwing a stone which shatters a pane of glass near a thief who thought he was unobserved, and slip out of the city at the first ray of dawn as the guards run to arrest him.",
+        "options": [
+            {
+                "text": "Continue",
+                "entry": 65
             }
         ]
     },
@@ -490,6 +526,24 @@
                 "text": "Continue",
                 "entry": "death",
                 "type": null
+            }
+        ]
+    },
+    "125": {
+        "description": "You glide through the night towards the city gate but someone has spotted you. The alarm sounds at the barracks as you approach the gate, and torches flare on the gate tower, some of which are thrown down into the street nearby. You hear the unmistakable twang of crossbow springs and spin towards the sound.",
+        "boolean_option": true,
+        "options": [
+            {
+                "prereq": [
+                    "skill",
+                    "Arrow Cutting"
+                ],
+                "text": "[Arrow Cutting] Continue",
+                "entry": 201
+            },
+            {
+                "text": "Continue",
+                "entry": 136
             }
         ]
     },

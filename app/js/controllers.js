@@ -21,6 +21,7 @@ var validEntryChoices = function(gameState) {
     // all of the prerequisites are met.
     // Assumes that gameState.entry has been set.
     gameState.options = [];
+    var prereq_met = false;
     // Handle Fate rolls.
     if (gameState.entry.fate_roll) {
         if ((dieRoll(2) + gameState.fate) > 7 || gameState.cheatMode) {
@@ -47,12 +48,14 @@ var validEntryChoices = function(gameState) {
                 angular.forEach(gameState.skills, function(skill) {
                     if (option.prereq[1] == skill.name) {
                         gameState.options.push(option);
+                        prereq_met = true;
                     };
                 });
             } else if (option.prereq && option.prereq[0] == 'item') {
                 angular.forEach(gameState.items, function(item) {
                     if (option.prereq[1] == item.name && item.count > 0) {
                         gameState.options.push(option);
+                        prereq_met = true;
                     };
                 });
             } else {
@@ -60,6 +63,13 @@ var validEntryChoices = function(gameState) {
                 gameState.options.push(option);
             };
         });
+    };
+    // Handle "Boolean options" - i.e. those with a prereqisite that allows an action.
+    // This aims to be a little slicker than simply adding both options if the prereq is met.
+    // Assumes two options, and the first is always the one with the prereqisite.
+    // If the prereq was met (or we're cheating), both options should be in the array now.
+    if (gameState.entry.boolean_option && prereq_met) {
+        gameState.options.pop();  // Pop the last (2nd) element out.
     };
 };
 
