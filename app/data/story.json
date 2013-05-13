@@ -449,6 +449,21 @@
             }
         ]
     },
+    "105": {
+        "description": "The Shuriken findš its mark. The guard throws his hand to his throat and screams before collapsing to the floor, dead. Realising the alarm may have been given, you run out of the barracks towards the city gate, leaving your throwing star behind.",
+        "loot_remove": [
+            [
+                "Shuriken",
+                1
+            ]
+        ],
+        "options": [
+            {
+                "text": "Continue",
+                "entry": 125
+            }
+        ]
+    },
     "107": {
         "description": "You swing up over the rail, unseen, and run up the stairway to the stern castle from where the pirate Captain is directing his men. You bound up the last steps, to appear from nowhere before him. He steps back in surprise but soon regains his composure. He is a large man, with a grizzled beard and gold armbands, which cause the veins of his massive arms to stand out like cords. He swings his morning star at you as you move in to attack.",
         "opponents": [
@@ -515,6 +530,15 @@
                 "text": "Continue",
                 "entry": "death",
                 "type": null
+            }
+        ]
+    },
+    "116": {
+        "description": "Silently, you pause behind the guard, readying yourself to strike. With blinding speed, you wrap the garotte around his throat. The guard dies without a sound as the wire slices neatly through his windpipe arid you slip out of the barracks and glide through the night to the city gate like a shadow. At the gate you distract the attention of the gate guards by throwing a stone that shatters a pane of glass near a thief who thought he was unobserved, and slip out of the city at the first ray of dawn as the guards run to arrest him.",
+        "options": [
+            {
+                "text": "Continue",
+                "entry": 65
             }
         ]
     },
@@ -740,7 +764,12 @@
         "description": "Your Shuriken glints in the sun as it hurtles towards its mark in the Ogre's chest. As you leap down from the rigging a volley of arrows is let loose from the stern castle of the Reaver's ship. The Ogre grunts with pain as the Shuriken lodges in its chest.\n\nOne of the pirate's arrows is coming at you.",
         "image": "232.png",
         "boolean_option": true,
-        "loot_remove": [["Shuriken", 1]],
+        "loot_remove": [
+            [
+                "Shuriken",
+                1
+            ]
+        ],
         "damage_opponent": [
             [
                 "Ogre pirate",
