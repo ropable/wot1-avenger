@@ -93,37 +93,6 @@ var readGameState = function(gameState, localStorageService) {
     };
 };
 
-var newGame = function(storyjson, itemsjson, opponentsjson, gameState, localStorageService) {
-    localStorageService.clearAll();
-    // Set starting entry number.
-    gameState.currentEntry = '26';
-    gameState.endurance = 20;
-    gameState.inProgress = true;
-    // Get starting items.
-    gameState.items = [];
-    angular.forEach(itemsjson, function(item) {
-        if (item.start) {
-            item.count = 1;
-            gameState.items.push(item);
-        } else if (item.name == 'Shuriken') {
-            // Start with 5 Shuriken.
-            item.count = 5;
-            gameState.items.push(item);
-        };
-    });
-    gameState.entry = storyjson[gameState.currentEntry];
-    gameState.entryText = textMarkup(gameState.entry.description);
-    gameState.hasEntryImage = 'image' in gameState.entry;
-    // Set options for which the prerequisites are met.
-    validEntryChoices(gameState);
-    // Add opponents
-    gameState.currentOpponents = [];
-    angular.forEach(gameState.entry.opponents, function(o) {
-        if (o in opponentsjson) {
-            gameState.currentOpponents.push(opponentsjson[o]);
-        };
-    });
-};
 
 /* Controllers */
 function NewGameCtrl($scope, $http, localStorageService, Story, Items, Opponents, $location, gameState) {
@@ -160,10 +129,36 @@ function NewGameCtrl($scope, $http, localStorageService, Story, Items, Opponents
     };
 
     $scope.beginGame = function() {
-        newGame(storyjson, itemsjson, opponentsjson, gameState, localStorageService);
+        localStorageService.clearAll();
+        // Set starting entry number.
+        gameState.currentEntry = '1';
+        gameState.endurance = 20;
+        // Get starting items.
+        angular.forEach(itemsjson, function(item) {
+            if (item.start) {
+                item.count = 1;
+                gameState.items.push(item);
+            } else if (item.name == 'Shuriken') {
+                item.count = 5;
+                gameState.items.push(item);
+            };
+        });
         gameState.skills = $scope.chosenSkills;
         // Add Shurikenjutsu to the skills array.
         gameState.skills.push($scope.shurikenSkill[0]);
+        gameState.entry = storyjson[gameState.currentEntry];
+        gameState.entryText = textMarkup(gameState.entry.description);
+        gameState.hasEntryImage = 'image' in gameState.entry;
+        // Set options for which the prerequisites are met.
+        validEntryChoices(gameState);
+        // Add opponents
+        gameState.currentOpponents = [];
+        angular.forEach(gameState.entry.opponents, function(o) {
+            if (o in opponentsjson) {
+                gameState.currentOpponents.push(opponentsjson[o]);
+            };
+        });
+        gameState.inProgress = true;
         // Persist gameState using localstorage.
         persistGameState(gameState, localStorageService);
         $location.path("/story");
@@ -398,6 +393,15 @@ function StoryCtrl($scope, $http, localStorageService, gameState, Story, Items, 
                     newitem.count = loot[1];
                     gameState.items.push(newitem);
                 };
+            });
+        };
+        if (gameState.entry.loot_remove) {
+            angular.forEach(gameState.entry.loot_remove, function(loot) {
+                angular.forEach(gameState.items, function(item) {
+                    if (item.name == loot[0]) {
+                        item.count -= loot[1];
+                    };
+                });
             });
         };
         // Notes
