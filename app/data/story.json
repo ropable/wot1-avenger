@@ -7,24 +7,20 @@
         ],
         "options": [
             {
-                "prereq": null,
                 "text": "Feint a punch and then use the Leaping Tiger kick?",
                 "entry": 17,
                 "type": "offence",
                 "action": "kick"
             },
             {
-                "prereq": null,
                 "text": "Pretend to grapple but instead use the Cobra Strike jab?",
                 "entry": 35,
                 "type": "offence",
                 "action": "punch"
             },
             {
-                "prereq": null,
                 "text": "Raise your foot as if to kick but side-step and use the Whirlpool throw?",
-                "entry": 61,
-                "type": null
+                "entry": 61
             },
             {
                 "prereq": [
@@ -32,8 +28,7 @@
                     "Acrobatics"
                 ],
                 "text": "[Acrobatics] Somersault to Gorobei's side before attacking?",
-                "entry": 80,
-                "type": null
+                "entry": 80
             }
         ]
     },
@@ -62,7 +57,7 @@
                 "entry": 75
             },
             {
-                "text": "Creep up behind the guard whilst the others sleep.",
+                "text": "Creep up behind the guard whilst the others sleep?",
                 "entry": 86
             }
         ]
@@ -75,7 +70,6 @@
         "defeat": 95,
         "options": [
             {
-                "prereq": null,
                 "text": "Feint and punch?",
                 "entry": 35,
                 "type": "offence",
@@ -83,13 +77,10 @@
                 "inner_force": false
             },
             {
-                "prereq": null,
                 "text": "Feint and throw?",
-                "entry": 61,
-                "type": null
+                "entry": 61
             },
             {
-                "prereq": null,
                 "text": "Kick again?",
                 "entry": 17,
                 "type": "offence",
@@ -101,21 +92,19 @@
     },
     "19": {
         "description": "The Aquamarin’s huge oars are each manned by two. At your side a rower, until recently free but now roped by the reavers to the oar shaft, stares blankly at you. You can tell by the white scars on his back that he is one of the two who has been in slave galleys before. His upper body is huge, his chest unnaturally deep and his legs squat and tapering to small feet, giving him the appearance of a toad. He tells you that he had been enslaved as a boy and knows no other life than that of the oar deck. He groans quietly at the savage twist of Fate that has befallen him and tells you that he was the only one on his last slave ship to live longer than a year.\n\nThe buccaneers appoint an Overseer and two whip hands to patrol the Aquamarin's oar deck. It seems they are going to sell her and her crew at some lawless port.",
+        "boolean_option": true,
         "options": [
             {
                 "prereq": [
                     "skill",
                     "Escapology"
                 ],
-                "text": "Wait until night, and then make your escape [Escapology]",
-                "entry": 126,
-                "type": null
+                "text": "[Escapology] Wait until night, and then make your escape.",
+                "entry": 126
             },
             {
-                "prereq": null,
                 "text": "Continue",
-                "entry": 115,
-                "type": null
+                "entry": 115
             }
         ]
     },
