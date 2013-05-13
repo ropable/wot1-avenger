@@ -223,9 +223,9 @@ function StoryCtrl($scope, $http, localStorageService, gameState, Story, Items, 
                     var dam = damage[2];
                 };
                 // Damage might be to endurance, or combat modifiers.
-                if (damage[0] == "endurance") {
+                if (damage[0] == 'endurance') {
                     gameState.endurance -= dam;
-                } else if (damage[0] == "kick") {
+                } else if (damage[0] == 'kick') {
                     gameState.kick -= dam;
                 };
             });
@@ -364,7 +364,6 @@ function StoryCtrl($scope, $http, localStorageService, gameState, Story, Items, 
             };
         };
         // Restore or reduce endurance.
-        // TODO: handle player death.
         if (gameState.entry.modify_endurance) {
             var total = gameState.endurance + gameState.entry.modify_endurance;
             if (total > 20) {
@@ -374,6 +373,16 @@ function StoryCtrl($scope, $http, localStorageService, gameState, Story, Items, 
             } else {
                 gameState.endurance = total;
             };
+        };
+        // Handle player death.
+        // TODO: For entries that damage endurance, break up the "before" and "after" text
+        // so that the "after" is not rendered if the player dies.
+        // Entries: 136, 396.
+        // Use "damage_followup" field, and consolidate "damage_player" and "modify_endurance".
+        if (gameState.endurance <= 0) {
+            gameState.options = [{"text": "Continue", "entry": 'death'}];
+            gameState.endurance = 0;
+            gameState.inProgress = false;
         };
         // Phat loot!
         if (gameState.entry.loot_add) {
