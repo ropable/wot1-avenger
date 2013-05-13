@@ -728,20 +728,19 @@
                     "Shuriken"
                 ],
                 "text": "Leap into the rigging and hurl a Shuriken at the Ogre?",
-                "entry": 257,
-                "type": null
+                "entry": 257
             },
             {
-                "prereq": null,
                 "text": "Attack the Ogre as it comes aboard, flattening a section of the Aquamarin's rail?",
-                "entry": 280,
-                "type": null
+                "entry": 280
             }
         ]
     },
     "257": {
         "description": "Your Shuriken glints in the sun as it hurtles towards its mark in the Ogre's chest. As you leap down from the rigging a volley of arrows is let loose from the stern castle of the Reaver's ship. The Ogre grunts with pain as the Shuriken lodges in its chest.\n\nOne of the pirate's arrows is coming at you.",
         "image": "232.png",
+        "boolean_option": true,
+        "loot_remove": [["Shuriken", 1]],
         "damage_opponent": [
             [
                 "Ogre pirate",
@@ -758,15 +757,12 @@
                     "skill",
                     "Arrow Cutting"
                 ],
-                "text": "Deflect the arrow [Arrow Cutting]?",
-                "entry": 380,
-                "type": null
+                "text": "[Arrow Cutting] Deflect the arrow.",
+                "entry": 380
             },
             {
-                "prereq": null,
-                "text": "Continue?",
-                "entry": 396,
-                "type": null
+                "text": "Continue",
+                "entry": 396
             }
         ]
     },
