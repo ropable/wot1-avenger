@@ -651,6 +651,37 @@
             }
         ]
     },
+    "176": {
+        "description": "You pay no attention but the insults continue and soon half of the soldiers in the room are shouting at you to fight. You decide that it is wise to leave the tavern and stride towards the door. The drunken young Captain lurches to his feet and draws his sword. It seems to glow as it leaves its sheath and a pall of fear descends upon you. You stop, the hairs bristling on your scalp.\n\nGrimly, you recite the Ninja Covenant, the Ninja No Chigiri, under your breath and courage returns. You move towards the door but the Captain and two of his friends decide to attack you with their swords. You must defend yourself.",
+        "image": "176.png",
+        "opponents": [
+            "Young Captain",
+            "First soldier",
+            "Second solder"
+        ],
+        "options": [
+            {
+                "text": "Use the Winged Horse kick?",
+                "entry": 256,
+                "type": "offence",
+                "action": "kick",
+                "inner_force": true
+            },
+            {
+                "text": "Use the Iron Fist punch?",
+                "entry": 248,
+                "type": "offence",
+                "action": "punch",
+                "inner_force": true
+            },
+            {
+                "text": "Use the Whirlpool throw?",
+                "entry": 237,
+                "type": "offence",
+                "action": "throw"
+            }
+        ]
+    },
     "177": {
         "description": "The Grandmaster of the Dawn smiles and says,\n\n'You pass the test for you have answered both truthfully and rightly. It is not wrong that you should wish to avenge Naijishi who loved you and taught you to love our Lord Kwon but you must wait patiently for your time to come and never forget that the service of Kwon is the helping of all mankind. It is only through failing a mission that a true Ninja would be captured and there is always time to bite off one's tongue from one's head and bleed to death rather than risk betraying secrets under torture.'\n\nHe continues, 'We have never seen one who shows such promise nor one who has mastered so ably the Way of the Tiger. I am going to recite to you the secret litany of the Ninja Grandmaster - remember it, for one day it may be of use to you.'\n\n> I AM NINJA  \nMy parents are the Heaven and the Earth  \nMy Home is my Body  \nMy Power is Loyalty  \nMy Magic is Training  \nMy Life and my Death is Breathing  \nMy Body is Control  \nMy Eyes are the Sun and the Moon  \nMy Ears are Sensitivity  \nMy Laws are Self-Protection  \nMy Strength is Adaptability  \nMy Ambition is taking every Opportunity with Fullness  \nMy Friend is my Mind  \nMy Enemy is Carelessness  \nMy Protection is Right Action  \nMy Weapons are Everything that Exists  \nMy Strategy is One Foot in front of the Other  \nMy Trust is in Kwon  \nMY WAY IS THE WAY OF THE TIGER\n\nHis words are etched in your memory. Next, he pulls an Opal Ring from his finger and passes it to you. 'This may be of use to you,' he says and you slip it onto your own finger. When the echoing words of the Grandmaster have died away they lead you back to the Temple Hall where the monks and villagers have waited to see whether you would pass the test. Prayers to Kwon are offered up as part of the ceremony at which you are ordained as a Grandmaster of the Five Winds. Gorobei applauds with the others. For now he remains an Adept of the Inner Circle but his time will come, for he is a great warrior and a good monk. Should you die he will probably take your place.",
         "loot_add": [
@@ -667,10 +698,8 @@
         ],
         "options": [
             {
-                "prereq": null,
                 "text": "Continue",
-                "entry": 191,
-                "type": null
+                "entry": 191
             }
         ]
     },
@@ -689,6 +718,7 @@
     },
     "186": {
         "description": "The young soldier sneers and calls you a plague-ridden sewer rat. You sit in a corner, ignoring him. Your heightened sense of hearing enables you to eavesdrop on their conversation rather than the countless others in the crowded tavern. It seems they are waiting for the leader of the Legion of the Sword of Doom, Honoric, to return before they march against the Spires of Foreshadowing. It seems he has left the city with Yaemon, heading north.\n\nOne of the drunken soldiers at the next table starts to insult you and then tells you that if you want to live you should leave the tavern now.",
+        "image": "176.png",
         "options": [
             {
                 "text": "Stay in your seat?",
@@ -705,15 +735,14 @@
         "modify_endurance": 20,
         "options": [
             {
-                "prereq": null,
                 "text": "Continue",
-                "entry": 232,
-                "type": null
+                "entry": 232
             }
         ]
     },
     "194": {
         "description": "You sit at his table and he calls for a hogshead of mead. He smiles at you, lids lowered, as the mead arrives and he plunges two mugs into the brimming bucket and places one carefully before you. You raise the mugs together and drain them. There is a cheer as you slam the mugs back down together. The young captain dips them into the bucket again and again a cheer answers your efforts.",
+        "image": "176.png",
         "boolean_option": true,
         "options": [
             {
@@ -851,6 +880,58 @@
             }
         ]
     },
+    "248": {
+        "description": "In the blink of an eye your fist flashes out at one of your attackers.",
+        "image": "176.png",
+        "options": [
+            {
+                "text": "Use the Whirlpool throw?",
+                "entry": 237,
+                "type": "offence",
+                "action": "throw"
+            },
+            {
+                "text": "Use the Winged Horse kick?",
+                "entry": 256,
+                "type": "offence",
+                "action": "kick",
+                "inner_force": true
+            },
+            {
+                "text": "Punch again?",
+                "entry": 248,
+                "type": "offence",
+                "action": "punch",
+                "inner_force": true
+            }
+        ]
+    },
+    "256": {
+        "description": "You step forward onto your right foot then bring your left foot up, spin to the right and lash your left heel high into the air at one of your attackers' heads.",
+        "image": "176.png",
+        "options": [
+            {
+                "text": "Use the Whirlpool throw?",
+                "entry": 237,
+                "type": "offence",
+                "action": "throw"
+            },
+            {
+                "text": "Use the Iron Fist punch?",
+                "entry": 248,
+                "type": "offence",
+                "action": "punch",
+                "inner_force": true
+            },
+            {
+                "text": "Kick again?",
+                "entry": 256,
+                "type": "offence",
+                "action": "kick",
+                "inner_force": true
+            }
+        ]
+    },
     "257": {
         "description": "Your Shuriken glints in the sun as it hurtles towards its mark in the Ogre's chest. As you leap down from the rigging a volley of arrows is let loose from the stern castle of the Reaver's ship. The Ogre grunts with pain as the Shuriken lodges in its chest.\n\nOne of the pirate's arrows is coming at you.",
         "image": "232.png",
@@ -942,6 +1023,7 @@
     },
     "307": {
         "description": "You enter the Black Sword tavern, a long drinking hail with a blazing fire, even at Harvest time, the month of All-Mother Splendour. There are forty or so drinkers, all men and mostly soldiers. There is not a single sailor to be seen even though you are still close to the harbour. The soldiers have brought their weapons into the tavern but many have loosened or discarded parts of their armour in the sweltering heat. The reek of stale sweat is overpowering. A man who must weigh twenty stones or more ambles up and down the long bar, slamming mugs of mead on the counter and pocketing silver.\n\nYou buy a mugful and listen to the conversations. They are shouting from table to table about the campaign they are going to fight against the people of the Spires of Foreshadowing. At one table a man of twenty-five or so is particularly loud. He demands mead and two of the soldiers with him grab his mug, fighting for the privilege of buying his drink. He ignores this and, spotting you, challenges you to a drinking bout.",
+        "image": "176.png",
         "options": [
             {
                 "text": "Accept?",

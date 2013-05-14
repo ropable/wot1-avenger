@@ -319,8 +319,8 @@ function StoryCtrl($scope, $http, localStorageService, gameState, Story, Items, 
                 gameState.actions.push(['You have won this combat!'])
             };
             // Opponent offence.
-            actionText = '';
             angular.forEach(gameState.currentOpponents, function(o) {
+                actionText = '';
                 if (o.effects == 'thrown') {  // Thrown opponents can't attack.
                     o.effects = null;
                 } else {
@@ -337,22 +337,22 @@ function StoryCtrl($scope, $http, localStorageService, gameState, Story, Items, 
                         gameState.actions.push([actionText])
                     };
                 };
-                // Handle player defeat (endurance/combat timer).
-                if (gameState.combatTimer == 0 && gameState.currentOpponents.length > 0) {
-                    gameState.actions.push(['You have run out of time!']);
-                    gameState.options = [{"text": "Continue", "entry": gameState.entry.defeat}];
-                };
-                if (gameState.endurance <= 0) {
-                    gameState.actions.push(['You have been defeated!']);
-                    if (gameState.entry.defeat) {  // Defeat leads to another entry.
-                        gameState.options = [{"text": "Continue", "entry": gameState.entry.defeat}];
-                    } else {  // Defeat results in death.
-                        gameState.options = [{"text": "Continue", "entry": 'death'}];
-                        gameState.endurance = 0;
-                        gameState.inProgress = false;
-                    };
-                };
             });  // End opponent offence.
+            // Handle player defeat (endurance/combat timer).
+            if (gameState.combatTimer == 0 && gameState.currentOpponents.length > 0) {
+                gameState.actions.push(['You have run out of time!']);
+                gameState.options = [{"text": "Continue", "entry": gameState.entry.defeat}];
+            };
+            if (gameState.endurance <= 0) {
+                gameState.actions.push(['You have been defeated!']);
+                if (gameState.entry.defeat) {  // Defeat leads to another entry.
+                    gameState.options = [{"text": "Continue", "entry": gameState.entry.defeat}];
+                } else {  // Defeat results in death.
+                    gameState.options = [{"text": "Continue", "entry": 'death'}];
+                    gameState.endurance = 0;
+                    gameState.inProgress = false;
+                };
+            };
         };  // End player offence.
         // HANDLING EVENTS BEGINS HERE.
         // Entries may occasionally manually remove opponents.
