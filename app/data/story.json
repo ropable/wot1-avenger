@@ -883,6 +883,7 @@
     "248": {
         "description": "In the blink of an eye your fist flashes out at one of your attackers.",
         "image": "176.png",
+        "player_defence": [9, 8, 7],
         "options": [
             {
                 "text": "Use the Whirlpool throw?",
@@ -909,6 +910,7 @@
     "256": {
         "description": "You step forward onto your right foot then bring your left foot up, spin to the right and lash your left heel high into the air at one of your attackers' heads.",
         "image": "176.png",
+        "player_defence": [9, 8, 7],
         "options": [
             {
                 "text": "Use the Whirlpool throw?",

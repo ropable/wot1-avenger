@@ -16,6 +16,10 @@ var textMarkup = function(text) {
     return converter.makeHtml(text);
 };
 
+function capitaliseFirstLetter(string) {
+    return string.charAt(0).toUpperCase() + string.slice(1);
+};
+
 var validEntryChoices = function(gameState) {
     // Accepts gameState, and returns it with options for which
     // all of the prerequisites are met.
@@ -286,7 +290,8 @@ function StoryCtrl($scope, $http, localStorageService, gameState, Story, Items, 
                     // Occasionally, throws can result in your one-shotting opponents.
                     if (gameState.entry.instakill) {
                         gameState.actions.push([gameState.entry.instakill_desc]);
-                        gameState.currentOpponents[0].endurance = 0;
+                        //gameState.currentOpponents[0].endurance = 0;
+                        gameState.currentOpponents = [];
                         gameState.options = [];
                     } else {
                         actionText = 'You throw {0} to the ground!'.replace('{0}', target.action_desc);
@@ -319,22 +324,38 @@ function StoryCtrl($scope, $http, localStorageService, gameState, Story, Items, 
                 gameState.actions.push(['You have won this combat!'])
             };
             // Opponent offence.
+            var hasBlocked = false;
             angular.forEach(gameState.currentOpponents, function(o) {
                 actionText = '';
                 if (o.effects == 'thrown') {  // Thrown opponents can't attack.
                     o.effects = null;
                 } else {
                     // Check 2d6 against player_defence.
-                    if (dieRoll(2) > gameState.entry.player_defence && !gameState.cheatMode) {
+                    var defence;
+                    if (gameState.entry.player_defence instanceof Array) {
+                        // Count opponents. Use this count to obtain the defence value.
+                        defence = gameState.entry.player_defence[gameState.currentOpponents.length - 1];
+                    } else {
+                        defence = gameState.entry.player_defence;
+                    };
+                    if (dieRoll(2) > defence && !gameState.cheatMode) {
                         var damage = (dieRoll(o.damage[0]) + o.damage[1]);
                         actionText += '{0} hits you for {1} damage!'.replace('{0}', o.action_desc);
                         actionText = actionText.replace('{1}', damage.toString());
+                        actionText = capitaliseFirstLetter(actionText);
                         gameState.endurance -= damage;
-                        // Push to actions: [actionText, true, damage, player_defence]
-                        gameState.actions.push([actionText, true, damage, gameState.entry.player_defence])
+                        // Push to actions to allow for blocking: [actionText, true, damage, defence]
+                        // Player may only try to block the first successful hit.
+                        // TODO: allow selective blocking.
+                        if (!hasBlocked) {
+                            gameState.actions.push([actionText, true, damage, defence]);
+                        } else {
+                            gameState.actions.push([actionText]);
+                        };
+                        hasBlocked = true;
                     } else {
                         actionText += '{0} tries to hit you...but misses!'.replace('{0}', o.action_desc);
-                        gameState.actions.push([actionText])
+                        gameState.actions.push([actionText]);
                     };
                 };
             });  // End opponent offence.
