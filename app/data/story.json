@@ -497,28 +497,20 @@
         "description": "Your last blow sent Gorobei tumbling senseless to the granite floor. A ripple of applause greets your victory and the Grandmaster of the Dawn compliments you on your fighting prowess and beckons you into the robing chamber. You step beyond the Temple Hall through silken drapes into a small dark room, completely bare of furnishing save for two enormous copper chests. Incense is burning in a censer which swings from the ceiling like a pendulum. The room is lit by white candles.\n\nYou kneel on the rush matting facing the three Grandmasters who stare ahead, unseeing, waiting for you to break the silence which you are determined to keep. After an hour-candle has sputtered its last, during which time none of you has moved so much as a muscle, the Grandmaster of the Dawn looks into your eyes and says, 'Kwon knows that you desire in your heart to serve him but I must ask you two questions. Do you truly desire to serve Kwon above all other things or do you desire to avenge the death of your foster-father, Naijishi, more even than to serve your God? What should a Ninja fear most - the failure of a mission or capture by an enemy who will use torture to gain secrets?'\n\nYou know that in your heart of hearts you would rather avenge Naijishi than anything else in Orb but a Grandmaster should dedicate his life to Kwon. As for the second question, you can only let your good sense guide you.",
         "options": [
             {
-                "prereq": null,
                 "text": "'I desire to serve Kwon above all else and I fear only the failure of a mission.'",
-                "entry": 139,
-                "type": null
+                "entry": 139
             },
             {
-                "prereq": null,
                 "text": "'I desire to avenge the father who loved me and I fear torture above all.'",
-                "entry": 151,
-                "type": null
+                "entry": 151
             },
             {
-                "prereq": null,
                 "text": "'I desire to avenge the father who loved me and I fear only the failure of a mission.'",
-                "entry": 177,
-                "type": null
+                "entry": 177
             },
             {
-                "prereq": null,
                 "text": "'I desire to serve Kwon above all else and I fear torture above all.'",
-                "entry": 128,
-                "type": null
+                "entry": 128
             }
         ]
     },
@@ -526,10 +518,8 @@
         "description": "After nightfall you strain at your bonds but the only reward for your efforts is the kiss of the whip. Exhausted, you fall asleep before dawn and awake to find iron manacles around your wrists and a girdle around your middle by which you are chained to the oar. They are heavy and unbreakable and will not be struck off until your body is spent and lifeless after years at the oar. You have failed.",
         "options": [
             {
-                "prereq": null,
                 "text": "Continue",
-                "entry": "death",
-                "type": null
+                "entry": "death"
             }
         ]
     },
@@ -589,26 +579,6 @@
             }
         ]
     },
-    "136": {
-        "description": "You try to roll aside but a crossbow bolt slams into your side and you sprawl flat on the ground. Lose 4 Endurance.",
-        "modify_endurance": -4,
-        "damage_followup": "The gate guards charge towards you, as you spring to your feet.",
-        "boolean_option": true,
-        "options": [
-            {
-                "prereq": [
-                    "skill",
-                    "Acrobatics"
-                ],
-                "text": "Continue",
-                "entry": 144
-            },
-            {
-                "text": "Continue",
-                "entry": 285
-            }
-        ]
-    },
     "137": {
         "description": "You stand, legs apart, in front of the door, taking three slow deep breaths. Then when you are ready, you use the Iron Fist with a grunting cry as the Inner Force escapes you. There is a crash and the door flies off its hinges. You leap over it as it falls to the floor. The buccaneer Captain is inside having forsaken his ship for the comfort of the Aquarmarin. Woken from his sleep by the crash of the door he rolls off the bed, pulling his cutlass from under the pillow and tries to throw some blankets at you. You whip out a Shuriken and with a deft flick of the wrist, send it hurtling towards him before he can cry out.",
         "shuriken_roll": 5,
@@ -631,6 +601,15 @@
                 "text": "Continue",
                 "entry": 191,
                 "type": null
+            }
+        ]
+    },
+    "144": {
+        "description": "You wait, apparently dejected, for the guards to take you prisoner but then somersault high in the air over them and sprint through the gate at the first ray of dawn. The astonished soldiers run after you but you sail down the road like the wind and they soon give up the futile chase.",
+        "options": [
+            {
+                "text": "Continue",
+                "entry": 254
             }
         ]
     },
@@ -708,6 +687,19 @@
             }
         ]
     },
+    "186": {
+        "description": "The young soldier sneers and calls you a plague-ridden sewer rat. You sit in a corner, ignoring him. Your heightened sense of hearing enables you to eavesdrop on their conversation rather than the countless others in the crowded tavern. It seems they are waiting for the leader of the Legion of the Sword of Doom, Honoric, to return before they march against the Spires of Foreshadowing. It seems he has left the city with Yaemon, heading north.\n\nOne of the drunken soldiers at the next table starts to insult you and then tells you that if you want to live you should leave the tavern now.",
+        "options": [
+            {
+                "text": "Stay in your seat?",
+                "entry": 176
+            },
+            {
+                "text": "Take a room upstairs for the night?",
+                "entry": 225
+            }
+        ]
+    },
     "191": {
         "description": "After the ceremony you all file out of the temple onto the golden sands and there is a frugal feast of rice and fruits shared by the villagers and the monks. You eat sparingly and take your leave early, wishing to meditate before you sleep. Relaxed from the meditation which frees your spirit from the shackles of your aching body your eyes close as soon as you lay yourself down on the straw-filled sacking that is your bed. You drift into a deep but troubled sleep.\n\nYou see a sleek-oared ship setting sail from the Land of Plenty. A tall, resolute-looking man is on the high stern castle, his legs braced against the swell. He wears a thick cloak of dark green against the weather and the sun flashes so vividly on the buckle of his sword belt that you believe this is not a dream but a vision. A sailor calls him by name, 'Glaivas', and he turns to look at you but then the vision fades and the brilliant blue sky is replaced by sombre purple clouds against which a large and dark castle looms. Three turrets on a great black Keep seem to pierce the douds. You are walking towards it, bent on completing a difficult and important mission.\n\nWhen ou awake you remember the dreams as if they were pictures painted on the wall of your monastic cell, but your sleep has at least restored any Endurance you lost in your contest with Gorobei. You are walking towards the Temple when there is a commotion on the beach and two fishermen run up to you with the news that a ship is riding at anchor offshore. A man rows himself to the beach and steps out, as the Grandmasters walk to the strand to greet him. He introduces himself as Glaivas and, bowing respectfully, he asks to talk to the Grandmaster of Grandmasters.\n\n'You may address us all,' says the Grandmaster of the Dawn, 'for we have no secrets on the Island of Tranquil Dreams.'\n\n'Not since you lost the Scrolls of Kettsuin,' Glaivas returns darkly.\n\n'What do you know of the Scrolls of Kettsuin?', asks the Grandmaster. The monks wait tensely as Glaivas looks around carefully before replying.\n\n'The Scrolls of Kettsuin hold the secret to the Word of Power which will bind Kwon himself in Inferno if it is spoken at the Pillars of Change in the great snow-wastes of the north. Yaemon, Grandmaster of Flame, of the order of the Scarlet Mantis stole it from you many years ago and he has deciphered the Word. It is the month of All-Mother Splendour and for three days the moon will turn red during the Great Conjunction of the Planets - something that occurs only once every five hundred years. If the Word is spoken by the Pillars of Change at this time your God, Kwon, will be imprisoned in the bottomless pit of fire, leaving the monks who worship Vile free to spread their dominion over the lands of men.'\n\nAt the mention of Yaemon's name there is uproar but as Glaivas continues an unnatural quiet descends.\n\n'Yaemon is preparing to set out even now from the city of Doomover on the long journey to the Ice Wastes. Though a Ranger long used to patrolling the wilderness on the edge of the Rift, I am no match for such as he. Is there one among you who will try to stop him?'\n\nAs Glaivas spoke you felt the burning need to be revenged on Yaemon flare within your breast. Your dream of Glaivas, for it was he you saw astride the deck of the ship which now rides at anchor near the sands, has convinced you that you are destined for this quest and you step forward saying, 'I  shall stop him.'\n\n'You are young,' says Glaivas, 'Can you succeed where I, a Ranger Lord, would fail?'\n\n'I am Ninja,' you reply.\n\nGlaivas starts. The Grandmaster of the Dawn sighs and says, 'Yes, I rename you Avenger, for if anyone can succeed, and you must for the sake of all mankind, it will be you.' With that he turns towards the Temple, and prayer.\n\nThe city of Doomover lies on the western coast of the Manmarch and Glaivas gifts you a map which shows the many cities and strange lands which stretch north to the snow wastes. You spend the rest of the day preparing, lacing the iron sleeves to your dark hued costume and gathering together the tools of the Ninja, before spending some hours in quiet meditation. You board Glaivas' ship in time to sail on the evening tide. You must find Yaemon and kill him before he reaches the Pillars of Change or all will be lost.",
         "modify_endurance": 20,
@@ -717,6 +709,24 @@
                 "text": "Continue",
                 "entry": 232,
                 "type": null
+            }
+        ]
+    },
+    "194": {
+        "description": "You sit at his table and he calls for a hogshead of mead. He smiles at you, lids lowered, as the mead arrives and he plunges two mugs into the brimming bucket and places one carefully before you. You raise the mugs together and drain them. There is a cheer as you slam the mugs back down together. The young captain dips them into the bucket again and again a cheer answers your efforts.",
+        "boolean_option": true,
+        "options": [
+            {
+                "prereq": [
+                    "skill",
+                    "Immunity to Poisons"
+                ],
+                "text": "[Immunity to Poisons] Continue",
+                "entry": 214
+            },
+            {
+                "text": "Continue",
+                "entry": 206
             }
         ]
     },
@@ -741,6 +751,35 @@
             }
         ]
     },
+    "201": {
+        "description": "You use the side of your hand to chop the quarrel aside before it hits you and then roll out of the torchlight. You lie low, motionless, until you hear a shout from a side street. 'Stop thief,' someone cries, as a man carrying a dagger runs into the torchlight. He squeals in fright as the gateguards charge after hun and you slip unnoticed out of the dty gate at the first ray of dawn.",
+        "options": [
+            {
+                "text": "Continue",
+                "entry": 65
+            }
+        ]
+    },
+    "206": {
+        "description": "The barman had mixed Spirits-of-Ra into the mead and it was stronger than you realized. The alcohol passes into your bloodstream quickly and you stand up to leave but pass out. You wake up in the morning, lying muddied in the gutter. Some of your gold coins have been taken, but you had hidden five upon your person, which you still have. If you had an Opal ring, you notice that has also been stolen.\n\nYou decide to head north in case Yaemon arrives at the Pillars of Change before you, and leave the city on the road to Mortavalon.",
+        "loot_remove": [
+            [
+                "Gold coin",
+                5
+            ],
+            [
+                "Opal ring",
+                1
+            ]
+        ],
+        "modify_endurance": 1,
+        "options": [
+            {
+                "text": "Continue",
+                "entry": 65
+            }
+        ]
+    },
     "208": {
         "description": "As you step between the pillars of white marble a voice speaks as if from the stones, 'Welcome to the Sanctuary, draw no swords here.' You can't see anyone nearby but ahead of you, a huge young warrior clad in russet and grey is crawling painfully up the steps of a temple. A priest in yellow robes comes out to help him but, as he leans down, a mounted knight in a black surcoat rides up the temple steps and lops the priest's head off. Another priest casts a spell, the horse rears backwards and then two other horsemen wearing the same coat of arms, a silver sword hanging by a silver thread on a black background, ride up and take the reins from their friend. He curses the young warrior in a rage but seems helpless as they lead him past you and gallop out through the marble gate. Priests carry their decapitated colleague and the young warrior, who has left a trail of blood on the steps, into the temple.\n\nAs they do so a wizened, stooped old man with a necklace of crystal which clicks as he sways, croaks, 'I foretold it but did you heed me, the Seer? No! Will Béatan the Free smile on you now, false priests?'\n\nHe turns and shuffles towards a small wooden chapel. The dead priest served Béaten, whose followers seek to bring nearer paradise on Orb by living lives of capricious goodness mocking all laws that constrict the free spirit.",
         "image": "208.png",
@@ -756,6 +795,38 @@
             {
                 "text": "Follow the old man who claimed to be a Seer?",
                 "entry": 36
+            }
+        ]
+    },
+    "214": {
+        "description": "Your training with the ingestion of small quantities of poisons also included large amounts of alcohol and you can drink almost anyone under the table. The young Captain begins slurring his words and the pace of drinking slows. You tell them that you are a monk who worships Vile and they treat you as one of them. The young Captain asks you about the journey that Honoric, leader of the Legion of the Sword of Doom, is making with Yaemon. You tell them that Yaemon is journeying north on important business.\n\nThey laugh at this and begin to joke with you that Honoric’s business is more important. You gather that he too knows a word which will bind a goddess in Inferno and that they are journeying to the Snow Wastes. After a time you pretend that you are overcome by the mead and take a room for the night in the tavern for which you pay 2 pieces of gold. You sleep lightly, senses alert, but are not disturbed.\n\nYou wake in the morning, mildly refreshed. You leave and walk out of the city on the road to Mortavalon.",
+        "loot_remove": [
+            [
+                "Gold coin",
+                2
+            ]
+        ],
+        "modify_endurance": 1,
+        "options": [
+            {
+                "text": "Continue",
+                "entry": 65
+            }
+        ]
+    },
+    "225": {
+        "description": "You give the barman two pieces of gold for the room and go upstairs. You sleep lightly, senses alert and you are ready when three drunken soldiers burst in. It is the work of a few moments to knock two of them unconscious with deft kicks and the third goggles in surprise and then runs from the room. You sleep little for the rest of the night. In the morning you leave the city, on the road to Mortavalon.",
+        "loot_remove": [
+            [
+                "Gold coin",
+                2
+            ]
+        ],
+        "modify_endurance": 1,
+        "options": [
+            {
+                "text": "Continue",
+                "entry": 254
             }
         ]
     },
@@ -841,6 +912,15 @@
             }
         ]
     },
+    "285": {
+        "description": "You try to somersault over the guards but you are too slow and one of them slashes you with his sword as you pass overhead. You fall to the ground and before you can get up one of them plunges his sword into your back, forcing you down to the muddy road. He has ruptured your liver and you die. Your adventure ends here.",
+        "options": [
+            {
+                "text": "Continue",
+                "entry": "death"
+            }
+        ]
+    },
     "297": {
         "description": "You tell the priest of your quest to stop Yaemon causing the imprisonment of your god, Kwon, in Inferno. His brow is furrowed as he says, 'I would not be so worried if it were not for the fact that Yaemon's monks of the Scarlet Mantis are in league with the accursed Legion of the Sword of Doom.' He goes on to say that Honoric, Marshal of the Legion, has left Doomover just when his men were expecting him to lead them in battle against the people of the Spires of Foreshadowing. He left with Yaemon and they rode alone, towards Mortavalon.\n\n'Surely you don't think that you alone can stop them. Honoric slew forty men, battle-hardened veterans, at the battle of the Hollow Tower. Three Tools of Fate died beneath his eldritch blade, Sorcerak, that day. You have no weapons. No man can stand against Yaemon in unarmed combat, he has been Grandmaster for a hundred seasons.'\n\n'What you say may be true, but I have sworn to try.' He can tell you no more but he gives you a small flask containing a dear blue liquid. It is a Potion of Healing and you may use it once, at any time when you are not in combat. You thank the priest and, intent on catching up with Yaemon, leave the temple.",
         "loot_add": [
@@ -857,6 +937,19 @@
             {
                 "text": "Go through the Obsidian Gate into Doomover?",
                 "entry": 6
+            }
+        ]
+    },
+    "307": {
+        "description": "You enter the Black Sword tavern, a long drinking hail with a blazing fire, even at Harvest time, the month of All-Mother Splendour. There are forty or so drinkers, all men and mostly soldiers. There is not a single sailor to be seen even though you are still close to the harbour. The soldiers have brought their weapons into the tavern but many have loosened or discarded parts of their armour in the sweltering heat. The reek of stale sweat is overpowering. A man who must weigh twenty stones or more ambles up and down the long bar, slamming mugs of mead on the counter and pocketing silver.\n\nYou buy a mugful and listen to the conversations. They are shouting from table to table about the campaign they are going to fight against the people of the Spires of Foreshadowing. At one table a man of twenty-five or so is particularly loud. He demands mead and two of the soldiers with him grab his mug, fighting for the privilege of buying his drink. He ignores this and, spotting you, challenges you to a drinking bout.",
+        "options": [
+            {
+                "text": "Accept?",
+                "entry": 194
+            },
+            {
+                "text": "Decline?",
+                "entry": 186
             }
         ]
     },
@@ -1007,8 +1100,12 @@
     "396": {
         "description": "Before you reach the deck an arrow pierces your thigh and you stumble. You pull the barbed arrow from your flesh but the muscle is badly torn. The Ogre, enraged, raises its spiked hammer to smash you.",
         "image": "232.png",
-        "modify_endurance": -4,
         "damage_player": [
+            [
+                "endurance",
+                "fixed",
+                4
+            ],
             [
                 "kick",
                 "fixed",
@@ -1036,6 +1133,19 @@
                 "entry": 345,
                 "type": "offence",
                 "action": "throw"
+            }
+        ]
+    },
+    "408": {
+        "description": "You walk past the slave market where a captain of the Legion of the Sword of Doom is bidding unopposed for men to pull the oars of the ships of the Barbican League, Doomover's navy. Most of the townspeople seem to give the place a wide berth and you hurry past. You come to the largest building in the city, and you stop to stare in amazement. You guess it must be the temple to Vasch-Ro. It is a great cathedral built of blocks of basalt, with a great square embattled tower, stark and unadorned which stretches two hundred feet above the surrounding buildings. Behind it is Honoric’s manse, more a fortress than a palace.\n\nYou continue on your way towards a tavern whose sign shows soldiers with spoked wheels on their shields cowering before a black sword which hangs in the air. It stands inside a fork in the street and beyond it to the right you catch sight of a monastery built of dark stone with bright red shutters at its windows. It can only be a temple to Vile, the twisted brother of your God, Kwon. Might Yaemon be within?",
+        "options": [
+            {
+                "text": "Try the tavern as a likely source of gossip?",
+                "entry": 307
+            },
+            {
+                "text": "Attempt to steal into the monastery?",
+                "entry": 273
             }
         ]
     },
