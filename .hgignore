@@ -1,0 +1,5 @@
+syntax: regexp
+\.swp$
+\.swo$
+\.orig$
+story.json~

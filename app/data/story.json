@@ -1,0 +1,1268 @@
+{
+    "1": {
+        "description": "The dawn rays of the sun greet you as you begin your preparations for the time of trial. Today you will become the youngest ever to challenge for the title of Grandmaster of the Five Winds. When your foster father, Naijishi, was murdered by Yaemon, the second Grandmaster stepped into his place. Now, many seasons later another of the Grandmasters has died and the position is open once more for there must always be five who lead the order. You have been invited to challenge for it because of your consummate mastery of the Way of the Tiger.\n\nAt the appointed hour you walk, alone, across the sands to the Temple of the Rock. It is a huge pillared hall built into the side of an enormous boulder of red granite brought to rest on the Island of Tranquil Dreams by the ice floes of the age of snow, which carved out the Great Valley Reaches of the far north. As you approach the Temple, you see that the monks and a large number of villagers have assembled to watch the combat between you and the other challenger, Gorobei.\n\nLike you, Gorobei is an Initiate of the Inner Circle, a devout worshipper of Kwon and a capable fighter. He is older, heavier and stronger than you and has been unsuccessful in one previous challenge, but he is a skillful wrestler. You walk into the Temple and bow to the Grandmaster of the Dawn, a man who looks younger than his fifty years, slim and taut with piercing dark eyes. Beside you, Gorobei also bows, his face a mask showing no emotion. He is clad only in a loin cloth and his rippling muscles gleam with an oil that will make it difficult to keep a grip on him. You must defeat him in unarmed combat in order to be allowed to undertake the spiritual test which will show whether you are ready to become a Grandmaster.\n\nGorobei turns to you and bows and you return the courtesy. The Grandmaster of the Dawn reminds you that this is not a fight to the death and you may not use Inner Force. He signals for you to begin. Gorobei advances warily across the polished granite floor, his big hands ready to grapple you.",
+        "image": "1.png",
+        "opponents": [
+            "Gorobei"
+        ],
+        "options": [
+            {
+                "text": "Feint a punch and then use the Leaping Tiger kick?",
+                "entry": 17,
+                "type": "offence",
+                "action": "kick"
+            },
+            {
+                "text": "Pretend to grapple but instead use the Cobra Strike jab?",
+                "entry": 35,
+                "type": "offence",
+                "action": "punch"
+            },
+            {
+                "text": "Raise your foot as if to kick but side-step and use the Whirlpool throw?",
+                "entry": 61
+            },
+            {
+                "prereq": [
+                    "skill",
+                    "Acrobatics"
+                ],
+                "text": "[Acrobatics] Somersault to Gorobei's side before attacking?",
+                "entry": 80
+            }
+        ]
+    },
+    "6": {
+        "description": "You pass through the archway of purple-black glass and on into the city of Doomover itself. You cannot remember ever having seen so many buildings, solid and tall, their roofs of sloping slates, not thatch, and there are shops everywhere, selling fish, wine, and grain and there is even a slave market. Near the Obsidian Gate a town-crier begins to ring his bell.\n\nHe is dressed in orange and green to attract attention, and he begins to shout loudly about a brave adventurer who lived in Doomover who has reaped rich rewards and found a secret way into the death-city of Mortavalon, having entered a cave in the hills which encircle that city. Next he proclaims loudly that the army is paying well for recruits, that there is no war but men are needed for manoeuvres on the Plain of Feet. There are rows of barracks not far from the harbour.",
+        "options": [
+            {
+                "text": "Decide to enlist in the army to see what information you can gain?",
+                "entry": 16
+            },
+            {
+                "text": "Ignore the town crier and walk on through the city?",
+                "entry": 408
+            }
+        ]
+    },
+    "16": {
+        "description": "You walk to the barracks and join a queue of people, some young and fit, others older, looking a little down on their luck. You are chosen with a few of the others to demonstrate your skill with the sword, which you manage adequately but not well, never having been trained in sword play. You are grouped together and given drill practice for some hours before being marched to your night barracks. You manage to discover that the Legion of the Sword of Doom is going to attack the people of the Spires of Foreshadowing but that there is plenty of time to be trained for battle, because its leader, Honoric, has left the city and journeyed north.\n\nAs you all settle down to sleep, they begin to talk of pillaging the Spires and the loot that they will bring home. The barracks are guarded in case any of the new recruits think better of joining up but you decide that there is nothing more of interest here and try to desert in the quiet hours before dawn. You wrap your black Ninja headgear around your head until only the slits of your eyes are visible and don your black costume.",
+        "options": [
+            {
+                "prereq": [
+                    "skill",
+                    "Climbing"
+                ],
+                "text": "[Climbing] Leave the barracks from the roof?",
+                "entry": 75
+            },
+            {
+                "text": "Creep up behind the guard whilst the others sleep?",
+                "entry": 86
+            }
+        ]
+    },
+    "17": {
+        "image": "1.png",
+        "opponent_offence": "punch",
+        "player_defence": 7,
+        "victory": 110,
+        "defeat": 95,
+        "options": [
+            {
+                "text": "Feint and punch?",
+                "entry": 35,
+                "type": "offence",
+                "action": "punch",
+                "inner_force": false
+            },
+            {
+                "text": "Feint and throw?",
+                "entry": 61
+            },
+            {
+                "text": "Kick again?",
+                "entry": 17,
+                "type": "offence",
+                "action": "kick",
+                "inner_force": false
+            }
+        ],
+        "description": "You step forward as if to punch, then, leaping in the air you lash the ball of your foot toward Gorobei's head with a speed that defies belief. Gorobei, although not quick, knows your style of combat."
+    },
+    "19": {
+        "description": "The Aquamarin’s huge oars are each manned by two. At your side a rower, until recently free but now roped by the reavers to the oar shaft, stares blankly at you. You can tell by the white scars on his back that he is one of the two who has been in slave galleys before. His upper body is huge, his chest unnaturally deep and his legs squat and tapering to small feet, giving him the appearance of a toad. He tells you that he had been enslaved as a boy and knows no other life than that of the oar deck. He groans quietly at the savage twist of Fate that has befallen him and tells you that he was the only one on his last slave ship to live longer than a year.\n\nThe buccaneers appoint an Overseer and two whip hands to patrol the Aquamarin's oar deck. It seems they are going to sell her and her crew at some lawless port.",
+        "boolean_option": true,
+        "options": [
+            {
+                "prereq": [
+                    "skill",
+                    "Escapology"
+                ],
+                "text": "[Escapology] Wait until night, and then make your escape.",
+                "entry": 126
+            },
+            {
+                "text": "Continue",
+                "entry": 115
+            }
+        ]
+    },
+    "26": {
+        "description": "By midday of the next day, the Aquamarin has left the islands behind and ahead of you looms the Greater Continent. You turn north and hug the rocky coast for some days; you regain much lost Endurance as you rest, gliding over the still calm seas. It begins to rain slightly on the next day, as you follow the shore of a vast bay. Glaivas comes to talk to you and points to a large estuary where the Greybones empties into the sea. He tells you that his home city, Tor, lies up river. You ask him whether there is a temple to Kwon there and he shakes his head but freely tells you that his goddess is the Allmother, Preserver of Life. You ask him of the cities which lie beyond Tor on the Greybones river but a look of pain crosses his face.\n\n'Let me tell you, instead, of Doomover, for that is our port of call,' he says. 'It is one of the largest cities in the Manmarch, perhaps four hundred thousand souls, and it is ruled by the Legion of the Sword of Doom. Most spit when they hear the name but they are one of the best armies on Orb. They worship the Wargod, Vasch-Ro, He who sows for the Reaper, and they spread fear about them in battle. There are temples to other gods but the Cathedral to the Wargod overshadows them all. The Marshal of the Legion of the Sword of Doom is Honoric, a blackheart who has never been defeated in combat. It is said that he once slew a storm giant, single handed. He is without doubt a peerless swordsman. The order of the Scarlet Mantis has a temple there, too. They send their acolytes to the Far Snows for training, where they become used to hardship of all kinds. Yaemon is the greatest warrior they have ever had to lead them. They use the cross of Avatar, the Supreme Principle of Good as a symbol, but with a serpent twining round it. In this way you may know one if you see one.'\n\nOn the next day, you sight the fortified harbour walls of Doomover and two long blackwood ships dart out to meet you. They fly the flag of the Barbican, the Doomover navy. As they approach, a tall man in black ringed mail orders you to heave to. The captain obeys and the sails are slackened. He answers various questions but when the naval commander asks what business he has at Doomover, he looks nervously at Glaivas, licking his lips. Glaivas answers for him, saying that he has come to sell galley slaves.\n\nThe commander grins, 'I was going to confiscate your ship but as you bring men we have need of, you may pass through the Barbican.' With that, you are allowed on your way.\n\nThe Barbican itself is a huge gatehouse, like a fort, which spans the ends of the harbour walls in an arc. The ship glides beneath it and is tied up at the busy wharf. You thank Glaivas for his help and jump lithely to the land. He is returning to Tor to organise the defence against the forces of Vile should your mission fail. He throws you a pouch containing ten gold pieces, saying, 'Here, you need this. May Fate smile on you, Ninja.' You pocket the pouch and turn to the city.\n\nTwo gates stand side by side. The larger is a huge arch of black obsidian like a rainbow of dark glass. The other, much smaller, consists of two pairs of white marble pillars topped by a portico on which the words 'Portal of the Gods' are written in gold leaf.",
+        "image": "26.png",
+        "modify_endurance": 10,
+        "loot_add": [
+            [
+                "Gold coin",
+                10
+            ]
+        ],
+        "options": [
+            {
+                "text": "Enter through the Obsidian Gate?",
+                "entry": 6
+            },
+            {
+                "text": "Enter via the Portal of the Gods?",
+                "entry": 208
+            }
+        ]
+    },
+    "27": {
+        "description": "The girl looks at you scornfully, as if you were in some way unworthy. The old man screams at you, 'May Fate never smile on you again.' He has cursed you.\n\nYou leave the chapel quickly and decide to pass through the Obsidian Gate into the main part of the city.",
+        "image": "36.png",
+        "player_modifier": [
+            "fate",
+            -1
+        ],
+        "options": [
+            {
+                "text": "Continue",
+                "entry": 6
+            }
+        ]
+    },
+    "34": {
+        "description": "Crash! The Captain’s head hits the deck on the way down and his skull is staved in before the waves engulf him. The news spreads quickly through the reavers and they break off the battle, jumping back to the Watery Death and begin fighting in earnest to decide who shall become the new tyrant captain.\n\nYou dive from the stern castle and swim strongly towards the Aquamarin which is already under way. Your lungs bursting, you catch onto a moving oar at last, and haul yourself up over the side.",
+        "options": [
+            {
+                "text": "Contine",
+                "entry": 26,
+                "type": null
+            }
+        ]
+    },
+    "35": {
+        "image": "1.png",
+        "opponent_offence": "punch",
+        "player_defence": 7,
+        "defeat": 95,
+        "victory": 110,
+        "options": [
+            {
+                "prereq": null,
+                "text": "Feint and kick?",
+                "entry": 17,
+                "type": "offence",
+                "action": "kick",
+                "inner_force": false
+            },
+            {
+                "prereq": null,
+                "text": "Feint and throw?",
+                "entry": 61,
+                "type": null
+            },
+            {
+                "prereq": null,
+                "text": "Punch again?",
+                "entry": 35,
+                "type": "offence",
+                "action": "punch",
+                "inner_force": false
+            }
+        ],
+        "description": "You crouch as if to wrestle with Gorobei who tenses, ready to throw his extra weight against yours, but you jab unexpectedly towards his midriff. Gorobei's reach is long and he is skilled in punching and blocking, though he is not as fast as you."
+    },
+    "36": {
+        "description": "The Seer is shuffling towards a porch at the entrance of the small wooden chapel that lies beyond the temple to Béatan the Free. He turns towards you and beckons you inside. The chapel is small and dark but to your surprise it is clean and well kept. Scrolls are neatly stacked in racks along the walls. The old man calls a girl’s name and his acolyte appears, a surprisingly pretty girl of no more, than eighteen seasons. Whilst you wonder what she is doing with the stooped old man in a chapel that is too small to hold more than twenty people, he produces a long and wicked looking sacrificial knife.\n\nIn the darkness of the chapel his features look more gaunt and powerful than they did when he raved at the priests. He tells you to lie down on what looks like a small marble tomb with a silver ewer beside it. The young girl reaches to guide you to it.",
+        "image": "36.png",
+        "options": [
+            {
+                "text": "Trust them and allow her to guide you?",
+                "entry": 50
+            },
+            {
+                "text": "Decide to take your leave hastily?",
+                "entry": 27
+            }
+        ]
+    },
+    "45": {
+        "description": "You duck the Captain’s swirling morning star, then dodge as he tries to surprise you by driving the heavy gold rings on his left fist into your face. Before you can attack him again a chain net descends upon you and you fall, struggling, to the boards. Two buccaneers had seen you attacking their Captain and being his favourites, they rush to his aid, flinging a chain net from the stairway.\n\nThey tie you up and drag you back to the Aquamarin where your Ninja tools are taken and you are roped to an oar.",
+        "lose_equipment": true,
+        "options": [
+            {
+                "text": "Continue",
+                "entry": 19
+            }
+        ]
+    },
+    "46": {
+        "description": "'We are always ready to help a follower of the Preserver of Life,' says the priest. You ask him if a monk, a follower of Vile called Yaemon, is in Doomover. The priest tells you that the talk of the town is that Honoric, the Marshal of the Legion of the Sword of Doom, left the city a tenday since, just when his men were expecting him to lead them in battle against the people of the Spires of Foreshadowing. He continues, 'I don’t know why he left so suddenly, but it must be important.' He pauses.\n\n'But what of Yaemon?’ you ask.\n\n'Ah yes, well, the monks of the Scarlet Mantis have always been on good terms with the reverencers of Vasch-Ro the Wargod. Yaemon went with him on the road to Mortavalon.' He can tell you no more other than that they rode and were alone. You thank him and leave the temple.",
+        "options": [
+            {
+                "text": "Go through the Obsidian Gate?",
+                "entry": 6
+            },
+            {
+                "text": "Leave Doomover out of the harbour gate and head for Mortavalon?",
+                "entry": 65
+            }
+        ]
+    },
+    "50": {
+        "description": "The girl takes your hand in hers and leads you to the marble slab. The old man explains that he must let some of your blood into the silver chalice if he is to show you the future. He cuts a vein in your arm and the blood pumps into the ewer. You look at him in alarm as he lets it flow until you have lost half a pint and your arm begins to tingle. Then he seals the wound with a spell.\n\nThe girl pours a green potion into the ewer. You feel faint and obey him when he tells you to look at a mirror which hangs on the wall above you. He begins to chant and produces a crystal prism which he holds over the ewer. The blood and potion bubble and the Seer's chanting grows louder. A picture forms in the mirror of two men leaving a city on horseback. The larger is dressed in black plate mail and carries a black shield upon which is emblazoned a silver sword hanging from a silver thread, the Sword of Doom. His face is arrogant and cruel. The other is dressed in the clothes of a martial monk, scarlet with a thin black belt. They are riding towards you in silence and the monk's piercing black eyes gaze unwavering, into yours.\n\nThe Seer informs you that the vision shows Yaemon Grandmaster of Flame, riding with Honoric, Marshal of the Legion of the Sword of Doom, north from Mortavalon. He tells you that they are travelling to the Pillars of Change, each to speak a word which will imprison a god and a goddess in Inferno. Honoric seeks to rule the whole of the Manmarch. You fall into a trance and when you wake up you find yourself outside Doomover, walking on the road to Mortavalon.\n\nYou wonder what the Seer may have done whilst you were entranced. Has he told anyone of your vision? At any rate, the vision suggested that Honoric and Yaemon were far ahead. You realise that you must travel to Mortavalon to find out where Yaemon and Honoric are.",
+        "image": "36.png",
+        "modify_endurance": -2,
+        "options": [
+            {
+                "text": "Continue",
+                "entry": 65
+            }
+        ]
+    },
+    "56": {
+        "description": "He asks you to give the sign of the many ways to freedom and you cannot. He prepares to cast a spell, but you beg his pardon and, saying that you will seek help elsewhere, quickly leave the temple. The Seer is nowhere to be seen so you walk out of the Sanctuary and through the Obsidian Gate.",
+        "options": [
+            {
+                "text": "Continue",
+                "entry": 6
+            }
+        ]
+    },
+    "58": {
+        "description": "The buccaneer Captain falls to the planks, dead. Two of his men are on the stairway behind you but seeing that you have killed the man they feared single-handed, they back away, calling the news to the other reavers. The pirates abandon the Aquamarin, returning to the Watery Grave, and begin fighting in earnest to deade who shall become the new tyrant captain.\n\nYou dive from the stern castle into the sea and swim strongly towards the Aquamarin, which is already under way. Your lungs bursting, you catch onto a moving oar at last, and haul yourself up over the side.",
+        "options": [
+            {
+                "text": "Continue",
+                "entry": 26
+            }
+        ]
+    },
+    "61": {
+        "image": "1.png",
+        "options": [
+            {
+                "prereq": null,
+                "text": "Continue",
+                "entry": 95,
+                "type": "move"
+            }
+        ],
+        "description": "You raise your foot as if to kick Gorobei in the chest, but spin to his side instead and take hold of his arm to throw him over your hip. You rapidly learn your mistake, however, as your grip slides on the oil which covers him and he uses his skill as a wrestler to grab you and lock your arm behind your back whilst he grips you around the throat. His strength is enormous. You try to somersault backwards over him and break the grip but he is ready for you and pins you to the floor before delivering a heavy blow."
+    },
+    "67": {
+        "description": "Before the morning start makes contact you snap your leg upwards, driving the ball of your foot at the Captain's face.",
+        "victory": 58,
+        "defeat": 45,
+        "player_defence": 7,
+        "options": [
+            {
+                "text": "Try the Teeth of the Tiger throw?",
+                "entry": 87,
+                "type": "offence",
+                "action": "throw"
+            },
+            {
+                "text": "Use a Cobra Strike punch?",
+                "entry": 77,
+                "type": "offence",
+                "action": "punch",
+                "inner_force": true
+            },
+            {
+                "text": "Kick again?",
+                "entry": 67,
+                "type": "offence",
+                "action": "kick",
+                "inner_force": true
+            }
+        ]
+    },
+    "75": {
+        "description": "You climb to the ceiling using your Cat's Claws and noiselessly open a trapdoor that leads to the roof. You climb out under the eaves and onto the slates of the barracks roof before jumping down to the street below.",
+        "fate_roll": true,
+        "options": [
+            {
+                "text": "Fate smiles on you.",
+                "entry": 94
+            },
+            {
+                "text": "Fate turns her back on you.",
+                "entry": 125
+            }
+        ]
+    },
+    "77": {
+        "description": "Before the morning star connects you drive your fingers at the evil Captain's throat.",
+        "victory": 58,
+        "defeat": 45,
+        "player_defence": 8,
+        "options": [
+            {
+                "text": "Try the Teeth of the Tiger throw?",
+                "entry": 87,
+                "type": "offence",
+                "action": "throw"
+            },
+            {
+                "text": "Use the Leaping Tiger kick?",
+                "entry": 67,
+                "type": "offence",
+                "action": "kick",
+                "inner_force": true
+            },
+            {
+                "text": "Punch again?",
+                "entry": 77,
+                "type": "offence",
+                "action": "punch",
+                "inner_force": true
+            }
+        ]
+    },
+    "80": {
+        "image": "1.png",
+        "description": "You step forward to attack but then somersault suddenly, landing at Gorobei's side as his fist flails the air at the spot from which you leapt. He turns but you have surprised him and will find it easier to attack him than if you merely stood before him to trade blows.",
+        "attack_modifier": 2,
+        "options": [
+            {
+                "prereq": null,
+                "text": "Feint a punch and then use the Leaping Tiger kick?",
+                "entry": 17,
+                "type": "offence",
+                "action": "kick",
+                "inner_force": false
+            },
+            {
+                "prereq": null,
+                "text": "Pretend to grapple but instead use the Cobra Strike jab?",
+                "entry": 35,
+                "type": "offence",
+                "action": "punch",
+                "inner_force": false
+            },
+            {
+                "prereq": null,
+                "text": "Raise your foot as if to kick but side-step and use the Whirlpool throw?",
+                "entry": 61,
+                "type": null
+            }
+        ]
+    },
+    "86": {
+        "description": "You slink soundlessly as a blaçk panther towards the unsuspecting guard, who is leaning against the doorpost lost in thought.",
+        "options": [
+            {
+                "text": "Creep along the wall and garotte him?",
+                "entry": 116
+            },
+            {
+                "text": "Send a Shuriken spinning towards his throat?",
+                "entry": 105
+            }
+        ]
+    },
+    "87": {
+        "description": "Ducking beneath the flailing chain and ball you jump into the air, and try to clamp your feet around his neck and, by twisting vigorously, throw him into the sea.",
+        "victory": 34,
+        "defeat": 45,
+        "player_defence": 7,
+        "instakill": true,
+        "instakill_desc": "You whip him over the edge of the stern castle and into the sea!",
+        "options": [
+            {
+                "text": "Use the Cobra Strike punch?",
+                "entry": 77,
+                "type": "offence",
+                "action": "punch",
+                "inner_force": true
+            },
+            {
+                "text": "Use the Leaping Tiger kick?",
+                "entry": 67,
+                "type": "offence",
+                "action": "kick",
+                "inner_force": true
+            }
+        ]
+    },
+    "94": {
+        "description": "You drop head-first towards the ground twenty feet below, and turning in mid-air land on your feet like a cat. No one has noticed you and you glide through the night to the city gate like a shadow. At the gate you distract the attention of the guards by throwing a stone which shatters a pane of glass near a thief who thought he was unobserved, and slip out of the city at the first ray of dawn as the guards run to arrest him.",
+        "options": [
+            {
+                "text": "Continue",
+                "entry": 65
+            }
+        ]
+    },
+    "95": {
+        "opponent_remove": "Gorobei",
+        "options": [
+            {
+                "prereq": null,
+                "text": "Continue",
+                "entry": 191,
+                "type": null
+            }
+        ],
+        "description": "Gorobei has used the Iron Fist, punching you so hard in the back of the neck that you slump to the granite floor, senseless. A young village boy is pouring water onto your forehead when you regain your wits. A few of the younger acolytes murmur condolences as you rub your neck. An hour later, Gorobei returns from the robing chamber and you applaud with the others as he is ordained as a Grandmaster."
+    },
+    "97": {
+        "description": "One of the buccaneers has seen you and he creeps along the deck of the Watery Grave, intent on severing your hands from your wrists with his cutlass. The faintest jingling of his many ear-rings alerts you and you nimbly vault over the rail onto the deck, and catch his arm with your left hand as he swings his cutlass at your head. Then you use the Whirlpool to throw him over the side.\n\nTurning, you run up the stairway to the stern castle from where the pirate Captain is directing his men. You bound up the last steps to appear from nowhere before him. He steps back in surprise but soon regains his composure. He is a large man, with a grizzled beard and gold armbands which cause the veins of his massive arms to stand out like cords.\n\nHe swings his morning star at you as you move in to attack.",
+        "opponents": [
+            "Buccaneer Captain"
+        ],
+        "combat_timer": 4,
+        "options": [
+            {
+                "text": "Use the Leaping Tiger kick?",
+                "entry": 67,
+                "type": "offence",
+                "action": "kick"
+            },
+            {
+                "prereq": null,
+                "text": "Use the Cobra Strike punch?",
+                "entry": 77,
+                "type": "offence",
+                "action": "punch"
+            },
+            {
+                "prereq": null,
+                "text": "Use the Teeth of the Tiger throw?",
+                "entry": 87,
+                "type": "offence",
+                "action": "throw"
+            }
+        ]
+    },
+    "105": {
+        "description": "The Shuriken findš its mark. The guard throws his hand to his throat and screams before collapsing to the floor, dead. Realising the alarm may have been given, you run out of the barracks towards the city gate, leaving your throwing star behind.",
+        "loot_remove": [
+            [
+                "Shuriken",
+                1
+            ]
+        ],
+        "options": [
+            {
+                "text": "Continue",
+                "entry": 125
+            }
+        ]
+    },
+    "107": {
+        "description": "You swing up over the rail, unseen, and run up the stairway to the stern castle from where the pirate Captain is directing his men. You bound up the last steps, to appear from nowhere before him. He steps back in surprise but soon regains his composure. He is a large man, with a grizzled beard and gold armbands, which cause the veins of his massive arms to stand out like cords. He swings his morning star at you as you move in to attack.",
+        "opponents": [
+            "Buccaneer Captain"
+        ],
+        "combat_timer": 4,
+        "options": [
+            {
+                "text": "Use the Leaping Tiger kick?",
+                "entry": 67,
+                "type": "offence",
+                "action": "kick",
+                "inner_force": true
+            },
+            {
+                "text": "Use the Cobra Strike punch?",
+                "entry": 77,
+                "type": "offence",
+                "action": "punch",
+                "inner_force": true
+            },
+            {
+                "text": "Use the Teeth of the Tiger throw?",
+                "entry": 87,
+                "type": "offence",
+                "action": "throw"
+            }
+        ]
+    },
+    "110": {
+        "description": "Your last blow sent Gorobei tumbling senseless to the granite floor. A ripple of applause greets your victory and the Grandmaster of the Dawn compliments you on your fighting prowess and beckons you into the robing chamber. You step beyond the Temple Hall through silken drapes into a small dark room, completely bare of furnishing save for two enormous copper chests. Incense is burning in a censer which swings from the ceiling like a pendulum. The room is lit by white candles.\n\nYou kneel on the rush matting facing the three Grandmasters who stare ahead, unseeing, waiting for you to break the silence which you are determined to keep. After an hour-candle has sputtered its last, during which time none of you has moved so much as a muscle, the Grandmaster of the Dawn looks into your eyes and says, 'Kwon knows that you desire in your heart to serve him but I must ask you two questions. Do you truly desire to serve Kwon above all other things or do you desire to avenge the death of your foster-father, Naijishi, more even than to serve your God? What should a Ninja fear most - the failure of a mission or capture by an enemy who will use torture to gain secrets?'\n\nYou know that in your heart of hearts you would rather avenge Naijishi than anything else in Orb but a Grandmaster should dedicate his life to Kwon. As for the second question, you can only let your good sense guide you.",
+        "options": [
+            {
+                "text": "'I desire to serve Kwon above all else and I fear only the failure of a mission.'",
+                "entry": 139
+            },
+            {
+                "text": "'I desire to avenge the father who loved me and I fear torture above all.'",
+                "entry": 151
+            },
+            {
+                "text": "'I desire to avenge the father who loved me and I fear only the failure of a mission.'",
+                "entry": 177
+            },
+            {
+                "text": "'I desire to serve Kwon above all else and I fear torture above all.'",
+                "entry": 128
+            }
+        ]
+    },
+    "115": {
+        "description": "After nightfall you strain at your bonds but the only reward for your efforts is the kiss of the whip. Exhausted, you fall asleep before dawn and awake to find iron manacles around your wrists and a girdle around your middle by which you are chained to the oar. They are heavy and unbreakable and will not be struck off until your body is spent and lifeless after years at the oar. You have failed.",
+        "options": [
+            {
+                "text": "Continue",
+                "entry": "death"
+            }
+        ]
+    },
+    "116": {
+        "description": "Silently, you pause behind the guard, readying yourself to strike. With blinding speed, you wrap the garotte around his throat. The guard dies without a sound as the wire slices neatly through his windpipe arid you slip out of the barracks and glide through the night to the city gate like a shadow. At the gate you distract the attention of the gate guards by throwing a stone that shatters a pane of glass near a thief who thought he was unobserved, and slip out of the city at the first ray of dawn as the guards run to arrest him.",
+        "options": [
+            {
+                "text": "Continue",
+                "entry": 65
+            }
+        ]
+    },
+    "125": {
+        "description": "You glide through the night towards the city gate but someone has spotted you. The alarm sounds at the barracks as you approach the gate, and torches flare on the gate tower, some of which are thrown down into the street nearby. You hear the unmistakable twang of crossbow springs and spin towards the sound.",
+        "boolean_option": true,
+        "options": [
+            {
+                "prereq": [
+                    "skill",
+                    "Arrow Cutting"
+                ],
+                "text": "[Arrow Cutting] Continue",
+                "entry": 201
+            },
+            {
+                "text": "Continue",
+                "entry": 136
+            }
+        ]
+    },
+    "126": {
+        "description": "Using your Escapologist's skill you had tensed your body and held your limbs so that, though the buccaneers bound you tightly, when you relaxed the ropes were loosened. You wriggle and twist, using the amazing suppleness of your body to loosen the bonds further. Dislocating a shoulder, you succeed in freeing an arm and then quickly dispose of the ropes which confine you. In the darkness of the oar deck you are thankful for the diet which has given you unusual powers of seeing in the dark. The duty guard doesn't hear you as you steal past the sleeping bodies at the oars, until you are close enough to wrap a handy piece of chain around his neck and choke him into unconsciousness.\n\nHe crumples without a sound and you step over his body to the locker where they have stowed your Ninja tools and retrieve them. One by one you free the crew and tell them to wait quietly for your signal, whilst you go to the main cabin to see if the buccaneer Captain is sleeping aboard his prize. Silently, you climb the stairs to the main deck and wait for the moon to pass behind a cloud. You reach the door of the main cabin unnoticed.",
+        "regain_equipment": true,
+        "options": [
+            {
+                "prereq": [
+                    "skill",
+                    "Picking Locks"
+                ],
+                "text": "[Picking Locks] Pick the lock on the door to open it?",
+                "entry": 153
+            },
+            {
+                "text": "Smash the door open.",
+                "entry": 137
+            }
+        ]
+    },
+    "128": {
+        "description": "The Grandmaster shakes his head.\n\n'You have answered neither truthfully nor wisely. You cannot hide your wish to avenge Naijishi who loved you and taught you to love our Lord Kwon, from we who have known you near all of your short life. It is not wrong that you should wish to avenge Naijishi but you must wait patiently for your time to come and never forget that the service of Kwon is the helping of all mankind. As for torture, it is only through failing a mission that a true Ninja could be captured and there is always time to bite one's tongue from one's head and bleed to death rather than risk betraying secrets. You need fear only the failure of a mission. You have failed the spiritual test and you are not yet worthy to become Grandmaster of the Five Winds. Go back to the Temple Hall and ask Gorobei to come in to us.'\n\nDejectedly, you return to the main temple and there is a low moan from the villagers as you ask Gorobei to go into the robing room. He places his arm on your shoulder and says, 'Next time,' before moving past the silken curtain. An hour later he returns and you applaud with the others as he is ordained as a Grandmaster.",
+        "options": [
+            {
+                "prereq": null,
+                "text": "Continue",
+                "entry": 191,
+                "type": null
+            }
+        ]
+    },
+    "137": {
+        "description": "You stand, legs apart, in front of the door, taking three slow deep breaths. Then when you are ready, you use the Iron Fist with a grunting cry as the Inner Force escapes you. There is a crash and the door flies off its hinges. You leap over it as it falls to the floor. The buccaneer Captain is inside having forsaken his ship for the comfort of the Aquarmarin. Woken from his sleep by the crash of the door he rolls off the bed, pulling his cutlass from under the pillow and tries to throw some blankets at you. You whip out a Shuriken and with a deft flick of the wrist, send it hurtling towards him before he can cry out.",
+        "shuriken_roll": 5,
+        "options": [
+            {
+                "text": "Continue",
+                "entry": 164
+            },
+            {
+                "text": "Continue",
+                "entry": 175
+            }
+        ]
+    },
+    "139": {
+        "description": "The Grandmaster smiles and shakes his head.\n\n'You have answered cleverly but not truthfully. You cannot hide your wish to avenge Naijishi, who loved you and taught you to love our Lord Kwon, from we who have known you near all of your short life. It is not wrong that you should wish for revenge on Yaemon but wait patiently for your time to come and never forget that the service of Kwon is the helping of all mankind. You are right, though, to say that a Ninja need only fear failure, for to endure torture one must first endure failure. There is always time to bite one's tongue from one's head and bleed to death rather than risk betraying secrets under torture. I shall not say that you have failed, rather you are like a whetted blade straining in the sheath needing only the wisdom of years to hone you to perfection. I shall not keep such a potent weapon sheathed - you have passed the test.'\n\nThey lead you back to the Temple Hall where the monks and villagers have waited to see whether you would pass the test. Prayers to Kwon are offered up as part of the ceremony at which you are ordained as Grandmaster of the Five Winds. Gorobei applauds with the others. For now he remains an Adept of the Inner Circle but his time will come for he is a great warrior and a good monk. Should you die he will probably take your place.",
+        "options": [
+            {
+                "prereq": null,
+                "text": "Continue",
+                "entry": 191,
+                "type": null
+            }
+        ]
+    },
+    "144": {
+        "description": "You wait, apparently dejected, for the guards to take you prisoner but then somersault high in the air over them and sprint through the gate at the first ray of dawn. The astonished soldiers run after you but you sail down the road like the wind and they soon give up the futile chase.",
+        "options": [
+            {
+                "text": "Continue",
+                "entry": 254
+            }
+        ]
+    },
+    "151": {
+        "description": "The Grandmaster smiles and shakes his head.\n\n'You have answered truthfully. It is not wrong that you should wish to avenge Naijishi, who loved you and taught you to love our Lord Kwon, but you must wait patiently for your time to come and never forget that the service of Kwon is the helping of all mankind. But as for torture, it is only through failing a mission that a true Ninja could be captured and there is always time to bite one's tongue from one's head and bleed to death rather than risk betraying secrets. You need only fear the failure of a mission. I shall not say that you have failed, for never has one mastered the Way of the Tiger so ably as you and we would not keep our sharpest weapon forever sheathed. You have passed the test.'\n\nThey lead you back to the Temple Hall where the monks and villagers have waited to see whether you would pass the test. Prayers to Kwon are offered up as part of the ceremony at which you are ordained as Grandmaster of the Five Winds. Gorobei applauds with the others, for now he remains an Adept of the Inner Circle but his time will come for he is a great warrior and a good monk. Should you die, he will probably succeed you.",
+        "options": [
+            {
+                "prereq": null,
+                "text": "Continue",
+                "entry": 191,
+                "type": null
+            }
+        ]
+    },
+    "153": {
+        "description": "It is the work of a few moments to pick the lock with a small file. It clicks quietly and the well-oiled hinges make no sound as you open the cabin door. Inside the buccaneer Captain is sleeping, having forsaken his own cabin for the comfort of the Aquamarin. He is snoring heavily, dead drunk. Taking your time, you smear poison on the lockpick before jabbing it into his jugular vein. Turning, you shout the signal for the crew to break out as the Reaver Captain is wracked by death spasms. You lead the attack and the rum-sodden pirates are taken by surprise. Many jump into the sea, forgetting that their ship is a mile away in darkness.\n\nYou are glad to see Glaivas, freed by one of the crew, despatching an ugly pirate who was proving troublesome. The few remaining alive surrender to him and he orders them put to the oar, for a taste of their own medicine. In the morning, you set sail again and make good speed.",
+        "options": [
+            {
+                "text": "Continue",
+                "entry": 26
+            }
+        ]
+    },
+    "164": {
+        "description": "The spinning Shuriken takes the pirate Captain in the throat and the shout which was on his lips dies to a bloody gurgle as he slumps lifeless to the planks. You shout the signal and the crew rush up from the oar deck whirling lengths of chain and the cutlasses of their guards. You lead the attack and the rum-sodden pirates are taken by surprise. Many jump into the sea, forgetting that their ship is a mile away in darkness. You are glad to see Glaivas, freed by one of the crew, despatching an ugly pirate who was proving troublesome. The few remaining alive surrender to him and he orders them put to the oar, for a taste of their own medicine. In the morning, you set sail again and make good speed.",
+        "options": [
+            {
+                "text": "Continue",
+                "entry": 26
+            }
+        ]
+    },
+    "175": {
+        "description": "The Captain shouts for help as the Shuriken is caught in the blankets and he throws them at you as you leap to attack. You cast them aside and duck a cutlass swipe before hearing a sound behind you. You whirl and block but are too late to catch the throwing knife of the Reaver's first mate. It lodges in your heart and you know no more.",
+        "options": [
+            {
+                "text": "Continue",
+                "entry": "death"
+            }
+        ]
+    },
+    "176": {
+        "description": "You pay no attention but the insults continue and soon half of the soldiers in the room are shouting at you to fight. You decide that it is wise to leave the tavern and stride towards the door. The drunken young Captain lurches to his feet and draws his sword. It seems to glow as it leaves its sheath and a pall of fear descends upon you. You stop, the hairs bristling on your scalp.\n\nGrimly, you recite the Ninja Covenant, the Ninja No Chigiri, under your breath and courage returns. You move towards the door but the Captain and two of his friends decide to attack you with their swords. You must defend yourself.",
+        "image": "176.png",
+        "opponents": [
+            "Young Captain",
+            "First soldier",
+            "Second solder"
+        ],
+        "options": [
+            {
+                "text": "Use the Winged Horse kick?",
+                "entry": 256,
+                "type": "offence",
+                "action": "kick",
+                "inner_force": true
+            },
+            {
+                "text": "Use the Iron Fist punch?",
+                "entry": 248,
+                "type": "offence",
+                "action": "punch",
+                "inner_force": true
+            },
+            {
+                "text": "Use the Whirlpool throw?",
+                "entry": 237,
+                "type": "offence",
+                "action": "throw"
+            }
+        ]
+    },
+    "177": {
+        "description": "The Grandmaster of the Dawn smiles and says,\n\n'You pass the test for you have answered both truthfully and rightly. It is not wrong that you should wish to avenge Naijishi who loved you and taught you to love our Lord Kwon but you must wait patiently for your time to come and never forget that the service of Kwon is the helping of all mankind. It is only through failing a mission that a true Ninja would be captured and there is always time to bite off one's tongue from one's head and bleed to death rather than risk betraying secrets under torture.'\n\nHe continues, 'We have never seen one who shows such promise nor one who has mastered so ably the Way of the Tiger. I am going to recite to you the secret litany of the Ninja Grandmaster - remember it, for one day it may be of use to you.'\n\n> I AM NINJA  \nMy parents are the Heaven and the Earth  \nMy Home is my Body  \nMy Power is Loyalty  \nMy Magic is Training  \nMy Life and my Death is Breathing  \nMy Body is Control  \nMy Eyes are the Sun and the Moon  \nMy Ears are Sensitivity  \nMy Laws are Self-Protection  \nMy Strength is Adaptability  \nMy Ambition is taking every Opportunity with Fullness  \nMy Friend is my Mind  \nMy Enemy is Carelessness  \nMy Protection is Right Action  \nMy Weapons are Everything that Exists  \nMy Strategy is One Foot in front of the Other  \nMy Trust is in Kwon  \nMY WAY IS THE WAY OF THE TIGER\n\nHis words are etched in your memory. Next, he pulls an Opal Ring from his finger and passes it to you. 'This may be of use to you,' he says and you slip it onto your own finger. When the echoing words of the Grandmaster have died away they lead you back to the Temple Hall where the monks and villagers have waited to see whether you would pass the test. Prayers to Kwon are offered up as part of the ceremony at which you are ordained as a Grandmaster of the Five Winds. Gorobei applauds with the others. For now he remains an Adept of the Inner Circle but his time will come, for he is a great warrior and a good monk. Should you die he will probably take your place.",
+        "loot_add": [
+            [
+                "Opal ring",
+                1
+            ]
+        ],
+        "note_add": [
+            "Litany of Dawn"
+        ],
+        "event_add": [
+            "ordained_grandmaster_of_five_winds"
+        ],
+        "options": [
+            {
+                "text": "Continue",
+                "entry": 191
+            }
+        ]
+    },
+    "183": {
+        "description": "The priest replies, 'Even if we were not busy with healing we would not help you, for those who follow the strict laws of a monastery, as you must, hinder freedom and prevent paradise on Orb.'\n\nYou realise from the look of zeal in his eyes that theological argument would not sway him.",
+        "options": [
+            {
+                "text": "Tell him of your quest and ask for his help again?",
+                "entry": 297
+            },
+            {
+                "text": "Leave the temple and the Sanctuary and pass through the Obsidian Gate into Doomover?",
+                "entry": 6
+            }
+        ]
+    },
+    "186": {
+        "description": "The young soldier sneers and calls you a plague-ridden sewer rat. You sit in a corner, ignoring him. Your heightened sense of hearing enables you to eavesdrop on their conversation rather than the countless others in the crowded tavern. It seems they are waiting for the leader of the Legion of the Sword of Doom, Honoric, to return before they march against the Spires of Foreshadowing. It seems he has left the city with Yaemon, heading north.\n\nOne of the drunken soldiers at the next table starts to insult you and then tells you that if you want to live you should leave the tavern now.",
+        "image": "176.png",
+        "options": [
+            {
+                "text": "Stay in your seat?",
+                "entry": 176
+            },
+            {
+                "text": "Take a room upstairs for the night?",
+                "entry": 225
+            }
+        ]
+    },
+    "191": {
+        "description": "After the ceremony you all file out of the temple onto the golden sands and there is a frugal feast of rice and fruits shared by the villagers and the monks. You eat sparingly and take your leave early, wishing to meditate before you sleep. Relaxed from the meditation which frees your spirit from the shackles of your aching body your eyes close as soon as you lay yourself down on the straw-filled sacking that is your bed. You drift into a deep but troubled sleep.\n\nYou see a sleek-oared ship setting sail from the Land of Plenty. A tall, resolute-looking man is on the high stern castle, his legs braced against the swell. He wears a thick cloak of dark green against the weather and the sun flashes so vividly on the buckle of his sword belt that you believe this is not a dream but a vision. A sailor calls him by name, 'Glaivas', and he turns to look at you but then the vision fades and the brilliant blue sky is replaced by sombre purple clouds against which a large and dark castle looms. Three turrets on a great black Keep seem to pierce the douds. You are walking towards it, bent on completing a difficult and important mission.\n\nWhen ou awake you remember the dreams as if they were pictures painted on the wall of your monastic cell, but your sleep has at least restored any Endurance you lost in your contest with Gorobei. You are walking towards the Temple when there is a commotion on the beach and two fishermen run up to you with the news that a ship is riding at anchor offshore. A man rows himself to the beach and steps out, as the Grandmasters walk to the strand to greet him. He introduces himself as Glaivas and, bowing respectfully, he asks to talk to the Grandmaster of Grandmasters.\n\n'You may address us all,' says the Grandmaster of the Dawn, 'for we have no secrets on the Island of Tranquil Dreams.'\n\n'Not since you lost the Scrolls of Kettsuin,' Glaivas returns darkly.\n\n'What do you know of the Scrolls of Kettsuin?', asks the Grandmaster. The monks wait tensely as Glaivas looks around carefully before replying.\n\n'The Scrolls of Kettsuin hold the secret to the Word of Power which will bind Kwon himself in Inferno if it is spoken at the Pillars of Change in the great snow-wastes of the north. Yaemon, Grandmaster of Flame, of the order of the Scarlet Mantis stole it from you many years ago and he has deciphered the Word. It is the month of All-Mother Splendour and for three days the moon will turn red during the Great Conjunction of the Planets - something that occurs only once every five hundred years. If the Word is spoken by the Pillars of Change at this time your God, Kwon, will be imprisoned in the bottomless pit of fire, leaving the monks who worship Vile free to spread their dominion over the lands of men.'\n\nAt the mention of Yaemon's name there is uproar but as Glaivas continues an unnatural quiet descends.\n\n'Yaemon is preparing to set out even now from the city of Doomover on the long journey to the Ice Wastes. Though a Ranger long used to patrolling the wilderness on the edge of the Rift, I am no match for such as he. Is there one among you who will try to stop him?'\n\nAs Glaivas spoke you felt the burning need to be revenged on Yaemon flare within your breast. Your dream of Glaivas, for it was he you saw astride the deck of the ship which now rides at anchor near the sands, has convinced you that you are destined for this quest and you step forward saying, 'I  shall stop him.'\n\n'You are young,' says Glaivas, 'Can you succeed where I, a Ranger Lord, would fail?'\n\n'I am Ninja,' you reply.\n\nGlaivas starts. The Grandmaster of the Dawn sighs and says, 'Yes, I rename you Avenger, for if anyone can succeed, and you must for the sake of all mankind, it will be you.' With that he turns towards the Temple, and prayer.\n\nThe city of Doomover lies on the western coast of the Manmarch and Glaivas gifts you a map which shows the many cities and strange lands which stretch north to the snow wastes. You spend the rest of the day preparing, lacing the iron sleeves to your dark hued costume and gathering together the tools of the Ninja, before spending some hours in quiet meditation. You board Glaivas' ship in time to sail on the evening tide. You must find Yaemon and kill him before he reaches the Pillars of Change or all will be lost.",
+        "modify_endurance": 20,
+        "options": [
+            {
+                "text": "Continue",
+                "entry": 232
+            }
+        ]
+    },
+    "194": {
+        "description": "You sit at his table and he calls for a hogshead of mead. He smiles at you, lids lowered, as the mead arrives and he plunges two mugs into the brimming bucket and places one carefully before you. You raise the mugs together and drain them. There is a cheer as you slam the mugs back down together. The young captain dips them into the bucket again and again a cheer answers your efforts.",
+        "image": "176.png",
+        "boolean_option": true,
+        "options": [
+            {
+                "prereq": [
+                    "skill",
+                    "Immunity to Poisons"
+                ],
+                "text": "[Immunity to Poisons] Continue",
+                "entry": 214
+            },
+            {
+                "text": "Continue",
+                "entry": 206
+            }
+        ]
+    },
+    "196": {
+        "description": "You walk up the steps and into the Temple. The wooden pews seem to be placed at random within, but the roof is pierced with rose-windows and the inside is bright and cheerful. Crystals reflect the sun's rays against a painting showing a demolished castle, and soldiers and peasants dancing in the meadows before it. There is no sign of the decapitated priest or the young warrior. One of the priests walks towards you and you ask him if he can help you with some information. He asks you whether you are a worshipper of Béatan. Which god will you say you worship?",
+        "options": [
+            {
+                "text": "Tell him 'Kwon'?",
+                "entry": 183
+            },
+            {
+                "text": "Tell him 'The Allmother'?",
+                "entry": 46
+            },
+            {
+                "text": "Tell him 'Béatan'?",
+                "entry": 56
+            },
+            {
+                "text": "Instead hasten from the Temple to follow the old man who called himself a Seer?",
+                "entry": 36
+            }
+        ]
+    },
+    "201": {
+        "description": "You use the side of your hand to chop the quarrel aside before it hits you and then roll out of the torchlight. You lie low, motionless, until you hear a shout from a side street. 'Stop thief,' someone cries, as a man carrying a dagger runs into the torchlight. He squeals in fright as the gateguards charge after hun and you slip unnoticed out of the dty gate at the first ray of dawn.",
+        "options": [
+            {
+                "text": "Continue",
+                "entry": 65
+            }
+        ]
+    },
+    "206": {
+        "description": "The barman had mixed Spirits-of-Ra into the mead and it was stronger than you realized. The alcohol passes into your bloodstream quickly and you stand up to leave but pass out. You wake up in the morning, lying muddied in the gutter. Some of your gold coins have been taken, but you had hidden five upon your person, which you still have. If you had an Opal ring, you notice that has also been stolen.\n\nYou decide to head north in case Yaemon arrives at the Pillars of Change before you, and leave the city on the road to Mortavalon.",
+        "loot_remove": [
+            [
+                "Gold coin",
+                5
+            ],
+            [
+                "Opal ring",
+                1
+            ]
+        ],
+        "modify_endurance": 1,
+        "options": [
+            {
+                "text": "Continue",
+                "entry": 65
+            }
+        ]
+    },
+    "208": {
+        "description": "As you step between the pillars of white marble a voice speaks as if from the stones, 'Welcome to the Sanctuary, draw no swords here.' You can't see anyone nearby but ahead of you, a huge young warrior clad in russet and grey is crawling painfully up the steps of a temple. A priest in yellow robes comes out to help him but, as he leans down, a mounted knight in a black surcoat rides up the temple steps and lops the priest's head off. Another priest casts a spell, the horse rears backwards and then two other horsemen wearing the same coat of arms, a silver sword hanging by a silver thread on a black background, ride up and take the reins from their friend. He curses the young warrior in a rage but seems helpless as they lead him past you and gallop out through the marble gate. Priests carry their decapitated colleague and the young warrior, who has left a trail of blood on the steps, into the temple.\n\nAs they do so a wizened, stooped old man with a necklace of crystal which clicks as he sways, croaks, 'I foretold it but did you heed me, the Seer? No! Will Béatan the Free smile on you now, false priests?'\n\nHe turns and shuffles towards a small wooden chapel. The dead priest served Béaten, whose followers seek to bring nearer paradise on Orb by living lives of capricious goodness mocking all laws that constrict the free spirit.",
+        "image": "208.png",
+        "options": [
+            {
+                "text": "Follow the priests into the temple of Béatan the Free?",
+                "entry": 196
+            },
+            {
+                "text": "Leave the Sanctuary and pass through the Obsidian Gate?",
+                "entry": 6
+            },
+            {
+                "text": "Follow the old man who claimed to be a Seer?",
+                "entry": 36
+            }
+        ]
+    },
+    "214": {
+        "description": "Your training with the ingestion of small quantities of poisons also included large amounts of alcohol and you can drink almost anyone under the table. The young Captain begins slurring his words and the pace of drinking slows. You tell them that you are a monk who worships Vile and they treat you as one of them. The young Captain asks you about the journey that Honoric, leader of the Legion of the Sword of Doom, is making with Yaemon. You tell them that Yaemon is journeying north on important business.\n\nThey laugh at this and begin to joke with you that Honoric’s business is more important. You gather that he too knows a word which will bind a goddess in Inferno and that they are journeying to the Snow Wastes. After a time you pretend that you are overcome by the mead and take a room for the night in the tavern for which you pay 2 pieces of gold. You sleep lightly, senses alert, but are not disturbed.\n\nYou wake in the morning, mildly refreshed. You leave and walk out of the city on the road to Mortavalon.",
+        "loot_remove": [
+            [
+                "Gold coin",
+                2
+            ]
+        ],
+        "modify_endurance": 1,
+        "options": [
+            {
+                "text": "Continue",
+                "entry": 65
+            }
+        ]
+    },
+    "225": {
+        "description": "You give the barman two pieces of gold for the room and go upstairs. You sleep lightly, senses alert and you are ready when three drunken soldiers burst in. It is the work of a few moments to knock two of them unconscious with deft kicks and the third goggles in surprise and then runs from the room. You sleep little for the rest of the night. In the morning you leave the city, on the road to Mortavalon.",
+        "loot_remove": [
+            [
+                "Gold coin",
+                2
+            ]
+        ],
+        "modify_endurance": 1,
+        "options": [
+            {
+                "text": "Continue",
+                "entry": 254
+            }
+        ]
+    },
+    "232": {
+        "description": "The ship which Glaivas has chartered, the 'Aquamarin', has a hundred oars and two masts. The winds are kind to you as you scud across the azure plain. The sea is so calm that after two weeks without the tang of salt spray on your lips you forget that it is composed of water at all. The oarsmen row for ten hours a day but they are free men, not chained to their oars. Two bear the scars of a pirate's persuader; captured by buccaneers, they are of the lucky few who have lived to see the sky again. All of them have the heavy upper body of the oarsman, some who turned to the sea for their livelihood too young are squat and mis-shapen, moulded by life at the oar into grotesque travesties of the mountain dwarves.\n\nThe Land of Plenty passes to the south and you are in sight of the Isle of the Magical Goddess when the lookout cries a warning. The helmsman steers a new course and the drum-beat quickens as the oarsmen redouble their efforts. The ship that is approaching is long and low, painted green and red and flying a red pennant at the top of its mast. Glaivas, standing next to you at the rail, says, 'That ship is from Port o' Reavers, we’ll never outrun it.' So saying, he draws his sword.\n\nThe oarsmen strain, sweating with effort but they cannot match the pace of the slaves on the Reavers' ship, galvanized into a frenzied spurt by the barbed whips of their overseers. At last the Captain gives the order 'Prepare to repel boarders', and you ready yourself for combat. The pirate ship carries a spiked ram but they are obviously trying to take the Aquamarin as a prize for they grapple and come alongside. The Reavers carry scimitars and chain nets and are led in their rush to attack by a nine-foot monster whose body is covered in knobbles of mis-grown bone, an Ogre with a large spiked hammer. The Aquamarin's crew look no match for the battle-scarred buccaneers.",
+        "image": "232.png",
+        "opponents": [
+            "Ogre pirate"
+        ],
+        "options": [
+            {
+                "prereq": [
+                    "item",
+                    "Shuriken"
+                ],
+                "text": "Leap into the rigging and hurl a Shuriken at the Ogre?",
+                "entry": 257
+            },
+            {
+                "text": "Attack the Ogre as it comes aboard, flattening a section of the Aquamarin's rail?",
+                "entry": 280
+            }
+        ]
+    },
+    "248": {
+        "description": "In the blink of an eye your fist flashes out at one of your attackers.",
+        "image": "176.png",
+        "player_defence": [
+            9,
+            8,
+            7
+        ],
+        "options": [
+            {
+                "text": "Use the Whirlpool throw?",
+                "entry": 237,
+                "type": "offence",
+                "action": "throw"
+            },
+            {
+                "text": "Use the Winged Horse kick?",
+                "entry": 256,
+                "type": "offence",
+                "action": "kick",
+                "inner_force": true
+            },
+            {
+                "text": "Punch again?",
+                "entry": 248,
+                "type": "offence",
+                "action": "punch",
+                "inner_force": true
+            }
+        ]
+    },
+    "256": {
+        "description": "You step forward onto your right foot then bring your left foot up, spin to the right and lash your left heel high into the air at one of your attackers' heads.",
+        "image": "176.png",
+        "player_defence": [
+            9,
+            8,
+            7
+        ],
+        "options": [
+            {
+                "text": "Use the Whirlpool throw?",
+                "entry": 237,
+                "type": "offence",
+                "action": "throw"
+            },
+            {
+                "text": "Use the Iron Fist punch?",
+                "entry": 248,
+                "type": "offence",
+                "action": "punch",
+                "inner_force": true
+            },
+            {
+                "text": "Kick again?",
+                "entry": 256,
+                "type": "offence",
+                "action": "kick",
+                "inner_force": true
+            }
+        ]
+    },
+    "257": {
+        "description": "Your Shuriken glints in the sun as it hurtles towards its mark in the Ogre's chest. As you leap down from the rigging a volley of arrows is let loose from the stern castle of the Reaver's ship. The Ogre grunts with pain as the Shuriken lodges in its chest.\n\nOne of the pirate's arrows is coming at you.",
+        "image": "232.png",
+        "boolean_option": true,
+        "loot_remove": [
+            [
+                "Shuriken",
+                1
+            ]
+        ],
+        "damage_opponent": [
+            [
+                "Ogre pirate",
+                "random",
+                [
+                    1,
+                    0
+                ]
+            ]
+        ],
+        "options": [
+            {
+                "prereq": [
+                    "skill",
+                    "Arrow Cutting"
+                ],
+                "text": "[Arrow Cutting] Deflect the arrow.",
+                "entry": 380
+            },
+            {
+                "text": "Continue",
+                "entry": 396
+            }
+        ]
+    },
+    "280": {
+        "description": "The Ogre tramples the wooden rail, and raises its hammer to smash you as you land nimbly before it. A volley of arrows from the pirate ship's stern-castle whistles above you.",
+        "image": "232.png",
+        "options": [
+            {
+                "text": "Try to deliver a Winged Horse kick?",
+                "entry": 332,
+                "type": "offence",
+                "action": "kick",
+                "inner_force": true
+            },
+            {
+                "text": "Attempt the Iron Fist punch?",
+                "entry": 310,
+                "type": "offence",
+                "action": "punch",
+                "inner_force": true
+            },
+            {
+                "text": "Slide across the deck and use the Dragon's Tail throw?",
+                "entry": 345,
+                "type": "offence",
+                "action": "throw"
+            }
+        ]
+    },
+    "285": {
+        "description": "You try to somersault over the guards but you are too slow and one of them slashes you with his sword as you pass overhead. You fall to the ground and before you can get up one of them plunges his sword into your back, forcing you down to the muddy road. He has ruptured your liver and you die. Your adventure ends here.",
+        "options": [
+            {
+                "text": "Continue",
+                "entry": "death"
+            }
+        ]
+    },
+    "297": {
+        "description": "You tell the priest of your quest to stop Yaemon causing the imprisonment of your god, Kwon, in Inferno. His brow is furrowed as he says, 'I would not be so worried if it were not for the fact that Yaemon's monks of the Scarlet Mantis are in league with the accursed Legion of the Sword of Doom.' He goes on to say that Honoric, Marshal of the Legion, has left Doomover just when his men were expecting him to lead them in battle against the people of the Spires of Foreshadowing. He left with Yaemon and they rode alone, towards Mortavalon.\n\n'Surely you don't think that you alone can stop them. Honoric slew forty men, battle-hardened veterans, at the battle of the Hollow Tower. Three Tools of Fate died beneath his eldritch blade, Sorcerak, that day. You have no weapons. No man can stand against Yaemon in unarmed combat, he has been Grandmaster for a hundred seasons.'\n\n'What you say may be true, but I have sworn to try.' He can tell you no more but he gives you a small flask containing a dear blue liquid. It is a Potion of Healing and you may use it once, at any time when you are not in combat. You thank the priest and, intent on catching up with Yaemon, leave the temple.",
+        "loot_add": [
+            [
+                "Healing potion",
+                1
+            ]
+        ],
+        "options": [
+            {
+                "text": "Leave the city by the harbour gate and head for Mortavalon?",
+                "entry": 65
+            },
+            {
+                "text": "Go through the Obsidian Gate into Doomover?",
+                "entry": 6
+            }
+        ]
+    },
+    "307": {
+        "description": "You enter the Black Sword tavern, a long drinking hail with a blazing fire, even at Harvest time, the month of All-Mother Splendour. There are forty or so drinkers, all men and mostly soldiers. There is not a single sailor to be seen even though you are still close to the harbour. The soldiers have brought their weapons into the tavern but many have loosened or discarded parts of their armour in the sweltering heat. The reek of stale sweat is overpowering. A man who must weigh twenty stones or more ambles up and down the long bar, slamming mugs of mead on the counter and pocketing silver.\n\nYou buy a mugful and listen to the conversations. They are shouting from table to table about the campaign they are going to fight against the people of the Spires of Foreshadowing. At one table a man of twenty-five or so is particularly loud. He demands mead and two of the soldiers with him grab his mug, fighting for the privilege of buying his drink. He ignores this and, spotting you, challenges you to a drinking bout.",
+        "image": "176.png",
+        "options": [
+            {
+                "text": "Accept?",
+                "entry": 194
+            },
+            {
+                "text": "Decline?",
+                "entry": 186
+            }
+        ]
+    },
+    "310": {
+        "description": "Your clenched fist audibly parts the air as you drive it towards the Ogre's body. He tries to crush you with his spiked hammer.",
+        "image": "232.png",
+        "player_defence": 8,
+        "victory": 360,
+        "options": [
+            {
+                "text": "Spin sideways and use the Winged Horse kick?",
+                "entry": 332,
+                "type": "offence",
+                "action": "kick",
+                "inner_force": true
+            },
+            {
+                "text": "Sweep the Ogre's legs from under him with Dragon's Tail throw?",
+                "entry": 345,
+                "type": "offence",
+                "action": "throw"
+            },
+            {
+                "text": "Use the Iron Fist punch again?",
+                "entry": 310,
+                "type": "offence",
+                "action": "punch",
+                "inner_force": true
+            }
+        ]
+    },
+    "332": {
+        "description": "You spin and drive the outside of your foot towards the Ogre's purple-veined throat as it tries to swat you aside with its hammer.",
+        "image": "232.png",
+        "player_defence": 7,
+        "victory": 360,
+        "options": [
+            {
+                "text": "Use the Iron Fist punch?",
+                "entry": 310,
+                "type": "offence",
+                "action": "punch",
+                "inner_force": true
+            },
+            {
+                "text": "Sweep the Ogre's legs from under him with Dragon's Tail throw?",
+                "entry": 345,
+                "type": "offence",
+                "action": "throw"
+            },
+            {
+                "text": "Kick again?",
+                "entry": 332,
+                "type": "offence",
+                "action": "kick",
+                "inner_force": true
+            }
+        ]
+    },
+    "342": {
+        "description": "He leans forward as you thrust up the rope towards the window and, ready for you, he delivers an Iron Fist punch into your face. Lose 4 Endurance.",
+        "damage_followup": "The force of the blow sends you falling backwards into space.",
+        "modify_endurance": 4,
+        "boolean_option": true,
+        "options": [
+            {
+                "prereq": [
+                    "skill",
+                    "Acrobatics"
+                ],
+                "text": "[Acrobatics] Catch the rope and arrest your fall.",
+                "entry": 298
+            },
+            {
+                "text": "Continue",
+                "entry": 287
+            }
+        ]
+    },
+    "345": {
+        "description": "To the surprise of the dull-witted Ogre you crouch to the deck and try to sweep its legs from under it. However, its legs are stocky and powerful and it is huge and strong.",
+        "image": "232.png",
+        "options": [
+            {
+                "prereq": null,
+                "text": "Attack with the Winged Horse kick?",
+                "entry": 332,
+                "type": "offence",
+                "action": "kick"
+            },
+            {
+                "prereq": null,
+                "text": "Use the Iron Fist punch?",
+                "entry": 310,
+                "type": "offence",
+                "action": "punch"
+            }
+        ]
+    },
+    "352": {
+        "description": "You run a few steps along the Aquamarin's deck before leaping the rail and landing against the side of the pirate ship, hanging from the scuppers by your hands. You wait for a moment before edging your way, hand over hand, towards the red stern of the Watery Grave. Will Fate decide if one of the Reavers spotted you jumping onto their ship?",
+        "fate_roll": true,
+        "options": [
+            {
+                "prereq": null,
+                "text": "Fate smiles on you.",
+                "entry": 107,
+                "type": null
+            },
+            {
+                "prereq": null,
+                "text": "Fate turns her back on you.",
+                "entry": 97,
+                "type": null
+            }
+        ]
+    },
+    "360": {
+        "description": "The Ogre buckles at the knees and topples backwards between the two ships, a plume of spray rising from where he plummets into the water. Looking quickly around you can see that the Reavers, with their ear-rings and scimitars are more than a match for the crew of the Aquamarin. Glaivas' swordsmanship is startling but they are slowly penning him in.\n\nWith a punishing sidekick you knock a new attacker to the floor, where he lies inert. Another huge wart-faced Half-orc lunges at you with his cutlass. With incredible speed, you clap your hands together, trapping the blade between them, inches from your face. He has time to gape in astonishment before you smash the top of your right foot into his temple.",
+        "options": [
+            {
+                "text": "Try to fight your way through to Glaivas?",
+                "entry": 371
+            },
+            {
+                "text": "Jump to the Reavers' ship to attack the pirate Captain?",
+                "entry": 352
+            }
+        ]
+    },
+    "371": {
+        "description": "You fight on, felling two more of the swarthy buccaneers. But the crew are rapidly being overpowered, some fools are even surrendering. You are surrounded but no one can close with you past the flashing blows of your fists and feet. Suddenly one of them looks above you and grins.\n\nTurning your eyes to the heavens you see the rigging collapsing on you. One of them has shinned up the mast and cut the rigging down. You can hardly move beneath it and a torrent of pirate bodies bears you, struggling, to the ground. You are carried below. Your Ninja equipment is taken from you and you are roped to one of the Aquamarin’s oars.",
+        "lose_equipment": true,
+        "options": [
+            {
+                "text": "Continue",
+                "entry": 19
+            }
+        ]
+    },
+    "380": {
+        "description": "The arrow reaches you as you are in mid-air between the rigging and the deck but you whip your hand up and snatch it out of the air inches before your chest, and throw it aside. The Ogre, enraged, raises its spiked hammer to smash you.",
+        "image": "232.png",
+        "options": [
+            {
+                "prereq": null,
+                "text": "Try the Winged Horse kick?",
+                "entry": 332,
+                "type": "offence",
+                "action": "kick"
+            },
+            {
+                "prereq": null,
+                "text": "Attempt the Iron Fist punch?",
+                "entry": 310,
+                "type": "offence",
+                "action": "punch"
+            },
+            {
+                "prereq": null,
+                "text": "Slide across the deck and use the Dragon's Tail throw?",
+                "entry": 345,
+                "type": "offence",
+                "action": "throw"
+            }
+        ]
+    },
+    "396": {
+        "description": "Before you reach the deck an arrow pierces your thigh and you stumble. You pull the barbed arrow from your flesh but the muscle is badly torn. The Ogre, enraged, raises its spiked hammer to smash you.",
+        "image": "232.png",
+        "damage_player": [
+            [
+                "endurance",
+                "fixed",
+                4
+            ],
+            [
+                "kick",
+                "fixed",
+                1
+            ]
+        ],
+        "options": [
+            {
+                "prereq": null,
+                "text": "Try the Winged Horse kick?",
+                "entry": 332,
+                "type": "offence",
+                "action": "kick"
+            },
+            {
+                "prereq": null,
+                "text": "Attempt the Iron Fist punch?",
+                "entry": 310,
+                "type": "offence",
+                "action": "punch"
+            },
+            {
+                "prereq": null,
+                "text": "Slide across the deck and use the Dragon's Tail throw?",
+                "entry": 345,
+                "type": "offence",
+                "action": "throw"
+            }
+        ]
+    },
+    "408": {
+        "description": "You walk past the slave market where a captain of the Legion of the Sword of Doom is bidding unopposed for men to pull the oars of the ships of the Barbican League, Doomover's navy. Most of the townspeople seem to give the place a wide berth and you hurry past. You come to the largest building in the city, and you stop to stare in amazement. You guess it must be the temple to Vasch-Ro. It is a great cathedral built of blocks of basalt, with a great square embattled tower, stark and unadorned which stretches two hundred feet above the surrounding buildings. Behind it is Honoric’s manse, more a fortress than a palace.\n\nYou continue on your way towards a tavern whose sign shows soldiers with spoked wheels on their shields cowering before a black sword which hangs in the air. It stands inside a fork in the street and beyond it to the right you catch sight of a monastery built of dark stone with bright red shutters at its windows. It can only be a temple to Vile, the twisted brother of your God, Kwon. Might Yaemon be within?",
+        "options": [
+            {
+                "text": "Try the tavern as a likely source of gossip?",
+                "entry": 307
+            },
+            {
+                "text": "Attempt to steal into the monastery?",
+                "entry": 273
+            }
+        ]
+    },
+    "death": {
+        "description": "You have died before completing your quest and recovering the Scrolls of Kettsuin.\n\n[Start a new game](#/new-game).",
+        "options": []
+    }
+}
