@@ -311,7 +311,7 @@ function StoryCtrl($scope, $http, localStorageService, gameState, Story, Items, 
             };
             gameState.attackModifierTemp = 0;  // Always resets, after an attack.
             // Target's endurance is reduced to 0 or less.
-            if (gameState.currentOpponents[0].endurance <= 0) {
+            if (gameState.currentOpponents.length > 0 && gameState.currentOpponents[0].endurance <= 0) {
                 // TODO: handle different targets.
                 // For now we just attack the first in line.
                 gameState.currentOpponents.splice(0, 1);
