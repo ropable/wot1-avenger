@@ -1007,6 +1007,28 @@
             }
         ]
     },
+    "268": {
+        "description": "Your three assailants lie around you, dead or unconscious. There is an awed silence in the tavern and nobody will meet your eye. Realising that word will spread that a monk who does not fight in the style of the Scarlet Mantis is in Doomover, you decide to leave the tavern and the city as soon as possible. A young soldier follows you as you leave but you give him the slip in a maze of back streets and make your way quickly to the city gate. You pass through before word comes to stop all strangers. Once safely  away from the city walls, you climb into a tree where you can sleep, hidden.",
+        "options": [
+            {
+                "text": "Continue",
+                "entry": 254
+            }
+        ]
+    },
+    "273": {
+        "description": "As you pass by the tavern, its door swings open and raucous noise and the reek of stale sweat from within greets you. You walk on by and casually examine the monastery. Beautiful towers and arches adorn it. Its cloisters are well-guarded and the edges of its roof are barbed with spikes. Behind it is a refectory and sleeping quarters. You decide to use your skills as a Ninja to gain entry at night and hunt for information. Is Yaemon somewhere within?",
+        "options": [
+            {
+                "text": "Reconnoitre the monastery to find the safest way of entry?",
+                "entry": 323
+            },
+            {
+                "text": "Spend the day in a hostel practising the Way of the Tiger?",
+                "entry": 303
+            }
+        ]
+    },
     "280": {
         "description": "The Ogre tramples the wooden rail, and raises its hammer to smash you as you land nimbly before it. A volley of arrows from the pirate ship's stern-castle whistles above you.",
         "image": "232.png",
@@ -1042,6 +1064,21 @@
             }
         ]
     },
+    "296": {
+        "description": "You manage to dodge underneath the sword cut of one of the soldiers, grab his arm, twist, and whirl him round your hip. You bring him down onto a small table with a splintering crash. Someone comments on your unusual fighting style. You hurdle the heap of broken bones and wood and are out of the tavern before anyone else can move against you. You are not followed and decide to sleep in a hostel for the night at a cost of one gold piece.\n\nIn the morning, you decide to set off north, lest Yaemon reach the Pillars of Change before you, and leave the city on the road to Mortavalon.",
+        "loot_remove": [
+            [
+                "Gold coin",
+                1
+            ]
+        ],
+        "options": [
+            {
+                "text": "Continue",
+                "entry": 254
+            }
+        ]
+    },
     "297": {
         "description": "You tell the priest of your quest to stop Yaemon causing the imprisonment of your god, Kwon, in Inferno. His brow is furrowed as he says, 'I would not be so worried if it were not for the fact that Yaemon's monks of the Scarlet Mantis are in league with the accursed Legion of the Sword of Doom.' He goes on to say that Honoric, Marshal of the Legion, has left Doomover just when his men were expecting him to lead them in battle against the people of the Spires of Foreshadowing. He left with Yaemon and they rode alone, towards Mortavalon.\n\n'Surely you don't think that you alone can stop them. Honoric slew forty men, battle-hardened veterans, at the battle of the Hollow Tower. Three Tools of Fate died beneath his eldritch blade, Sorcerak, that day. You have no weapons. No man can stand against Yaemon in unarmed combat, he has been Grandmaster for a hundred seasons.'\n\n'What you say may be true, but I have sworn to try.' He can tell you no more but he gives you a small flask containing a dear blue liquid. It is a Potion of Healing and you may use it once, at any time when you are not in combat. You thank the priest and, intent on catching up with Yaemon, leave the temple.",
         "loot_add": [
@@ -1058,6 +1095,15 @@
             {
                 "text": "Go through the Obsidian Gate into Doomover?",
                 "entry": 6
+            }
+        ]
+    },
+    "303": {
+        "description": "It is well after midnight when you emerge from the hostel into the cool night air, dressed in your black costume and hood. Approaching the monastery, you can see that the climb to the roof of the hallway which connects the refectory to the hail of worship is an easy one because barrels of wine have been stacked against the wail. You gain the roof and descend into a very small courtyard. Turning a corner of the courtyard wall, you are faced with a dead end. The only way out vhich you can see is a small passageway leading off to the left.\n\nYou edge carefully down it but snap an unseen thread, as thin as spiderweave, which sets a bell jingling in the refectory. You run on down the passageway which turns left again only to find another dead end from which there is no escape. The passages are specially designed to lead an intruder to an inescapable hole and that is where you now find yourself. Several monks appear behind you and you frantically try to climb the wall, only to find that it is coated with a slimy web to which you stick fast. You are helpless and can only kill yourself before they take you, by biting off your own tongue so that you bleed to death.\n\nYour adventure ends here.",
+        "options": [
+            {
+                "text": "Continue",
+                "entry": "death"
             }
         ]
     },
@@ -1100,6 +1146,23 @@
                 "type": "offence",
                 "action": "punch",
                 "inner_force": true
+            }
+        ]
+    },
+    "323": {
+        "description": "You take some fish scales from one of your pockets and place them on your eyeballs. You can see through them reasonably well but they give you the appearance of a blind man. Sitting down to beg near the entrance to the monastery, you overhear enough to convince you that the monks who worship Vile are steeped in evil, but it is a woman in a black cloak which is covered in the pattern of green spiders' webs who most claims your attention.\n\nShe is walking towards the monastery flanked by two monks dressed in scarlet, and it seems they are having an argument. She is bartering a price for a spell which they wish her to cast in the 'Hall of Webs'. She is pointing out that if this is their only defence against spies in the corridor which joins the refectory to the sleeping quarters then the Webs of Nullaq spell is worth more than three hundred golds.\n\nYou pick up your hood with its meagre haul of copper coins and pad slowly away before lying low until darkness falls. You decide to take advantage of your knowledge that the Hall of Webs has only one trap, the webs of the witch you saw earlier.",
+        "options": [
+            {
+                "prereq": [
+                    "skill",
+                    "Climbing"
+                ],
+                "text": "[Climbing] Use your skills at climbing to enter the monastery?",
+                "entry": 414
+            },
+            {
+                "text": "Sneak in the back of the monastery?",
+                "entry": 375
             }
         ]
     },
