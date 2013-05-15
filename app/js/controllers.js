@@ -135,7 +135,7 @@ function NewGameCtrl($scope, $http, localStorageService, Story, Items, Opponents
     $scope.beginGame = function() {
         localStorageService.clearAll();
         // Set starting entry number.
-        gameState.currentEntry = '408';
+        gameState.currentEntry = '323';
         gameState.endurance = 20;
         // Get starting items.
         angular.forEach(itemsjson, function(item) {
@@ -385,7 +385,9 @@ function StoryCtrl($scope, $http, localStorageService, gameState, Story, Items, 
             };
         };
         // Restore or reduce endurance.
-        if (gameState.entry.modify_endurance) {
+        // Note that might need to modify gameState.entryText if damage is dealt but the
+        // player is still alive.
+        if (gameState.entry.modify_endurance && !gameState.cheatMode) {
             var total = gameState.endurance + gameState.entry.modify_endurance;
             if (total > 20) {
                 gameState.endurance = 20;
@@ -398,12 +400,17 @@ function StoryCtrl($scope, $http, localStorageService, gameState, Story, Items, 
         // Handle player death.
         // TODO: For entries that damage endurance, break up the "before" and "after" text
         // so that the "after" is not rendered if the player dies.
-        // Entries: 136, 396.
+        // Entries: 136, 396, 342.
         // Use "damage_followup" field, and consolidate "damage_player" and "modify_endurance".
         if (gameState.endurance <= 0) {
             gameState.options = [{"text": "Continue", "entry": 'death'}];
             gameState.endurance = 0;
             gameState.inProgress = false;
+        } else {  // Player is still alive - we may need to alter the entry text.
+            if (gameState.entry.damage_followup) {
+                var newtext = gameState.entry.description + '\n\n' + gameState.entry.damage_followup;
+                gameState.entryText = textMarkup(newtext);
+            };
         };
         // Phat loot!
         if (gameState.entry.loot_add) {

@@ -883,7 +883,11 @@
     "248": {
         "description": "In the blink of an eye your fist flashes out at one of your attackers.",
         "image": "176.png",
-        "player_defence": [9, 8, 7],
+        "player_defence": [
+            9,
+            8,
+            7
+        ],
         "options": [
             {
                 "text": "Use the Whirlpool throw?",
@@ -910,7 +914,11 @@
     "256": {
         "description": "You step forward onto your right foot then bring your left foot up, spin to the right and lash your left heel high into the air at one of your attackers' heads.",
         "image": "176.png",
-        "player_defence": [9, 8, 7],
+        "player_defence": [
+            9,
+            8,
+            7
+        ],
         "options": [
             {
                 "text": "Use the Whirlpool throw?",
@@ -1090,6 +1098,26 @@
                 "type": "offence",
                 "action": "kick",
                 "inner_force": true
+            }
+        ]
+    },
+    "342": {
+        "description": "He leans forward as you thrust up the rope towards the window and, ready for you, he delivers an Iron Fist punch into your face. Lose 4 Endurance.",
+        "damage_followup": "The force of the blow sends you falling backwards into space.",
+        "modify_endurance": 4,
+        "boolean_option": true,
+        "options": [
+            {
+                "prereq": [
+                    "skill",
+                    "Acrobatics"
+                ],
+                "text": "[Acrobatics] Catch the rope and arrest your fall.",
+                "entry": 298
+            },
+            {
+                "text": "Continue",
+                "entry": 287
             }
         ]
     },
