@@ -880,10 +880,43 @@
             }
         ]
     },
+    "237": {
+        "description": "You attempt to throw one of your assailants. He is sobering up but still quite drunk.",
+        "image": "176.png",
+        "victory": 296,
+        "instakill": true,
+        "instakill_desc": "You successfully throw him over your hip!",
+        "player_defence": [
+            9,
+            8,
+            7
+        ],
+        "options": [
+            {
+                "text": "Use the Iron Fist punch?",
+                "entry": 248,
+                "type": "offence",
+                "action": "punch",
+                "inner_force": true
+            },
+            {
+                "text": "Use the Winged Horse Kick",
+                "entry": 256,
+                "type": "offence",
+                "action": "kick",
+                "inner_force": true
+            }
+        ]
+    },
     "248": {
         "description": "In the blink of an eye your fist flashes out at one of your attackers.",
         "image": "176.png",
-        "player_defence": [9, 8, 7],
+        "player_defence": [
+            9,
+            8,
+            7
+        ],
+        "victory": 268,
         "options": [
             {
                 "text": "Use the Whirlpool throw?",
@@ -910,7 +943,12 @@
     "256": {
         "description": "You step forward onto your right foot then bring your left foot up, spin to the right and lash your left heel high into the air at one of your attackers' heads.",
         "image": "176.png",
-        "player_defence": [9, 8, 7],
+        "player_defence": [
+            9,
+            8,
+            7
+        ],
+        "victory": 268,
         "options": [
             {
                 "text": "Use the Whirlpool throw?",
