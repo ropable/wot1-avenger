@@ -161,7 +161,6 @@
         "victory": 110,
         "options": [
             {
-                "prereq": null,
                 "text": "Feint and kick?",
                 "entry": 17,
                 "type": "offence",
@@ -169,13 +168,11 @@
                 "inner_force": false
             },
             {
-                "prereq": null,
                 "text": "Feint and throw?",
                 "entry": 61,
                 "type": null
             },
             {
-                "prereq": null,
                 "text": "Punch again?",
                 "entry": 35,
                 "type": "offence",
@@ -581,7 +578,7 @@
     },
     "137": {
         "description": "You stand, legs apart, in front of the door, taking three slow deep breaths. Then when you are ready, you use the Iron Fist with a grunting cry as the Inner Force escapes you. There is a crash and the door flies off its hinges. You leap over it as it falls to the floor. The buccaneer Captain is inside having forsaken his ship for the comfort of the Aquarmarin. Woken from his sleep by the crash of the door he rolls off the bed, pulling his cutlass from under the pillow and tries to throw some blankets at you. You whip out a Shuriken and with a deft flick of the wrist, send it hurtling towards him before he can cry out.",
-        "shuriken_roll": 5,
+        "opponent_defence_roll": 5,
         "options": [
             {
                 "text": "Continue",
@@ -1238,6 +1235,23 @@
             }
         ]
     },
+    "334": {
+        "description": "To your dismay the moon chooses this moment to come out from behind a cloud and the monk catches sight of your shadow. 'Who are you?' he asks tensely.",
+        "options": [
+            {
+                "text": "Walk up to him and attack?",
+                "entry": 359
+            },
+            {
+                "prereq": [
+                    "item",
+                    "Shuriken"
+                ],
+                "text": "Use a Shuriken?",
+                "entry": 347
+            }
+        ]
+    },
     "342": {
         "description": "He leans forward as you thrust up the rope towards the window and, ready for you, he delivers an Iron Fist punch into your face. Lose 4 Endurance.",
         "damage_followup": "The force of the blow sends you falling backwards into space.",
@@ -1278,6 +1292,21 @@
             }
         ]
     },
+    "347": {
+        "description": "The Shuriken hurtles towards him, glinting in the moonlight. He tries to dodge aside but it catches him in the arm, instead of the throat as you had intended. He cries the alarm and falls back, clutching his arm. You will not be able to retrieve the Shuriken. You decide that to remain would imperil your mission and lose yourself quickly in the side streets, lying low in a burnt-out bakery for the night. You reflect that the monk may have recognised you were a Ninja and decide to leave Doomover, intent on making sure that Yaemon does not arrive at the Pillars of Change before you. Using the disguise of a beggar, you leave the city in the morning.",
+        "loot_remove": [
+            [
+                "Shuriken",
+                1
+            ]
+        ],
+        "options": [
+            {
+                "text": "Continue",
+                "entry": 254
+            }
+        ]
+    },
     "352": {
         "description": "You run a few steps along the Aquamarin's deck before leaping the rail and landing against the side of the pirate ship, hanging from the scuppers by your hands. You wait for a moment before edging your way, hand over hand, towards the red stern of the Watery Grave. Will Fate decide if one of the Reavers spotted you jumping onto their ship?",
         "fate_roll": true,
@@ -1293,6 +1322,23 @@
                 "text": "Fate turns her back on you.",
                 "entry": 97,
                 "type": null
+            }
+        ]
+    },
+    "359": {
+        "description": "You step towards him and without warning, unleash a Flying Winged Horse kick at his throat.",
+        "options": [
+            {
+                "prereq": [
+                    "inner_force",
+                    1
+                ],
+                "text": "Use Inner Force?",
+                "entry": 395
+            },
+            {
+                "text": "Continue",
+                "entry": 403
             }
         ]
     },
@@ -1372,6 +1418,30 @@
             }
         ]
     },
+    "384": {
+        "description": "Your foot slams into his solar plexus with incredible force, cracking a rib and driving the breath from his body. He doubles up, unable to move and you lash out with a Forked Lightning strike, slamming your foot into his midriff again and then up to his throat in one swift fluid movement. He drops dead to the muddy street three seconds after your attack began. Wasting no time, you strip him of his scarlet uniform and put it on over your Ninja costume. Walking with calm assurance, you enter the sleeping quarters of the monastery unchallenged and make your way to the Hall of Webs.",
+        "options": [
+            {
+                "text": "Continue",
+                "entry": 368
+            }
+        ]
+    },
+    "395": {
+        "description": "The monk is also an expert in unarmed combat and tensed for an attack from his dark assailant. He defends against your Winged Horse kick as you grunt with an explosion of Inner Force.",
+        "opponent_defence_roll": 6,
+        "inner_force_remove": 1,
+        "options": [
+            {
+                "text": "You hit the monk!",
+                "entry": 384
+            },
+            {
+                "text": "Your attack fails!",
+                "entry": 403
+            }
+        ]
+    },
     "396": {
         "description": "Before you reach the deck an arrow pierces your thigh and you stumble. You pull the barbed arrow from your flesh but the muscle is badly torn. The Ogre, enraged, raises its spiked hammer to smash you.",
         "image": "232.png",
@@ -1408,6 +1478,15 @@
                 "entry": 345,
                 "type": "offence",
                 "action": "throw"
+            }
+        ]
+    },
+    "403": {
+        "description": "The monk is an expert in unarmed combat. He steps back and slaps your foot aside with his forearm and then cries in panic, 'NINJA!', giving the alarm. You decide that to remain would imperil your mission and lose yourself quickly in the side streets, lying low in a burnt-out bakery for the night. You reflect that the monk recognised you were a Ninja and decide to leave Doomover, intent on making sure that Yaemon does not arrive at the Pillars of Change before you. Using the disguise of a beggar, you leave the city in the morning.",
+        "options": [
+            {
+                "text": "Continue",
+                "entry": 254
             }
         ]
     },

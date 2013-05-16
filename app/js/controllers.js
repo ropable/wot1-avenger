@@ -34,9 +34,9 @@ var validEntryChoices = function(gameState) {
         } else {
             gameState.options.push(gameState.entry.options[1]);
         };
-    // Handle Shuriken rolls.
-    } else if (gameState.entry.shuriken_roll) {
-        if (dieRoll(2) > gameState.entry.shuriken_roll || gameState.cheatMode) {
+    // Handle opponent defence roll (vs Shuriken, surprise attacks, etc).
+    } else if (gameState.entry.opponent_defence_roll) {
+        if (dieRoll(2) > gameState.entry.opponent_defence_roll || gameState.cheatMode) {
             // First option is always the success.
             gameState.options.push(gameState.entry.options[0]);
         } else {
@@ -62,6 +62,11 @@ var validEntryChoices = function(gameState) {
                         prereq_met = true;
                     };
                 });
+            } else if (option.prereq && option.prereq[0] == 'inner_force') {
+                if (gameState.innerForce > 0) {
+                    gameState.options.push(option);
+                    prereq_met = true;
+                };
             } else {
                 // No prerequesites.
                 gameState.options.push(option);
@@ -463,6 +468,10 @@ function StoryCtrl($scope, $http, localStorageService, gameState, Story, Items, 
         if (gameState.entry.regain_equipment) {
             gameState.items = gameState.lost_equipment;
             gameState.lost_equipment = [];
+        };
+        // Remove Inner Force.
+        if (gameState.entry.inner_force_remove) {
+            gameState.innerForce -= gameState.entry.inner_force_remove;
         };
         // Alter player modifiers.
         if (gameState.entry.player_modifier) {
