@@ -1064,6 +1064,15 @@
             }
         ]
     },
+    "287": {
+        "description": "You fall backwards from the Hall of Webs onto the flagstones of the courtyard below, breaking your neck. You have failed.",
+        "options": [
+            {
+                "text": "Continue",
+                "entry": "death"
+            }
+        ]
+    },
     "296": {
         "description": "You manage to dodge underneath the sword cut of one of the soldiers, grab his arm, twist, and whirl him round your hip. You bring him down onto a small table with a splintering crash. Someone comments on your unusual fighting style. You hurdle the heap of broken bones and wood and are out of the tavern before anyone else can move against you. You are not followed and decide to sleep in a hostel for the night at a cost of one gold piece.\n\nIn the morning, you decide to set off north, lest Yaemon reach the Pillars of Change before you, and leave the city on the road to Mortavalon.",
         "loot_remove": [
@@ -1095,6 +1104,15 @@
             {
                 "text": "Go through the Obsidian Gate into Doomover?",
                 "entry": 6
+            }
+        ]
+    },
+    "298": {
+        "description": "You manage to grab the rope in mid-air and slow your fall, dropping the last five yards and landing on your feet when the monk dislodges the grappling hook. You sweep it up and disappear into the city before he can give the alarm. You lie low until morning and leave the city, disguised once more as a beggar, intent on making sure that Yaemon doesn’t reach the Pillars of Change before you.",
+        "options": [
+            {
+                "text": "Continue",
+                "entry": 254
             }
         ]
     },
@@ -1149,6 +1167,23 @@
             }
         ]
     },
+    "314": {
+        "description": "You turn down a side street so that you can approach the Hall of Webs from the back and, covered in black from head to toe in your Ninja costume, slink stealthily through the night, your breathing as quiet as a bird's. You stop absolutely still as you catch sight of a monk coming down the otherwise deserted street towards you. He too stops, seeming to sense danger.",
+        "options": [
+            {
+                "prereq": [
+                    "skill",
+                    "Poison Needles"
+                ],
+                "text": "[Poison Needles] Use a Poison Needle Dart?",
+                "entry": 329
+            },
+            {
+                "text": "Continue to hide?",
+                "entry": 334
+            }
+        ]
+    },
     "323": {
         "description": "You take some fish scales from one of your pockets and place them on your eyeballs. You can see through them reasonably well but they give you the appearance of a blind man. Sitting down to beg near the entrance to the monastery, you overhear enough to convince you that the monks who worship Vile are steeped in evil, but it is a woman in a black cloak which is covered in the pattern of green spiders' webs who most claims your attention.\n\nShe is walking towards the monastery flanked by two monks dressed in scarlet, and it seems they are having an argument. She is bartering a price for a spell which they wish her to cast in the 'Hall of Webs'. She is pointing out that if this is their only defence against spies in the corridor which joins the refectory to the sleeping quarters then the Webs of Nullaq spell is worth more than three hundred golds.\n\nYou pick up your hood with its meagre haul of copper coins and pad slowly away before lying low until darkness falls. You decide to take advantage of your knowledge that the Hall of Webs has only one trap, the webs of the witch you saw earlier.",
         "options": [
@@ -1162,7 +1197,16 @@
             },
             {
                 "text": "Sneak in the back of the monastery?",
-                "entry": 375
+                "entry": 314
+            }
+        ]
+    },
+    "329": {
+        "description": "You make an 'O' shape with your tongue and place one of the poison needles carefully within it in one deft movement. You exhale and spit it out. The needle has imbedded itself in the monk's eye before he realises what you are doing. The poison takes effect. He doubles up, convulsing in the muddy road and dies. Wasting no time, you strip him of his scarlet uniform and put it on over your Ninja costume.\n\nWalking with calm assurance you enter the sleeping quarters of the monastery unchallenged and make your way to the Hall of Webs.",
+        "options": [
+            {
+                "text": "Continue",
+                "entry": 368
             }
         ]
     },
@@ -1265,6 +1309,19 @@
             }
         ]
     },
+    "368": {
+        "description": "The Hall of Webs is an archng corridor, like a humpback bridge, which connects the upper floor of the dwellings to the refectory where the monks take their meals. The door opens to reveal a room dimly lit by two flickering candles. Forewarned, you notice the glint of many threads as slender as a spider's web criss-crossing the floor. Some of them, you guess, will be attached to bells or traps which will give you away or kill you. Bending down, you do a handstand and walk carefully into the room on your hands. You are able to balance on one arm whilst with the other you delicately test the floor ahead for strands of web.\n\nIt takes you half an hour to slowly cross the room but you manage it without breaking any of the strands. You reach the door and, neatly flipping onto your feet, open it soundlessly. You are on the balcony above the refectory and the dining hail. Crouching behind the balcony, you overhear the information you need, as the monks drink wine late into the night. It seems Yaemon has left for Mortavalon, accompanied by Honoric, Marshal of the Legion of the Sword of Doom a ten-day since.\n\n Before you leave, you catch sight of a scroll that details some of the kicks, punches and throws used in the Way of the Mantis, the fighting style of the monks who worship Vile. You learn some useful techniques. They are skilled in punching. You also notice that they have no knowledge of the Forked lightning Strike. This may be useful to you whenever you must fight a monk who worships Vile.\n\nYou manage to get out the way you came without difficulty and lie low in a burnt-out bakery for the rest of the night. In the morning, you leave Doomover, intent on catching up with Yaemon and Honoric.",
+        "player_modifier": [
+            "punch",
+            1
+        ],
+        "options": [
+            {
+                "text": "Continue",
+                "entry": 368
+            }
+        ]
+    },
     "371": {
         "description": "You fight on, felling two more of the swarthy buccaneers. But the crew are rapidly being overpowered, some fools are even surrendering. You are surrounded but no one can close with you past the flashing blows of your fists and feet. Suddenly one of them looks above you and grins.\n\nTurning your eyes to the heavens you see the rigging collapsing on you. One of them has shinned up the mast and cut the rigging down. You can hardly move beneath it and a torrent of pirate bodies bears you, struggling, to the ground. You are carried below. Your Ninja equipment is taken from you and you are roped to one of the Aquamarin’s oars.",
         "lose_equipment": true,
@@ -1272,6 +1329,19 @@
             {
                 "text": "Continue",
                 "entry": 19
+            }
+        ]
+    },
+    "375": {
+        "description": "You manage to cling to the flints of the Hall of Webs as the monk throws the grappling hook to the flagstone below, and throw your voice like a ventriloquist so that the monk hears what he believes is a groan of pain from the courtyard below. He chuckles and then leans out of the window to look down but cannot see in the darkness. He pulls back and you inch slowly up the wall to the window and, pushing off with your feet, swing down and into the  window to land silently behind him as he walks from the window. He seems to sense you and is turning his head when you throw your garotte-wire around his neck. He dies soundlessly.\n\nThe hall is dimly lit by two flickering candles but your sharp eyesight can see the glinting of webs which crisscross the floor. Reaching up from the window ledge, you bury your Cat's Claws into the plaster ceiling and slowly cross it to the door, hanging upside down like a fly. You drop to the floor and quietly open the door. You are on the balcony above the refectory and the dining hail.\n\nCrouching behind the balcony, you overhear the information you need as the monks drink wine late into the night. It seems Yaemon has left for Mortavalon, accompanied by Honoric, Marshal of the Legion of the Sword of Doom, a ten-day since. Before you leave, you catch sight of a scroll that details some of the kicks, punches and throws used in the Way of the Mantis, the fighting style of the monks who worship Vile. You learn some useful throwing techniques and you also notice that they have no knowledge of the Forked Lightning Strike.\n\nYou manage to get out through a window off the balcony and climb down to the courtyard where you pick up your grappling hook before lying low in a burnt-out bakery for the rest of the night. In the morning, you leave Doomover intent on catching up with Yaemon and Hononic.",
+        "player_modifier": [
+            "throw",
+            1
+        ],
+        "options": [
+            {
+                "text": "Continue",
+                "entry": 65
             }
         ]
     },
@@ -1351,6 +1421,19 @@
             {
                 "text": "Attempt to steal into the monastery?",
                 "entry": 273
+            }
+        ]
+    },
+    "414": {
+        "description": "You stare up into the night sky until you can see in the dark as if you were an owl. Then squeezing through the narrowest of gaps between two buildings you make your way towards the Hall of Webs which is in fact, a large hump-back bridge, thirty feet up and completely endosed. It connects the upper floor of the sleeping quarters to the balcony of the refectory where the monks eat their meals. Standing below the window in the centre of the arch, you fit your Cat’s Claws to your hands and feet and take the small grappling hook and rope from one of the inner pockets of your costume. You fling the padded hook into the open window and pull the rope taut before climbing it hand over hand, like a monkey.\n\nYou are just below the window when you see a man's hands on the hook above you.",
+        "options": [
+            {
+                "text": "Try to scramble the last yard up the rope before he can dislodge the hook?",
+                "entry": 342
+            },
+            {
+                "text": "Try to dig your Claws into the flints of the bridge and climb to the side of the window?",
+                "entry": 375
             }
         ]
     },
