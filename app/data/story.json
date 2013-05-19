@@ -1365,6 +1365,19 @@
             }
         ]
     },
+    "357": {
+        "description": "The boy screams as he dies and the men crack the whip over their ox and drive off, dragging the Cobra Man behind them. There is a cave, overhung by rock above you in the hillside. 'That way to Mortavalon,' one of the men shouts, pointing to it.",
+        "options": [
+            {
+                "text": "Continue along the road?",
+                "entry": 283
+            },
+            {
+                "text": "Investigate the cave?",
+                "entry": 275
+            }
+        ]
+    },
     "359": {
         "description": "You step towards him and without warning, unleash a Flying Winged Horse kick at his throat.",
         "options": [
