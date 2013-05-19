@@ -260,6 +260,19 @@
         ],
         "description": "You raise your foot as if to kick Gorobei in the chest, but spin to his side instead and take hold of his arm to throw him over your hip. You rapidly learn your mistake, however, as your grip slides on the oil which covers him and he uses his skill as a wrestler to grab you and lock your arm behind your back whilst he grips you around the throat. His strength is enormous. You try to somersault backwards over him and break the grip but he is ready for you and pins you to the floor before delivering a heavy blow."
     },
+    "65": {
+        "description": "As you leave the forbidding towered walls of Doomover behind, the sun climbs in the sky, ripening the corn and barley which rustles in the breeze. The fields do not stretch for far and you are soon on the edge of a low plain, the Plain of Feet, on which several thousand of the Legion of the Sword of Doom, smart and efficient, are practising for the forthcoming war. The smooth plain gradually gives way to a wilderness of trees and vines.",
+        "options": [
+            {
+                "text": "Continue along the road to Mortavalon?",
+                "entry": 212
+            },
+            {
+                "text": "Strike north of the road, into the wilderness?",
+                "entry": 235
+            }
+        ]
+    },
     "67": {
         "description": "Before the morning start makes contact you snap your leg upwards, driving the ball of your foot at the Captain's face.",
         "victory": 58,
@@ -824,6 +837,20 @@
             }
         ]
     },
+    "212": {
+        "description": "You trot along the road, passing the occasional traveller on horseback or on foot and an occasional trading caravan, gathering berries and nuts at the side of the road as you go. You sleep away from the road. You may restore up to 2 Endurance and continue on, hoping to reach Mortavalon at dusk on the second day. The road winds upwards into a range of hills which encircle the city of Mortavalon, and it is afternoon when you hear a strange hissing and a sudden scream around a corner ahead.\n\nYou move stealthily forwards to see a black-skinned man with the swaying neck and head of a cobra, tethered to a wagon on which there is a large cage. The Cobra Man has grabbed a young boy and is about to kill him. The two men who are on the wagon look too terrified to do anything.",
+        "image": "212.png",
+        "options": [
+            {
+                "text": "Leave the young boy to his fate?",
+                "entry": 357
+            },
+            {
+                "text": "Run and kick the Cobra Man?",
+                "entry": 315
+            }
+        ]
+    },
     "214": {
         "description": "Your training with the ingestion of small quantities of poisons also included large amounts of alcohol and you can drink almost anyone under the table. The young Captain begins slurring his words and the pace of drinking slows. You tell them that you are a monk who worships Vile and they treat you as one of them. The young Captain asks you about the journey that Honoric, leader of the Legion of the Sword of Doom, is making with Yaemon. You tell them that Yaemon is journeying north on important business.\n\nThey laugh at this and begin to joke with you that Honoric’s business is more important. You gather that he too knows a word which will bind a goddess in Inferno and that they are journeying to the Snow Wastes. After a time you pretend that you are overcome by the mead and take a room for the night in the tavern for which you pay 2 pieces of gold. You sleep lightly, senses alert, but are not disturbed.\n\nYou wake in the morning, mildly refreshed. You leave and walk out of the city on the road to Mortavalon.",
         "loot_remove": [
@@ -934,6 +961,19 @@
                 "type": "offence",
                 "action": "punch",
                 "inner_force": true
+            }
+        ]
+    },
+    "254": {
+        "description": "As you leave the forbidding towered walls of Doomover behind, the sun climbs in the sky, ripening the corn and barley which ru sties in the breeze. The fields do not stretch for far and you are soon on the edge of a low plain, the Plain of Feet, on which several thousand of the Legion of the Sword of Doom are practising for the forthcoming war, smart and efficient. The smooth plain gradually gives way to a wilderness of trees and vines.",
+        "options": [
+            {
+                "text": "Continue along the road to Mortavalon?",
+                "entry": 223
+            },
+            {
+                "text": "Strike north of the road, into the wilderness?",
+                "entry": 235
             }
         ]
     },
