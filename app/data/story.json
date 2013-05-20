@@ -1150,6 +1150,16 @@
             }
         ]
     },
+    "295": {
+        "description": "You grab the Two-headed Giant around the thighs, but it weighs well over a ton and you find yourself unable to throw it. The monster drops its colossal club and grabs you, throwing you to the rock under foot and trampling you. Your head splits like a ripe melon as the force of its heel grinds downwards. You have failed your mission.",
+        "image": "341.png",
+        "options": [
+            {
+                "text": "Continue",
+                "entry": "death"
+            }
+        ]
+    },
     "296": {
         "description": "You manage to dodge underneath the sword cut of one of the soldiers, grab his arm, twist, and whirl him round your hip. You bring him down onto a small table with a splintering crash. Someone comments on your unusual fighting style. You hurdle the heap of broken bones and wood and are out of the tavern before anyone else can move against you. You are not followed and decide to sleep in a hostel for the night at a cost of one gold piece.\n\nIn the morning, you decide to set off north, lest Yaemon reach the Pillars of Change before you, and leave the city on the road to Mortavalon.",
         "loot_remove": [
@@ -1276,6 +1286,31 @@
             }
         ]
     },
+    "316": {
+        "description": "The cumbersome Giant is dull-witted and slow, but very strong. You will need to strike it several telling blows, whilst avoiding the colossal club with which it is trying to flatten you.",
+        "image": "341.png",
+        "player_defence": 8,
+        "victory": 336,
+        "defeat": "death",
+        "options": [
+            {
+                "text": "Use the Iron Fist punch?",
+                "entry": 325,
+                "type": "offence",
+                "action": "punch"
+            },
+            {
+                "text": "Try the Whirlpool throw?",
+                "entry": 295
+            },
+            {
+                "text": "Kick again?",
+                "entry": 316,
+                "type": "offence",
+                "action": "Kick"
+            }
+        ]
+    },
     "323": {
         "description": "You take some fish scales from one of your pockets and place them on your eyeballs. You can see through them reasonably well but they give you the appearance of a blind man. Sitting down to beg near the entrance to the monastery, you overhear enough to convince you that the monks who worship Vile are steeped in evil, but it is a woman in a black cloak which is covered in the pattern of green spiders' webs who most claims your attention.\n\nShe is walking towards the monastery flanked by two monks dressed in scarlet, and it seems they are having an argument. She is bartering a price for a spell which they wish her to cast in the 'Hall of Webs'. She is pointing out that if this is their only defence against spies in the corridor which joins the refectory to the sleeping quarters then the Webs of Nullaq spell is worth more than three hundred golds.\n\nYou pick up your hood with its meagre haul of copper coins and pad slowly away before lying low until darkness falls. You decide to take advantage of your knowledge that the Hall of Webs has only one trap, the webs of the witch you saw earlier.",
         "options": [
@@ -1290,6 +1325,31 @@
             {
                 "text": "Sneak in the back of the monastery?",
                 "entry": 314
+            }
+        ]
+    },
+    "325": {
+        "description": "The cumbersome Giant is slow but very strong. You will need to strike several blows to fell it, avoiding the tree-trunk club while you do so.",
+        "image": "341.png",
+        "player_defence": 8,
+        "victory": 336,
+        "defeat": "death",
+        "options": [
+            {
+                "text": "Use the Leaping Tiger kick?",
+                "entry": 316,
+                "type": "offence",
+                "action": "kick"
+            },
+            {
+                "text": "Try the Whirlpool throw?",
+                "entry": 295
+            },
+            {
+                "text": "Punch again?",
+                "entry": 325,
+                "type": "offence",
+                "action": "punch"
             }
         ]
     },
@@ -1344,6 +1404,31 @@
                 ],
                 "text": "Use a Shuriken?",
                 "entry": 347
+            }
+        ]
+    },
+    "341": {
+        "description": "You strike north from Doomover until you come to a marshland called the Greenfen. You skirt this, crossing the river which flows out of the dank mires and trot for a few days, hunting and foraging at need and sleeping in trees. After several days you turn north east and warily cross the track which leads north from Mortavalon to the city of Sundial and climb into the wild and windswept hills known as the Barrow Swales, heading for the dty of Fiendil.\n\nOn a day which dawns strangely cold, a mist lies heavily around the hills and you find yourself in a narrow gully. A boulder thuds dully towards you from higher up the, hill but you leap agilely out of its way, to be faced by a great Two-headed Giant waving a thorny club, which looks like the trunk of a small tree. The club whistles through the air towards you and you duck low beneath it. The Giant roars in frustration.",
+        "image": "341.png",
+        "opponents": [
+            "Two-headed Giant"
+        ],
+        "options": [
+            {
+                "text": "Use the Leaping Tiger kick?",
+                "entry": 316,
+                "type": "offence",
+                "action": "kick"
+            },
+            {
+                "text": "Use the Iron Fist punch?",
+                "entry": 325,
+                "type": "offence",
+                "action": "punch"
+            },
+            {
+                "text": "Try the Whirlpool throw?",
+                "entry": 295
             }
         ]
     },

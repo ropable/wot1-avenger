@@ -3,3 +3,4 @@ syntax: regexp
 \.swo$
 \.orig$
 story.json~
+opponents.json~
