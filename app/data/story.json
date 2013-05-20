@@ -883,6 +883,19 @@
             }
         ]
     },
+    "227": {
+        "description": "The Cobra Man hisses, squirming on the end of his leash as the boy escapes to safety whilst the he was distracted. The two men, hulking fat brutes who resemble the ox which pulls their wagon, tell you that they are taking the Cobra Man to the zoo in Mortavalon.\n\n'We found him living alone in a cave not far up the hill there,' says one, pointing to a dark hole in the hillside overhung with rock. 'We didn't dare venture too far in but there’s treasure to be had, I'll warrant.' With that, they whip the ox onwards, dragging the hissing Cobra Man behind them.\n\nThe boy sitting on the back of the wagon calls, 'Thank you for saving me - don't shake hands with the young magician!' The men laugh and you are left to ponder the meaning of his strange words.",
+        "options": [
+            {
+                "text": "Overtake the ox-cart and go straight to Mortavalon?",
+                "entry": 283
+            },
+            {
+                "text": "Enter the cave?",
+                "entry": 275
+            }
+        ]
+    },
     "232": {
         "description": "The ship which Glaivas has chartered, the 'Aquamarin', has a hundred oars and two masts. The winds are kind to you as you scud across the azure plain. The sea is so calm that after two weeks without the tang of salt spray on your lips you forget that it is composed of water at all. The oarsmen row for ten hours a day but they are free men, not chained to their oars. Two bear the scars of a pirate's persuader; captured by buccaneers, they are of the lucky few who have lived to see the sky again. All of them have the heavy upper body of the oarsman, some who turned to the sea for their livelihood too young are squat and mis-shapen, moulded by life at the oar into grotesque travesties of the mountain dwarves.\n\nThe Land of Plenty passes to the south and you are in sight of the Isle of the Magical Goddess when the lookout cries a warning. The helmsman steers a new course and the drum-beat quickens as the oarsmen redouble their efforts. The ship that is approaching is long and low, painted green and red and flying a red pennant at the top of its mast. Glaivas, standing next to you at the rail, says, 'That ship is from Port o' Reavers, we’ll never outrun it.' So saying, he draws his sword.\n\nThe oarsmen strain, sweating with effort but they cannot match the pace of the slaves on the Reavers' ship, galvanized into a frenzied spurt by the barbed whips of their overseers. At last the Captain gives the order 'Prepare to repel boarders', and you ready yourself for combat. The pirate ship carries a spiked ram but they are obviously trying to take the Aquamarin as a prize for they grapple and come alongside. The Reavers carry scimitars and chain nets and are led in their rush to attack by a nine-foot monster whose body is covered in knobbles of mis-grown bone, an Ogre with a large spiked hammer. The Aquamarin's crew look no match for the battle-scarred buccaneers.",
         "image": "232.png",
@@ -901,6 +914,20 @@
             {
                 "text": "Attack the Ogre as it comes aboard, flattening a section of the Aquamarin's rail?",
                 "entry": 280
+            }
+        ]
+    },
+    "235": {
+        "description": "You gather grapes and nuts aplenty, living off the land as you jog through the wilderness, checking your position by the position and height of the sun. You cover the ground quickly and are soon in a range of low hills crowned with cypress trees and, climbing up into one, you pass an untroubled and restful night.",
+        "modify_endurance": 2,
+        "options": [
+            {
+                "text": "Continue through the wilderness and pass north of Mortavalon?",
+                "entry": 341
+            },
+            {
+                "text": "Rejoin the road near the city to Mortavalon?",
+                "entry": 212
             }
         ]
     },
@@ -1092,6 +1119,19 @@
             }
         ]
     },
+    "283": {
+        "description": "The road winds down from the hills and you see the city of Mortavalon, nestling in a bowl of green pastures and cornfields. The entrance to the city is through a large triumphal arch dedicated to a victory won by the Empire hunters who follow the god of Empire, Moraine, against the Soldiers of Fate.\n\nIt is evening and you fall in with a group of peasants who have been working the land. Explaining that you are a stranger you ask them about their city. It seems that the largest temple is to the god, Death, but the priests seldom interfere in daily life, as long as no-one quibbles over the occasional disappearance. They practise child-sacrifice. Tomorrow is to be a holiday for there is a combat in the arena. It seems they are looking for a champion who may win a fabulous fortune.",
+        "options": [
+            {
+                "text": "Follow one of them to visit the Master of the Arena?",
+                "entry": 290
+            },
+            {
+                "text": "Walk on through the city?",
+                "entry": 169
+            }
+        ]
+    },
     "285": {
         "description": "You try to somersault over the guards but you are too slow and one of them slashes you with his sword as you pass overhead. You fall to the ground and before you can get up one of them plunges his sword into your back, forcing you down to the muddy road. He has ruptured your liver and you die. Your adventure ends here.",
         "options": [
@@ -1218,6 +1258,21 @@
             {
                 "text": "Continue to hide?",
                 "entry": 334
+            }
+        ]
+    },
+    "315": {
+        "description": "The Cobra Man looks up as you launch yourself into a flying Leaping Tiger kick. The Cobra Man can strike with the speed of a snake however, and he twists aside to bite you.",
+        "image": "212.png",
+        "opponent_defence_roll": 6,
+        "options": [
+            {
+                "text": "You hit the Cobra Man!",
+                "entry": 227
+            },
+            {
+                "text": "You miss the Cobra Man!",
+                "entry": "315a"
             }
         ]
     },
@@ -1566,6 +1621,25 @@
             {
                 "text": "Try to dig your Claws into the flints of the bridge and climb to the side of the window?",
                 "entry": 375
+            }
+        ]
+    },
+    "315a": {
+        "description": "you miss the Cobra Man and he bites your ankle, injecting a deadly venom.",
+        "image": "212.png",
+        "boolean_option": true,
+        "options": [
+            {
+                "prereq": [
+                    "skill",
+                    "Immunity to Poisons"
+                ],
+                "text": "[Immunity to Poisons] You pick yourself up while the boy scrambles to safety.",
+                "entry": 227
+            },
+            {
+                "text": "You die painfully.",
+                "entry": "death"
             }
         ]
     },
