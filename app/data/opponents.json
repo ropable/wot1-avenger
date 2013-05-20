@@ -52,7 +52,8 @@
         "defence_kick": 5,
         "defence_throw": 5,
         "damage_mod": 0,
-        "effects": null},
+        "effects": null
+    },
     "First soldier": {
         "name": "First soldier",
         "action_desc": "the First soldier",
@@ -65,7 +66,8 @@
         "defence_kick": 4,
         "defence_throw": 5,
         "damage_mod": 0,
-        "effects": null},
+        "effects": null
+    },
     "Second solder": {
         "name": "Second soldier",
         "action_desc": "the Second soldier",
@@ -78,5 +80,22 @@
         "defence_kick": 4,
         "defence_throw": 5,
         "damage_mod": 0,
-        "effects": null}
+        "effects": null
+    },
+    "Two-headed Giant": {
+        "name": "Two-headed Giant",
+        "action_desc": "the Two-headed Giant",
+        "endurance": 25,
+        "damage": [
+            2,
+            1
+        ],
+        "defence_punch": 3,
+        "defence_kick": 4,
+        "defence_throw": 5,
+        "damage_mod": 0,
+        "effects": [
+            "unblockable"
+        ]
+    }
 }
