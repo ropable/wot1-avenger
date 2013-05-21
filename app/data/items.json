@@ -66,5 +66,9 @@
         "name": "Healing potion",
         "desc": "A small bottle of clear blue liquid, able to restore up to ten Endurance points.",
         "consumable": "false"
+    },
+    "Gauntlet of Striking": {
+        "name": "Gauntlet of Striking",
+        "desc": "A black leather gauntlet sewn with delicate silver thread, it carries the virtue of magic."
     }
 }
