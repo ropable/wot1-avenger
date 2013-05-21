@@ -409,6 +409,15 @@
             }
         ]
     },
+    "93": {
+        "description": "The wild lands give way to the meadows of the valley of the River Fortune. You pass the tracks of strange beasts everywhere and, skirting a dense and gloomy wood, you find a wide swathe trampled in the meadow grass. Bending down to examine the tracks you see that they were made by a large band of Orcs, returning, perhaps to the Rift, a few days ago. As you sniff the air, a man staggers towards you, out of the waist high grass. He is old and wears a blue robe that is in tatters but it is his face that holds your attention. It is encrusted with blood for his eyes have been gouged out.\n\nYou call to him and he sits down suddenly, saying that he has no gold and that he has a terrible disease that you would catch if you ate him. You reassure him that you are not a cannibal and ask him what happened. He tells you that he is a monk from Fiendil. He is losing track of time but he thinks that he has felt the sun on his face four times since a man called Hononc had him blinded for spying through a keyhole.\n\n'He was with a Grandmaster of our order, a fine man named Yaemon and I saw them planning a journey north on a map, but Yaemon heard me and I was caught. Help me, I’m starving, which way is the river?'\n\nYou tell him to walk downhill if he wishes to find the river, and taking pity on him, give him some nuts which you have gathered. He remembers only that they were planning to meet a third man whom they called the Deathmage. There is nothing further you can do to help him and so you journey on towards the city of Fiendil.",
+        "options": [
+            {
+                "text": "Continue",
+                "entry": 260
+            }
+        ]
+    },
     "94": {
         "description": "You drop head-first towards the ground twenty feet below, and turning in mid-air land on your feet like a cat. No one has noticed you and you glide through the night to the city gate like a shadow. At the gate you distract the attention of the guards by throwing a stone which shatters a pane of glass near a thief who thought he was unobserved, and slip out of the city at the first ray of dawn as the guards run to arrest him.",
         "options": [
@@ -441,14 +450,16 @@
                 "text": "Use the Leaping Tiger kick?",
                 "entry": 67,
                 "type": "offence",
-                "action": "kick"
+                "action": "kick",
+                "inner_force": true
             },
             {
                 "prereq": null,
                 "text": "Use the Cobra Strike punch?",
                 "entry": 77,
                 "type": "offence",
-                "action": "punch"
+                "action": "punch",
+                "inner_force": true
             },
             {
                 "prereq": null,
@@ -1297,7 +1308,8 @@
                 "text": "Use the Iron Fist punch?",
                 "entry": 325,
                 "type": "offence",
-                "action": "punch"
+                "action": "punch",
+                "inner_force": true
             },
             {
                 "text": "Try the Whirlpool throw?",
@@ -1307,7 +1319,8 @@
                 "text": "Kick again?",
                 "entry": 316,
                 "type": "offence",
-                "action": "Kick"
+                "action": "Kick",
+                "inner_force": true
             }
         ]
     },
@@ -1339,7 +1352,8 @@
                 "text": "Use the Leaping Tiger kick?",
                 "entry": 316,
                 "type": "offence",
-                "action": "kick"
+                "action": "kick",
+                "inner_force": true
             },
             {
                 "text": "Try the Whirlpool throw?",
@@ -1349,7 +1363,8 @@
                 "text": "Punch again?",
                 "entry": 325,
                 "type": "offence",
-                "action": "punch"
+                "action": "punch",
+                "inner_force": true
             }
         ]
     },
@@ -1407,6 +1422,22 @@
             }
         ]
     },
+    "336": {
+        "description": "The Two-headed Giant crashes to the ground, cracking the rock. Saliva flecked with blood covers its lips. You move on, and in the mist see the cave which was its lair. Investigating carefully you find a selection of bones cracked open which have had the marrow sucked out of them, and a small sack full of copper pieces.\n\nThe Giant's treasure is worthless to you, too heavy to carry, but you do find a black leather gauntlet sewn with delicate silver thread. It carries the virtue of magic, a Gauntlet of Striking and you put it on. Add +1 to your Punch Modifier when using the Iron Fist, Tiger's Paw or Cobra Strike punches. You continue on through the hills as the mist lifts and head into the wild wastelands towards the city of Fiendil.",
+        "player_modifier": ["punch", 1],
+        "loot_add": [
+            [
+                "Gauntlet of Striking",
+                1
+            ]
+        ],
+        "options": [
+            {
+                "text": "Continue",
+                "entry": 93
+            }
+        ]
+    },
     "341": {
         "description": "You strike north from Doomover until you come to a marshland called the Greenfen. You skirt this, crossing the river which flows out of the dank mires and trot for a few days, hunting and foraging at need and sleeping in trees. After several days you turn north east and warily cross the track which leads north from Mortavalon to the city of Sundial and climb into the wild and windswept hills known as the Barrow Swales, heading for the dty of Fiendil.\n\nOn a day which dawns strangely cold, a mist lies heavily around the hills and you find yourself in a narrow gully. A boulder thuds dully towards you from higher up the, hill but you leap agilely out of its way, to be faced by a great Two-headed Giant waving a thorny club, which looks like the trunk of a small tree. The club whistles through the air towards you and you duck low beneath it. The Giant roars in frustration.",
         "image": "341.png",
@@ -1418,13 +1449,15 @@
                 "text": "Use the Leaping Tiger kick?",
                 "entry": 316,
                 "type": "offence",
-                "action": "kick"
+                "action": "kick",
+                "inner_force": true
             },
             {
                 "text": "Use the Iron Fist punch?",
                 "entry": 325,
                 "type": "offence",
-                "action": "punch"
+                "action": "punch",
+                "inner_force": true
             },
             {
                 "text": "Try the Whirlpool throw?",
@@ -1457,18 +1490,18 @@
         "image": "232.png",
         "options": [
             {
-                "prereq": null,
                 "text": "Attack with the Winged Horse kick?",
                 "entry": 332,
                 "type": "offence",
-                "action": "kick"
+                "action": "kick",
+                "inner_force": true
             },
             {
-                "prereq": null,
                 "text": "Use the Iron Fist punch?",
                 "entry": 310,
                 "type": "offence",
-                "action": "punch"
+                "action": "punch",
+                "inner_force": true
             }
         ]
     },
@@ -1589,21 +1622,20 @@
         "image": "232.png",
         "options": [
             {
-                "prereq": null,
                 "text": "Try the Winged Horse kick?",
                 "entry": 332,
                 "type": "offence",
-                "action": "kick"
+                "action": "kick",
+                "inner_force": true
             },
             {
-                "prereq": null,
                 "text": "Attempt the Iron Fist punch?",
                 "entry": 310,
                 "type": "offence",
-                "action": "punch"
+                "action": "punch",
+                "inner_force": true
             },
             {
-                "prereq": null,
                 "text": "Slide across the deck and use the Dragon's Tail throw?",
                 "entry": 345,
                 "type": "offence",
@@ -1652,21 +1684,20 @@
         ],
         "options": [
             {
-                "prereq": null,
                 "text": "Try the Winged Horse kick?",
                 "entry": 332,
                 "type": "offence",
-                "action": "kick"
+                "action": "kick",
+                "inner_force": true
             },
             {
-                "prereq": null,
                 "text": "Attempt the Iron Fist punch?",
                 "entry": 310,
                 "type": "offence",
-                "action": "punch"
+                "action": "punch",
+                "inner_force": true
             },
             {
-                "prereq": null,
                 "text": "Slide across the deck and use the Dragon's Tail throw?",
                 "entry": 345,
                 "type": "offence",

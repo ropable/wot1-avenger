@@ -10,7 +10,7 @@
         "defence_punch": 7,
         "defence_kick": 6,
         "damage_mod": 0,
-        "effects": null
+        "effects": []
     },
     "Ogre pirate": {
         "name": "Ogre pirate",
@@ -24,7 +24,7 @@
         "defence_kick": 5,
         "defence_throw": 8,
         "damage_mod": 0,
-        "effects": null
+        "effects": []
     },
     "Buccaneer Captain": {
         "name": "Buccaneer Captain",
@@ -38,7 +38,7 @@
         "defence_kick": 6,
         "defence_throw": 6,
         "damage_mod": 0,
-        "effects": null
+        "effects": []
     },
     "Young Captain": {
         "name": "Young Captain",
@@ -52,7 +52,7 @@
         "defence_kick": 5,
         "defence_throw": 5,
         "damage_mod": 0,
-        "effects": null
+        "effects": []
     },
     "First soldier": {
         "name": "First soldier",
@@ -66,7 +66,7 @@
         "defence_kick": 4,
         "defence_throw": 5,
         "damage_mod": 0,
-        "effects": null
+        "effects": []
     },
     "Second solder": {
         "name": "Second soldier",
@@ -80,7 +80,7 @@
         "defence_kick": 4,
         "defence_throw": 5,
         "damage_mod": 0,
-        "effects": null
+        "effects": []
     },
     "Two-headed Giant": {
         "name": "Two-headed Giant",

@@ -140,7 +140,7 @@ function NewGameCtrl($scope, $http, localStorageService, Story, Items, Opponents
     $scope.beginGame = function() {
         localStorageService.clearAll();
         // Set starting entry number.
-        gameState.currentEntry = '65';
+        gameState.currentEntry = '235';
         gameState.endurance = 20;
         // Get starting items.
         angular.forEach(itemsjson, function(item) {
@@ -302,7 +302,7 @@ function StoryCtrl($scope, $http, localStorageService, gameState, Story, Items, 
                         actionText = 'You throw {0} to the ground!'.replace('{0}', target.action_desc);
                         gameState.attackModifierTemp = 2;  // Next attack will be easier.
                         gameState.currentOpponents[0].damage_mod = 2;  // Next attack will do more damage.
-                        gameState.currentOpponents[0].effects = 'thrown';  // Thrown opponents can't attack.
+                        gameState.currentOpponents[0].effects.push('thrown');  // Thrown opponents can't attack.
                         gameState.actions.push([actionText]);
                     };
                 } else {
@@ -332,8 +332,8 @@ function StoryCtrl($scope, $http, localStorageService, gameState, Story, Items, 
             var hasBlocked = false;
             angular.forEach(gameState.currentOpponents, function(o) {
                 actionText = '';
-                if (o.effects == 'thrown') {  // Thrown opponents can't attack.
-                    o.effects = null;
+                if (o.effects.indexOf('thrown') > -1) {  // Thrown opponents can't attack.
+                    o.effects.splice(o.effects.indexOf('thrown'), 1);
                 } else {
                     // Check 2d6 against player_defence.
                     var defence;
@@ -349,10 +349,16 @@ function StoryCtrl($scope, $http, localStorageService, gameState, Story, Items, 
                         actionText = actionText.replace('{1}', damage.toString());
                         actionText = capitaliseFirstLetter(actionText);
                         gameState.endurance -= damage;
+                        // Not all attacks can be blocked.
+                        var blockable = true;
+                        if (o.effects.indexOf('unblockable') > -1) {
+                            console.log('foo');
+                            blockable = false;
+                        };
                         // Push to actions to allow for blocking: [actionText, true, damage, defence]
                         // Player may only try to block the first successful hit.
                         // TODO: allow selective blocking.
-                        if (!hasBlocked) {
+                        if (!hasBlocked && blockable) {
                             gameState.actions.push([actionText, true, damage, defence]);
                         } else {
                             gameState.actions.push([actionText]);
