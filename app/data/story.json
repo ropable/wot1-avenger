@@ -780,6 +780,21 @@
             }
         ]
     },
+    "195": {
+        "description": "You sidestep the swinging mace and spring up behind the mailed man, landing on his horse. The horse rears and you try to chop him to the ground as he twists in the saddle to mace your face. His Defence against your Tiger's Paw is 5.",
+        "image": "223.png",
+        "opponent_defence_roll": 5,
+        "options": [
+            {
+                "text": "You blow lands!",
+                "entry": 387
+            },
+            {
+                "text": "You failed to hit the man!",
+                "entry": 407
+            }
+        ]
+    },
     "196": {
         "description": "You walk up the steps and into the Temple. The wooden pews seem to be placed at random within, but the roof is pierced with rose-windows and the inside is bright and cheerful. Crystals reflect the sun's rays against a painting showing a demolished castle, and soldiers and peasants dancing in the meadows before it. There is no sign of the decapitated priest or the young warrior. One of the priests walks towards you and you ask him if he can help you with some information. He asks you whether you are a worshipper of Béatan. Which god will you say you worship?",
         "options": [
@@ -875,6 +890,28 @@
             {
                 "text": "Continue",
                 "entry": 65
+            }
+        ]
+    },
+    "223": {
+        "description": "You jog along the road, passing a few travellers on horseback or on foot and an occasional trading caravan, gathering berries and nuts at the side of the road as you go. You sleep away from the road. You may restore up to 2 Endurance and continue on, hoping to reach Mortavalon at dusk on the second day. Around mid-day another small caravan of four wagons, approaches. There are four caravan guards on horseback, dressed in chain mail and, curiously, all carrying maces. You jog on, wary now, when suddenly, one of them cries, 'The Ninja!' and they charge towards you, swinging their weapons.\n\nAs they close, you see that they bear the black whirlpool symbol.",
+        "image": "223.png",
+        "options": [
+            {
+                "prereq": [
+                    "skill",
+                    "Acrobatics"
+                ],
+                "text": "[Acrobatics] Try to dodge aside and leap up behind one of your attackers?",
+                "entry": 195
+            },
+            {
+                "text": "Block the first mace blow with your iron sleeve and try to topple your assailant from the saddle?",
+                "entry": 171
+            },
+            {
+                "text": "Duck to the ground knowing that their horses will avoid trampling you?",
+                "entry": 182
             }
         ]
     },
@@ -1424,7 +1461,10 @@
     },
     "336": {
         "description": "The Two-headed Giant crashes to the ground, cracking the rock. Saliva flecked with blood covers its lips. You move on, and in the mist see the cave which was its lair. Investigating carefully you find a selection of bones cracked open which have had the marrow sucked out of them, and a small sack full of copper pieces.\n\nThe Giant's treasure is worthless to you, too heavy to carry, but you do find a black leather gauntlet sewn with delicate silver thread. It carries the virtue of magic, a Gauntlet of Striking and you put it on. Add +1 to your Punch Modifier when using the Iron Fist, Tiger's Paw or Cobra Strike punches. You continue on through the hills as the mist lifts and head into the wild wastelands towards the city of Fiendil.",
-        "player_modifier": ["punch", 1],
+        "player_modifier": [
+            "punch",
+            1
+        ],
         "loot_add": [
             [
                 "Gauntlet of Striking",
