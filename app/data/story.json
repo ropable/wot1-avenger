@@ -108,6 +108,15 @@
             }
         ]
     },
+    "21": {
+        "description": "The priests camp in the hills which encircle Mortavalon, near a cave-mouth overhung with rock. After they have eaten round a small fire, two of them walk over to where you lie. Instead of giving you food they tell you that they are taking you back to the dungeons under the cathedral to Vasch-Ro, in Doomover, where you will rot. Intrigued, you ask them why they are taking you there instead of to their own temple at Mortavalon.\n\n'Because Manse the Deathmage, a servant of Nemesis and the most powerful sorcerer of them all, is journeying north to meet Honoric and Yaemon, he of the order of the Scarlet Mantis, to work a great magic which will plunge the world into darkness and bring nearer the day when we, the followers of Nemesis, will rule everything on Orb.'\n\n'Yaemon will betray him,' you say.\n\nThey laugh and reply that the Deathmage knows the thoughts of all men and can see them plotting from afar. With that they leave you, preparing themselves for sleep. For some hours you wrestle with your bonds, loosening them until you can hook your thumbs inside the chafing ropes. At last you are free and you decide to creep into the cave, lest they use spells to snare you once again.",
+        "options": [
+            {
+                "text": "Continue",
+                "entry": 275
+            }
+        ]
+    },
     "26": {
         "description": "By midday of the next day, the Aquamarin has left the islands behind and ahead of you looms the Greater Continent. You turn north and hug the rocky coast for some days; you regain much lost Endurance as you rest, gliding over the still calm seas. It begins to rain slightly on the next day, as you follow the shore of a vast bay. Glaivas comes to talk to you and points to a large estuary where the Greybones empties into the sea. He tells you that his home city, Tor, lies up river. You ask him whether there is a temple to Kwon there and he shakes his head but freely tells you that his goddess is the Allmother, Preserver of Life. You ask him of the cities which lie beyond Tor on the Greybones river but a look of pain crosses his face.\n\n'Let me tell you, instead, of Doomover, for that is our port of call,' he says. 'It is one of the largest cities in the Manmarch, perhaps four hundred thousand souls, and it is ruled by the Legion of the Sword of Doom. Most spit when they hear the name but they are one of the best armies on Orb. They worship the Wargod, Vasch-Ro, He who sows for the Reaper, and they spread fear about them in battle. There are temples to other gods but the Cathedral to the Wargod overshadows them all. The Marshal of the Legion of the Sword of Doom is Honoric, a blackheart who has never been defeated in combat. It is said that he once slew a storm giant, single handed. He is without doubt a peerless swordsman. The order of the Scarlet Mantis has a temple there, too. They send their acolytes to the Far Snows for training, where they become used to hardship of all kinds. Yaemon is the greatest warrior they have ever had to lead them. They use the cross of Avatar, the Supreme Principle of Good as a symbol, but with a serpent twining round it. In this way you may know one if you see one.'\n\nOn the next day, you sight the fortified harbour walls of Doomover and two long blackwood ships dart out to meet you. They fly the flag of the Barbican, the Doomover navy. As they approach, a tall man in black ringed mail orders you to heave to. The captain obeys and the sails are slackened. He answers various questions but when the naval commander asks what business he has at Doomover, he looks nervously at Glaivas, licking his lips. Glaivas answers for him, saying that he has come to sell galley slaves.\n\nThe commander grins, 'I was going to confiscate your ship but as you bring men we have need of, you may pass through the Barbican.' With that, you are allowed on your way.\n\nThe Barbican itself is a huge gatehouse, like a fort, which spans the ends of the harbour walls in an arc. The ship glides beneath it and is tied up at the busy wharf. You thank Glaivas for his help and jump lithely to the land. He is returning to Tor to organise the defence against the forces of Vile should your mission fail. He throws you a pouch containing ten gold pieces, saying, 'Here, you need this. May Fate smile on you, Ninja.' You pocket the pouch and turn to the city.\n\nTwo gates stand side by side. The larger is a huge arch of black obsidian like a rainbow of dark glass. The other, much smaller, consists of two pairs of white marble pillars topped by a portico on which the words 'Portal of the Gods' are written in gold leaf.",
         "image": "26.png",
@@ -193,6 +202,40 @@
             {
                 "text": "Decide to take your leave hastily?",
                 "entry": 27
+            }
+        ]
+    },
+    "37": {
+        "description": "Try as you might, you cannot loosen your bonds. You overhear the priests talking and it seems that they worship Nemesis, the Supreme Principle of Evil. Somehow word of your exploits in Doomover has travelled ahead of you, but you cannot puzzle out why the priests of Nemesis are in league with the monks of the Scarlet Mantis and the Legion of the Sword of Doom who follow the Wargod Vasch-Ro.\n\nThey return you to Doomover where you are taken to the dungeons below the cathedral to Vasch-Ro and manacled to the wall. The jaiior does not bother to bring you food or water and you are dead within days.",
+        "options": [
+            {
+                "text": "Continue",
+                "entry": "death"
+            }
+        ]
+    },
+    "44": {
+        "description": "As you try to run at the priests their spell takes hold and your legs and arms turn to lead. Your body quivers as, with a great effort of will, you struggle a few steps further but they have no trouble in knocking you to the ground and tying you securely.",
+        "image": "223.png",
+        "loot_remove": [
+            [
+                "Opal ring",
+                1
+            ]
+        ],
+        "boolean_option": true,
+        "options": [
+            {
+                "prereq": [
+                    "skill",
+                    "Escapology"
+                ],
+                "text": "[Escapology] Continue",
+                "entry": 21
+            },
+            {
+                "text": "Continue",
+                "entry": 37
             }
         ]
     },
@@ -600,6 +643,24 @@
             }
         ]
     },
+    "135": {
+        "description": "The priests dismount and, walking slowly towards you, begin a fell incantation. Your limbs begin to feel heavy.",
+        "image": "223.png",
+        "options": [
+            {
+                "text": "Run to attack them?",
+                "entry": 44
+            },
+            {
+                "text": "Run to the river and, hiding in the bullrushes roll a boulder in before crawling away?",
+                "entry": 123
+            },
+            {
+                "text": "Run to the river and, diving in, stay submerged using your bamboo tube?",
+                "entry": 4
+            }
+        ]
+    },
     "137": {
         "description": "You stand, legs apart, in front of the door, taking three slow deep breaths. Then when you are ready, you use the Iron Fist with a grunting cry as the Inner Force escapes you. There is a crash and the door flies off its hinges. You leap over it as it falls to the floor. The buccaneer Captain is inside having forsaken his ship for the comfort of the Aquarmarin. Woken from his sleep by the crash of the door he rolls off the bed, pulling his cutlass from under the pillow and tries to throw some blankets at you. You whip out a Shuriken and with a deft flick of the wrist, send it hurtling towards him before he can cry out.",
         "opponent_defence_roll": 5,
@@ -660,6 +721,21 @@
             {
                 "text": "Continue",
                 "entry": 26
+            }
+        ]
+    },
+    "171": {
+        "description": "As the first mailed man charges, swinging his mace down at you, you try to sweep the heavy mace aside with your forearm.",
+        "image": "223.png",
+        "player_defence": 8,
+        "options": [
+            {
+                "text": "You block his swing!",
+                "entry": 163
+            },
+            {
+                "text": "You fail to block the swing!",
+                "entry": 157
             }
         ]
     },
@@ -724,6 +800,16 @@
             }
         ]
     },
+    "182": {
+        "description": "You crouch on the ground and the horses thunder over you.",
+        "image": "223.png",
+        "options": [
+            {
+                "text": "Continue",
+                "entry": 135
+            }
+        ]
+    },
     "183": {
         "description": "The priest replies, 'Even if we were not busy with healing we would not help you, for those who follow the strict laws of a monastery, as you must, hinder freedom and prevent paradise on Orb.'\n\nYou realise from the look of zeal in his eyes that theological argument would not sway him.",
         "options": [
@@ -781,12 +867,12 @@
         ]
     },
     "195": {
-        "description": "You sidestep the swinging mace and spring up behind the mailed man, landing on his horse. The horse rears and you try to chop him to the ground as he twists in the saddle to mace your face. His Defence against your Tiger's Paw is 5.",
+        "description": "You sidestep the swinging mace and spring up behind the mailed man, landing on his horse. The horse rears and you try to chop him to the ground as he twists in the saddle to mace your face.",
         "image": "223.png",
         "opponent_defence_roll": 5,
         "options": [
             {
-                "text": "You blow lands!",
+                "text": "You blow lands true!",
                 "entry": 387
             },
             {
@@ -894,8 +980,9 @@
         ]
     },
     "223": {
-        "description": "You jog along the road, passing a few travellers on horseback or on foot and an occasional trading caravan, gathering berries and nuts at the side of the road as you go. You sleep away from the road. You may restore up to 2 Endurance and continue on, hoping to reach Mortavalon at dusk on the second day. Around mid-day another small caravan of four wagons, approaches. There are four caravan guards on horseback, dressed in chain mail and, curiously, all carrying maces. You jog on, wary now, when suddenly, one of them cries, 'The Ninja!' and they charge towards you, swinging their weapons.\n\nAs they close, you see that they bear the black whirlpool symbol.",
+        "description": "You jog along the road, passing a few travellers on horseback or on foot and an occasional trading caravan, gathering berries and nuts at the side of the road as you go. You sleep away from the road. You continue on, hoping to reach Mortavalon at dusk on the second day.\n\nAround mid-day another small caravan of four wagons, approaches. There are four caravan guards on horseback, dressed in chain mail and, curiously, all carrying maces. You jog on, wary now, when suddenly, one of them cries, 'The Ninja!' and they charge towards you, swinging their weapons.\n\nAs they close, you see that they bear the black whirlpool symbol.",
         "image": "223.png",
+        "modify_endurance": 2,
         "options": [
             {
                 "prereq": [
@@ -1781,7 +1868,7 @@
         ]
     },
     "315a": {
-        "description": "you miss the Cobra Man and he bites your ankle, injecting a deadly venom.",
+        "description": "You miss the Cobra Man and he bites your ankle, injecting a deadly venom.",
         "image": "212.png",
         "boolean_option": true,
         "options": [
@@ -1794,7 +1881,7 @@
                 "entry": 227
             },
             {
-                "text": "You die painfully.",
+                "text": "You die, painfully.",
                 "entry": "death"
             }
         ]
