@@ -409,18 +409,15 @@ function StoryCtrl($scope, $http, localStorageService, gameState, Story, Items, 
             };
         };
         // Handle player death.
-        // TODO: For entries that damage endurance, break up the "before" and "after" text
-        // so that the "after" is not rendered if the player dies.
-        // Entries: 136, 396, 342.
-        // Use "damage_followup" field, and consolidate "damage_player" and "modify_endurance".
+        // Use "damage_followup".
         if (gameState.endurance <= 0) {
             gameState.options = [{"text": "Continue", "entry": 'death'}];
             gameState.endurance = 0;
             gameState.inProgress = false;
         } else {  // Player is still alive - we may need to alter the entry text.
             if (gameState.entry.damage_followup) {
-                var newtext = gameState.entry.description + '\n\n' + gameState.entry.damage_followup;
-                gameState.entryText = textMarkup(newtext);
+                var newText = gameState.entry.description + '\n\n' + gameState.entry.damage_followup;
+                gameState.entryText = textMarkup(newText);
             };
         };
         // Phat loot!

@@ -513,6 +513,19 @@
             }
         ]
     },
+    "103": {
+        "description": "You turn and run but as they finish their fell incantation your movements slow, your limbs feel as heavy as lead and it is only by a great effort of will that, quivering with the strain, you can get them to move at all. You stagger to the river and duck out of sight in some bullrushes.",
+        "options": [
+            {
+                "text": "Slide into the river and stay below the surface, using your slender bamboo tube to breath through?",
+                "entry": 4
+            },
+            {
+                "text": "Roll a boulder into the river and crawl slowly away through the bullrushes?",
+                "entry": 123
+            }
+        ]
+    },
     "105": {
         "description": "The Shuriken findš its mark. The guard throws his hand to his throat and screams before collapsing to the floor, dead. Realising the alarm may have been given, you run out of the barracks towards the city gate, leaving your throwing star behind.",
         "loot_remove": [
@@ -643,6 +656,31 @@
             }
         ]
     },
+    "129": {
+        "description": "The horse, too, is affected and it slows to a plodding walk, whinnying shrilly in terror. Your body quivers as you strive to move but you cannot. The priests, for you know this is priestly magic, knock you from the saddle and tie you securely.",
+        "image": "223.png",
+        "loot_remove": [
+            [
+                "Opal ring",
+                1
+            ]
+        ],
+        "boolean_option": true,
+        "options": [
+            {
+                "prereq": [
+                    "skill",
+                    "Escapology"
+                ],
+                "text": "[Escapology] Continue",
+                "entry": 21
+            },
+            {
+                "text": "Continue",
+                "entry": 37
+            }
+        ]
+    },
     "135": {
         "description": "The priests dismount and, walking slowly towards you, begin a fell incantation. Your limbs begin to feel heavy.",
         "image": "223.png",
@@ -658,6 +696,25 @@
             {
                 "text": "Run to the river and, diving in, stay submerged using your bamboo tube?",
                 "entry": 4
+            }
+        ]
+    },
+    "136": {
+        "description": "You try to roll aside but a crossbow bolt slams into your side and you sprawl flat on the ground.",
+        "damage_followup": "The gate guards charge towards you, as you spring to your feet.",
+        "boolean_option": true,
+        "options": [
+            {
+                "prereq": [
+                    "skill",
+                    "Acrobatics"
+                ],
+                "text": "[Acrobatics] Continue",
+                "entry": 144
+            },
+            {
+                "text": "Continue",
+                "entry": 285
             }
         ]
     },
@@ -1593,7 +1650,7 @@
         ]
     },
     "342": {
-        "description": "He leans forward as you thrust up the rope towards the window and, ready for you, he delivers an Iron Fist punch into your face. Lose 4 Endurance.",
+        "description": "He leans forward as you thrust up the rope towards the window and, ready for you, he delivers an Iron Fist punch into your face.",
         "damage_followup": "The force of the blow sends you falling backwards into space.",
         "modify_endurance": 4,
         "boolean_option": true,
@@ -1744,6 +1801,19 @@
             }
         ]
     },
+    "376": {
+        "description": "You lie unmoving on the grass as they dismount to examine your body. You stop breathing almost completely and concentrate so that the blood stops flowing to your skin and your heart rate drops to a minimum. When they touch you it seems you are already growing slightly stiff and when, after a few minutes your brow feels cold, they ride off and leave you. As they mount up they are deciding to return to their temple, that of Nemesis, Supreme Principle of Evil.\n\n'Manse will be pleased,' says one.\n\n'Yes, and thse strange monks of the Mantis,' says another. When they have left yoù continue warily, wondering how news of you had travelled ahead so quickly and why the priests of Nemesis should be in league with the monks who worship Vile. After a time you enter the hills that encircle Mortavalon and remember that you have heard of a sorcerer who worships Nemesis, Manse the Deathmage, supposedly one of the most powerful beings on Orb. Your musings are interrupted when you see a cave in the hillside above you.",
+        "options": [
+            {
+                "text": "Continue along the road to Mortavalon?",
+                "entry": 283
+            },
+            {
+                "text": "Enter the cave?",
+                "entry": 275
+            }
+        ]
+    },
     "380": {
         "description": "The arrow reaches you as you are in mid-air between the rigging and the deck but you whip your hand up and snatch it out of the air inches before your chest, and throw it aside. The Ogre, enraged, raises its spiked hammer to smash you.",
         "image": "232.png",
@@ -1776,6 +1846,20 @@
             {
                 "text": "Continue",
                 "entry": 368
+            }
+        ]
+    },
+    "387": {
+        "description": "The mail-clad rider stiffens as you chop his neck and rolls sideways off his horse. You balance on your hands and move yourself forwards into the saddle, grabbing the reins as the horse bolts. You are an accomplished horseman and you manage to turn the frightened beast towards the hills that circle Mortavalon.\n\nThe others thunder after you, and are still behind you as you enter the hills. They begin to shout a fell incantation and you feel a sluggishness overcome you.",
+        "image": "223.png",
+        "options": [
+            {
+                "text": "Spur your horse on faster?",
+                "entry": 129
+            },
+            {
+                "text": "Vault from the horse and run into a cave which you see in the hillside above you?",
+                "entry": 275
             }
         ]
     },
@@ -1838,6 +1922,25 @@
             {
                 "text": "Continue",
                 "entry": 254
+            }
+        ]
+    },
+    "407": {
+        "description": "You are not fast enough and the heavy mace catches you in the face before the chop lands.",
+        "image": "223.png",
+        "damage_followup": "The pain is terrible and you are knocked from the horse, landing in a heap on the ground.",
+        "options": [
+            {
+                "prereq": [
+                    "skill",
+                    "Feigning Death"
+                ],
+                "text": "[Feigning Death] Slow your metabolism and pretend to be dead?",
+                "entry": 376
+            },
+            {
+                "text": "Pick yourself up and stagger towards the river.",
+                "entry": 103
             }
         ]
     },
