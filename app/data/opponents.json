@@ -97,5 +97,47 @@
         "effects": [
             "unblockable"
         ]
+    },
+    "First priest": {
+        "name": "First priest",
+        "action_desc": "the first priest",
+        "endurance": 12,
+        "damage": [
+            1,
+            1
+        ],
+        "defence_punch": 5,
+        "defence_kick": 4,
+        "defence_throw": 4,
+        "damage_mod": 0,
+        "effects": []
+    },
+    "Second priest": {
+        "name": "Second priest",
+        "action_desc": "the second priest",
+        "endurance": 14,
+        "damage": [
+            1,
+            1
+        ],
+        "defence_punch": 7,
+        "defence_kick": 5,
+        "defence_throw": 5,
+        "damage_mod": 0,
+        "effects": []
+    },
+    "Third priest": {
+        "name": "Third priest",
+        "action_desc": "the third priest",
+        "endurance": 13,
+        "damage": [
+            1,
+            1
+        ],
+        "defence_punch": 6,
+        "defence_kick": 5,
+        "defence_throw": 5,
+        "damage_mod": 0,
+        "effects": []
     }
 }

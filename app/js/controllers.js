@@ -42,6 +42,14 @@ var validEntryChoices = function(gameState) {
         } else {
             gameState.options.push(gameState.entry.options[1]);
         };
+    // Handle player defence roll (vs attacks, traps, etc).
+    } else if (gameState.entry.player_defence_roll) {
+        if (dieRoll(2) < gameState.entry.player_defence_roll || gameState.cheatMode) {
+            // First option is always the success.
+            gameState.options.push(gameState.entry.options[0]);
+        } else {
+            gameState.options.push(gameState.entry.options[1]);
+        };
     } else {
         angular.forEach(gameState.entry.options, function(option) {
             if (gameState.cheatMode) {

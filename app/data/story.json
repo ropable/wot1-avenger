@@ -32,6 +32,23 @@
             }
         ]
     },
+    "4": {
+        "description": "The priests rush to the edge of the river and one of them catches sight of you and points. They begin to throw off their chainmail.",
+        "options": [
+            {
+                "prereq": [
+                    "skill",
+                    "Poison Needles"
+                ],
+                "text": "[Poison Needles] Use a poison needle dart?",
+                "entry": 419
+            },
+            {
+                "text": "Swim powerfully away upstream?",
+                "entry": 12
+            }
+        ]
+    },
     "6": {
         "description": "You pass through the archway of purple-black glass and on into the city of Doomover itself. You cannot remember ever having seen so many buildings, solid and tall, their roofs of sloping slates, not thatch, and there are shops everywhere, selling fish, wine, and grain and there is even a slave market. Near the Obsidian Gate a town-crier begins to ring his bell.\n\nHe is dressed in orange and green to attract attention, and he begins to shout loudly about a brave adventurer who lived in Doomover who has reaped rich rewards and found a secret way into the death-city of Mortavalon, having entered a cave in the hills which encircle that city. Next he proclaims loudly that the army is paying well for recruits, that there is no war but men are needed for manoeuvres on the Plain of Feet. There are rows of barracks not far from the harbour.",
         "options": [
@@ -42,6 +59,30 @@
             {
                 "text": "Ignore the town crier and walk on through the city?",
                 "entry": 408
+            }
+        ]
+    },
+    "12": {
+        "description": "You swim upstream but as you go they begin chanting again, and as their spell takes effect you find you cannot move your limbs. You float gently downstream, into their welcoming arms and they bind you securely.",
+        "loot_remove": [
+            [
+                "Opal ring",
+                1
+            ]
+        ],
+        "boolean_option": true,
+        "options": [
+            {
+                "prereq": [
+                    "skill",
+                    "Escapology"
+                ],
+                "text": "[Escapology] Continue",
+                "entry": 21
+            },
+            {
+                "text": "Continue",
+                "entry": 37
             }
         ]
     },
@@ -273,6 +314,25 @@
             }
         ]
     },
+    "55": {
+        "description": "Your last blow sends one of them collapsing backwards towards the river. You have pummelled them all to death. The wagons are nowhere to be seen, but you notice that one of them is wearing an Amulet. The Amulet is a bright crystal set in a gold disk which carries an inscription, as well as magical runes: 'My wearer can withstand the Finger of Death'. You slip the Amulet around your neck.\n\nSearching their bodies, you find a battered scroll case and, muttering a prayer to Kwon to protect you from curses, you open it. The papyrus inside identifies its bearer as a priest of Nemesis, 'The Supreme Principle of Evil, he who would return all to The Darkness.' It carries a description of you. It was no accident that they attacked you, word has somehow travelled ahead of you for their temple to Nemesis is in Mortavalon.\n\nYou walk on into the hills which encircle Mortavalon, puzzling as to who could have contacted the temple to Nemesis about you and why, until, turning a bend in the hills, you notice a cave overhung by rock in the hillside above you.",
+        "loot_add": [
+            [
+                "Crystal Amulet",
+                1
+            ]
+        ],
+        "options": [
+            {
+                "text": "Continue along the road to Mortavalon?",
+                "entry": 283
+            },
+            {
+                "text": "Enter the cave?",
+                "entry": 275
+            }
+        ]
+    },
     "56": {
         "description": "He asks you to give the sign of the many ways to freedom and you cannot. He prepares to cast a spell, but you beg his pardon and, saying that you will seek help elsewhere, quickly leave the temple. The Seer is nowhere to be seen so you walk out of the Sanctuary and through the Obsidian Gate.",
         "options": [
@@ -302,6 +362,31 @@
             }
         ],
         "description": "You raise your foot as if to kick Gorobei in the chest, but spin to his side instead and take hold of his arm to throw him over your hip. You rapidly learn your mistake, however, as your grip slides on the oil which covers him and he uses his skill as a wrestler to grab you and lock your arm behind your back whilst he grips you around the throat. His strength is enormous. You try to somersault backwards over him and break the grip but he is ready for you and pins you to the floor before delivering a heavy blow."
+    },
+    "63": {
+        "description": "You leap feet-first at one of the priests, trying to wrap your feet around his head, before twisting to throw him to the ground.",
+        "image": "223.png",
+        "player_defence": [
+            9,
+            8,
+            7
+        ],
+        "options": [
+            {
+                "text": "Use the Forked Lightning kick?",
+                "entry": 71,
+                "type": "offence",
+                "action": "kick",
+                "inner_force": true
+            },
+            {
+                "text": "Use the Cobra Strike jab?",
+                "entry": 82,
+                "type": "offence",
+                "action": "punch",
+                "inner_force": true
+            }
+        ]
     },
     "65": {
         "description": "As you leave the forbidding towered walls of Doomover behind, the sun climbs in the sky, ripening the corn and barley which rustles in the breeze. The fields do not stretch for far and you are soon on the edge of a low plain, the Plain of Feet, on which several thousand of the Legion of the Sword of Doom, smart and efficient, are practising for the forthcoming war. The smooth plain gradually gives way to a wilderness of trees and vines.",
@@ -338,6 +423,38 @@
             {
                 "text": "Kick again?",
                 "entry": 67,
+                "type": "offence",
+                "action": "kick",
+                "inner_force": true
+            }
+        ]
+    },
+    "71": {
+        "description": "You try to drive the heel of your foot into the groin of one of the priests and then whip it up to his face.",
+        "image": "223.png",
+        "player_defence": [
+            9,
+            8,
+            7
+        ],
+        "victory": 55,
+        "options": [
+            {
+                "text": "Use the Cobra Strike jab?",
+                "entry": 82,
+                "type": "offence",
+                "action": "punch",
+                "inner_force": true
+            },
+            {
+                "text": "Use the Teeth of the Tiger throw?",
+                "entry": 63,
+                "type": "offence",
+                "action": "throw"
+            },
+            {
+                "text": "Kick again?",
+                "entry": 71,
                 "type": "offence",
                 "action": "kick",
                 "inner_force": true
@@ -415,6 +532,38 @@
             }
         ]
     },
+    "82": {
+        "description": "Your fingers jab like rods of steel towards one of your assailants, as you hope to catch him in the armpit where he has no protection from his mail surcoat.",
+        "image": "223.png",
+        "player_defence": [
+            9,
+            8,
+            7
+        ],
+        "victory": 55,
+        "options": [
+            {
+                "text": "Use the Forked Lightning kick?",
+                "entry": 71,
+                "type": "offence",
+                "action": "kick",
+                "inner_force": true
+            },
+            {
+                "text": "Use the Teeth of the Tiger throw?",
+                "entry": 63,
+                "type": "offence",
+                "action": "throw"
+            },
+            {
+                "text": "Punch again?",
+                "entry": 82,
+                "type": "offence",
+                "action": "punch",
+                "inner_force": true
+            }
+        ]
+    },
     "86": {
         "description": "You slink soundlessly as a blaçk panther towards the unsuspecting guard, who is leaning against the doorpost lost in thought.",
         "options": [
@@ -474,13 +623,42 @@
         "opponent_remove": "Gorobei",
         "options": [
             {
-                "prereq": null,
                 "text": "Continue",
-                "entry": 191,
-                "type": null
+                "entry": 191
             }
         ],
         "description": "Gorobei has used the Iron Fist, punching you so hard in the back of the neck that you slump to the granite floor, senseless. A young village boy is pouring water onto your forehead when you regain your wits. A few of the younger acolytes murmur condolences as you rub your neck. An hour later, Gorobei returns from the robing chamber and you applaud with the others as he is ordained as a Grandmaster."
+    },
+    "96": {
+        "description": "You are among them before they can finish whatever fell incantation they had begun and they heft their maces at you instead. They are in full chainmail, well-protected but slow.",
+        "image": "223.png",
+        "opponents": [
+            "First priest",
+            "Second priest",
+            "Third priest"
+        ],
+        "options": [
+            {
+                "text": "Use the Teeth of the Tiger throw?",
+                "entry": 63,
+                "type": "offence",
+                "action": "throw"
+            },
+            {
+                "text": "Use the Cobra Strike jab?",
+                "entry": 82,
+                "type": "offence",
+                "action": "punch",
+                "inner_force": true
+            },
+            {
+                "text": "Use the Forked Lightning kick?",
+                "entry": 71,
+                "type": "offence",
+                "action": "kick",
+                "inner_force": true
+            }
+        ]
     },
     "97": {
         "description": "One of the buccaneers has seen you and he creeps along the deck of the Watery Grave, intent on severing your hands from your wrists with his cutlass. The faintest jingling of his many ear-rings alerts you and you nimbly vault over the rail onto the deck, and catch his arm with your left hand as he swings his cutlass at your head. Then you use the Whirlpool to throw him over the side.\n\nTurning, you run up the stairway to the stern castle from where the pirate Captain is directing his men. You bound up the last steps to appear from nowhere before him. He steps back in surprise but soon regains his composure. He is a large man, with a grizzled beard and gold armbands which cause the veins of his massive arms to stand out like cords.\n\nHe swings his morning star at you as you move in to attack.",
@@ -772,6 +950,40 @@
             }
         ]
     },
+    "157": {
+        "description": "The blow is so heavy that it sweeps through your guard and catches you on the side of the head.",
+        "image": "223.png",
+        "modify_endurance": -10,
+        "damage_followup": "The pain is terrible as you fold to the ground.",
+        "options": [
+            {
+                "prereq": [
+                    "skill",
+                    "Feigning Death"
+                ],
+                "text": "[Feigning Death] Slow your metabolism and pretend to be dead?",
+                "entry": 376
+            },
+            {
+                "text": "Pick yourself up and stagger towards the river.",
+                "entry": 103
+            }
+        ]
+    },
+    "163": {
+        "description": "The mace rings on your iron sleeves like a hammer on the anvil and you grab your aftacker’s wrist, dragging him from the saddle. He falls awkwardly and rolls aside dead. The three others dismount and they begin to chant. They must be priests, you think.",
+        "image": "223.png",
+        "options": [
+            {
+                "text": "Attack them?",
+                "entry": 96
+            },
+            {
+                "text": "Run?",
+                "entry": 103
+            }
+        ]
+    },
     "164": {
         "description": "The spinning Shuriken takes the pirate Captain in the throat and the shout which was on his lips dies to a bloody gurgle as he slumps lifeless to the planks. You shout the signal and the crew rush up from the oar deck whirling lengths of chain and the cutlasses of their guards. You lead the attack and the rum-sodden pirates are taken by surprise. Many jump into the sea, forgetting that their ship is a mile away in darkness. You are glad to see Glaivas, freed by one of the crew, despatching an ugly pirate who was proving troublesome. The few remaining alive surrender to him and he orders them put to the oar, for a taste of their own medicine. In the morning, you set sail again and make good speed.",
         "options": [
@@ -784,7 +996,7 @@
     "171": {
         "description": "As the first mailed man charges, swinging his mace down at you, you try to sweep the heavy mace aside with your forearm.",
         "image": "223.png",
-        "player_defence": 8,
+        "player_defence_roll": 8,
         "options": [
             {
                 "text": "You block his swing!",
@@ -1282,6 +1494,15 @@
             {
                 "text": "Spend the day in a hostel practising the Way of the Tiger?",
                 "entry": 303
+            }
+        ]
+    },
+    "275": {
+        "description": "The cave is dark, but light filters down into it from a narrow crack in the ceiling. As you inch your way along the uneven floor you hear footsteps behind you and hurry on into the darkness. Steps lead down and, as you descend, a curious noise like the grinding of metal cogs sounds above. Suddenly a torrent of water cascades down the steps and you run on through the darkness, feeling the wall with your hand. You are soon knee-deep and beginning to wonder if there is any way out at the end of the tunnel when a portcuffis slams to the floor behind you. The level of water drops and you find yourself trapped in an iron cage.\n\nThere is no escape and you languish in the cage for some hours, using the time to relax and meditate. Suddenly the cage is flooded with light as a door at the end of the tunnel is flung open. You are under the seats of a huge circular arena which is slowly filling with people. The huge crowd cheers as a trumpet sounds and the front of the cage collapses to the ground. A group of soldiers come to the back of the cage and motion you to step out into the arena, poking spears through the portcullis.\n\n'May Fate smile on you,' says one. 'Only one of you can become the king of the castle, and live.'\n\nYou step out into the sunlight to another cheer from the crowd, and the cage front is pulled up again behind you and you cannot go back. Squinting in the sun, you look around you.",
+        "options": [
+            {
+                "text": "Continue",
+                "entry": 261
             }
         ]
     },
@@ -1881,12 +2102,8 @@
     "396": {
         "description": "Before you reach the deck an arrow pierces your thigh and you stumble. You pull the barbed arrow from your flesh but the muscle is badly torn. The Ogre, enraged, raises its spiked hammer to smash you.",
         "image": "232.png",
+        "modify_endurance": -4,
         "damage_player": [
-            [
-                "endurance",
-                "fixed",
-                4
-            ],
             [
                 "kick",
                 "fixed",
@@ -1967,6 +2184,19 @@
             {
                 "text": "Try to dig your Claws into the flints of the bridge and climb to the side of the window?",
                 "entry": 375
+            }
+        ]
+    },
+    "419": {
+        "description": "You thrash around in the water, pretending that you cannot swim and when they are close blow a poison needle through your breathing tube at the face of one of the priests. It slaps into his cheek and he thrashes in the water and dies in convulsions. The spell that had made you so sluggish is broken.\n\nYou swim across to the other bank and disappear into the bullrushes. They cannot keep up with your sure-footed speed and you re-cross the river and enter the hills that encircle Mortavalon. You rejoin the road and, rounding a corner espy a cave overhung with rock on the hillside above you.",
+        "options": [
+            {
+                "text": "Continue straight on to Mortavalon?",
+                "entry": 283
+            },
+            {
+                "text": "Enter the cave?",
+                "entry": 275
             }
         ]
     },
