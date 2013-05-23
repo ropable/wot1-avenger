@@ -13,7 +13,7 @@ Combat ratings:
 <div ng-show="gameState.items">
     Items:
     <ul>
-        <li ng-repeat="item in gameState.items">
+        <li ng-repeat="item in gameState.items" ng-show="item.count>0">
         <a href="" data-toggle="tooltip" title="{{item.desc}}">{{item.name}}</a>
         <span ng-show="item.count>1"> ({{item.count}})</span>
         </li>
