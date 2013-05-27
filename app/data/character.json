@@ -1,0 +1,15 @@
+{
+    "endurance": 20,
+    "punch": 0,
+    "kick": 0,
+    "throw": 0,
+    "fate": 0,
+    "inner_force": 5,
+    "shuriken": 5,
+    "skills": [
+        {"name": "Shurikenjitsu", "desc": ""}
+    ],
+    "items": [],
+    "encounters" : [],
+    "history": []
+}

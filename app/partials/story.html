@@ -1,0 +1,40 @@
+<div class="container" ng-controller="StoryCtrl">
+    <ng-include src="'partials/navbar.html'"></ng-include>
+    <div class="row">
+        <div class="span2 charsheet">
+            <ng-include src="'partials/charsheet.html'"></ng-include>
+        </div>
+        <div class="span8">
+            <div class="row">
+                <h4 ng-show="gameState.currentEntry != 'death'">{{gameState.currentEntry}}</h4>
+                <h4 ng-show="gameState.currentEntry == 'death'">You have died</h4>
+                <img ng-show="gameState.hasEntryImage" src="img/{{gameState.entry.image}}" class="pull-right"/>
+                <div ng-bind-html-unsafe="gameState.entryText"></div>
+            </div>
+            <!-- This is where attack and response text is displayed -->
+            <div class="row" ng-show="gameState.actions">
+                <div ng-repeat="action in gameState.actions">
+                    <span ng-bind-html-unsafe="action[0]"></span>
+                    <!-- Conditional block choice -->
+                    <span ng-show="action[1]"><a href="" ng-click="blockAttack(action)">Try to block? (your defence: {{action[3]}})</a></span>
+                </div>
+            </div>
+            <div class="row">
+                <p ng-show="gameState.options.length > 1">Will you:</p>
+                <ul>
+                    <li ng-repeat="option in gameState.options">
+                        <a href="" ng-click="chooseEntry(option, false)">{{option.text}}</a>
+                        <a href="" ng-show="option.inner_force && gameState.innerForce > 0" ng-click="chooseEntry(option, true)">(use Inner Force)</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="span2">
+            <h4>Opponents</h4>
+            <div ng-repeat="o in gameState.currentOpponents">
+                <strong>{{o.name}}</strong><br>
+                Endurance: {{o.endurance}}<br>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,7 @@
+syntax: regexp
+\.swp$
+\.swo$
+\.orig$
+story.json~
+opponents.json~
+skills.json~
