@@ -148,7 +148,7 @@ function NewGameCtrl($scope, $http, localStorageService, Story, Items, Opponents
     $scope.beginGame = function() {
         localStorageService.clearAll();
         // Set starting entry number.
-        gameState.currentEntry = '223';
+        gameState.currentEntry = '324';
         gameState.endurance = 20;
         // Get starting items.
         angular.forEach(itemsjson, function(item) {
@@ -356,6 +356,7 @@ function StoryCtrl($scope, $http, localStorageService, gameState, Story, Items, 
                         actionText += '{0} hits you for {1} damage!'.replace('{0}', o.action_desc);
                         actionText = actionText.replace('{1}', damage.toString());
                         actionText = capitaliseFirstLetter(actionText);
+                        console.log(actionText);
                         gameState.endurance -= damage;
                         // Not all attacks can be blocked.
                         var blockable = true;
@@ -374,6 +375,7 @@ function StoryCtrl($scope, $http, localStorageService, gameState, Story, Items, 
                         hasBlocked = true;
                     } else {
                         actionText += '{0} tries to hit you...but misses!'.replace('{0}', o.action_desc);
+                        actionText = capitaliseFirstLetter(actionText);
                         gameState.actions.push([actionText]);
                     };
                 };

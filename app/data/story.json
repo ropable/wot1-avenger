@@ -496,7 +496,7 @@
                 "entry": 405
             },
             {
-                "text": "Dodge to the side - you will be hit, but not crushed under its wheel (turn to 416)?",
+                "text": "Dodge to the side - you will be hit, but not crushed under its wheel?",
                 "entry": 416
             }
         ]
@@ -1580,12 +1580,54 @@
             }
         ]
     },
+    "286": {
+        "description": "As the two monks close in to kick at you, you launch yourself feet first at the head of one. They are taken by surprise.",
+        "player_defence": [
+            6,
+            8
+        ],
+        "victory": 324,
+        "options": [
+            {
+                "text": "Use the Tiger's Paw chop?",
+                "entry": 353,
+                "type": "offence",
+                "action": "punch",
+                "inner_force": true
+            },
+            {
+                "text": "Use the Winged Horse kick?",
+                "entry": 374,
+                "type": "offence",
+                "action": "kick",
+                "inner_force": true
+            }
+        ]
+    },
     "287": {
         "description": "You fall backwards from the Hall of Webs onto the flagstones of the courtyard below, breaking your neck. You have failed.",
         "options": [
             {
                 "text": "Continue",
                 "entry": "death"
+            }
+        ]
+    },
+    "289": {
+        "description": "There is no one at the north gate to see you leave the strange city of Fiendil, but you decide to put as much distance between yourself and its inhabitants as quickly as you can.",
+        "boolean_option": true,
+        "options": [
+            {
+                "prereq": [
+                    "item",
+                    "Opal ring"
+                ],
+                "text": "[Opal ring] Continue",
+                "entry": 203
+            },
+            {
+                "text": "Continue",
+                "entry": 213
             }
         ]
     },
@@ -1648,6 +1690,15 @@
             {
                 "text": "Continue",
                 "entry": 254
+            }
+        ]
+    },
+    "299": {
+        "description": "The Toy-maker screams wretchedly behind you as you pass quickly by. Keeping away from monks you spend some time walking the otherwise quiet streets of this city that seems almost out of touch with the rest of the Manmarch. You find out nothing, no one seems to care enough even to speak more than a few pleasantries to you.\n\nIn despair you decide to head north once more. You have no way of knowing whether Yaemon is still ahead of you but you cannot risk allowing him to reach the Pillars of Change before you.",
+        "options": [
+            {
+                "text": "Continue",
+                "entry": 289
             }
         ]
     },
@@ -1775,6 +1826,15 @@
             {
                 "text": "Sneak in the back of the monastery?",
                 "entry": 314
+            }
+        ]
+    },
+    "324": {
+        "description": "As you strike the last monk with what you expect will be the killing blow, strength borne of desperate fear enables him to block the blow at the last moment and he throws himself under the ox-cart to the other side. He limps away into a nearby building and you decide to leave the city by the north gate before he can call up reinforcements.",
+        "options": [
+            {
+                "text": "Continue",
+                "entry": 289
             }
         ]
     },
@@ -1978,6 +2038,36 @@
             }
         ]
     },
+    "353": {
+        "description": "These monks who reverence Vile are well-versed in the martial arts. One of the monks tries to use a Winged Horse on you, but you side-step to the left and try to bring your right hand down across his throat with a Tiger's Paw.",
+        "player_defence": [
+            6,
+            8
+        ],
+        "victory": 324,
+        "options": [
+            {
+                "text": "Use the Winged Horse kick?",
+                "entry": 374,
+                "type": "offence",
+                "action": "kick",
+                "inner_force": true
+            },
+            {
+                "text": "Use the Teeth of the Tiger throw?",
+                "entry": 286,
+                "type": "offence",
+                "action": "throw"
+            },
+            {
+                "text": "Punch again",
+                "entry": 353,
+                "type": "offence",
+                "action": "punch",
+                "inner_force": true
+            }
+        ]
+    },
     "357": {
         "description": "The boy screams as he dies and the men crack the whip over their ox and drive off, dragging the Cobra Man behind them. There is a cave, overhung by rock above you in the hillside. 'That way to Mortavalon,' one of the men shouts, pointing to it.",
         "options": [
@@ -2041,6 +2131,36 @@
             {
                 "text": "Continue",
                 "entry": 19
+            }
+        ]
+    },
+    "374": {
+        "description": "One of the monks tries to punch you, but you lean back out of range, turn and dive your foot towards his head.",
+        "player_defence": [
+            6,
+            8
+        ],
+        "victory": 324,
+        "options": [
+            {
+                "text": "Use the Teeth of the Tiger throw?",
+                "entry": 286,
+                "type": "offence",
+                "action": "throw"
+            },
+            {
+                "text": "Use the Tiger's Paw chop?",
+                "entry": 353,
+                "type": "offence",
+                "action": "punch",
+                "inner_force": true
+            },
+            {
+                "text": "Use the Winged Horse kick again?",
+                "entry": 374,
+                "type": "offence",
+                "action": "kick",
+                "inner_force": true
             }
         ]
     },
@@ -2177,6 +2297,35 @@
             }
         ]
     },
+    "405": {
+        "description": "The ox-cart clatters underneath you as you somersault above it, landing agilely on your feet. Before you can move further, two monks who bear the symbol of the Cross of Avatar, reversed, with a serpent twining around it appear from doorways to either side of you. You recognise the insignia of Vile.\n\n'It must be the Kwon worshipper,' says one. 'No one but a monk could have avoided the cart.'\n\nThey move into the attack, adopting martial stances, as do you. There is a moment of silent confrontation, as you circle each other.",
+        "opponents": [
+            "First monk of Vile",
+            "Second monk of Vile"
+        ],
+        "options": [
+            {
+                "text": "Use the Tiger's Paw chop?",
+                "entry": 353,
+                "type": "offence",
+                "action": "punch",
+                "inner_force": true
+            },
+            {
+                "text": "Use the Winged Horse kick?",
+                "entry": 374,
+                "type": "offence",
+                "action": "kick",
+                "inner_force": true
+            },
+            {
+                "text": "Use the Teeth of the Tiger throw?",
+                "entry": 286,
+                "type": "offence",
+                "action": "throw"
+            }
+        ]
+    },
     "407": {
         "description": "You are not fast enough and the heavy mace catches you in the face before the chop lands.",
         "image": "223.png",
@@ -2219,6 +2368,17 @@
             {
                 "text": "Try to dig your Claws into the flints of the bridge and climb to the side of the window?",
                 "entry": 375
+            }
+        ]
+    },
+    "416": {
+        "description": "The hub of the wheel catches you and throws you hard against a wall.",
+        "modify_endurance": -4,
+        "damage_followup": "You trudge on your way and notice some monks who bear the symbol of the Cross of Avatar, reversed with a serpent twining about it. You recognise the insignia of Vile. They ignore you and follow the cart which seems to be under control now.",
+        "options": [
+            {
+                "text": "Continue",
+                "entry": 289
             }
         ]
     },
