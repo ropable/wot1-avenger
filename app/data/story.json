@@ -475,6 +475,32 @@
             }
         ]
     },
+    "76": {
+        "description": "The priest is not affronted by your refusal to worship his goddess. Instead he takes you to his house, near the great domed cathedral and a meal is served to you both. He tells you that the evil men whom you seek are even now nearing the city of Druath Glennan, on the northern coast of the Sea of the Star. As it is late, you stay in his house for the night. \n\nWhen you awaken, you notice that one of your Shuriken lies on a chair beside your bed. There are no scratches or signs of use but a magical rune has been etched upon it, with acid. The priest tells you over breakfast that he has enchanted the throwing star and says that he will pray that Fate will smile upon you.\n\nYou take your leave of the priest and make for the north gate. Not far from his house you find yourself in a narrow alley when a runaway ox-cart róunds the corner suddenly and bears down on you.",
+        "modify_endurance": 3,
+        "loot_remove": [
+            [
+                "Shuriken",
+                1
+            ]
+        ],
+        "loot_add": [
+            [
+                "Enchanted Shuriken",
+                1
+            ]
+        ],
+        "options": [
+            {
+                "text": "Leap high into the air and somersault over it so that it passes beneath you?",
+                "entry": 405
+            },
+            {
+                "text": "Dodge to the side - you will be hit, but not crushed under its wheel (turn to 416)?",
+                "entry": 416
+            }
+        ]
+    },
     "77": {
         "description": "Before the morning star connects you drive your fingers at the evil Captain's throat.",
         "victory": 58,
@@ -1560,6 +1586,15 @@
             {
                 "text": "Continue",
                 "entry": "death"
+            }
+        ]
+    },
+    "290": {
+        "description": "The peasant who has been leading you stops outside a grand white building and points inside. You thank him and enter the cool marble-floored building, striding confidently towards a warrior dressed in a blue and gold toga. Suddenly the floor opens up underneath you and you are pitched downwards to the floor of a dark tunnel below. The man in the toga shouts down after you, 'Hurry friend, to the arena. If my men catch you first they will kill you.'\n\nYou can see no way out save down the tunnel ahead of you.",
+        "options": [
+            {
+                "text": "Continue",
+                "entry": 275
             }
         ]
     },
