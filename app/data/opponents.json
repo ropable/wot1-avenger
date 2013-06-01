@@ -167,5 +167,33 @@
         "defence_throw": 5,
         "damage_mod": 0,
         "effects": []
+    },
+    "First Reverencer of Vile": {
+        "name": "First Reverencer of Vile",
+        "action_desc": "the first Reverencer of Vile",
+        "endurance": 16,
+        "damage": [
+            1,
+            0
+        ],
+        "defence_punch": 6,
+        "defence_kick": 6,
+        "defence_throw": 6,
+        "damage_mod": 0,
+        "effects": []
+    },
+    "Second Reverencer of Vile": {
+        "name": "Second Reverencer of Vile",
+        "action_desc": "the second Reverencer of Vile",
+        "endurance": 12,
+        "damage": [
+            1,
+            0
+        ],
+        "defence_punch": 6,
+        "defence_kick": 7,
+        "defence_throw": 6,
+        "damage_mod": 0,
+        "effects": []
     }
 }
