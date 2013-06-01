@@ -1019,6 +1019,40 @@
             }
         ]
     },
+    "168": {
+        "description": "You step towards the monks. One of them sends the Toy-maker tumbling to the groúnd with a deft jab to the stomach as you demand that they cease tormenting him. He attacks with blinding speed while you are looking to see if the Toy-maker is badly wounded.",
+        "opponents": [
+            "First Reverencer of Vile"
+        ],
+        "player_defence_vs_injury": [
+            6,
+            1,
+            2
+        ],
+        "damage_followup": "The monk steps back; they move with the grace of well-trained fighters. Confident of success, they decide to take you on one at a time. The one who kicked steps forward and bows, as do you.",
+        "options": [
+            {
+                "text": "Attack with the Tiger's Paw chop?",
+                "entry": 322,
+                "type": "offence",
+                "action": "punch",
+                "inner_force": true
+            },
+            {
+                "text": "Use the Forked Lightning Strike kick?",
+                "entry": 335,
+                "type": "offence",
+                "action": "kick",
+                "inner_force": true
+            },
+            {
+                "text": "Try the Teeth of the Tiger throw?",
+                "entry": 312,
+                "type": "offence",
+                "action": "throw"
+            }
+        ]
+    },
     "171": {
         "description": "As the first mailed man charges, swinging his mace down at you, you try to sweep the heavy mace aside with your forearm.",
         "image": "223.png",
@@ -1115,6 +1149,19 @@
             {
                 "text": "Leave the temple and the Sanctuary and pass through the Obsidian Gate into Doomover?",
                 "entry": 6
+            }
+        ]
+    },
+    "185": {
+        "description": "You walk on down the main street, the Dreamer's Saunter, and turn right onto Wheel Way. The city seems tranquil until you hear raised voices ahead. Two men, wearing brown habits which bear the symbol of the cross of Avatar upside down with a serpent writhing in mist atop it, are cruelly taunting a puppet-maker. A small girl is crying but other townsfolk pass by on the other side of the road, staring straight ahead. The two men are forcing him to open his mouth and then while one holds his head, the other is trying to shove glove puppets down his throat.\n\nFrom the symbol you recognise these men as Reverencers of Vile.",
+        "options": [
+            {
+                "text": "Step in and try to save the Toy-maker?",
+                "entry": 168
+            },
+            {
+                "text": "Ignore the incident, leaving him to his fate?",
+                "entry": 299
             }
         ]
     },
@@ -1753,6 +1800,26 @@
             }
         ]
     },
+    "312": {
+        "description": "You dart in as if to punch but leap into the air at the last moment, trying to bring your feet to the sides of his head before twisting and throwing him to the ground.",
+        "player_defence": 6,
+        "options": [
+            {
+                "text": "Use the Tiger's Paw chop?",
+                "entry": 322,
+                "type": "offence",
+                "action": "punch",
+                "inner_force": true
+            },
+            {
+                "text": "Use the Forked Lightning Strike kick?",
+                "entry": 335,
+                "type": "offence",
+                "action": "kick",
+                "inner_force": true
+            }
+        ]
+    },
     "314": {
         "description": "You turn down a side street so that you can approach the Hall of Webs from the back and, covered in black from head to toe in your Ninja costume, slink stealthily through the night, your breathing as quiet as a bird's. You stop absolutely still as you catch sight of a monk coming down the otherwise deserted street towards you. He too stops, seeming to sense danger.",
         "options": [
@@ -1808,6 +1875,34 @@
                 "entry": 316,
                 "type": "offence",
                 "action": "Kick",
+                "inner_force": true
+            }
+        ]
+    },
+    "322": {
+        "description": "Without warning, you raise your hands and try to chop them together on either side of your opponent's neck.\n\nHe counters your double Tiger's Paw chop so swiftly that you may not block, as he ducks down and Cobra Strike kicks upwards toward your solar plexus.",
+        "unblockable_attack": true,
+        "victory": 279,
+        "player_defence": 6,
+        "options": [
+            {
+                "text": "Use the Forked Lightning Strike kick?",
+                "entry": 335,
+                "type": "offence",
+                "action": "kick",
+                "inner_force": true
+            },
+            {
+                "text": "Try the Teeth of the Tiger throw?",
+                "entry": 312,
+                "type": "offence",
+                "action": "throw"
+            },
+            {
+                "text": "Punch again?",
+                "entry": 322,
+                "type": "offence",
+                "action": "punch",
                 "inner_force": true
             }
         ]
@@ -1916,6 +2011,33 @@
                 ],
                 "text": "Use a Shuriken?",
                 "entry": 347
+            }
+        ]
+    },
+    "335": {
+        "description": "Without a flicker of muscle to announce your intent until you are moving, you move to the right and side-kick twice in quick succession; once to the side of his left knee and then up to the left side of his head, catching him by surprise.\n\nThe monk feints a punch and then drives his heel towards your neck.",
+        "victory": 279,
+        "player_defence": 7,
+        "options": [
+            {
+                "text": "Try the Teeth of the Tiger throw?",
+                "entry": 312,
+                "type": "offence",
+                "action": "throw"
+            },
+            {
+                "text": "Use the Tiger's Paw chop?",
+                "entry": 322,
+                "type": "offence",
+                "action": "punch",
+                "inner_force": true
+            },
+            {
+                "text": "Kick again?",
+                "entry": 335,
+                "type": "offence",
+                "action": "kick",
+                "inner_force": true
             }
         ]
     },
