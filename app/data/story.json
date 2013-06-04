@@ -429,6 +429,20 @@
             }
         ]
     },
+    "70": {
+        "description": "The youthful river Fortune pours down a narrow valley which winds like a snake between the escarpments of the Mountains of Vision. The air becomes cooler as you climb and snow begins to fall. You turn your costume inside out, so that the white lining will camouflage you in the snow. You sleep well in the pass, despite the cold.\n\nOn the second day you hear a cry from around an escarpment and you move on stealthily to look. A warrior holds his sword aloft as a small group of Arocs, bird—men, attack. As you watch, a bolt of green light speeds from his sword, felling one of the Arocs.",
+        "modify_endurance": 4,
+        "options": [
+            {
+                "text": "Help the warrior, who is hard-pressed?",
+                "entry": 271
+            },
+            {
+                "text": "Hide in the snow until the Arocs leave?",
+                "entry": 284
+            }
+        ]
+    },
     "71": {
         "description": "You try to drive the heel of your foot into the groin of one of the priests and then whip it up to his face.",
         "image": "223.png",
@@ -555,6 +569,15 @@
                 "text": "Raise your foot as if to kick but side-step and use the Whirlpool throw?",
                 "entry": 61,
                 "type": null
+            }
+        ]
+    },
+    "81": {
+        "description": "As you climb up into Storm Giant's Causeway, the air grows cooler and snow begins to fall. There are no trails, save those of mountain goats and even these are soon covered. You are at the highest point of the pass when a bank of cloud collects above you. Looking up, you see what looks like a titanic statue on the peak of the nearest mountain. The snow falls thickly as a bolt of lightning darts from the peak into the mountainside above.\n\nThere is a sudden roaring and you begin to run, but the avalanching snow precipitated by the lightning overwhelms you. You are crushed to death.",
+        "options": [
+            {
+                "text": "Continue",
+                "entry": "death"
             }
         ]
     },
@@ -1262,6 +1285,19 @@
             }
         ]
     },
+    "203": {
+        "description": "The ring on your finger grows warm and as you watch, the opal stone becomes clear and seems to grow. Looking into it you see a man's face; it is pallid and white, with a long, hooked nose and hollow cheeks. His large blood-red eyes are staring intently out of the opal, questing for something or someone. They narrow and his brow furrows with annoyance.\n\nHe curses and you are shocked to hear his voice, resonant and macabre, as he says, 'I cannot see you, Follower, but know that none can stand before the sorcery of Manse the Deathmage.'\n\nWith that he pulls back and behind him you catch sight of another, a man in scarlet robes, with a belt of black and gold. It is Yaemon, Grandmaster of Flame. You press on, eager to catch up with them.",
+        "options": [
+            {
+                "text": "Head west and then cross the Mountains of Vision at the Storm Giant's Causeway?",
+                "entry": 81
+            },
+            {
+                "text": "Follow the winding river Fortune up into Fortune Pass and cross the mountains that way?",
+                "entry": 70
+            }
+        ]
+    },
     "206": {
         "description": "The barman had mixed Spirits-of-Ra into the mead and it was stronger than you realized. The alcohol passes into your bloodstream quickly and you stand up to leave but pass out. You wake up in the morning, lying muddied in the gutter. Some of your gold coins have been taken, but you had hidden five upon your person, which you still have. If you had an Opal ring, you notice that has also been stolen.\n\nYou decide to head north in case Yaemon arrives at the Pillars of Change before you, and leave the city on the road to Mortavalon.",
         "loot_remove": [
@@ -1297,6 +1333,24 @@
             {
                 "text": "Follow the old man who claimed to be a Seer?",
                 "entry": 36
+            }
+        ]
+    },
+    "210": {
+        "description": "On the morning of the third day out from Mortavaion you are high up in Fortune Pass, the air is crisp and scented with mountain heather. Mount Gwalodrun rises to a jagged peak before you. You climb up the scree slope at its base, slipping backwards whenever the pebbles avalanche, until you reach a belt of pines. At the tree line the mountainside becomes sheer and dangerous.",
+        "boolean_option": true,
+        "options": [
+            {
+                "prereq": [
+                    "skill",
+                    "Acrobatics"
+                ],
+                "text": "[Acrobatics] Continue",
+                "entry": 193
+            },
+            {
+                "text": "Continue",
+                "entry": 133
             }
         ]
     },
