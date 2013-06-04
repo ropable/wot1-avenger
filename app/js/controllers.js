@@ -148,7 +148,7 @@ function NewGameCtrl($scope, $http, localStorageService, Story, Items, Opponents
     $scope.beginGame = function() {
         localStorageService.clearAll();
         // Set starting entry number.
-        gameState.currentEntry = '185';
+        gameState.currentEntry = '283';
         gameState.endurance = 20;
         // Get starting items.
         angular.forEach(itemsjson, function(item) {
@@ -417,6 +417,17 @@ function StoryCtrl($scope, $http, localStorageService, gameState, Story, Items, 
                 gameState.endurance = 0;
             } else {
                 gameState.endurance = total;
+            };
+        };
+        // Alter Inner Force.
+        if (gameState.entry.modify_inner_force && !gameState.cheatMode) {
+            var total = gameState.innerForce + gameState.entry.modify_inner_force;
+            if (total > 5) {
+                gameState.innerForce = 5;
+            } else if (total < 0) {
+                gameState.innerForce = 0;
+            } else {
+                gameState.innerForce = total;
             };
         };
         var entryText = gameState.entryText;
