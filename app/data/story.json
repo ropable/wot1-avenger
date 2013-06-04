@@ -1053,6 +1053,15 @@
             }
         ]
     },
+    "169": {
+        "description": "You stroll through the arch and bid good-day to the labourers. As you walk on through the quiet streets of this dead city your heart is lightened by the sight of a rose garden and trees. You turn into the bower and find a small monastery dedicated to Kwon.\n\nHappy to find a safe haven where you may meditate and seek help you walk into the temple, and kneel at prayer. A monk kneels at your side in the bare temple and intones the psalm of Kwon the Redeemer.",
+        "options": [
+            {
+                "text": "Continue",
+                "entry": 221
+            }
+        ]
+    },
     "171": {
         "description": "As the first mailed man charges, swinging his mace down at you, you try to sweep the heavy mace aside with your forearm.",
         "image": "223.png",
@@ -1321,6 +1330,34 @@
             }
         ]
     },
+    "221": {
+        "description": "As you meditate in the temple, your body and soul seem filled with the harmony of Kwon the Redeemer. Your Inner Force feels restored, as the God lends you his power. The monk, Bartholdy, recognises that you have the favour of Kwon and asks you to preach to his brothers in the refectory before dinner. You decline, telling him instead of your quest.\n\nUpon hearing that you are Ninja, he agrees that only he and the local Grandmaster should know of your mission. The Grandmaster, Bartok, a frail old man, wise but weak, is filled with fear at your news. He has heard, however, that Yaemon has passed through Mortavalon eight days since, perhaps, he thinks, heading for the monastery of the Reverencers of Vile in the city of Fiendil. He advises that you strike north towards Fortune Pass, so that you may come to the lands of snow, before the Grandmaster of Flame.\n\nHe continues, 'There is a man who lives in the mountains, a mystic, but a follower of the Way of the Tiger. He is older than I but by the grace of Kwon, he has remained fit and strong. His name is Togawa and, long ago, he was the Grandmaster of the Dawn on the Island of Tranquil Dreams. He lives on Mount Gwalodrun and from there he sets his mind free to roam all the planes of existence. He may be able to tell you where you can find Yaemon.'\n\nYou dine alone in a small monkish cell and your sleep refreshes you. On the following day you leave the monks to prepare against the day of darkness, should you fail your mission. You have not caught up with Yaemon yet and so you leave the city through the northern arch in the morning.",
+        "modify_endurance": 4,
+        "modify_inner_force": 3,
+        "options": [
+            {
+                "text": "Strike across the wastelands towards Fiendil?",
+                "entry": 260
+            },
+            {
+                "text": "Head due north to Storm Giants' Causeway?",
+                "entry": 81
+            },
+            {
+                "text": "Head northeast to Fortune Pass and the mystic, Togawa?",
+                "entry": 210
+            }
+        ]
+    },
+    "222": {
+        "description": "The monk's head jerks backwards, his skull distorted by the power of your blow. His neck breaks with a sound like a whip-crack and his head lolls foolishly, like the heads of the puppets made by the Toy-maker whose life you have saved. He is recovering and smiles his thanks, but the little girl, his daughter, runs up to you and smothers your hand in kisses. You ask the Toy-maker if he has seen Yaemon, a Grand Master of the order of the Scarlet Mantis. He shakes his head.\n\n'No-one guards the gates here, there’s no telling who comes and goes.'\n\nYou thank him and, politely refusing his offer of hospitality, and decide to leave Fiendil before the Reverencers of Vile find out what you have done to two of their brothers.",
+        "options": [
+            {
+                "text": "Continue",
+                "entry": 289
+            }
+        ]
+    },
     "223": {
         "description": "You jog along the road, passing a few travellers on horseback or on foot and an occasional trading caravan, gathering berries and nuts at the side of the road as you go. You sleep away from the road. You continue on, hoping to reach Mortavalon at dusk on the second day.\n\nAround mid-day another small caravan of four wagons, approaches. There are four caravan guards on horseback, dressed in chain mail and, curiously, all carrying maces. You jog on, wary now, when suddenly, one of them cries, 'The Ninja!' and they charge towards you, swinging their weapons.\n\nAs they close, you see that they bear the black whirlpool symbol.",
         "image": "223.png",
@@ -1408,6 +1445,26 @@
             }
         ]
     },
+    "236": {
+        "description": "The second monk hesitates slightly as you fling yourself into a feet-first slide at his legs.",
+        "player_defence": 7,
+        "options": [
+            {
+                "text": "Attack with the Winged Horse kick?",
+                "entry": 264,
+                "type": "offence",
+                "action": "kick",
+                "inner_force": true
+            },
+            {
+                "text": "Use with the Cobra Strike jab?",
+                "entry": 244,
+                "type": "offence",
+                "action": "punch",
+                "inner_force": true
+            }
+        ]
+    },
     "237": {
         "description": "You attempt to throw one of your assailants. He is sobering up but still quite drunk.",
         "image": "176.png",
@@ -1432,6 +1489,33 @@
                 "entry": 256,
                 "type": "offence",
                 "action": "kick",
+                "inner_force": true
+            }
+        ]
+    },
+    "244": {
+        "description": "The second monk comes to attack. Before he can kick, you dance forward and deliver a straight-fingered jab under his ribs.\n\nThe monk tries to throw you with a Mantis version of the Whirlpool throw, then kick you solidly.",
+        "victory": 258,
+        "player_defence": 7,
+        "options": [
+            {
+                "text": "Attack with the Winged Horse kick?",
+                "entry": 264,
+                "type": "offence",
+                "action": "kick",
+                "inner_force": true
+            },
+            {
+                "text": "Use the Dragon's tail throw?",
+                "entry": 236,
+                "type": "offence",
+                "action": "throw"
+            },
+            {
+                "text": "Punch again?",
+                "entry": 244,
+                "type": "offence",
+                "action": "punch",
                 "inner_force": true
             }
         ]
@@ -1548,6 +1632,46 @@
             }
         ]
     },
+    "258": {
+        "description": "The second monk is barely conscious but he kneels before you in the street, submitting to your superior power and ability.",
+        "options": [
+            {
+                "text": "Spare him?",
+                "entry": 409
+            },
+            {
+                "text": "Finish him off with a kick to the head?",
+                "entry": 222
+            }
+        ]
+    },
+    "264": {
+        "description": "The second monk comes to attack. You turn sideways on and unleash a Winged Horse kick as he approaches.",
+        "victory": 258,
+        "player_defence": 7,
+        "options": [
+            {
+                "text": "Hit with the Cobra Strike punch?",
+                "entry": 244,
+                "type": "offence",
+                "action": "punch",
+                "inner_force": true
+            },
+            {
+                "text": "Use the Dragon's tail throw?",
+                "entry": 236,
+                "type": "offence",
+                "action": "throw"
+            },
+            {
+                "text": "Kick again?",
+                "entry": 264,
+                "type": "offence",
+                "action": "kick",
+                "inner_force": true
+            }
+        ]
+    },
     "268": {
         "description": "Your three assailants lie around you, dead or unconscious. There is an awed silence in the tavern and nobody will meet your eye. Realising that word will spread that a monk who does not fight in the style of the Scarlet Mantis is in Doomover, you decide to leave the tavern and the city as soon as possible. A young soldier follows you as you leave but you give him the slip in a maze of back streets and make your way quickly to the city gate. You pass through before word comes to stop all strangers. Once safely  away from the city walls, you climb into a tree where you can sleep, hidden.",
         "options": [
@@ -1576,6 +1700,34 @@
             {
                 "text": "Continue",
                 "entry": 261
+            }
+        ]
+    },
+    "279": {
+        "description": "The monk falls to the ground helplessly coughing blood, but there is no respite for you as the second monk bows to you before preparing to attack. You decide to change your tactics.",
+        "opponents": [
+            "Second Reverencer of Vile"
+        ],
+        "options": [
+            {
+                "text": "Use the Dragon's Tail throw",
+                "entry": 236,
+                "type": "offence",
+                "action": "throw"
+            },
+            {
+                "text": "Attack with the Cobra Strike jab?",
+                "entry": 244,
+                "type": "offence",
+                "action": "punch",
+                "inner_force": true
+            },
+            {
+                "text": "Strike with the Winged Horse kick?",
+                "entry": 264,
+                "type": "offence",
+                "action": "kick",
+                "inner_force": true
             }
         ]
     },
@@ -2477,6 +2629,15 @@
             {
                 "text": "Attempt to steal into the monastery?",
                 "entry": 273
+            }
+        ]
+    },
+    "409": {
+        "description": "You look down at the kneeling monk and say 'I will spare you if you tell me where Yaemon, Grandmaster of the Flame, is.'\n\nThe monk has clearly lost his nerve and you believe him when he says, 'He left for the City of Druath Glennan three days ago. A large warrior went with him and I happen to know that they travel to meet another, a powerful sorcerer, I think.'\n\nYou let the monk go and he walks away, head bowed.",
+        "options": [
+            {
+                "text": "Continue",
+                "entry": 289
             }
         ]
     },
