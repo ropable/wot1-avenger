@@ -631,7 +631,7 @@
         "victory": 34,
         "defeat": 45,
         "player_defence": 7,
-        "instakill": true,
+        "instakill_throw": true,
         "instakill_desc": "You whip him over the edge of the stern castle and into the sea!",
         "options": [
             {
@@ -797,6 +797,29 @@
             }
         ]
     },
+    "109": {
+        "description": "You clasp your hands around its forearm - it is too cumbersome to dodge,  but instead flame bursts forth all over its body and you are badly burnt.",
+        "image": "213.png",
+        "modify_endurance": -4,
+        "damage_followup": "As you spring back, unable to attempt the Whirlpool, its fiery fist descends on you and you try to somersault aside.",
+        "player_defence": 6,
+        "options": [
+            {
+                "text": "Use the Leaping Tiger kick?",
+                "entry": 119,
+                "type": "offence",
+                "action": "kick",
+                "inner_force": true
+            },
+            {
+                "text": "Use the Iron Fist punch?",
+                "entry": 131,
+                "type": "offence",
+                "action": "punch",
+                "inner_force": true
+            }
+        ]
+    },
     "110": {
         "description": "Your last blow sent Gorobei tumbling senseless to the granite floor. A ripple of applause greets your victory and the Grandmaster of the Dawn compliments you on your fighting prowess and beckons you into the robing chamber. You step beyond the Temple Hall through silken drapes into a small dark room, completely bare of furnishing save for two enormous copper chests. Incense is burning in a censer which swings from the ceiling like a pendulum. The room is lit by white candles.\n\nYou kneel on the rush matting facing the three Grandmasters who stare ahead, unseeing, waiting for you to break the silence which you are determined to keep. After an hour-candle has sputtered its last, during which time none of you has moved so much as a muscle, the Grandmaster of the Dawn looks into your eyes and says, 'Kwon knows that you desire in your heart to serve him but I must ask you two questions. Do you truly desire to serve Kwon above all other things or do you desire to avenge the death of your foster-father, Naijishi, more even than to serve your God? What should a Ninja fear most - the failure of a mission or capture by an enemy who will use torture to gain secrets?'\n\nYou know that in your heart of hearts you would rather avenge Naijishi than anything else in Orb but a Grandmaster should dedicate his life to Kwon. As for the second question, you can only let your good sense guide you.",
         "options": [
@@ -833,6 +856,34 @@
             {
                 "text": "Continue",
                 "entry": 65
+            }
+        ]
+    },
+    "119": {
+        "description": "Flame ripples across its massive frame as the Elemental being tries to grab you. You kick with all your might, hoping to make some impression on the fiery colossus. Even if you manage to hit it, the flames sear your foot.\n\nAs you kick, the Efreet tries to knock you to the ground with both its huge fists.",
+        "image": "213.png",
+        "modify_endurance": -1,
+        "player_defence": 7,
+        "victory": 197,
+        "options": [
+            {
+                "text": "Use the Iron Fist punch?",
+                "entry": 131,
+                "type": "offence",
+                "action": "punch",
+                "inner_force": true
+            },
+            {
+                "text": "Use the Whirlpool throw?",
+                "entry": "109",
+                "type": "offence"
+            },
+            {
+                "text": "Kick again?",
+                "entry": 119,
+                "type": "offence",
+                "action": "kick",
+                "inner_force": true
             }
         ]
     },
@@ -908,6 +959,34 @@
             }
         ]
     },
+    "131": {
+        "description": "The fiery elemental being is cumbersome and you can scarcely miss, your only worry is that it may not feel pain from your blow. If you hit it, your fist is burned by the flames which lick across its body.\n\nAs you punch, the Efreet tries to drive its flaming fist down into your chest.",
+        "image": "213.png",
+        "modify_endurance": -1,
+        "player_defence": 7,
+        "victory": 197,
+        "options": [
+            {
+                "text": "Use the Leaping Tiger kicj?",
+                "entry": 119,
+                "type": "offence",
+                "action": "kick",
+                "inner_force": true
+            },
+            {
+                "text": "Use the Whirlpool throw?",
+                "entry": "109",
+                "type": "offence"
+            },
+            {
+                "text": "Punch again?",
+                "entry": 131,
+                "type": "offence",
+                "action": "punch",
+                "inner_force": true
+            }
+        ]
+    },
     "135": {
         "description": "The priests dismount and, walking slowly towards you, begin a fell incantation. Your limbs begin to feel heavy.",
         "image": "223.png",
@@ -979,6 +1058,31 @@
             }
         ]
     },
+    "149": {
+        "description": "The Efreet towers above you, flame licking across its ruby flesh. It reaches for you, and fire pours down its arm.",
+        "image": "213.png",
+        "options": [
+            {
+                "text": "Use the Iron Fist punch?",
+                "entry": 131,
+                "type": "offence",
+                "action": "punch",
+                "inner_force": true
+            },
+            {
+                "text": "Use the Whirlpool throw?",
+                "entry": "109",
+                "type": "offence"
+            },
+            {
+                "text": "Use the Leaping Tiger kick?",
+                "entry": 119,
+                "type": "offence",
+                "action": "kick",
+                "inner_force": true
+            }
+        ]
+    },
     "151": {
         "description": "The Grandmaster smiles and shakes his head.\n\n'You have answered truthfully. It is not wrong that you should wish to avenge Naijishi, who loved you and taught you to love our Lord Kwon, but you must wait patiently for your time to come and never forget that the service of Kwon is the helping of all mankind. But as for torture, it is only through failing a mission that a true Ninja could be captured and there is always time to bite one's tongue from one's head and bleed to death rather than risk betraying secrets. You need only fear the failure of a mission. I shall not say that you have failed, for never has one mastered the Way of the Tiger so ably as you and we would not keep our sharpest weapon forever sheathed. You have passed the test.'\n\nThey lead you back to the Temple Hall where the monks and villagers have waited to see whether you would pass the test. Prayers to Kwon are offered up as part of the ceremony at which you are ordained as Grandmaster of the Five Winds. Gorobei applauds with the others, for now he remains an Adept of the Inner Circle but his time will come for he is a great warrior and a good monk. Should you die, he will probably succeed you.",
         "options": [
@@ -1016,6 +1120,26 @@
             {
                 "text": "Pick yourself up and stagger towards the river.",
                 "entry": 103
+            }
+        ]
+    },
+    "161": {
+        "description": "The Shuriken, enchanted by the priest of Fate, shrieks like a banshee as it hurtles towards the chest of the Elemental Being. It embeds itself and the Efreet becomes a pillar of flame before disappearing. You have banished it to its home, the City of Brass. The Enchanted Shuriken has been taken to the elemental plane of fire.\n\nShaking your head at your narrow escape, you journey on towards the Mountains of Vision.",
+        "loot_remove": [
+            [
+                "Enchanted Shuriken",
+                1
+            ]
+        ],
+        "instakill": true,
+        "options": [
+            {
+                "text": "Head west and then cross the Mountains of Vision at the Storm Giant's Causeway?",
+                "entry": 81
+            },
+            {
+                "text": "Follow the winding river Fortune up into Fortune Pass and cross the mountains that way?",
+                "entry": 70
             }
         ]
     },
@@ -1082,6 +1206,29 @@
             {
                 "text": "Continue",
                 "entry": 221
+            }
+        ]
+    },
+    "170": {
+        "description": "You cannot miss the bulk of the Efreet and the throwing star embeds itself into its chest, where it begins, slowly, to melt. You will, of course, be unable to retrieve it. It has hurt the Elemental Being, however.",
+        "image": "213.png",
+        "loot_remove": [
+            [
+                "Shuriken",
+                1
+            ]
+        ],
+        "damage_opponent": [
+            [
+                "Efreet",
+                "fixed",
+                2
+            ]
+        ],
+        "options": [
+            {
+                "text": "Continue",
+                "entry": 149
             }
         ]
     },
@@ -1158,6 +1305,15 @@
             {
                 "text": "Continue",
                 "entry": 191
+            }
+        ]
+    },
+    "180": {
+        "description": "As you place the needle in your mouth, the Efreet spreads its arms. You blow hard and the needle sinks into the Efreet's flesh but is consumed by flames which lick across its body. It has no effect.\n\nBefore you can move, flames leap from its open arms and you are encircled by fire. You are held powerless in its arms and the world of Orb fades to greyness around you. You writhe in the Efreet's burning embrace as you see a new landscape appearing around you. Brazen castles and walls hem you in and a dirgeful braying of horns heralds your arrival at the City of Brass. The brass floor is so hot that it blisters your feet and you know of no way to leave the Elemental Plane of Fire.\n\nYour quest ends here.",
+        "options": [
+            {
+                "text": "Continue",
+                "entry": "death"
             }
         ]
     },
@@ -1276,6 +1432,19 @@
             }
         ]
     },
+    "197": {
+        "description": "You have defeated the Elemental Being, and you step back as the Efreet becomes a pillar of flame before disappearing. You have banished it to its home, the City of Brass.",
+        "options": [
+            {
+                "text": "Head west and then cross the Mountains of Vision at the Storm Giant's Causeway?",
+                "entry": 81
+            },
+            {
+                "text": "Follow the winding river Fortune up into Fortune Pass and cross the mountains that way?",
+                "entry": 70
+            }
+        ]
+    },
     "201": {
         "description": "You use the side of your hand to chop the quarrel aside before it hits you and then roll out of the torchlight. You lie low, motionless, until you hear a shout from a side street. 'Stop thief,' someone cries, as a man carrying a dagger runs into the torchlight. He squeals in fright as the gateguards charge after hun and you slip unnoticed out of the dty gate at the first ray of dawn.",
         "options": [
@@ -1365,6 +1534,39 @@
             {
                 "text": "Run and kick the Cobra Man?",
                 "entry": 315
+            }
+        ]
+    },
+    "213": {
+        "description": "As the crumbling walls of Fiendil are lost to sight behind you, a vague shimmering disturbs the air. You feel warmth on your face as a strange being takes shape before you. It is the size of a giant but its skin is ruby red and covered in running flames. Its wide grinning mouth is filled with curving yellow tusks and two yellow smoking horns crown its head. It speaks in a deep rumbling voice.\n\n'My master, Manse the Deathmage, has sent me to take you to the City of Brass, in the Elemental Plane of Fire.'\n\nLife in the dread City of Brass is worse than death itself.",
+        "image": "213.png",
+        "opponents": [
+            "Efreet"
+        ],
+        "options": [
+            {
+                "text": "Leap to attack the Efreet?",
+                "entry": 149
+            },
+            {
+                "prereq": [
+                    "skill",
+                    "Poison Needles"
+                ],
+                "text": "[Poison Needles] Use a poison dart?",
+                "entry": 180
+            },
+            {
+                "prereq": [
+                    "item",
+                    "Enchanted Shuriken"
+                ],
+                "text": "Hurl your Enchanted Shuriken at the Efreet?",
+                "entry": 161
+            },
+            {
+                "text": "Hurl a Shuriken at the Efreet?",
+                "entry": 170
             }
         ]
     },
@@ -1523,7 +1725,7 @@
         "description": "You attempt to throw one of your assailants. He is sobering up but still quite drunk.",
         "image": "176.png",
         "victory": 296,
-        "instakill": true,
+        "instakill_throw": true,
         "instakill_desc": "You successfully throw him over your hip!",
         "player_defence": [
             9,

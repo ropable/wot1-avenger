@@ -148,7 +148,7 @@ function NewGameCtrl($scope, $http, localStorageService, Story, Items, Opponents
     $scope.beginGame = function() {
         localStorageService.clearAll();
         // Set starting entry number.
-        gameState.currentEntry = '283';
+        gameState.currentEntry = '213';
         gameState.endurance = 20;
         // Get starting items.
         angular.forEach(itemsjson, function(item) {
@@ -298,12 +298,11 @@ function StoryCtrl($scope, $http, localStorageService, gameState, Story, Items, 
                     actionText = 'You kick at {0}...and miss!'.replace('{0}', target.action_desc);
                     gameState.actions.push([actionText])
                 };
-            } else {
+            } else if (option.action == 'throw') {
                 if ((dieRoll(2) + gameState.throw) > target.defence_throw || gameState.cheatMode) {
                     // Occasionally, throws can result in your one-shotting opponents.
-                    if (gameState.entry.instakill) {
+                    if (gameState.entry.instakill_throw) {
                         gameState.actions.push([gameState.entry.instakill_desc]);
-                        //gameState.currentOpponents[0].endurance = 0;
                         gameState.currentOpponents = [];
                         gameState.options = [];
                     } else {
@@ -405,6 +404,10 @@ function StoryCtrl($scope, $http, localStorageService, gameState, Story, Items, 
                     gameState.currentOpponents.splice(i, 1);
                 };
             };
+        };
+        // Some entries can result in instant victory, against all opponents.
+        if (gameState.entry.instakill) {
+            gameState.currentOpponents = [];
         };
         // Restore or reduce endurance.
         // Note that might need to modify gameState.entryText if damage is dealt but the
