@@ -66,7 +66,10 @@
     "Enchanted Shuriken": {
         "name": "Enchanted Shuriken",
         "desc": "A magical rune has been etched upon this Shuriken with acid, imbuing it with the power of Fate.",
-	"hit_mod": 1,
-        "start": true
+	"hit_mod": 1
+    },
+    "Healing herbs": {
+        "name": "Healing herbs",
+        "desc": "A bag of herbs with a potent healing virtue, able to restore up to eight Endurance points."
     }
 }

@@ -62,6 +62,21 @@
             }
         ]
     },
+    "10": {
+        "description": "He looks at you and nods, apparently satisfied. You sleep the night in the strange monk's cave. He has few possessions and says he has not seen another human being in years, except in sleep. It seems he feeds on air for he has nothing to offer you other than cool and refreshing mountain rain-water. In the morning he claims that he has, somehow, seen Yaemon, Grandmaster of Flame, journeying north with Hononic, servant of Vasch-Ro, Marshal of the Legion of the Sword of Doom, from the city of Doomover.\n\n'And they journey to meet a third,' he says, 'Manse the Deathmage, who reverences Nemesis. A most powerful and evil sorcerer. This unholy affiance must be stopped. Of all the evil gods, only the followers of Vile, Vasch-Ro and Nemesis have the discipline to act in alliance. Nemesis is the greatest of the evil gods. Never before have three such powerful and evil men trusted each other.'\n\n'It is the conjunction of the planets,' you reply. Togawa pulls a bag of herbs from a crack in the rock.\n\n'These have healing virtue,' he says. You take them and may use them at any time when you are not being attacked to restore up to 8 Endurance points, once only.\n\nYou thank him and are about to ask him if he will accompany you when he lies down on the cave floor and goes to sleep. Sensing that there is no further help to be gained, you begin the climb down Mount Gwalodrun to the pass below. A day later you enter the foothills of Fortune Pass.",
+        "loot_add": [
+            [
+                "Healing herbs",
+                1
+            ]
+        ],
+        "options": [
+            {
+                "text": "Continue",
+                "entry": 70
+            }
+        ]
+    },
     "12": {
         "description": "You swim upstream but as you go they begin chanting again, and as their spell takes effect you find you cannot move your limbs. You float gently downstream, into their welcoming arms and they bind you securely.",
         "loot_remove": [
@@ -149,6 +164,15 @@
             }
         ]
     },
+    "20": {
+        "description": "'Look around you,' says Togawa, 'is this my home?' You stare at him, nonplussed.\n\n'No,' he goes on, 'my home is my body and your home is your body.'",
+        "options": [
+            {
+                "text": "Continue",
+                "entry": 10
+            }
+        ]
+    },
     "21": {
         "description": "The priests camp in the hills which encircle Mortavalon, near a cave-mouth overhung with rock. After they have eaten round a small fire, two of them walk over to where you lie. Instead of giving you food they tell you that they are taking you back to the dungeons under the cathedral to Vasch-Ro, in Doomover, where you will rot. Intrigued, you ask them why they are taking you there instead of to their own temple at Mortavalon.\n\n'Because Manse the Deathmage, a servant of Nemesis and the most powerful sorcerer of them all, is journeying north to meet Honoric and Yaemon, he of the order of the Scarlet Mantis, to work a great magic which will plunge the world into darkness and bring nearer the day when we, the followers of Nemesis, will rule everything on Orb.'\n\n'Yaemon will betray him,' you say.\n\nThey laugh and reply that the Deathmage knows the thoughts of all men and can see them plotting from afar. With that they leave you, preparing themselves for sleep. For some hours you wrestle with your bonds, loosening them until you can hook your thumbs inside the chafing ropes. At last you are free and you decide to creep into the cave, lest they use spells to snare you once again.",
         "options": [
@@ -190,6 +214,19 @@
             {
                 "text": "Continue",
                 "entry": 6
+            }
+        ]
+    },
+    "32": {
+        "description": "Togawa nods. 'What are your weapons?' he demands.",
+        "options": [
+            {
+                "text": "Answer 'I have no need of weapons.'",
+                "entry": 10
+            },
+            {
+                "text": "Answer 'My weapons are everything that exists.'",
+                "entry": 304
             }
         ]
     },
@@ -255,6 +292,15 @@
             }
         ]
     },
+    "43": {
+        "description": "'Look around you,' says Togawa, 'is this my home?' You stare at him, nonplussed.\n\n'No,' he goes on, 'my home is my body and your home is your body.'",
+        "options": [
+            {
+                "text": "Continue",
+                "entry": 10
+            }
+        ]
+    },
     "44": {
         "description": "As you try to run at the priests their spell takes hold and your legs and arms turn to lead. Your body quivers as, with a great effort of will, you struggle a few steps further but they have no trouble in knocking you to the ground and tying you securely.",
         "image": "223.png",
@@ -311,6 +357,15 @@
             {
                 "text": "Continue",
                 "entry": 65
+            }
+        ]
+    },
+    "53": {
+        "description": "'Look around you,' says Togawa, 'is this my home?' You stare at him, nonplussed.\n\n'No,' he goes on, 'my home is my body and your home is your body.'",
+        "options": [
+            {
+                "text": "Continue",
+                "entry": 10
             }
         ]
     },
@@ -398,6 +453,33 @@
             {
                 "text": "Strike north of the road, into the wilderness?",
                 "entry": 235
+            }
+        ]
+    },
+    "66": {
+        "description": "The cave is bare. Togawa squats, cross-legged on the floor and you follow suit. He compliments you on your skill in the Way of the Tiger, but recognising that he is more accomplished than you, you compliment him in turn, commenting on the kick which killed the Rock Hulk. He offers to show it to you. He calls it Kwon's Flail, and it is more powerful even than the kicks which you use.\n\nYou tell him that you are from the Island of Tranquil Dreams, and of your mission, asking for his help. He surprises you by asking a question.\n\n'Where is your home?'",
+        "note_add": [
+            "Kwon's Flail"
+        ],
+        "event_add": [
+            "learned_kwons_flail"
+        ],
+        "options": [
+            {
+                "text": "Answer 'I have no home.'",
+                "entry": 20
+            },
+            {
+                "text": "Answer 'My home is my body.'",
+                "entry": 32
+            },
+            {
+                "text": "Answer 'As I said, the Island of Tranquil Dreams.'",
+                "entry": 43
+            },
+            {
+                "text": "Answer 'I believe in Kwon, the world is my home.'",
+                "entry": 53
             }
         ]
     },
@@ -1591,9 +1673,9 @@
             {
                 "prereq": [
                     "skill",
-                    "Acrobatics"
+                    "Climbing"
                 ],
-                "text": "[Acrobatics] Continue",
+                "text": "[Climbing] Continue",
                 "entry": 193
             },
             {
@@ -2242,6 +2324,25 @@
             {
                 "text": "Continue",
                 "entry": "death"
+            }
+        ]
+    },
+    "304": {
+        "description": "Togawa nods again and asks a third question, 'What are your eyes?'\n\n'My eyes are the Sun and the Moon,' you say, reciting the words from the secret Litany of the Ninja Grandmasters. 'I am Ninja, I follow the Way of the Tiger.'\n\nTogawa beams at you, 'A Grandmaster of the Five Winds,' he says, 'I must do my best to help you.'\n\nYou sleep on the cold floor of the cave, but in your dreams, Togawa, his body silver and ethereal, appears to you stretching out his hand. You take it and he lifts you out of your body, Looking down, you can see yourself, asleep, in the candlelight. Soon, you are far from the cave, washed by ethereal wind. You hold on tight, knowing that without Togawa's guidance, you would drift helplessly; the skills of the Ninja cannot aid you here. The monk points ahead to a gleaming archway beyond which a silver pathway stretches up into the clouds. Cherubs flock around its pillars and a Guardian Angel, flawless and white, stands between them.\n\n'This is the Gateway to the Seven Heavens,' says Togawa. 'We may not enter yet.' As he speaks, a sinuous form takes shape on the silver road. It glides past the Guardian Angel and as it approaches you see that it is a perfect tiger, but its fur is white and its eyes are blue.\n\n'The Spirit Tiger is a servant of Kwon,' says Togawa. 'She will help us.' As the tigress looks at you, she passes on a part of her knowledge. She has stalked Yaemon on the Ethereal Plane, undetected even by him. Yaemon and Honoric, Marshal of the Legion of the Sword of Doom who worships the god, Vasch-Ro, are journeying to the far-away city of Druath Glennan at the edge of the Far Snows. They will meet a third there, Manse the Deathmage, a potent and evil sorcerer who reverences Nemesis, the Supreme Principle of Evil.\n\nTogether they plan to journey to the Pillars of Change and each knows a secret word which will bind a god or goddess in Inferno. You realise that you must journey to Druath Glennan as quickly as possible. The Spirit Tiger blesses you and Fate will smile on you. You try to speak to the Spirit Tiger but words will not come and Togawa pulls you away from the Gateway to the Seven Heavens.\n\nWhen you awake in the morning he says, 'The unholy alliance must be stopped. Of all the evil gods, only the followers of Vile, Vasch-Ro and Nemesis would have the discipline to join together. Nemesis is the greatest of the evil gods. Never before have three such powerful and evil men trusted each other.' He pulls a bag of herbs from a crack in the rock. 'These have healing virtue,' he says. You take them and may use them at any time to restore up to 8 Endurance.\n\nYou thank him and are about to ask him if he will accompany you, when he lies down on the cave floor and falls asleep. Sensing that there is no further help to be gained, you begin the climb down Mount Gwalodrun to the pass below. A day later, you enter the foothills of Fortune Pass.",
+        "player_modifier": [
+            "fate",
+            1
+        ],
+        "loot_add": [
+            [
+                "Healing herbs",
+                1
+            ]
+        ],
+        "options": [
+            {
+                "text": "Continue",
+                "entry": 70
             }
         ]
     },
