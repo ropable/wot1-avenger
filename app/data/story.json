@@ -613,6 +613,18 @@
             }
         ]
     },
+    "83": {
+        "description": "The cave is dark and you stare into the blackness until your eyes become accustomed to the gloom, before calling Togawa's name. The skeleton of an elk of the Western Isles, with antlers nearly twenty feet across, lies on the rocky floor. The huge thigh bones have been cracked open for their marrow. You step cautiously forwards, but freeze as you hear what sounds like an ox breathing heavily. You are tensed when a ten-foot tall Rock Hulk attacks. You try to block his heavy blow but it sweeps your arm aside and whirls you against the side of the cave.",
+        "image": "83.png",
+        "modify_endurance": -4,
+        "damage_followup": "You throw yourself head first to the ground and somersault towards the monster, and then roll upright and lash out with your foot in one fluid movement. The Rock Hulk flails at you, grunting with pain. You dodge its claws but the beast seems impervious to your blows and the battle rages for some time.\n\nSuddenly, a monk appears from nowhere, seemingly in mid-air. The Rock Hulk looks up just as the man lands before it. The monk spins to the right on his left foot, presenting his back to the brute and whips his right foot round and up into the Rock Hulk's midriff with speed even you can hardly believe. He screams as his Inner Force is released. The kick pole-axes the Rock Hulk, which shakes the cave as it falls, rigid, to the floor.\n\nThe monk turns to you and bows. 'My name is Togawa. Please, follow me.'\n\nHis own cave is a short climb above that of the Rock Hulk, and you follow him into it.",
+        "options": [
+            {
+                "text": "Continue",
+                "entry": 66
+            }
+        ]
+    },
     "86": {
         "description": "You slink soundlessly as a blaçk panther towards the unsuspecting guard, who is leaning against the doorpost lost in thought.",
         "options": [
@@ -841,6 +853,19 @@
             }
         ]
     },
+    "113": {
+        "description": "You scramble back down the scree slopes to the floor of Fortune Pass.",
+        "options": [
+            {
+                "text": "Turn back south and, skirting the mountains, make for the city of Fiendil?",
+                "entry": 122
+            },
+            {
+                "text": "Forge on through Fortune Pass?",
+                "entry": 70
+            }
+        ]
+    },
     "115": {
         "description": "After nightfall you strain at your bonds but the only reward for your efforts is the kiss of the whip. Exhausted, you fall asleep before dawn and awake to find iron manacles around your wrists and a girdle around your middle by which you are chained to the oar. They are heavy and unbreakable and will not be struck off until your body is spent and lifeless after years at the oar. You have failed.",
         "options": [
@@ -884,6 +909,15 @@
                 "type": "offence",
                 "action": "kick",
                 "inner_force": true
+            }
+        ]
+    },
+    "122": {
+        "description": "The going is difficult as you skirt the rough foothills of the Mountains of Vision and the journey takes many days longer than you had anticipated. After the hardest day's slog you have yet driven yourself through, night falls. The moon is red and no day follows. You are too late.\n\nThe eternal darkness has come and Kwon has been imprisoned in Inferno. Your Inner Force drains away and there is nothing you can do to stop the rise of evil. You have failed.",
+        "options": [
+            {
+                "text": "Continue",
+                "entry": "death"
             }
         ]
     },
@@ -987,6 +1021,19 @@
             }
         ]
     },
+    "133": {
+        "description": "The rock-face towers above you and you realise that it will be a dangerous climb. If you wish to go on, you will be in the hands of Fate.",
+        "options": [
+            {
+                "text": "Take your chances with Fate?",
+                "entry": 173
+            },
+            {
+                "text": "Do not take this risk and abandon the chance to find Togawa, if he still lives?",
+                "entry": 113
+            }
+        ]
+    },
     "135": {
         "description": "The priests dismount and, walking slowly towards you, begin a fell incantation. Your limbs begin to feel heavy.",
         "image": "223.png",
@@ -1046,6 +1093,15 @@
                 "text": "Continue",
                 "entry": 191,
                 "type": null
+            }
+        ]
+    },
+    "143": {
+        "description": "As you are nearing a cave mouth in the sheer rock, a small ledge of rock on which you are standing gives way. You fall, trying to use your hands and feet to slow your progress by brushing the rock-face as you go. The fall is too far, however, and you bounce away from the rock-face and are impaled on the tip of a young pine.\n\nYou have failed the quest.",
+        "options": [
+            {
+                "text": "Continue",
+                "entry": "death"
             }
         ]
     },
@@ -1247,6 +1303,20 @@
             }
         ]
     },
+    "173": {
+        "description": "You carefully make your way up the sheer wall of rock.",
+        "fate_roll": true,
+        "options": [
+            {
+                "text": "Fate smiles on you.",
+                "entry": 83
+            },
+            {
+                "text": "Fate turns her back on you.",
+                "entry": 143
+            }
+        ]
+    },
     "175": {
         "description": "The Captain shouts for help as the Shuriken is caught in the blankets and he throws them at you as you leap to attack. You cast them aside and duck a cutlass swipe before hearing a sound behind you. You whirl and block but are too late to catch the throwing knife of the Reaver's first mate. It lodges in your heart and you know no more.",
         "options": [
@@ -1374,6 +1444,15 @@
             {
                 "text": "Continue",
                 "entry": 232
+            }
+        ]
+    },
+    "193": {
+        "description": "You fix the Cat's claws to your hands and climb carefully up the rock face, avoiding any ledges where cracks warn you that the rock may crumble beneath you. At length the sheer rock-face gives way to a cave mouth.",
+        "options": [
+            {
+                "text": "Continue",
+                "entry": 83
             }
         ]
     },
