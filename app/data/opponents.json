@@ -139,5 +139,75 @@
         "defence_throw": 5,
         "damage_mod": 0,
         "effects": []
+    },
+    "First monk of Vile": {
+        "name": "First monk of Vile",
+        "action_desc": "the first monk of Vile",
+        "endurance": 14,
+        "damage": [
+            1,
+            1
+        ],
+        "defence_punch": 7,
+        "defence_kick": 6,
+        "defence_throw": 5,
+        "damage_mod": 0,
+        "effects": []
+    },
+    "Second monk of Vile": {
+        "name": "Second monk of Vile",
+        "action_desc": "the second monk of Vile",
+        "endurance": 13,
+        "damage": [
+            1,
+            1
+        ],
+        "defence_punch": 7,
+        "defence_kick": 7,
+        "defence_throw": 5,
+        "damage_mod": 0,
+        "effects": []
+    },
+    "First Reverencer of Vile": {
+        "name": "First Reverencer of Vile",
+        "action_desc": "the first Reverencer of Vile",
+        "endurance": 16,
+        "damage": [
+            1,
+            0
+        ],
+        "defence_punch": 6,
+        "defence_kick": 6,
+        "defence_throw": 6,
+        "damage_mod": 0,
+        "effects": []
+    },
+    "Second Reverencer of Vile": {
+        "name": "Second Reverencer of Vile",
+        "action_desc": "the second Reverencer of Vile",
+        "endurance": 12,
+        "damage": [
+            1,
+            0
+        ],
+        "defence_punch": 6,
+        "defence_kick": 7,
+        "defence_throw": 6,
+        "damage_mod": 0,
+        "effects": []
+    },
+    "Efreet": {
+        "name": "Efreet",
+        "action_desc": "the Efreet",
+        "endurance": 22,
+        "damage": [
+            2,
+            1
+        ],
+        "defence_punch": 4,
+        "defence_kick": 5,
+        "defence_throw": 12,
+        "damage_mod": 0,
+        "effects": []
     }
 }

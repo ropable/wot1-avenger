@@ -62,5 +62,14 @@
     "Crystal Amulet": {
         "name": "Crystal Amulet",
         "desc": "This amulet is a bright crystal set in a gold disk which carries an inscription, as well as magical runes: 'My wearer can withstand the Finger of Death'."
+    },
+    "Enchanted Shuriken": {
+        "name": "Enchanted Shuriken",
+        "desc": "A magical rune has been etched upon this Shuriken with acid, imbuing it with the power of Fate.",
+	"hit_mod": 1
+    },
+    "Healing herbs": {
+        "name": "Healing herbs",
+        "desc": "A bag of herbs with a potent healing virtue, able to restore up to eight Endurance points."
     }
 }

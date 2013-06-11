@@ -148,7 +148,7 @@ function NewGameCtrl($scope, $http, localStorageService, Story, Items, Opponents
     $scope.beginGame = function() {
         localStorageService.clearAll();
         // Set starting entry number.
-        gameState.currentEntry = '223';
+        gameState.currentEntry = '210';
         gameState.endurance = 20;
         // Get starting items.
         angular.forEach(itemsjson, function(item) {
@@ -298,12 +298,11 @@ function StoryCtrl($scope, $http, localStorageService, gameState, Story, Items, 
                     actionText = 'You kick at {0}...and miss!'.replace('{0}', target.action_desc);
                     gameState.actions.push([actionText])
                 };
-            } else {
+            } else if (option.action == 'throw') {
                 if ((dieRoll(2) + gameState.throw) > target.defence_throw || gameState.cheatMode) {
                     // Occasionally, throws can result in your one-shotting opponents.
-                    if (gameState.entry.instakill) {
+                    if (gameState.entry.instakill_throw) {
                         gameState.actions.push([gameState.entry.instakill_desc]);
-                        //gameState.currentOpponents[0].endurance = 0;
                         gameState.currentOpponents = [];
                         gameState.options = [];
                     } else {
@@ -356,11 +355,13 @@ function StoryCtrl($scope, $http, localStorageService, gameState, Story, Items, 
                         actionText += '{0} hits you for {1} damage!'.replace('{0}', o.action_desc);
                         actionText = actionText.replace('{1}', damage.toString());
                         actionText = capitaliseFirstLetter(actionText);
+                        console.log(actionText);
                         gameState.endurance -= damage;
                         // Not all attacks can be blocked.
+                        // Use unblockable_attack = true if once-off, else set 'unblockable' in the
+                        // opponent effects array.
                         var blockable = true;
-                        if (o.effects.indexOf('unblockable') > -1) {
-                            console.log('foo');
+                        if (o.effects.indexOf('unblockable') > -1 || gameState.entry.unblockable_attack) {
                             blockable = false;
                         };
                         // Push to actions to allow for blocking: [actionText, true, damage, defence]
@@ -374,6 +375,7 @@ function StoryCtrl($scope, $http, localStorageService, gameState, Story, Items, 
                         hasBlocked = true;
                     } else {
                         actionText += '{0} tries to hit you...but misses!'.replace('{0}', o.action_desc);
+                        actionText = capitaliseFirstLetter(actionText);
                         gameState.actions.push([actionText]);
                     };
                 };
@@ -403,6 +405,10 @@ function StoryCtrl($scope, $http, localStorageService, gameState, Story, Items, 
                 };
             };
         };
+        // Some entries can result in instant victory, against all opponents.
+        if (gameState.entry.instakill) {
+            gameState.currentOpponents = [];
+        };
         // Restore or reduce endurance.
         // Note that might need to modify gameState.entryText if damage is dealt but the
         // player is still alive.
@@ -416,6 +422,31 @@ function StoryCtrl($scope, $http, localStorageService, gameState, Story, Items, 
                 gameState.endurance = total;
             };
         };
+        // Alter Inner Force.
+        if (gameState.entry.modify_inner_force && !gameState.cheatMode) {
+            var total = gameState.innerForce + gameState.entry.modify_inner_force;
+            if (total > 5) {
+                gameState.innerForce = 5;
+            } else if (total < 0) {
+                gameState.innerForce = 0;
+            } else {
+                gameState.innerForce = total;
+            };
+        };
+        var entryText = gameState.entryText;
+        // Handle player defence against basic injury (may result in death).
+        if (gameState.entry.player_defence_vs_injury) {
+            var d = gameState.entry.player_defence_vs_injury;
+            if (dieRoll(2) < d[0] || gameState.cheatMode) {
+                // Success - no damage.
+                entryText = gameState.entry.description + '\n\nYou avoid the attack!';
+            } else {
+                // Ouch!
+                var damage = (dieRoll(d[1]) + d[2]);
+                gameState.endurance -= damage;
+                entryText = gameState.entry.description + '\n\nYou are hit for {0} damage!'.replace('{0}', damage);
+            };
+        };
         // Handle player death.
         // Use "damage_followup".
         if (gameState.endurance <= 0) {
@@ -424,10 +455,11 @@ function StoryCtrl($scope, $http, localStorageService, gameState, Story, Items, 
             gameState.inProgress = false;
         } else {  // Player is still alive - we may need to alter the entry text.
             if (gameState.entry.damage_followup) {
-                var newText = gameState.entry.description + '\n\n' + gameState.entry.damage_followup;
-                gameState.entryText = textMarkup(newText);
+                entryText = entryText + '\n\n' + gameState.entry.damage_followup;
             };
         };
+        // (Re)set entry text.
+        gameState.entryText = textMarkup(entryText);
         // Phat loot!
         if (gameState.entry.loot_add) {
             angular.forEach(gameState.entry.loot_add, function(loot) {

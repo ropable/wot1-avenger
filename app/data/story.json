@@ -62,6 +62,21 @@
             }
         ]
     },
+    "10": {
+        "description": "He looks at you and nods, apparently satisfied. You sleep the night in the strange monk's cave. He has few possessions and says he has not seen another human being in years, except in sleep. It seems he feeds on air for he has nothing to offer you other than cool and refreshing mountain rain-water. In the morning he claims that he has, somehow, seen Yaemon, Grandmaster of Flame, journeying north with Hononic, servant of Vasch-Ro, Marshal of the Legion of the Sword of Doom, from the city of Doomover.\n\n'And they journey to meet a third,' he says, 'Manse the Deathmage, who reverences Nemesis. A most powerful and evil sorcerer. This unholy affiance must be stopped. Of all the evil gods, only the followers of Vile, Vasch-Ro and Nemesis have the discipline to act in alliance. Nemesis is the greatest of the evil gods. Never before have three such powerful and evil men trusted each other.'\n\n'It is the conjunction of the planets,' you reply. Togawa pulls a bag of herbs from a crack in the rock.\n\n'These have healing virtue,' he says. You take them and may use them at any time when you are not being attacked to restore up to 8 Endurance points, once only.\n\nYou thank him and are about to ask him if he will accompany you when he lies down on the cave floor and goes to sleep. Sensing that there is no further help to be gained, you begin the climb down Mount Gwalodrun to the pass below. A day later you enter the foothills of Fortune Pass.",
+        "loot_add": [
+            [
+                "Healing herbs",
+                1
+            ]
+        ],
+        "options": [
+            {
+                "text": "Continue",
+                "entry": 70
+            }
+        ]
+    },
     "12": {
         "description": "You swim upstream but as you go they begin chanting again, and as their spell takes effect you find you cannot move your limbs. You float gently downstream, into their welcoming arms and they bind you securely.",
         "loot_remove": [
@@ -149,6 +164,15 @@
             }
         ]
     },
+    "20": {
+        "description": "'Look around you,' says Togawa, 'is this my home?' You stare at him, nonplussed.\n\n'No,' he goes on, 'my home is my body and your home is your body.'",
+        "options": [
+            {
+                "text": "Continue",
+                "entry": 10
+            }
+        ]
+    },
     "21": {
         "description": "The priests camp in the hills which encircle Mortavalon, near a cave-mouth overhung with rock. After they have eaten round a small fire, two of them walk over to where you lie. Instead of giving you food they tell you that they are taking you back to the dungeons under the cathedral to Vasch-Ro, in Doomover, where you will rot. Intrigued, you ask them why they are taking you there instead of to their own temple at Mortavalon.\n\n'Because Manse the Deathmage, a servant of Nemesis and the most powerful sorcerer of them all, is journeying north to meet Honoric and Yaemon, he of the order of the Scarlet Mantis, to work a great magic which will plunge the world into darkness and bring nearer the day when we, the followers of Nemesis, will rule everything on Orb.'\n\n'Yaemon will betray him,' you say.\n\nThey laugh and reply that the Deathmage knows the thoughts of all men and can see them plotting from afar. With that they leave you, preparing themselves for sleep. For some hours you wrestle with your bonds, loosening them until you can hook your thumbs inside the chafing ropes. At last you are free and you decide to creep into the cave, lest they use spells to snare you once again.",
         "options": [
@@ -190,6 +214,19 @@
             {
                 "text": "Continue",
                 "entry": 6
+            }
+        ]
+    },
+    "32": {
+        "description": "Togawa nods. 'What are your weapons?' he demands.",
+        "options": [
+            {
+                "text": "Answer 'I have no need of weapons.'",
+                "entry": 10
+            },
+            {
+                "text": "Answer 'My weapons are everything that exists.'",
+                "entry": 304
             }
         ]
     },
@@ -255,6 +292,15 @@
             }
         ]
     },
+    "43": {
+        "description": "'Look around you,' says Togawa, 'is this my home?' You stare at him, nonplussed.\n\n'No,' he goes on, 'my home is my body and your home is your body.'",
+        "options": [
+            {
+                "text": "Continue",
+                "entry": 10
+            }
+        ]
+    },
     "44": {
         "description": "As you try to run at the priests their spell takes hold and your legs and arms turn to lead. Your body quivers as, with a great effort of will, you struggle a few steps further but they have no trouble in knocking you to the ground and tying you securely.",
         "image": "223.png",
@@ -311,6 +357,15 @@
             {
                 "text": "Continue",
                 "entry": 65
+            }
+        ]
+    },
+    "53": {
+        "description": "'Look around you,' says Togawa, 'is this my home?' You stare at him, nonplussed.\n\n'No,' he goes on, 'my home is my body and your home is your body.'",
+        "options": [
+            {
+                "text": "Continue",
+                "entry": 10
             }
         ]
     },
@@ -401,6 +456,33 @@
             }
         ]
     },
+    "66": {
+        "description": "The cave is bare. Togawa squats, cross-legged on the floor and you follow suit. He compliments you on your skill in the Way of the Tiger, but recognising that he is more accomplished than you, you compliment him in turn, commenting on the kick which killed the Rock Hulk. He offers to show it to you. He calls it Kwon's Flail, and it is more powerful even than the kicks which you use.\n\nYou tell him that you are from the Island of Tranquil Dreams, and of your mission, asking for his help. He surprises you by asking a question.\n\n'Where is your home?'",
+        "note_add": [
+            "Kwon's Flail"
+        ],
+        "event_add": [
+            "learned_kwons_flail"
+        ],
+        "options": [
+            {
+                "text": "Answer 'I have no home.'",
+                "entry": 20
+            },
+            {
+                "text": "Answer 'My home is my body.'",
+                "entry": 32
+            },
+            {
+                "text": "Answer 'As I said, the Island of Tranquil Dreams.'",
+                "entry": 43
+            },
+            {
+                "text": "Answer 'I believe in Kwon, the world is my home.'",
+                "entry": 53
+            }
+        ]
+    },
     "67": {
         "description": "Before the morning start makes contact you snap your leg upwards, driving the ball of your foot at the Captain's face.",
         "victory": 58,
@@ -426,6 +508,20 @@
                 "type": "offence",
                 "action": "kick",
                 "inner_force": true
+            }
+        ]
+    },
+    "70": {
+        "description": "The youthful river Fortune pours down a narrow valley which winds like a snake between the escarpments of the Mountains of Vision. The air becomes cooler as you climb and snow begins to fall. You turn your costume inside out, so that the white lining will camouflage you in the snow. You sleep well in the pass, despite the cold.\n\nOn the second day you hear a cry from around an escarpment and you move on stealthily to look. A warrior holds his sword aloft as a small group of Arocs, bird—men, attack. As you watch, a bolt of green light speeds from his sword, felling one of the Arocs.",
+        "modify_endurance": 4,
+        "options": [
+            {
+                "text": "Help the warrior, who is hard-pressed?",
+                "entry": 271
+            },
+            {
+                "text": "Hide in the snow until the Arocs leave?",
+                "entry": 284
             }
         ]
     },
@@ -472,6 +568,32 @@
             {
                 "text": "Fate turns her back on you.",
                 "entry": 125
+            }
+        ]
+    },
+    "76": {
+        "description": "The priest is not affronted by your refusal to worship his goddess. Instead he takes you to his house, near the great domed cathedral and a meal is served to you both. He tells you that the evil men whom you seek are even now nearing the city of Druath Glennan, on the northern coast of the Sea of the Star. As it is late, you stay in his house for the night. \n\nWhen you awaken, you notice that one of your Shuriken lies on a chair beside your bed. There are no scratches or signs of use but a magical rune has been etched upon it, with acid. The priest tells you over breakfast that he has enchanted the throwing star and says that he will pray that Fate will smile upon you.\n\nYou take your leave of the priest and make for the north gate. Not far from his house you find yourself in a narrow alley when a runaway ox-cart róunds the corner suddenly and bears down on you.",
+        "modify_endurance": 3,
+        "loot_remove": [
+            [
+                "Shuriken",
+                1
+            ]
+        ],
+        "loot_add": [
+            [
+                "Enchanted Shuriken",
+                1
+            ]
+        ],
+        "options": [
+            {
+                "text": "Leap high into the air and somersault over it so that it passes beneath you?",
+                "entry": 405
+            },
+            {
+                "text": "Dodge to the side - you will be hit, but not crushed under its wheel?",
+                "entry": 416
             }
         ]
     },
@@ -532,6 +654,15 @@
             }
         ]
     },
+    "81": {
+        "description": "As you climb up into Storm Giant's Causeway, the air grows cooler and snow begins to fall. There are no trails, save those of mountain goats and even these are soon covered. You are at the highest point of the pass when a bank of cloud collects above you. Looking up, you see what looks like a titanic statue on the peak of the nearest mountain. The snow falls thickly as a bolt of lightning darts from the peak into the mountainside above.\n\nThere is a sudden roaring and you begin to run, but the avalanching snow precipitated by the lightning overwhelms you. You are crushed to death.",
+        "options": [
+            {
+                "text": "Continue",
+                "entry": "death"
+            }
+        ]
+    },
     "82": {
         "description": "Your fingers jab like rods of steel towards one of your assailants, as you hope to catch him in the armpit where he has no protection from his mail surcoat.",
         "image": "223.png",
@@ -564,6 +695,18 @@
             }
         ]
     },
+    "83": {
+        "description": "The cave is dark and you stare into the blackness until your eyes become accustomed to the gloom, before calling Togawa's name. The skeleton of an elk of the Western Isles, with antlers nearly twenty feet across, lies on the rocky floor. The huge thigh bones have been cracked open for their marrow. You step cautiously forwards, but freeze as you hear what sounds like an ox breathing heavily. You are tensed when a ten-foot tall Rock Hulk attacks. You try to block his heavy blow but it sweeps your arm aside and whirls you against the side of the cave.",
+        "image": "83.png",
+        "modify_endurance": -4,
+        "damage_followup": "You throw yourself head first to the ground and somersault towards the monster, and then roll upright and lash out with your foot in one fluid movement. The Rock Hulk flails at you, grunting with pain. You dodge its claws but the beast seems impervious to your blows and the battle rages for some time.\n\nSuddenly, a monk appears from nowhere, seemingly in mid-air. The Rock Hulk looks up just as the man lands before it. The monk spins to the right on his left foot, presenting his back to the brute and whips his right foot round and up into the Rock Hulk's midriff with speed even you can hardly believe. He screams as his Inner Force is released. The kick pole-axes the Rock Hulk, which shakes the cave as it falls, rigid, to the floor.\n\nThe monk turns to you and bows. 'My name is Togawa. Please, follow me.'\n\nHis own cave is a short climb above that of the Rock Hulk, and you follow him into it.",
+        "options": [
+            {
+                "text": "Continue",
+                "entry": 66
+            }
+        ]
+    },
     "86": {
         "description": "You slink soundlessly as a blaçk panther towards the unsuspecting guard, who is leaning against the doorpost lost in thought.",
         "options": [
@@ -582,7 +725,7 @@
         "victory": 34,
         "defeat": 45,
         "player_defence": 7,
-        "instakill": true,
+        "instakill_throw": true,
         "instakill_desc": "You whip him over the edge of the stern castle and into the sea!",
         "options": [
             {
@@ -691,15 +834,6 @@
             }
         ]
     },
-    "100": {
-        "description": "As you kneel before the great altar in,the vast vaults of the domed cathedral, Fate accepts you as her reverencer. At the same time, your own god, Kwon, renounces you, and your Inner Force is stripped away, leaving you weakened. This does not worry you, for now you know that it was fated that this should come to pass arid that it would be pointless to regret. Your quest to kill Yaemon seems unimportant and you idle your days in the dreamy city of Fiendil as a priest in the cathedral, until one day even the calm folk of the city seem agitated.\n\nA great darkness, a long night without days, is followed by news that the dread Legion of the Sword of Doom and the monks of the Scarlet Mantis have sacked the Spires of Foreshadowing and now march on Fiendil. It is too late. Kwon is incarcerated in Inferno but your failure does not trouble you.",
-        "options": [
-            {
-                "text": "Continue",
-                "entry": "death"
-            }
-        ]
-    },
     "103": {
         "description": "You turn and run but as they finish their fell incantation your movements slow, your limbs feel as heavy as lead and it is only by a great effort of will that, quivering with the strain, you can get them to move at all. You stagger to the river and duck out of sight in some bullrushes.",
         "options": [
@@ -757,6 +891,29 @@
             }
         ]
     },
+    "109": {
+        "description": "You clasp your hands around its forearm - it is too cumbersome to dodge,  but instead flame bursts forth all over its body and you are badly burnt.",
+        "image": "213.png",
+        "modify_endurance": -4,
+        "damage_followup": "As you spring back, unable to attempt the Whirlpool, its fiery fist descends on you and you try to somersault aside.",
+        "player_defence": 6,
+        "options": [
+            {
+                "text": "Use the Leaping Tiger kick?",
+                "entry": 119,
+                "type": "offence",
+                "action": "kick",
+                "inner_force": true
+            },
+            {
+                "text": "Use the Iron Fist punch?",
+                "entry": 131,
+                "type": "offence",
+                "action": "punch",
+                "inner_force": true
+            }
+        ]
+    },
     "110": {
         "description": "Your last blow sent Gorobei tumbling senseless to the granite floor. A ripple of applause greets your victory and the Grandmaster of the Dawn compliments you on your fighting prowess and beckons you into the robing chamber. You step beyond the Temple Hall through silken drapes into a small dark room, completely bare of furnishing save for two enormous copper chests. Incense is burning in a censer which swings from the ceiling like a pendulum. The room is lit by white candles.\n\nYou kneel on the rush matting facing the three Grandmasters who stare ahead, unseeing, waiting for you to break the silence which you are determined to keep. After an hour-candle has sputtered its last, during which time none of you has moved so much as a muscle, the Grandmaster of the Dawn looks into your eyes and says, 'Kwon knows that you desire in your heart to serve him but I must ask you two questions. Do you truly desire to serve Kwon above all other things or do you desire to avenge the death of your foster-father, Naijishi, more even than to serve your God? What should a Ninja fear most - the failure of a mission or capture by an enemy who will use torture to gain secrets?'\n\nYou know that in your heart of hearts you would rather avenge Naijishi than anything else in Orb but a Grandmaster should dedicate his life to Kwon. As for the second question, you can only let your good sense guide you.",
         "options": [
@@ -778,16 +935,16 @@
             }
         ]
     },
-    "114": {
-        "description": "He sees the deadly intent in your eyes an instant before your blow lands, but accepts death stoically. His neck is broken, but he still manages to speak, apparently resigned to it all.\n\n'It was fated that you should kill me thus, Avenger.'\n\nIt seems, however, that Fate is displeased. The hermit revered her and she turns her back on you for the callous act which she knew you would commit. You almost feel your luck change. You cannot help quietly cursing the pointlessness of it all as you walk on into the city. The people smile at you as you go by, something no-one has done in the other cities. They seem to float past you with the uncaring calmness of those who accept that their destiny has already been decided.",
-        "player_modifier": [
-            "fate",
-            -2
-        ],
+    "113": {
+        "description": "You scramble back down the scree slopes to the floor of Fortune Pass.",
         "options": [
             {
-                "text": "Continue",
-                "entry": 185
+                "text": "Turn back south and, skirting the mountains, make for the city of Fiendil?",
+                "entry": 122
+            },
+            {
+                "text": "Forge on through Fortune Pass?",
+                "entry": 70
             }
         ]
     },
@@ -809,16 +966,40 @@
             }
         ]
     },
-    "123": {
-        "description": "The priests rush to the river's edge and stare into the water at the point where the boulder splashed. The sluggishness wears off and you glide through the bullrushes and away, as they peer in. One is casting away his chainmail ready to explore the depths of the river as you vanish into the hills that ring the city of Mortavalon. You rejoin the road and, rounding a cerner espy a cave overhung with rock in the hill side above you.",
+    "119": {
+        "description": "Flame ripples across its massive frame as the Elemental being tries to grab you. You kick with all your might, hoping to make some impression on the fiery colossus. Even if you manage to hit it, the flames sear your foot.\n\nAs you kick, the Efreet tries to knock you to the ground with both its huge fists.",
+        "image": "213.png",
+        "modify_endurance": -1,
+        "player_defence": 7,
+        "victory": 197,
         "options": [
             {
-                "text": "Continue straight on to Mortavalon?",
-                "entry": 283
+                "text": "Use the Iron Fist punch?",
+                "entry": 131,
+                "type": "offence",
+                "action": "punch",
+                "inner_force": true
             },
             {
-                "text": "Enter the cave?",
-                "entry": 275
+                "text": "Use the Whirlpool throw?",
+                "entry": "109",
+                "type": "offence"
+            },
+            {
+                "text": "Kick again?",
+                "entry": 119,
+                "type": "offence",
+                "action": "kick",
+                "inner_force": true
+            }
+        ]
+    },
+    "122": {
+        "description": "The going is difficult as you skirt the rough foothills of the Mountains of Vision and the journey takes many days longer than you had anticipated. After the hardest day's slog you have yet driven yourself through, night falls. The moon is red and no day follows. You are too late.\n\nThe eternal darkness has come and Kwon has been imprisoned in Inferno. Your Inner Force drains away and there is nothing you can do to stop the rise of evil. You have failed.",
+        "options": [
+            {
+                "text": "Continue",
+                "entry": "death"
             }
         ]
     },
@@ -894,6 +1075,47 @@
             }
         ]
     },
+    "131": {
+        "description": "The fiery elemental being is cumbersome and you can scarcely miss, your only worry is that it may not feel pain from your blow. If you hit it, your fist is burned by the flames which lick across its body.\n\nAs you punch, the Efreet tries to drive its flaming fist down into your chest.",
+        "image": "213.png",
+        "modify_endurance": -1,
+        "player_defence": 7,
+        "victory": 197,
+        "options": [
+            {
+                "text": "Use the Leaping Tiger kicj?",
+                "entry": 119,
+                "type": "offence",
+                "action": "kick",
+                "inner_force": true
+            },
+            {
+                "text": "Use the Whirlpool throw?",
+                "entry": "109",
+                "type": "offence"
+            },
+            {
+                "text": "Punch again?",
+                "entry": 131,
+                "type": "offence",
+                "action": "punch",
+                "inner_force": true
+            }
+        ]
+    },
+    "133": {
+        "description": "The rock-face towers above you and you realise that it will be a dangerous climb. If you wish to go on, you will be in the hands of Fate.",
+        "options": [
+            {
+                "text": "Take your chances with Fate?",
+                "entry": 173
+            },
+            {
+                "text": "Do not take this risk and abandon the chance to find Togawa, if he still lives?",
+                "entry": 113
+            }
+        ]
+    },
     "135": {
         "description": "The priests dismount and, walking slowly towards you, begin a fell incantation. Your limbs begin to feel heavy.",
         "image": "223.png",
@@ -956,12 +1178,46 @@
             }
         ]
     },
+    "143": {
+        "description": "As you are nearing a cave mouth in the sheer rock, a small ledge of rock on which you are standing gives way. You fall, trying to use your hands and feet to slow your progress by brushing the rock-face as you go. The fall is too far, however, and you bounce away from the rock-face and are impaled on the tip of a young pine.\n\nYou have failed the quest.",
+        "options": [
+            {
+                "text": "Continue",
+                "entry": "death"
+            }
+        ]
+    },
     "144": {
         "description": "You wait, apparently dejected, for the guards to take you prisoner but then somersault high in the air over them and sprint through the gate at the first ray of dawn. The astonished soldiers run after you but you sail down the road like the wind and they soon give up the futile chase.",
         "options": [
             {
                 "text": "Continue",
                 "entry": 254
+            }
+        ]
+    },
+    "149": {
+        "description": "The Efreet towers above you, flame licking across its ruby flesh. It reaches for you, and fire pours down its arm.",
+        "image": "213.png",
+        "options": [
+            {
+                "text": "Use the Iron Fist punch?",
+                "entry": 131,
+                "type": "offence",
+                "action": "punch",
+                "inner_force": true
+            },
+            {
+                "text": "Use the Whirlpool throw?",
+                "entry": "109",
+                "type": "offence"
+            },
+            {
+                "text": "Use the Leaping Tiger kick?",
+                "entry": 119,
+                "type": "offence",
+                "action": "kick",
+                "inner_force": true
             }
         ]
     },
@@ -1005,6 +1261,26 @@
             }
         ]
     },
+    "161": {
+        "description": "The Shuriken, enchanted by the priest of Fate, shrieks like a banshee as it hurtles towards the chest of the Elemental Being. It embeds itself and the Efreet becomes a pillar of flame before disappearing. You have banished it to its home, the City of Brass. The Enchanted Shuriken has been taken to the elemental plane of fire.\n\nShaking your head at your narrow escape, you journey on towards the Mountains of Vision.",
+        "loot_remove": [
+            [
+                "Enchanted Shuriken",
+                1
+            ]
+        ],
+        "instakill": true,
+        "options": [
+            {
+                "text": "Head west and then cross the Mountains of Vision at the Storm Giant's Causeway?",
+                "entry": 81
+            },
+            {
+                "text": "Follow the winding river Fortune up into Fortune Pass and cross the mountains that way?",
+                "entry": 70
+            }
+        ]
+    },
     "163": {
         "description": "The mace rings on your iron sleeves like a hammer on the anvil and you grab your aftacker’s wrist, dragging him from the saddle. He falls awkwardly and rolls aside dead. The three others dismount and they begin to chant. They must be priests, you think.",
         "image": "223.png",
@@ -1028,6 +1304,72 @@
             }
         ]
     },
+    "168": {
+        "description": "You step towards the monks. One of them sends the Toy-maker tumbling to the groúnd with a deft jab to the stomach as you demand that they cease tormenting him. He attacks with blinding speed while you are looking to see if the Toy-maker is badly wounded.",
+        "opponents": [
+            "First Reverencer of Vile"
+        ],
+        "player_defence_vs_injury": [
+            6,
+            1,
+            2
+        ],
+        "damage_followup": "The monk steps back; they move with the grace of well-trained fighters. Confident of success, they decide to take you on one at a time. The one who kicked steps forward and bows, as do you.",
+        "options": [
+            {
+                "text": "Attack with the Tiger's Paw chop?",
+                "entry": 322,
+                "type": "offence",
+                "action": "punch",
+                "inner_force": true
+            },
+            {
+                "text": "Use the Forked Lightning Strike kick?",
+                "entry": 335,
+                "type": "offence",
+                "action": "kick",
+                "inner_force": true
+            },
+            {
+                "text": "Try the Teeth of the Tiger throw?",
+                "entry": 312,
+                "type": "offence",
+                "action": "throw"
+            }
+        ]
+    },
+    "169": {
+        "description": "You stroll through the arch and bid good-day to the labourers. As you walk on through the quiet streets of this dead city your heart is lightened by the sight of a rose garden and trees. You turn into the bower and find a small monastery dedicated to Kwon.\n\nHappy to find a safe haven where you may meditate and seek help you walk into the temple, and kneel at prayer. A monk kneels at your side in the bare temple and intones the psalm of Kwon the Redeemer.",
+        "options": [
+            {
+                "text": "Continue",
+                "entry": 221
+            }
+        ]
+    },
+    "170": {
+        "description": "You cannot miss the bulk of the Efreet and the throwing star embeds itself into its chest, where it begins, slowly, to melt. You will, of course, be unable to retrieve it. It has hurt the Elemental Being, however.",
+        "image": "213.png",
+        "loot_remove": [
+            [
+                "Shuriken",
+                1
+            ]
+        ],
+        "damage_opponent": [
+            [
+                "Efreet",
+                "fixed",
+                2
+            ]
+        ],
+        "options": [
+            {
+                "text": "Continue",
+                "entry": 149
+            }
+        ]
+    },
     "171": {
         "description": "As the first mailed man charges, swinging his mace down at you, you try to sweep the heavy mace aside with your forearm.",
         "image": "223.png",
@@ -1040,6 +1382,20 @@
             {
                 "text": "You fail to block the swing!",
                 "entry": 157
+            }
+        ]
+    },
+    "173": {
+        "description": "You carefully make your way up the sheer wall of rock.",
+        "fate_roll": true,
+        "options": [
+            {
+                "text": "Fate smiles on you.",
+                "entry": 83
+            },
+            {
+                "text": "Fate turns her back on you.",
+                "entry": 143
             }
         ]
     },
@@ -1104,6 +1460,15 @@
             }
         ]
     },
+    "180": {
+        "description": "As you place the needle in your mouth, the Efreet spreads its arms. You blow hard and the needle sinks into the Efreet's flesh but is consumed by flames which lick across its body. It has no effect.\n\nBefore you can move, flames leap from its open arms and you are encircled by fire. You are held powerless in its arms and the world of Orb fades to greyness around you. You writhe in the Efreet's burning embrace as you see a new landscape appearing around you. Brazen castles and walls hem you in and a dirgeful braying of horns heralds your arrival at the City of Brass. The brass floor is so hot that it blisters your feet and you know of no way to leave the Elemental Plane of Fire.\n\nYour quest ends here.",
+        "options": [
+            {
+                "text": "Continue",
+                "entry": "death"
+            }
+        ]
+    },
     "182": {
         "description": "You crouch on the ground and the horses thunder over you.",
         "image": "223.png",
@@ -1124,6 +1489,19 @@
             {
                 "text": "Leave the temple and the Sanctuary and pass through the Obsidian Gate into Doomover?",
                 "entry": 6
+            }
+        ]
+    },
+    "185": {
+        "description": "You walk on down the main street, the Dreamer's Saunter, and turn right onto Wheel Way. The city seems tranquil until you hear raised voices ahead. Two men, wearing brown habits which bear the symbol of the cross of Avatar upside down with a serpent writhing in mist atop it, are cruelly taunting a puppet-maker. A small girl is crying but other townsfolk pass by on the other side of the road, staring straight ahead. The two men are forcing him to open his mouth and then while one holds his head, the other is trying to shove glove puppets down his throat.\n\nFrom the symbol you recognise these men as Reverencers of Vile.",
+        "options": [
+            {
+                "text": "Step in and try to save the Toy-maker?",
+                "entry": 168
+            },
+            {
+                "text": "Ignore the incident, leaving him to his fate?",
+                "entry": 299
             }
         ]
     },
@@ -1148,6 +1526,15 @@
             {
                 "text": "Continue",
                 "entry": 232
+            }
+        ]
+    },
+    "193": {
+        "description": "You fix the Cat's claws to your hands and climb carefully up the rock face, avoiding any ledges where cracks warn you that the rock may crumble beneath you. At length the sheer rock-face gives way to a cave mouth.",
+        "options": [
+            {
+                "text": "Continue",
+                "entry": 83
             }
         ]
     },
@@ -1206,16 +1593,16 @@
             }
         ]
     },
-    "200": {
-        "description": "You step through the doorway of the Volunteer Inn and are surprised to see a wheel-shaped room, airy and light with a circular bar at its centre. There are ten tables with chairs screwed into the floor around them but perhaps because of the sound the door makes everyone seems to be looking at you, and all conversation ceases. A man dressed in robes which bear the symbol of a ten-spoked wheel greets you as Avenger and invites you to join him. You sit opposite him and demand how he knows your name.\n\nHe replies, 'We who follow Fate may often know what will come to pass. Our leader, Whimsical, foresees the arrival of all strangers'\n\n'But surely,' you ask, 'With such power he could rule the Manmarch?'\n\n'We only see what we are fated to see and it is not Whimsical's fate to rule the Manmarch.'...\n\nYou tell him that there is a conspiracy amongst the followers of evil gods to enslave their fellow men. The priest replies that he knows this and when you demand what the followers of Fate plan to do, he merely spreads his hands and says, 'What will be, will be, and you cannot change it.' He goes on, however, to say that he realises that the Spires of Foreshadowing with its great cathedral to Fate will fall first if the evil ones have their way, and he says that he is on your side. He even asks you to become a Tool of Fate and to join the elite band of heroes who are fated to do great deeds in her service, and to embrace the worship of Fate.\n\n'For she is above other gods, Keeper of the Balance, without which all things would perish.' You have heard of the elite few who serve Fate as her Tools, this is indeed an honour. One of the drinkers leaves the Inn as he invites you to go with him to Fiendil's cathedral to Fate.",
+    "197": {
+        "description": "You have defeated the Elemental Being, and you step back as the Efreet becomes a pillar of flame before disappearing. You have banished it to its home, the City of Brass.",
         "options": [
             {
-                "text": "Embrace the worship of Fate?",
-                "entry": 100
+                "text": "Head west and then cross the Mountains of Vision at the Storm Giant's Causeway?",
+                "entry": 81
             },
             {
-                "text": "Politely decline the priest's offer?",
-                "entry": 76
+                "text": "Follow the winding river Fortune up into Fortune Pass and cross the mountains that way?",
+                "entry": 70
             }
         ]
     },
@@ -1225,6 +1612,19 @@
             {
                 "text": "Continue",
                 "entry": 65
+            }
+        ]
+    },
+    "203": {
+        "description": "The ring on your finger grows warm and as you watch, the opal stone becomes clear and seems to grow. Looking into it you see a man's face; it is pallid and white, with a long, hooked nose and hollow cheeks. His large blood-red eyes are staring intently out of the opal, questing for something or someone. They narrow and his brow furrows with annoyance.\n\nHe curses and you are shocked to hear his voice, resonant and macabre, as he says, 'I cannot see you, Follower, but know that none can stand before the sorcery of Manse the Deathmage.'\n\nWith that he pulls back and behind him you catch sight of another, a man in scarlet robes, with a belt of black and gold. It is Yaemon, Grandmaster of Flame. You press on, eager to catch up with them.",
+        "options": [
+            {
+                "text": "Head west and then cross the Mountains of Vision at the Storm Giant's Causeway?",
+                "entry": 81
+            },
+            {
+                "text": "Follow the winding river Fortune up into Fortune Pass and cross the mountains that way?",
+                "entry": 70
             }
         ]
     },
@@ -1266,6 +1666,24 @@
             }
         ]
     },
+    "210": {
+        "description": "On the morning of the third day out from Mortavaion you are high up in Fortune Pass, the air is crisp and scented with mountain heather. Mount Gwalodrun rises to a jagged peak before you. You climb up the scree slope at its base, slipping backwards whenever the pebbles avalanche, until you reach a belt of pines. At the tree line the mountainside becomes sheer and dangerous.",
+        "boolean_option": true,
+        "options": [
+            {
+                "prereq": [
+                    "skill",
+                    "Climbing"
+                ],
+                "text": "[Climbing] Continue",
+                "entry": 193
+            },
+            {
+                "text": "Continue",
+                "entry": 133
+            }
+        ]
+    },
     "212": {
         "description": "You trot along the road, passing the occasional traveller on horseback or on foot and an occasional trading caravan, gathering berries and nuts at the side of the road as you go. You sleep away from the road. You may restore up to 2 Endurance and continue on, hoping to reach Mortavalon at dusk on the second day. The road winds upwards into a range of hills which encircle the city of Mortavalon, and it is afternoon when you hear a strange hissing and a sudden scream around a corner ahead.\n\nYou move stealthily forwards to see a black-skinned man with the swaying neck and head of a cobra, tethered to a wagon on which there is a large cage. The Cobra Man has grabbed a young boy and is about to kill him. The two men who are on the wagon look too terrified to do anything.",
         "image": "212.png",
@@ -1277,6 +1695,39 @@
             {
                 "text": "Run and kick the Cobra Man?",
                 "entry": 315
+            }
+        ]
+    },
+    "213": {
+        "description": "As the crumbling walls of Fiendil are lost to sight behind you, a vague shimmering disturbs the air. You feel warmth on your face as a strange being takes shape before you. It is the size of a giant but its skin is ruby red and covered in running flames. Its wide grinning mouth is filled with curving yellow tusks and two yellow smoking horns crown its head. It speaks in a deep rumbling voice.\n\n'My master, Manse the Deathmage, has sent me to take you to the City of Brass, in the Elemental Plane of Fire.'\n\nLife in the dread City of Brass is worse than death itself.",
+        "image": "213.png",
+        "opponents": [
+            "Efreet"
+        ],
+        "options": [
+            {
+                "text": "Leap to attack the Efreet?",
+                "entry": 149
+            },
+            {
+                "prereq": [
+                    "skill",
+                    "Poison Needles"
+                ],
+                "text": "[Poison Needles] Use a poison dart?",
+                "entry": 180
+            },
+            {
+                "prereq": [
+                    "item",
+                    "Enchanted Shuriken"
+                ],
+                "text": "Hurl your Enchanted Shuriken at the Efreet?",
+                "entry": 161
+            },
+            {
+                "text": "Hurl a Shuriken at the Efreet?",
+                "entry": 170
             }
         ]
     },
@@ -1293,6 +1744,34 @@
             {
                 "text": "Continue",
                 "entry": 65
+            }
+        ]
+    },
+    "221": {
+        "description": "As you meditate in the temple, your body and soul seem filled with the harmony of Kwon the Redeemer. Your Inner Force feels restored, as the God lends you his power. The monk, Bartholdy, recognises that you have the favour of Kwon and asks you to preach to his brothers in the refectory before dinner. You decline, telling him instead of your quest.\n\nUpon hearing that you are Ninja, he agrees that only he and the local Grandmaster should know of your mission. The Grandmaster, Bartok, a frail old man, wise but weak, is filled with fear at your news. He has heard, however, that Yaemon has passed through Mortavalon eight days since, perhaps, he thinks, heading for the monastery of the Reverencers of Vile in the city of Fiendil. He advises that you strike north towards Fortune Pass, so that you may come to the lands of snow, before the Grandmaster of Flame.\n\nHe continues, 'There is a man who lives in the mountains, a mystic, but a follower of the Way of the Tiger. He is older than I but by the grace of Kwon, he has remained fit and strong. His name is Togawa and, long ago, he was the Grandmaster of the Dawn on the Island of Tranquil Dreams. He lives on Mount Gwalodrun and from there he sets his mind free to roam all the planes of existence. He may be able to tell you where you can find Yaemon.'\n\nYou dine alone in a small monkish cell and your sleep refreshes you. On the following day you leave the monks to prepare against the day of darkness, should you fail your mission. You have not caught up with Yaemon yet and so you leave the city through the northern arch in the morning.",
+        "modify_endurance": 4,
+        "modify_inner_force": 3,
+        "options": [
+            {
+                "text": "Strike across the wastelands towards Fiendil?",
+                "entry": 260
+            },
+            {
+                "text": "Head due north to Storm Giants' Causeway?",
+                "entry": 81
+            },
+            {
+                "text": "Head northeast to Fortune Pass and the mystic, Togawa?",
+                "entry": 210
+            }
+        ]
+    },
+    "222": {
+        "description": "The monk's head jerks backwards, his skull distorted by the power of your blow. His neck breaks with a sound like a whip-crack and his head lolls foolishly, like the heads of the puppets made by the Toy-maker whose life you have saved. He is recovering and smiles his thanks, but the little girl, his daughter, runs up to you and smothers your hand in kisses. You ask the Toy-maker if he has seen Yaemon, a Grand Master of the order of the Scarlet Mantis. He shakes his head.\n\n'No-one guards the gates here, there’s no telling who comes and goes.'\n\nYou thank him and, politely refusing his offer of hospitality, and decide to leave Fiendil before the Reverencers of Vile find out what you have done to two of their brothers.",
+        "options": [
+            {
+                "text": "Continue",
+                "entry": 289
             }
         ]
     },
@@ -1369,19 +1848,6 @@
             }
         ]
     },
-    "234": {
-        "description": "'Oh, but you are expected. Whimsical himself already knows of you, but not the Vile ones, it is not fated that they should know...' He pauses, '...yet.'\n\n'Who is Whimsical?' you ask.\n\n'The Theocrat of Fate, the ruler of Fiendil. You know so little, stranger. Here is a golden touch for you, go to the Volunteer.' He points down the main street. 'You will hear something there to your advantage. Oh, we knew you were coming all right.'\n\nHe breaks into a peal of laughter. Not wishing to draw further attention to yourself you hurry along the main street, Dreamer's Saunter. Fifty yards down the street hangs the sign of the Volunteer, a young warrior on bended knee receiving a sword from a man in golden robes, wearing a smiling golden mask.",
-        "options": [
-            {
-                "text": "Take the old hermit's advice and go in?",
-                "entry": 200
-            },
-            {
-                "text": "Continue on down Dreamer's Saunter?",
-                "entry": 185
-            }
-        ]
-    },
     "235": {
         "description": "You gather grapes and nuts aplenty, living off the land as you jog through the wilderness, checking your position by the position and height of the sun. You cover the ground quickly and are soon in a range of low hills crowned with cypress trees and, climbing up into one, you pass an untroubled and restful night.",
         "modify_endurance": 2,
@@ -1396,11 +1862,31 @@
             }
         ]
     },
+    "236": {
+        "description": "The second monk hesitates slightly as you fling yourself into a feet-first slide at his legs.",
+        "player_defence": 7,
+        "options": [
+            {
+                "text": "Attack with the Winged Horse kick?",
+                "entry": 264,
+                "type": "offence",
+                "action": "kick",
+                "inner_force": true
+            },
+            {
+                "text": "Use with the Cobra Strike jab?",
+                "entry": 244,
+                "type": "offence",
+                "action": "punch",
+                "inner_force": true
+            }
+        ]
+    },
     "237": {
         "description": "You attempt to throw one of your assailants. He is sobering up but still quite drunk.",
         "image": "176.png",
         "victory": 296,
-        "instakill": true,
+        "instakill_throw": true,
         "instakill_desc": "You successfully throw him over your hip!",
         "player_defence": [
             9,
@@ -1420,6 +1906,33 @@
                 "entry": 256,
                 "type": "offence",
                 "action": "kick",
+                "inner_force": true
+            }
+        ]
+    },
+    "244": {
+        "description": "The second monk comes to attack. Before he can kick, you dance forward and deliver a straight-fingered jab under his ribs.\n\nThe monk tries to throw you with a Mantis version of the Whirlpool throw, then kick you solidly.",
+        "victory": 258,
+        "player_defence": 7,
+        "options": [
+            {
+                "text": "Attack with the Winged Horse kick?",
+                "entry": 264,
+                "type": "offence",
+                "action": "kick",
+                "inner_force": true
+            },
+            {
+                "text": "Use the Dragon's tail throw?",
+                "entry": 236,
+                "type": "offence",
+                "action": "throw"
+            },
+            {
+                "text": "Punch again?",
+                "entry": 244,
+                "type": "offence",
+                "action": "punch",
                 "inner_force": true
             }
         ]
@@ -1536,6 +2049,46 @@
             }
         ]
     },
+    "258": {
+        "description": "The second monk is barely conscious but he kneels before you in the street, submitting to your superior power and ability.",
+        "options": [
+            {
+                "text": "Spare him?",
+                "entry": 409
+            },
+            {
+                "text": "Finish him off with a kick to the head?",
+                "entry": 222
+            }
+        ]
+    },
+    "264": {
+        "description": "The second monk comes to attack. You turn sideways on and unleash a Winged Horse kick as he approaches.",
+        "victory": 258,
+        "player_defence": 7,
+        "options": [
+            {
+                "text": "Hit with the Cobra Strike punch?",
+                "entry": 244,
+                "type": "offence",
+                "action": "punch",
+                "inner_force": true
+            },
+            {
+                "text": "Use the Dragon's tail throw?",
+                "entry": 236,
+                "type": "offence",
+                "action": "throw"
+            },
+            {
+                "text": "Kick again?",
+                "entry": 264,
+                "type": "offence",
+                "action": "kick",
+                "inner_force": true
+            }
+        ]
+    },
     "268": {
         "description": "Your three assailants lie around you, dead or unconscious. There is an awed silence in the tavern and nobody will meet your eye. Realising that word will spread that a monk who does not fight in the style of the Scarlet Mantis is in Doomover, you decide to leave the tavern and the city as soon as possible. A young soldier follows you as you leave but you give him the slip in a maze of back streets and make your way quickly to the city gate. You pass through before word comes to stop all strangers. Once safely  away from the city walls, you climb into a tree where you can sleep, hidden.",
         "options": [
@@ -1564,6 +2117,34 @@
             {
                 "text": "Continue",
                 "entry": 261
+            }
+        ]
+    },
+    "279": {
+        "description": "The monk falls to the ground helplessly coughing blood, but there is no respite for you as the second monk bows to you before preparing to attack. You decide to change your tactics.",
+        "opponents": [
+            "Second Reverencer of Vile"
+        ],
+        "options": [
+            {
+                "text": "Use the Dragon's Tail throw",
+                "entry": 236,
+                "type": "offence",
+                "action": "throw"
+            },
+            {
+                "text": "Attack with the Cobra Strike jab?",
+                "entry": 244,
+                "type": "offence",
+                "action": "punch",
+                "inner_force": true
+            },
+            {
+                "text": "Strike with the Winged Horse kick?",
+                "entry": 264,
+                "type": "offence",
+                "action": "kick",
+                "inner_force": true
             }
         ]
     },
@@ -1615,12 +2196,63 @@
             }
         ]
     },
+    "286": {
+        "description": "As the two monks close in to kick at you, you launch yourself feet first at the head of one. They are taken by surprise.",
+        "player_defence": [
+            6,
+            8
+        ],
+        "victory": 324,
+        "options": [
+            {
+                "text": "Use the Tiger's Paw chop?",
+                "entry": 353,
+                "type": "offence",
+                "action": "punch",
+                "inner_force": true
+            },
+            {
+                "text": "Use the Winged Horse kick?",
+                "entry": 374,
+                "type": "offence",
+                "action": "kick",
+                "inner_force": true
+            }
+        ]
+    },
     "287": {
         "description": "You fall backwards from the Hall of Webs onto the flagstones of the courtyard below, breaking your neck. You have failed.",
         "options": [
             {
                 "text": "Continue",
                 "entry": "death"
+            }
+        ]
+    },
+    "289": {
+        "description": "There is no one at the north gate to see you leave the strange city of Fiendil, but you decide to put as much distance between yourself and its inhabitants as quickly as you can.",
+        "boolean_option": true,
+        "options": [
+            {
+                "prereq": [
+                    "item",
+                    "Opal ring"
+                ],
+                "text": "[Opal ring] Continue",
+                "entry": 203
+            },
+            {
+                "text": "Continue",
+                "entry": 213
+            }
+        ]
+    },
+    "290": {
+        "description": "The peasant who has been leading you stops outside a grand white building and points inside. You thank him and enter the cool marble-floored building, striding confidently towards a warrior dressed in a blue and gold toga. Suddenly the floor opens up underneath you and you are pitched downwards to the floor of a dark tunnel below. The man in the toga shouts down after you, 'Hurry friend, to the arena. If my men catch you first they will kill you.'\n\nYou can see no way out save down the tunnel ahead of you.",
+        "options": [
+            {
+                "text": "Continue",
+                "entry": 275
             }
         ]
     },
@@ -1677,12 +2309,40 @@
             }
         ]
     },
+    "299": {
+        "description": "The Toy-maker screams wretchedly behind you as you pass quickly by. Keeping away from monks you spend some time walking the otherwise quiet streets of this city that seems almost out of touch with the rest of the Manmarch. You find out nothing, no one seems to care enough even to speak more than a few pleasantries to you.\n\nIn despair you decide to head north once more. You have no way of knowing whether Yaemon is still ahead of you but you cannot risk allowing him to reach the Pillars of Change before you.",
+        "options": [
+            {
+                "text": "Continue",
+                "entry": 289
+            }
+        ]
+    },
     "303": {
         "description": "It is well after midnight when you emerge from the hostel into the cool night air, dressed in your black costume and hood. Approaching the monastery, you can see that the climb to the roof of the hallway which connects the refectory to the hail of worship is an easy one because barrels of wine have been stacked against the wail. You gain the roof and descend into a very small courtyard. Turning a corner of the courtyard wall, you are faced with a dead end. The only way out vhich you can see is a small passageway leading off to the left.\n\nYou edge carefully down it but snap an unseen thread, as thin as spiderweave, which sets a bell jingling in the refectory. You run on down the passageway which turns left again only to find another dead end from which there is no escape. The passages are specially designed to lead an intruder to an inescapable hole and that is where you now find yourself. Several monks appear behind you and you frantically try to climb the wall, only to find that it is coated with a slimy web to which you stick fast. You are helpless and can only kill yourself before they take you, by biting off your own tongue so that you bleed to death.\n\nYour adventure ends here.",
         "options": [
             {
                 "text": "Continue",
                 "entry": "death"
+            }
+        ]
+    },
+    "304": {
+        "description": "Togawa nods again and asks a third question, 'What are your eyes?'\n\n'My eyes are the Sun and the Moon,' you say, reciting the words from the secret Litany of the Ninja Grandmasters. 'I am Ninja, I follow the Way of the Tiger.'\n\nTogawa beams at you, 'A Grandmaster of the Five Winds,' he says, 'I must do my best to help you.'\n\nYou sleep on the cold floor of the cave, but in your dreams, Togawa, his body silver and ethereal, appears to you stretching out his hand. You take it and he lifts you out of your body, Looking down, you can see yourself, asleep, in the candlelight. Soon, you are far from the cave, washed by ethereal wind. You hold on tight, knowing that without Togawa's guidance, you would drift helplessly; the skills of the Ninja cannot aid you here. The monk points ahead to a gleaming archway beyond which a silver pathway stretches up into the clouds. Cherubs flock around its pillars and a Guardian Angel, flawless and white, stands between them.\n\n'This is the Gateway to the Seven Heavens,' says Togawa. 'We may not enter yet.' As he speaks, a sinuous form takes shape on the silver road. It glides past the Guardian Angel and as it approaches you see that it is a perfect tiger, but its fur is white and its eyes are blue.\n\n'The Spirit Tiger is a servant of Kwon,' says Togawa. 'She will help us.' As the tigress looks at you, she passes on a part of her knowledge. She has stalked Yaemon on the Ethereal Plane, undetected even by him. Yaemon and Honoric, Marshal of the Legion of the Sword of Doom who worships the god, Vasch-Ro, are journeying to the far-away city of Druath Glennan at the edge of the Far Snows. They will meet a third there, Manse the Deathmage, a potent and evil sorcerer who reverences Nemesis, the Supreme Principle of Evil.\n\nTogether they plan to journey to the Pillars of Change and each knows a secret word which will bind a god or goddess in Inferno. You realise that you must journey to Druath Glennan as quickly as possible. The Spirit Tiger blesses you and Fate will smile on you. You try to speak to the Spirit Tiger but words will not come and Togawa pulls you away from the Gateway to the Seven Heavens.\n\nWhen you awake in the morning he says, 'The unholy alliance must be stopped. Of all the evil gods, only the followers of Vile, Vasch-Ro and Nemesis would have the discipline to join together. Nemesis is the greatest of the evil gods. Never before have three such powerful and evil men trusted each other.' He pulls a bag of herbs from a crack in the rock. 'These have healing virtue,' he says. You take them and may use them at any time to restore up to 8 Endurance.\n\nYou thank him and are about to ask him if he will accompany you, when he lies down on the cave floor and falls asleep. Sensing that there is no further help to be gained, you begin the climb down Mount Gwalodrun to the pass below. A day later, you enter the foothills of Fortune Pass.",
+        "player_modifier": [
+            "fate",
+            1
+        ],
+        "loot_add": [
+            [
+                "Healing herbs",
+                1
+            ]
+        ],
+        "options": [
+            {
+                "text": "Continue",
+                "entry": 70
             }
         ]
     },
@@ -1724,6 +2384,26 @@
                 "entry": 310,
                 "type": "offence",
                 "action": "punch",
+                "inner_force": true
+            }
+        ]
+    },
+    "312": {
+        "description": "You dart in as if to punch but leap into the air at the last moment, trying to bring your feet to the sides of his head before twisting and throwing him to the ground.",
+        "player_defence": 6,
+        "options": [
+            {
+                "text": "Use the Tiger's Paw chop?",
+                "entry": 322,
+                "type": "offence",
+                "action": "punch",
+                "inner_force": true
+            },
+            {
+                "text": "Use the Forked Lightning Strike kick?",
+                "entry": 335,
+                "type": "offence",
+                "action": "kick",
                 "inner_force": true
             }
         ]
@@ -1787,6 +2467,34 @@
             }
         ]
     },
+    "322": {
+        "description": "Without warning, you raise your hands and try to chop them together on either side of your opponent's neck.\n\nHe counters your double Tiger's Paw chop so swiftly that you may not block, as he ducks down and Cobra Strike kicks upwards toward your solar plexus.",
+        "unblockable_attack": true,
+        "victory": 279,
+        "player_defence": 6,
+        "options": [
+            {
+                "text": "Use the Forked Lightning Strike kick?",
+                "entry": 335,
+                "type": "offence",
+                "action": "kick",
+                "inner_force": true
+            },
+            {
+                "text": "Try the Teeth of the Tiger throw?",
+                "entry": 312,
+                "type": "offence",
+                "action": "throw"
+            },
+            {
+                "text": "Punch again?",
+                "entry": 322,
+                "type": "offence",
+                "action": "punch",
+                "inner_force": true
+            }
+        ]
+    },
     "323": {
         "description": "You take some fish scales from one of your pockets and place them on your eyeballs. You can see through them reasonably well but they give you the appearance of a blind man. Sitting down to beg near the entrance to the monastery, you overhear enough to convince you that the monks who worship Vile are steeped in evil, but it is a woman in a black cloak which is covered in the pattern of green spiders' webs who most claims your attention.\n\nShe is walking towards the monastery flanked by two monks dressed in scarlet, and it seems they are having an argument. She is bartering a price for a spell which they wish her to cast in the 'Hall of Webs'. She is pointing out that if this is their only defence against spies in the corridor which joins the refectory to the sleeping quarters then the Webs of Nullaq spell is worth more than three hundred golds.\n\nYou pick up your hood with its meagre haul of copper coins and pad slowly away before lying low until darkness falls. You decide to take advantage of your knowledge that the Hall of Webs has only one trap, the webs of the witch you saw earlier.",
         "options": [
@@ -1801,6 +2509,15 @@
             {
                 "text": "Sneak in the back of the monastery?",
                 "entry": 314
+            }
+        ]
+    },
+    "324": {
+        "description": "As you strike the last monk with what you expect will be the killing blow, strength borne of desperate fear enables him to block the blow at the last moment and he throws himself under the ox-cart to the other side. He limps away into a nearby building and you decide to leave the city by the north gate before he can call up reinforcements.",
+        "options": [
+            {
+                "text": "Continue",
+                "entry": 289
             }
         ]
     },
@@ -1882,6 +2599,33 @@
                 ],
                 "text": "Use a Shuriken?",
                 "entry": 347
+            }
+        ]
+    },
+    "335": {
+        "description": "Without a flicker of muscle to announce your intent until you are moving, you move to the right and side-kick twice in quick succession; once to the side of his left knee and then up to the left side of his head, catching him by surprise.\n\nThe monk feints a punch and then drives his heel towards your neck.",
+        "victory": 279,
+        "player_defence": 7,
+        "options": [
+            {
+                "text": "Try the Teeth of the Tiger throw?",
+                "entry": 312,
+                "type": "offence",
+                "action": "throw"
+            },
+            {
+                "text": "Use the Tiger's Paw chop?",
+                "entry": 322,
+                "type": "offence",
+                "action": "punch",
+                "inner_force": true
+            },
+            {
+                "text": "Kick again?",
+                "entry": 335,
+                "type": "offence",
+                "action": "kick",
+                "inner_force": true
             }
         ]
     },
@@ -2004,6 +2748,36 @@
             }
         ]
     },
+    "353": {
+        "description": "These monks who reverence Vile are well-versed in the martial arts. One of the monks tries to use a Winged Horse on you, but you side-step to the left and try to bring your right hand down across his throat with a Tiger's Paw.",
+        "player_defence": [
+            6,
+            8
+        ],
+        "victory": 324,
+        "options": [
+            {
+                "text": "Use the Winged Horse kick?",
+                "entry": 374,
+                "type": "offence",
+                "action": "kick",
+                "inner_force": true
+            },
+            {
+                "text": "Use the Teeth of the Tiger throw?",
+                "entry": 286,
+                "type": "offence",
+                "action": "throw"
+            },
+            {
+                "text": "Punch again",
+                "entry": 353,
+                "type": "offence",
+                "action": "punch",
+                "inner_force": true
+            }
+        ]
+    },
     "357": {
         "description": "The boy screams as he dies and the men crack the whip over their ox and drive off, dragging the Cobra Man behind them. There is a cave, overhung by rock above you in the hillside. 'That way to Mortavalon,' one of the men shouts, pointing to it.",
         "options": [
@@ -2067,6 +2841,36 @@
             {
                 "text": "Continue",
                 "entry": 19
+            }
+        ]
+    },
+    "374": {
+        "description": "One of the monks tries to punch you, but you lean back out of range, turn and dive your foot towards his head.",
+        "player_defence": [
+            6,
+            8
+        ],
+        "victory": 324,
+        "options": [
+            {
+                "text": "Use the Teeth of the Tiger throw?",
+                "entry": 286,
+                "type": "offence",
+                "action": "throw"
+            },
+            {
+                "text": "Use the Tiger's Paw chop?",
+                "entry": 353,
+                "type": "offence",
+                "action": "punch",
+                "inner_force": true
+            },
+            {
+                "text": "Use the Winged Horse kick again?",
+                "entry": 374,
+                "type": "offence",
+                "action": "kick",
+                "inner_force": true
             }
         ]
     },
@@ -2203,6 +3007,35 @@
             }
         ]
     },
+    "405": {
+        "description": "The ox-cart clatters underneath you as you somersault above it, landing agilely on your feet. Before you can move further, two monks who bear the symbol of the Cross of Avatar, reversed, with a serpent twining around it appear from doorways to either side of you. You recognise the insignia of Vile.\n\n'It must be the Kwon worshipper,' says one. 'No one but a monk could have avoided the cart.'\n\nThey move into the attack, adopting martial stances, as do you. There is a moment of silent confrontation, as you circle each other.",
+        "opponents": [
+            "First monk of Vile",
+            "Second monk of Vile"
+        ],
+        "options": [
+            {
+                "text": "Use the Tiger's Paw chop?",
+                "entry": 353,
+                "type": "offence",
+                "action": "punch",
+                "inner_force": true
+            },
+            {
+                "text": "Use the Winged Horse kick?",
+                "entry": 374,
+                "type": "offence",
+                "action": "kick",
+                "inner_force": true
+            },
+            {
+                "text": "Use the Teeth of the Tiger throw?",
+                "entry": 286,
+                "type": "offence",
+                "action": "throw"
+            }
+        ]
+    },
     "407": {
         "description": "You are not fast enough and the heavy mace catches you in the face before the chop lands.",
         "image": "223.png",
@@ -2235,6 +3068,15 @@
             }
         ]
     },
+    "409": {
+        "description": "You look down at the kneeling monk and say 'I will spare you if you tell me where Yaemon, Grandmaster of the Flame, is.'\n\nThe monk has clearly lost his nerve and you believe him when he says, 'He left for the City of Druath Glennan three days ago. A large warrior went with him and I happen to know that they travel to meet another, a powerful sorcerer, I think.'\n\nYou let the monk go and he walks away, head bowed.",
+        "options": [
+            {
+                "text": "Continue",
+                "entry": 289
+            }
+        ]
+    },
     "414": {
         "description": "You stare up into the night sky until you can see in the dark as if you were an owl. Then squeezing through the narrowest of gaps between two buildings you make your way towards the Hall of Webs which is in fact, a large hump-back bridge, thirty feet up and completely endosed. It connects the upper floor of the sleeping quarters to the balcony of the refectory where the monks eat their meals. Standing below the window in the centre of the arch, you fit your Cat’s Claws to your hands and feet and take the small grappling hook and rope from one of the inner pockets of your costume. You fling the padded hook into the open window and pull the rope taut before climbing it hand over hand, like a monkey.\n\nYou are just below the window when you see a man's hands on the hook above you.",
         "options": [
@@ -2245,6 +3087,17 @@
             {
                 "text": "Try to dig your Claws into the flints of the bridge and climb to the side of the window?",
                 "entry": 375
+            }
+        ]
+    },
+    "416": {
+        "description": "The hub of the wheel catches you and throws you hard against a wall.",
+        "modify_endurance": -4,
+        "damage_followup": "You trudge on your way and notice some monks who bear the symbol of the Cross of Avatar, reversed with a serpent twining about it. You recognise the insignia of Vile. They ignore you and follow the cart which seems to be under control now.",
+        "options": [
+            {
+                "text": "Continue",
+                "entry": 289
             }
         ]
     },
