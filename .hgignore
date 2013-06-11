@@ -5,3 +5,4 @@ syntax: regexp
 story.json~
 opponents.json~
 skills.json~
+items.json~
