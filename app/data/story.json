@@ -1969,6 +1969,24 @@
             }
         ]
     },
+    "251": {
+        "description": "Runeweaver makes a fire in the hut while you squat on the floor, to meditate. He wears only a breast plate of boiled leather for armour and you notice that he somehow starts the fire without a tinder box. Your spirit is wandering far away when the door to the hut is suddenly hurled open. A barbarian warrior strides in.\n\nHe wears a necklace of giant weasel's teeth, a bearskin and a strange circlet with a deep blue gem at his forehead. His armour is curiously fashioned with overlapping plates, like a fish's scales.\n\nHe points his longsword menacingly and demands in an uncouth norseman’s bastardization of the common tongue, 'Well, my two small kobolds of the mountains, I'll take your money and all of your belongings.'\n\n Runeweaver replies, 'What do you take us for, mere farmers or peasants that you should threaten us so?'\n\nThe Barbarian replies, 'I don’t care if you're princes, I am Olvar the Chaos Bringer and I'm taking your gold'.",
+        "image": "251.png",
+        "options": [
+            {
+                "text": "Spring to the attack?",
+                "entry": 239
+            },
+            {
+                "text": "Hand him your money pouch?",
+                "entry": 216
+            },
+            {
+                "text": "Throw flash powder into the fire?",
+                "entry": 187
+            }
+        ]
+    },
     "254": {
         "description": "As you leave the forbidding towered walls of Doomover behind, the sun climbs in the sky, ripening the corn and barley which ru sties in the breeze. The fields do not stretch for far and you are soon on the edge of a low plain, the Plain of Feet, on which several thousand of the Legion of the Sword of Doom are practising for the forthcoming war, smart and efficient. The smooth plain gradually gives way to a wilderness of trees and vines.",
         "options": [
@@ -2062,6 +2080,24 @@
             }
         ]
     },
+    "262": {
+        "description": "You make a small fire in the hut before squatting on the floor to meditate. Your spirit is wandering far away when the door to the hut is suddenly hurled open. A barbarian warrior strides in. He wears a necklace of giant weasel's teeth, a bearskin and a strange circlet with a deep blue gem at his forehead. His armour is curiously fashioned with overlapping plates, like a fish’s scales.\n\nHe points his longsword menacingly and demands in an uncouth norseman's bastardization of the common tongue, 'Well, my small kobold of the mountains, Olvar the Chaos Bringer is going to take all of your money!'",
+        "image": "251.png",
+        "options": [
+            {
+                "text": "Spring to the attack?",
+                "entry": 226
+            },
+            {
+                "text": "Hand him your money pouch?",
+                "entry": 204
+            },
+            {
+                "text": "Throw flash powder into the fire?",
+                "entry": 117
+            }
+        ]
+    },
     "264": {
         "description": "The second monk comes to attack. You turn sideways on and unleash a Winged Horse kick as he approaches.",
         "victory": 258,
@@ -2095,6 +2131,17 @@
             {
                 "text": "Continue",
                 "entry": 254
+            }
+        ]
+    },
+    "271": {
+        "description": "You leap out and into the air, grabbing one of the Arocs as it swoops behind the warrior. With a powerful wrench you break its neck. A sharp talon tears your shoulder.",
+        "modify_endurance": -3,
+        "damage_followup": "You turn and grab your attacker’s leg, pulling him down and then delivering a crippling Tiger's Paw to the side of its neck as another magical bolt leaps from the warrior's sword. Seeing this, the Arocs glide out across the valley, leaving you to continue on your way.\n\nThe warrior introduces himself as Runeweaver. You know that runes are the symbols used in spell making. He thanks you for aiding him and tells you he is a wandering adventurer who is traveffing north to find pastures new, after a somewhat embarrassing brush with the authorities at Mortavalon.\n\nYou walk together for a while until you come to a small hut, near the source of the river. You decide to pass the night there - Runeweaver hopes to light a fire against the cold.",
+        "options": [
+            {
+                "text": "Continue",
+                "entry": 251
             }
         ]
     },
@@ -2184,6 +2231,15 @@
             {
                 "text": "Walk on through the city?",
                 "entry": 169
+            }
+        ]
+    },
+    "284": {
+        "description": "The warrior fights well but after a time no more magical bolts flare forth from his sword and he is tumbled off the path. The bird-men kill him and carry him off to their ledges. You go on your way and eventually reach a hut ifear the source of the river.\n\nThe cold does not affect you long as you are moving, as you trained long and hard to withstand extremes of climate, but you decide to spend the night inside as you will be safe from the bird-men.",
+        "options": [
+            {
+                "text": "Continue",
+                "entry": 262
             }
         ]
     },
