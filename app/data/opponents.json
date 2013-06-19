@@ -209,5 +209,19 @@
         "defence_throw": 12,
         "damage_mod": 0,
         "effects": []
+    },
+    "Olvar the Barbarian": {
+        "name": "Olvar the Barbarian",
+        "action_desc": "Olvar the Barbarian",
+        "endurance": 18,
+        "damage": [
+            1,
+            1
+        ],
+        "defence_punch": 6,
+        "defence_kick": 7,
+        "defence_throw": 4,
+        "damage_mod": 0,
+        "effects": []
     }
 }
