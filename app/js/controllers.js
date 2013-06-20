@@ -148,7 +148,7 @@ function NewGameCtrl($scope, $http, localStorageService, Story, Items, Opponents
     $scope.beginGame = function() {
         localStorageService.clearAll();
         // Set starting entry number.
-        gameState.currentEntry = '210';
+        gameState.currentEntry = '284';
         gameState.endurance = 20;
         // Get starting items.
         angular.forEach(itemsjson, function(item) {
@@ -267,6 +267,9 @@ function StoryCtrl($scope, $http, localStorageService, gameState, Story, Items, 
                     if (target.damage_mod) { // i.e. damage_mod is not 0.
                         damage += target.damage_mod;
                         gameState.currentOpponents[0].damage_mod = 0;
+                    };
+                    if (target.player_damage_mod) {  // Alter the amount of damage that the player deals.
+                        damage += target.player_damage_mod;
                     };
                     gameState.currentOpponents[0].endurance -= damage;
                     actionText = 'You punch {0} and hit for {1} damage!';

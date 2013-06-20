@@ -222,6 +222,7 @@
         "defence_kick": 7,
         "defence_throw": 4,
         "damage_mod": 0,
-        "effects": []
+        "effects": [],
+	"player_damage_mod": -1
     }
 }
