@@ -62,6 +62,44 @@
             }
         ]
     },
+    "8": {
+        "description": "The Barbarian tenses as you place the needle on your rolled tongue and spit it out in one fluid motion. The needle pierces his cheek. He has an iron constitution and although a look of agony twists his features, his system overcomes the virulent poison.\n\nAs you pause in astonishment, he strikes at you and his sword cleaves the air towards your shoulder. You try to bring your left forearm up to sweep aside the blade.",
+        "image": "251.png",
+        "damage_opponent": [
+            [
+                "Olvar the Barbarian",
+                "fixed",
+                4
+            ]
+        ],
+        "player_defence_vs_injury": [
+            8,
+            1,
+            1
+        ],
+        "options": [
+            {
+                "text": "Use the Cobra Strike jab?",
+                "entry": 377,
+                "type": "offence",
+                "action": "punch",
+                "inner_force": true
+            },
+            {
+                "text": "Use the Winged Horse kick?",
+                "entry": 302,
+                "type": "offence",
+                "action": "kick",
+                "inner_force": true
+            },
+            {
+                "text": "Use the Dragon's Tail throw?",
+                "entry": 318,
+                "type": "offence",
+                "action": "throw"
+            }
+        ]
+    },
     "10": {
         "description": "He looks at you and nods, apparently satisfied. You sleep the night in the strange monk's cave. He has few possessions and says he has not seen another human being in years, except in sleep. It seems he feeds on air for he has nothing to offer you other than cool and refreshing mountain rain-water. In the morning he claims that he has, somehow, seen Yaemon, Grandmaster of Flame, journeying north with Hononic, servant of Vasch-Ro, Marshal of the Legion of the Sword of Doom, from the city of Doomover.\n\n'And they journey to meet a third,' he says, 'Manse the Deathmage, who reverences Nemesis. A most powerful and evil sorcerer. This unholy affiance must be stopped. Of all the evil gods, only the followers of Vile, Vasch-Ro and Nemesis have the discipline to act in alliance. Nemesis is the greatest of the evil gods. Never before have three such powerful and evil men trusted each other.'\n\n'It is the conjunction of the planets,' you reply. Togawa pulls a bag of herbs from a crack in the rock.\n\n'These have healing virtue,' he says. You take them and may use them at any time when you are not being attacked to restore up to 8 Endurance points, once only.\n\nYou thank him and are about to ask him if he will accompany you when he lies down on the cave floor and goes to sleep. Sensing that there is no further help to be gained, you begin the climb down Mount Gwalodrun to the pass below. A day later you enter the foothills of Fortune Pass.",
         "loot_add": [
@@ -963,6 +1001,48 @@
             {
                 "text": "Continue",
                 "entry": 65
+            }
+        ]
+    },
+    "117": {
+        "description": "As the dust enters the flames there is a brilliant flash. You had shaded your eyes but Olvar is, for the moment, blinded. The Barbarian backs out of the doorway and you follow up with a flying Winged Horse to his chest and he throws his arms up and crashes backwards into the snow. You have cracked some of his ribs.\n\nYou are about to run out into the snow to finish him, when a bolt of blue lightning discharges from the gem at his forehead towards the doorway. You flip backwards into the air, somersault as the bolt passes beneath you, and land upright facing the doorway. Olvar has regained his sight and he charges in.",
+        "image": "251.png",
+        "loot_remove": [["Flash powder", 1]],
+        "damage_opponent": [
+            [
+                "Olvar the Barbarian",
+                "fixed",
+                5
+            ]
+        ],
+        "options": [
+            {
+                "text": "Use the Winged Horse kick?",
+                "entry": 302,
+                "type": "offence",
+                "action": "kick",
+                "inner_force": true
+            },
+            {
+                "text": "Use the Cobra Strike jab?",
+                "entry": 377,
+                "type": "offence",
+                "action": "punch",
+                "inner_force": true
+            },
+            {
+                "text": "Use the Dragon's Tail throw?",
+                "entry": 318,
+                "type": "offence",
+                "action": "throw"
+            },
+            {
+                "prereq": [
+                    "skill",
+                    "Poison Needles"
+                ],
+                "text": "[Poison Needles] Use a poison needle?",
+                "entry": 8
             }
         ]
     },
@@ -1972,6 +2052,9 @@
     "251": {
         "description": "Runeweaver makes a fire in the hut while you squat on the floor, to meditate. He wears only a breast plate of boiled leather for armour and you notice that he somehow starts the fire without a tinder box. Your spirit is wandering far away when the door to the hut is suddenly hurled open. A barbarian warrior strides in.\n\nHe wears a necklace of giant weasel's teeth, a bearskin and a strange circlet with a deep blue gem at his forehead. His armour is curiously fashioned with overlapping plates, like a fish's scales.\n\nHe points his longsword menacingly and demands in an uncouth norseman’s bastardization of the common tongue, 'Well, my two small kobolds of the mountains, I'll take your money and all of your belongings.'\n\n Runeweaver replies, 'What do you take us for, mere farmers or peasants that you should threaten us so?'\n\nThe Barbarian replies, 'I don’t care if you're princes, I am Olvar the Chaos Bringer and I'm taking your gold'.",
         "image": "251.png",
+        "opponents": [
+            "Olvar the Barbarian"
+        ],
         "options": [
             {
                 "text": "Spring to the attack?",
@@ -2083,6 +2166,9 @@
     "262": {
         "description": "You make a small fire in the hut before squatting on the floor to meditate. Your spirit is wandering far away when the door to the hut is suddenly hurled open. A barbarian warrior strides in. He wears a necklace of giant weasel's teeth, a bearskin and a strange circlet with a deep blue gem at his forehead. His armour is curiously fashioned with overlapping plates, like a fish’s scales.\n\nHe points his longsword menacingly and demands in an uncouth norseman's bastardization of the common tongue, 'Well, my small kobold of the mountains, Olvar the Chaos Bringer is going to take all of your money!'",
         "image": "251.png",
+        "opponents": [
+            "Olvar the Barbarian"
+        ],
         "options": [
             {
                 "text": "Spring to the attack?",
@@ -2374,6 +2460,34 @@
             }
         ]
     },
+    "302": {
+        "description": "The Barbarian's voice rises to a shriek of battle lust as he swipes at you, berserk. He cares nothing for your attacks so long as his sword tastes your blood. He cuts his sword down towards your head, but you sidestep to the right, twist and lash your foot towards his face as his sword whistles down past your back.",
+        "image": "251.png",
+        "player_defence": 8,
+        "victory": 344,
+        "options": [
+            {
+                "text": "Use the Cobra Strike jab?",
+                "entry": 377,
+                "type": "offence",
+                "action": "punch",
+                "inner_force": true
+            },
+            {
+                "text": "Use the Dragon's Tail throw?",
+                "entry": 318,
+                "type": "offence",
+                "action": "throw"
+            },
+            {
+                "text": "Kick again?",
+                "entry": 302,
+                "type": "offence",
+                "action": "kick",
+                "inner_force": true
+            }
+        ]
+    },
     "303": {
         "description": "It is well after midnight when you emerge from the hostel into the cool night air, dressed in your black costume and hood. Approaching the monastery, you can see that the climb to the roof of the hallway which connects the refectory to the hail of worship is an easy one because barrels of wine have been stacked against the wail. You gain the roof and descend into a very small courtyard. Turning a corner of the courtyard wall, you are faced with a dead end. The only way out vhich you can see is a small passageway leading off to the left.\n\nYou edge carefully down it but snap an unseen thread, as thin as spiderweave, which sets a bell jingling in the refectory. You run on down the passageway which turns left again only to find another dead end from which there is no escape. The passages are specially designed to lead an intruder to an inescapable hole and that is where you now find yourself. Several monks appear behind you and you frantically try to climb the wall, only to find that it is coated with a slimy web to which you stick fast. You are helpless and can only kill yourself before they take you, by biting off your own tongue so that you bleed to death.\n\nYour adventure ends here.",
         "options": [
@@ -2519,6 +2633,27 @@
                 "entry": 316,
                 "type": "offence",
                 "action": "Kick",
+                "inner_force": true
+            }
+        ]
+    },
+    "318": {
+        "description": "The Barbarian has worked himself into a berserk frenzy of battle lust, cleaving the air with mighty sweeps of his sword, heedless of pain, wanting only your blood. The Dragon's Tail takes him by surprise as you try and sweep his legs from under him. His defence is weak as his sword cuts the air above you.",
+        "image": "251.png",
+        "player_defence": 6,
+        "options": [
+            {
+                "text": "Use the Cobra Strike jab?",
+                "entry": 377,
+                "type": "offence",
+                "action": "punch",
+                "inner_force": true
+            },
+            {
+                "text": "Use the Winged Horse kick?",
+                "entry": 302,
+                "type": "offence",
+                "action": "kick",
                 "inner_force": true
             }
         ]
@@ -2751,6 +2886,15 @@
             }
         ]
     },
+    "344": {
+        "description": "The Barbarian falls at last, a mass of broken bones. At the end it seemed that he would fight on for ever, but his battle cries will no longer trouble the world of Orb.",
+        "options": [
+            {
+                "text": "Continue",
+                "entry": 366
+            }
+        ]
+    },
     "345": {
         "description": "To the surprise of the dull-witted Ogre you crouch to the deck and try to sweep its legs from under it. However, its legs are stocky and powerful and it is huge and strong.",
         "image": "232.png",
@@ -2953,6 +3097,34 @@
             {
                 "text": "Enter the cave?",
                 "entry": 275
+            }
+        ]
+    },
+    "377": {
+        "description": "Olvar lets out a ferocious cry as, throwing daution to the wind, he whirls his sword above his head and then lunges at you. He is berserk, lost in a battle frenzy. He will feel no fear or pain until either you or he lie dead. You parry his blade with your forearm, sidestep and unleash a Cobra Strike at his face.",
+        "image": "251.png",
+        "player_defence": 8,
+        "victory": 344,
+        "options": [
+            {
+                "text": "Use the Winged Horse kick?",
+                "entry": 302,
+                "type": "offence",
+                "action": "kick",
+                "inner_force": true
+            },
+            {
+                "text": "Use the Dragon's Tail throw?",
+                "entry": 318,
+                "type": "offence",
+                "action": "throw"
+            },
+            {
+                "text": "Punch again?",
+                "entry": 377,
+                "type": "offence",
+                "action": "punch",
+                "inner_force": true
             }
         ]
     },
