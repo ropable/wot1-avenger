@@ -745,6 +745,42 @@
             }
         ]
     },
+    "85": {
+        "description": "The bolt of lightning catches you in the side, charring your flesh and jolting you as if you had been hit by a battering ram and you are sent hurtling to the far wall.",
+        "image": "251.png",
+        "modify_endurance": -8,
+        "damage_followup": "You flip in the air and land safely on your feet, overcoming the pain as the Barbarian moves to attack you with his longsword.",
+        "options": [
+            {
+                "text": "Use the Cobra Strike jab?",
+                "entry": 377,
+                "type": "offence",
+                "action": "punch",
+                "inner_force": true
+            },
+            {
+                "text": "Use the Winged Horse kick?",
+                "entry": 302,
+                "type": "offence",
+                "action": "kick",
+                "inner_force": true
+            },
+            {
+                "text": "Use the Dragon's Tail throw?",
+                "entry": 318,
+                "type": "offence",
+                "action": "throw"
+            },
+            {
+                "prereq": [
+                    "skill",
+                    "Poison Needles"
+                ],
+                "text": "[Poison Needles] Use a poisoned needle?",
+                "entry": 8
+            }
+        ]
+    },
     "86": {
         "description": "You slink soundlessly as a blaçk panther towards the unsuspecting guard, who is leaning against the doorpost lost in thought.",
         "options": [
@@ -1007,7 +1043,12 @@
     "117": {
         "description": "As the dust enters the flames there is a brilliant flash. You had shaded your eyes but Olvar is, for the moment, blinded. The Barbarian backs out of the doorway and you follow up with a flying Winged Horse to his chest and he throws his arms up and crashes backwards into the snow. You have cracked some of his ribs.\n\nYou are about to run out into the snow to finish him, when a bolt of blue lightning discharges from the gem at his forehead towards the doorway. You flip backwards into the air, somersault as the bolt passes beneath you, and land upright facing the doorway. Olvar has regained his sight and he charges in.",
         "image": "251.png",
-        "loot_remove": [["Flash powder", 1]],
+        "loot_remove": [
+            [
+                "Flash powder",
+                1
+            ]
+        ],
         "damage_opponent": [
             [
                 "Olvar the Barbarian",
@@ -1708,6 +1749,25 @@
             }
         ]
     },
+    "204": {
+        "description": "The Barbarian's eyes never leave yours as he takes the money pouch from you. Then, sneering, he demands your Ninja accoutrements as well. Rather than give away the equipment you need for your mission, you jump to the attack.\n\nA bolt of blue lightning discharges from the gem at Olvar’s forehead, with a crack. Almost instantaneously, you try to twist aside.",
+        "image": "251.png",
+        "player_defence_roll": 5,
+        "loot_hold": [
+            "Gold coin",
+            "Flint and tinder"
+        ],
+        "options": [
+            {
+                "text": "Continue",
+                "entry": 406
+            },
+            {
+                "text": "Continue",
+                "entry": 85
+            }
+        ]
+    },
     "206": {
         "description": "The barman had mixed Spirits-of-Ra into the mead and it was stronger than you realized. The alcohol passes into your bloodstream quickly and you stand up to leave but pass out. You wake up in the morning, lying muddied in the gutter. Some of your gold coins have been taken, but you had hidden five upon your person, which you still have. If you had an Opal ring, you notice that has also been stolen.\n\nYou decide to head north in case Yaemon arrives at the Pillars of Change before you, and leave the city on the road to Mortavalon.",
         "loot_remove": [
@@ -1891,6 +1951,21 @@
             {
                 "text": "Continue",
                 "entry": 254
+            }
+        ]
+    },
+    "226": {
+        "description": "As you spring towards Olvar he nods towards you and a lightning bolt stabs at you with a crack from the gem at his forehead. You try to dodge.",
+        "image": "251.png",
+        "player_defence_roll": 6,
+        "options": [
+            {
+                "text": "Continue",
+                "entry": 406
+            },
+            {
+                "text": "Continue",
+                "entry": 85
             }
         ]
     },
@@ -3261,6 +3336,40 @@
                 "entry": 286,
                 "type": "offence",
                 "action": "throw"
+            }
+        ]
+    },
+    "406": {
+        "description": "The lightning bolt lances past you and slams into the opposite wall, setting the planks of the hut smouldering. You leap to the attack before Olvar can unleash another.",
+        "image": "251.png",
+        "options": [
+            {
+                "text": "Try a Cobra Strike jab at his unprotected neck?",
+                "entry": 377,
+                "type": "offence",
+                "action": "punch",
+                "inner_force": true
+            },
+            {
+                "text": "Use the Winged Horse kick?",
+                "entry": 302,
+                "type": "offence",
+                "action": "kick",
+                "inner_force": true
+            },
+            {
+                "text": "Use the Dragon's Tail throw?",
+                "entry": 318,
+                "type": "offence",
+                "action": "throw"
+            },
+            {
+                "prereq": [
+                    "skill",
+                    "Poison Needles"
+                ],
+                "text": "[Poison Needles] Use a poisoned needle?",
+                "entry": 8
             }
         ]
     },
