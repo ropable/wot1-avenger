@@ -221,6 +221,7 @@
         "defence_punch": 6,
         "defence_kick": 7,
         "defence_throw": 4,
+	"defence_ally": 8,
         "damage_mod": 0,
         "effects": [],
 	"player_damage_mod": -1
