@@ -492,6 +492,40 @@ function StoryCtrl($scope, $http, localStorageService, gameState, Story, Items, 
                 });
             });
         };
+        // Some sequences require that specific items are held away from the player temporarily
+        // (until combat is finished, etc).
+        // In hindsight, I should have used this to handle shuriken :/
+        if (gameState.entry.loot_hold) {
+            angular.forEach(gameState.entry.loot_hold, function(loot) {
+                angular.forEach(gameState.items, function(item) {
+                    if (item.name == loot) {
+                        gameState.held_loot.push(item);
+                        item.count = 0;
+                    };
+                });
+            });
+        };
+        // Restore those items.
+        if (gameState.entry.loot_held_restore) {
+            angular.forEach(gameState.held_loot, function(loot) {
+                angular.forEach(gameState.items, function(item) {
+                    if (item.name == loot) {
+                        item.count = loot.count;
+                    };
+                });
+            });
+            gameState.held_loot = [];
+        };
+        // Losing all equipment (captured, etc).
+        if (gameState.entry.lose_equipment) {
+            gameState.lost_equipment = gameState.items;
+            gameState.items = [];
+        };
+        // Regaining all equipment.
+        if (gameState.entry.regain_equipment) {
+            gameState.items = gameState.lost_equipment;
+            gameState.lost_equipment = [];
+        };
         // Notes
         if (gameState.entry.note_add) {
             angular.forEach(gameState.entry.note_add, function(note) {
@@ -503,17 +537,6 @@ function StoryCtrl($scope, $http, localStorageService, gameState, Story, Items, 
             angular.forEach(gameState.entry.event_add, function(evt) {
                 gameState.events.push(evt);
             });
-        };
-        // Losing equipment (captured, etc).
-        if (gameState.entry.lose_equipment) {
-            // Place equipment in a holding variable.
-            gameState.lost_equipment = gameState.items;
-            gameState.items = [];
-        };
-        // Regaining equipment.
-        if (gameState.entry.regain_equipment) {
-            gameState.items = gameState.lost_equipment;
-            gameState.lost_equipment = [];
         };
         // Remove Inner Force.
         if (gameState.entry.inner_force_remove) {
