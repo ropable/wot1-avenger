@@ -50,5 +50,6 @@ wot1app.factory('gameState', function($http) {
     gameState.lost_equipment = [];
     gameState.lost_shuriken = 0;
     gameState.held_loot = [];
+    gameState.allies = [];
     return gameState;
 });

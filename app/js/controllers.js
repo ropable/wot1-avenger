@@ -148,7 +148,7 @@ function NewGameCtrl($scope, $http, localStorageService, Story, Items, Opponents
     $scope.beginGame = function() {
         localStorageService.clearAll();
         // Set starting entry number.
-        gameState.currentEntry = '284';
+        gameState.currentEntry = '251';
         gameState.endurance = 20;
         // Get starting items.
         angular.forEach(itemsjson, function(item) {
@@ -207,6 +207,10 @@ function StoryCtrl($scope, $http, localStorageService, gameState, Story, Items, 
                 gameState.currentOpponents.push(opponentsjson[o]);
             };
         });
+        // Add new allies.
+        if (gameState.entry.allies) {
+            gameState.allies = gameState.entry.allies;
+        };
         // Set combat timer, if required.
         if (gameState.entry.combat_timer) {
             gameState.combatTimer = gameState.entry.combat_timer;
@@ -247,8 +251,7 @@ function StoryCtrl($scope, $http, localStorageService, gameState, Story, Items, 
                 };
             });
         };
-        // Handle different types of options.
-        // type == null indicates a change of entry (no action).
+        // COMBAT!
         if (option.type == 'offence') {  // Offence can be punch, kick or throw.
             // TODO: allow player to choose a target if several exist.
             var target = gameState.currentOpponents[0];
@@ -331,12 +334,43 @@ function StoryCtrl($scope, $http, localStorageService, gameState, Story, Items, 
                 // For now we just attack the first in line.
                 gameState.currentOpponents.splice(0, 1);
             };
+            // Allied offence.
+            // Allies will attack the first living opponent in line, after the player.
+            if (gameState.allies && gameState.currentOpponents.length > 0) {
+                angular.forEach(gameState.allies, function(ally) {
+                    target = gameState.currentOpponents[0];
+                    if (dieRoll(2) > target.defence_ally ) {
+                        var damage = dieRoll(ally[1]) + ally[2];
+                        if (target.damage_mod) {
+                            damage += target.damage_mod;
+                            gameState.currentOpponents[0].damage_mod = 0;
+                        };
+                        gameState.currentOpponents[0].endurance -= damage;
+                        actionText = '{0} attacks {1} and hits for {2} damage!';
+                        actionText = actionText.replace('{0}', ally[0]);
+                        actionText = actionText.replace('{1}', target.name);
+                        actionText = actionText.replace('{2}', damage.toString());
+                        gameState.actions.push([actionText]);
+                    } else {
+                        actionText = '{0} attacks {1} and misses!';
+                        actionText = actionText.replace('{0}', ally[0]);
+                        actionText = actionText.replace('{1}', target.name);
+                        gameState.actions.push([actionText]);
+                    };
+                });
+            };
+            // Target's endurance is reduced to 0 or less.
+            if (gameState.currentOpponents.length > 0 && gameState.currentOpponents[0].endurance <= 0) {
+                gameState.currentOpponents.splice(0, 1);
+            };
             // If we've taken an offensive action and there are no opponents left alive,
             // then we must have won!
             // Replace entry options with a single "Continue".
+            // Also assume that allies are removed after winning a combat.
             if (gameState.currentOpponents.length == 0) {
                 gameState.options = [{"text": "Continue", "entry": gameState.entry.victory}];
                 gameState.actions.push(['You have won this combat!'])
+                gameState.allies = [];
             };
             // Opponent offence.
             var hasBlocked = false;
