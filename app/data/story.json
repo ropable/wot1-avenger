@@ -220,6 +220,34 @@
             }
         ]
     },
+    "23": {
+        "description": "The Barbarian’s voice rises to a shriek of battle lust as he swipes at you, berserk. He cares nothing for your attacks so long as his sword tastes your blood.\n\nHe cuts his sword down towards your head, but you sidestep to the right, twist and lash your left foot towards his face as his sword whistles down past your back.",
+        "image": "251.png",
+        "player_defence": 8,
+        "victory": 47,
+        "options": [
+            {
+                "text": "Punch?",
+                "entry": 92,
+                "type": "offence",
+                "action": "punch",
+                "inner_force": true
+            },
+            {
+                "text": "Throw?",
+                "entry": 39,
+                "type": "offence",
+                "action": "throw"
+            },
+            {
+                "text": "Kick again?",
+                "entry": 23,
+                "type": "offence",
+                "action": "kick",
+                "inner_force": true
+            }
+        ]
+    },
     "26": {
         "description": "By midday of the next day, the Aquamarin has left the islands behind and ahead of you looms the Greater Continent. You turn north and hug the rocky coast for some days; you regain much lost Endurance as you rest, gliding over the still calm seas. It begins to rain slightly on the next day, as you follow the shore of a vast bay. Glaivas comes to talk to you and points to a large estuary where the Greybones empties into the sea. He tells you that his home city, Tor, lies up river. You ask him whether there is a temple to Kwon there and he shakes his head but freely tells you that his goddess is the Allmother, Preserver of Life. You ask him of the cities which lie beyond Tor on the Greybones river but a look of pain crosses his face.\n\n'Let me tell you, instead, of Doomover, for that is our port of call,' he says. 'It is one of the largest cities in the Manmarch, perhaps four hundred thousand souls, and it is ruled by the Legion of the Sword of Doom. Most spit when they hear the name but they are one of the best armies on Orb. They worship the Wargod, Vasch-Ro, He who sows for the Reaper, and they spread fear about them in battle. There are temples to other gods but the Cathedral to the Wargod overshadows them all. The Marshal of the Legion of the Sword of Doom is Honoric, a blackheart who has never been defeated in combat. It is said that he once slew a storm giant, single handed. He is without doubt a peerless swordsman. The order of the Scarlet Mantis has a temple there, too. They send their acolytes to the Far Snows for training, where they become used to hardship of all kinds. Yaemon is the greatest warrior they have ever had to lead them. They use the cross of Avatar, the Supreme Principle of Good as a symbol, but with a serpent twining round it. In this way you may know one if you see one.'\n\nOn the next day, you sight the fortified harbour walls of Doomover and two long blackwood ships dart out to meet you. They fly the flag of the Barbican, the Doomover navy. As they approach, a tall man in black ringed mail orders you to heave to. The captain obeys and the sails are slackened. He answers various questions but when the naval commander asks what business he has at Doomover, he looks nervously at Glaivas, licking his lips. Glaivas answers for him, saying that he has come to sell galley slaves.\n\nThe commander grins, 'I was going to confiscate your ship but as you bring men we have need of, you may pass through the Barbican.' With that, you are allowed on your way.\n\nThe Barbican itself is a huge gatehouse, like a fort, which spans the ends of the harbour walls in an arc. The ship glides beneath it and is tied up at the busy wharf. You thank Glaivas for his help and jump lithely to the land. He is returning to Tor to organise the defence against the forces of Vile should your mission fail. He throws you a pouch containing ten gold pieces, saying, 'Here, you need this. May Fate smile on you, Ninja.' You pocket the pouch and turn to the city.\n\nTwo gates stand side by side. The larger is a huge arch of black obsidian like a rainbow of dark glass. The other, much smaller, consists of two pairs of white marble pillars topped by a portico on which the words 'Portal of the Gods' are written in gold leaf.",
         "image": "26.png",
@@ -327,6 +355,28 @@
             {
                 "text": "Continue",
                 "entry": "death"
+            }
+        ]
+    },
+    "39": {
+        "description": "The Barbarian has worked himself into a berserk frenzy of battle lust, cleaving the air with mighty sweeps of his sword, heedless of pain, wanting only your blood.\n\nThe Dragon's Tail takes him by surprise as you try and sweep his legs from under him. His defence is weak as his sword cuts the air above you.",
+        "image": "251.png",
+        "player_defence": 6,
+        "victory": 47,
+        "options": [
+            {
+                "text": "Punch?",
+                "entry": 92,
+                "type": "offence",
+                "action": "punch",
+                "inner_force": true
+            },
+            {
+                "text": "Kick?",
+                "entry": 23,
+                "type": "offence",
+                "action": "kick",
+                "inner_force": true
             }
         ]
     },
@@ -818,6 +868,34 @@
             }
         ]
     },
+    "92": {
+        "description": "Olvar lets out a ferocious cry as, throwing caution to the wind, he whirls his sword above his head and then lunges at you. He is berserk, lost in a battle frenzy. He will feel no fear or pain until either you or he lie dead.\n\nYou parry his blade with your forearm, sidestep and unleash a Cobra Strike from your hip. He swings his sword in a great arc from left to right, trying to cut open your chest.",
+        "image": "251.png",
+        "player_defence": 8,
+        "victory": 47,
+        "options": [
+            {
+                "text": "Kick?",
+                "entry": 23,
+                "type": "offence",
+                "action": "kick",
+                "inner_force": true
+            },
+            {
+                "text": "Throw?",
+                "entry": 39,
+                "type": "offence",
+                "action": "throw"
+            },
+            {
+                "text": "Punch again?",
+                "entry": 92,
+                "type": "offence",
+                "action": "punch",
+                "inner_force": true
+            }
+        ]
+    },
     "93": {
         "description": "The wild lands give way to the meadows of the valley of the River Fortune. You pass the tracks of strange beasts everywhere and, skirting a dense and gloomy wood, you find a wide swathe trampled in the meadow grass. Bending down to examine the tracks you see that they were made by a large band of Orcs, returning, perhaps to the Rift, a few days ago. As you sniff the air, a man staggers towards you, out of the waist high grass. He is old and wears a blue robe that is in tatters but it is his face that holds your attention. It is encrusted with blood for his eyes have been gouged out.\n\nYou call to him and he sits down suddenly, saying that he has no gold and that he has a terrible disease that you would catch if you ate him. You reassure him that you are not a cannibal and ask him what happened. He tells you that he is a monk from Fiendil. He is losing track of time but he thinks that he has felt the sun on his face four times since a man called Hononc had him blinded for spying through a keyhole.\n\n'He was with a Grandmaster of our order, a fine man named Yaemon and I saw them planning a journey north on a map, but Yaemon heard me and I was caught. Help me, I’m starving, which way is the river?'\n\nYou tell him to walk downhill if he wishes to find the river, and taking pity on him, give him some nuts which you have gathered. He remembers only that they were planning to meet a third man whom they called the Deathmage. There is nothing further you can do to help him and so you journey on towards the city of Fiendil.",
         "options": [
@@ -933,6 +1011,44 @@
             {
                 "text": "Continue",
                 "entry": 125
+            }
+        ]
+    },
+    "106": {
+        "description": "The Barbarian tenses as you place the needle on your rolled tongue and spit it out in one fluid motion. The needle embeds itself in his cheek. He has an iron constitution and although a look of agony twists his features, his system overcomes the virulent poison.\n\nAs you pause in astonishment, he strikes at you and his sword cleaves the air towards your shoulder. You try to bring your left forearm up to sweep aside the blade.",
+        "image": "251.png",
+        "damage_opponent": [
+            [
+                "Olvar the Barbarian",
+                "fixed",
+                4
+            ]
+        ],
+        "player_defence_vs_injury": [
+            8,
+            1,
+            1
+        ],
+        "options": [
+            {
+                "text": "Use the Cobra Strike jab?",
+                "entry": 92,
+                "type": "offence",
+                "action": "punch",
+                "inner_force": true
+            },
+            {
+                "text": "Use the Winged Horse kick?",
+                "entry": 23,
+                "type": "offence",
+                "action": "kick",
+                "inner_force": true
+            },
+            {
+                "text": "Use the Dragon's Tail throw?",
+                "entry": 39,
+                "type": "offence",
+                "action": "throw"
             }
         ]
     },
