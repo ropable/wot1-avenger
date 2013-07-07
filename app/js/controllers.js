@@ -392,7 +392,6 @@ function StoryCtrl($scope, $http, localStorageService, gameState, Story, Items, 
                         actionText += '{0} hits you for {1} damage!'.replace('{0}', o.action_desc);
                         actionText = actionText.replace('{1}', damage.toString());
                         actionText = capitaliseFirstLetter(actionText);
-                        console.log(actionText);
                         gameState.endurance -= damage;
                         // Not all attacks can be blocked.
                         // Use unblockable_attack = true if once-off, else set 'unblockable' in the

@@ -2343,6 +2343,30 @@
             }
         ]
     },
+    "233": {
+        "description": "Runeweaver lies dead at your feet, his sword impaled in the wooden floor by his side. You pick it up but realise that he was indeed something of a magician as well as a warrior, for it needs a magician's spell to produce the pulsating spheres of green light which explode when they hit something.\n\nYou reach for the Circlet but bum yourself when you touch it. Eldritch characters carved upon it show that it was forged deep in the Rift by dark elves. No-one of true heart may touch it.\n\nYou spend the night in the hut and may regain some Endurance. You leave the useless treasures behind; they would encumber you on your journey, and at daybreak you set out once more on your mission. Later in the day you descend from the heights of Fortune Pass.",
+        "loot_add": [
+            [
+                "Gold coin",
+                5
+            ]
+        ],
+        "modify_endurance": 3,
+        "options": [
+            {
+                "text": "Head northeast to the shores of the Sea of the Star and Druath Glennan?",
+                "entry": 219
+            },
+            {
+                "text": "Head due north towards the City of Far Snows?",
+                "entry": 313
+            },
+            {
+                "text": "Turn east through the Trollfens to the City of Ionalbion to take ship across the Sea of the Star?",
+                "entry": 59
+            }
+        ]
+    },
     "235": {
         "description": "You gather grapes and nuts aplenty, living off the land as you jog through the wilderness, checking your position by the position and height of the sun. You cover the ground quickly and are soon in a range of low hills crowned with cypress trees and, climbing up into one, you pass an untroubled and restful night.",
         "modify_endurance": 2,
@@ -2420,6 +2444,26 @@
             }
         ]
     },
+    "241": {
+        "description": "You wait for Runeweaver to lunge at you, then sidestep to the right and try to grab his wrist, twist into him and throw him over your hip.",
+        "player_defence": 7,
+        "options": [
+            {
+                "text": "Attack with the Tiger's paw chop?",
+                "entry": 263,
+                "type": "offence",
+                "action": "punch",
+                "inner_force": true
+            },
+            {
+                "text": "Use the Forked Lightning kick?",
+                "entry": 250,
+                "type": "offence",
+                "action": "kick",
+                "inner_force": true
+            }
+        ]
+    },
     "244": {
         "description": "The second monk comes to attack. Before he can kick, you dance forward and deliver a straight-fingered jab under his ribs.\n\nThe monk tries to throw you with a Mantis version of the Whirlpool throw, then kick you solidly.",
         "victory": 258,
@@ -2475,6 +2519,33 @@
                 "entry": 248,
                 "type": "offence",
                 "action": "punch",
+                "inner_force": true
+            }
+        ]
+    },
+    "250": {
+        "description": "You step in to the right, and try to slam the top of your left foot into his midriff and then up to his throat in quick succession.",
+        "player_defence": 7,
+        "victory": 233,
+        "options": [
+            {
+                "text": "Use the Whirlpool throw?",
+                "entry": 241,
+                "type": "offence",
+                "action": "throw"
+            },
+            {
+                "text": "Attack with the Tiger's paw chop?",
+                "entry": 263,
+                "type": "offence",
+                "action": "punch",
+                "inner_force": true
+            },
+            {
+                "text": "Kick again?",
+                "entry": 250,
+                "type": "offence",
+                "action": "kick",
                 "inner_force": true
             }
         ]
@@ -2614,6 +2685,33 @@
             }
         ]
     },
+    "263": {
+        "description": "You chop with the speed of a striking snake towards the side of Runeweaver's neck.",
+        "player_defence": 6,
+        "victory": 233,
+        "options": [
+            {
+                "text": "Attack with the Forked Lightning kick?",
+                "entry": 250,
+                "type": "offence",
+                "action": "kick",
+                "inner_force": true
+            },
+            {
+                "text": "Use the Whirlpool throw?",
+                "entry": 241,
+                "type": "offence",
+                "action": "throw"
+            },
+            {
+                "text": "Punch again?",
+                "entry": 263,
+                "type": "offence",
+                "action": "punch",
+                "inner_force": true
+            }
+        ]
+    },
     "264": {
         "description": "The second monk comes to attack. You turn sideways on and unleash a Winged Horse kick as he approaches.",
         "victory": 258,
@@ -2680,6 +2778,34 @@
             {
                 "text": "Continue",
                 "entry": 261
+            }
+        ]
+    },
+    "276": {
+        "description": "The warrior-magician hefts his sword normally now, poised to thrust or parry. Perhaps there is no magic left in his sword, you wonder as you decide how to open your attack.",
+        "opponents": [
+            "Runeweaver"
+        ],
+        "options": [
+            {
+                "text": "Attack with the Forked Lightning kick?",
+                "entry": 250,
+                "type": "offence",
+                "action": "kick",
+                "inner_force": true
+            },
+            {
+                "text": "Use the Whirlpool throw?",
+                "entry": 241,
+                "type": "offence",
+                "action": "throw"
+            },
+            {
+                "text": "Use the Tiger's paw chop?",
+                "entry": 263,
+                "type": "offence",
+                "action": "punch",
+                "inner_force": true
             }
         ]
     },
