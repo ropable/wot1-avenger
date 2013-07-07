@@ -437,6 +437,19 @@
             }
         ]
     },
+    "47": {
+        "description": "The Barbarian falls at last, a mass of broken bones. At the end it seemed that he would fight on for ever but his battle cries will no longer trouble the lands of Orb. Runeweaver's sight has returned and he has been watching the closing rounds of the battle. As soon as Olvar falls dead he darts in and grabs the circlet with the blue jewel from the Barbarian's forehead.\n\n'I'll take this,' he says and draws his sword on you.",
+        "options": [
+            {
+                "text": "Fight the man you saved from the birdmen, for the circlet?",
+                "entry": 78
+            },
+            {
+                "text": "Let him go, take 5 gold pieces from Olvar's body and continue your journey?",
+                "entry": "47b"
+            }
+        ]
+    },
     "50": {
         "description": "The girl takes your hand in hers and leads you to the marble slab. The old man explains that he must let some of your blood into the silver chalice if he is to show you the future. He cuts a vein in your arm and the blood pumps into the ewer. You look at him in alarm as he lets it flow until you have lost half a pint and your arm begins to tingle. Then he seals the wound with a spell.\n\nThe girl pours a green potion into the ewer. You feel faint and obey him when he tells you to look at a mirror which hangs on the wall above you. He begins to chant and produces a crystal prism which he holds over the ewer. The blood and potion bubble and the Seer's chanting grows louder. A picture forms in the mirror of two men leaving a city on horseback. The larger is dressed in black plate mail and carries a black shield upon which is emblazoned a silver sword hanging from a silver thread, the Sword of Doom. His face is arrogant and cruel. The other is dressed in the clothes of a martial monk, scarlet with a thin black belt. They are riding towards you in silence and the monk's piercing black eyes gaze unwavering, into yours.\n\nThe Seer informs you that the vision shows Yaemon Grandmaster of Flame, riding with Honoric, Marshal of the Legion of the Sword of Doom, north from Mortavalon. He tells you that they are travelling to the Pillars of Change, each to speak a word which will imprison a god and a goddess in Inferno. Honoric seeks to rule the whole of the Manmarch. You fall into a trance and when you wake up you find yourself outside Doomover, walking on the road to Mortavalon.\n\nYou wonder what the Seer may have done whilst you were entranced. Has he told anyone of your vision? At any rate, the vision suggested that Honoric and Yaemon were far ahead. You realise that you must travel to Mortavalon to find out where Yaemon and Honoric are.",
         "image": "36.png",
@@ -710,6 +723,31 @@
                 "type": "offence",
                 "action": "punch",
                 "inner_force": true
+            }
+        ]
+    },
+    "78": {
+        "description": "As you run to attack, Runeweaver points his sword at you and mouths a spell. A globe of green energy explodes towards you from the sword tip.",
+        "options": [
+            {
+                "prereq": [
+                    "skill",
+                    "Acrobatics"
+                ],
+                "text": "[Acrobatics] Leap into the air, somersault over it and launch yourself at the warrior-magician?",
+                "entry": 288
+            },
+            {
+                "prereq": [
+                    "item",
+                    "Shuriken"
+                ],
+                "text": "Try to deflect the globe with a Shuriken?",
+                "entry": "78b"
+            },
+            {
+                "text": "Try to absorb the impact of the globe with your Iron Sleeves?",
+                "entry": "78c"
             }
         ]
     },
@@ -1691,7 +1729,7 @@
                     "Poison Needles"
                 ],
                 "text": "[Poison Needles] Use a poisoned needle?",
-                "entry": 8
+                "entry": 106
             }
         ]
     },
@@ -2763,6 +2801,15 @@
             }
         ]
     },
+    "288": {
+        "description": "You leap high into the air and somersault towards Runeweaver, over the speeding bolt which explodes against the wall of the hut with a bang.",
+        "options": [
+            {
+                "text": "Continue",
+                "entry": "276"
+            }
+        ]
+    },
     "289": {
         "description": "There is no one at the north gate to see you leave the strange city of Fiendil, but you decide to put as much distance between yourself and its inhabitants as quickly as you can.",
         "boolean_option": true,
@@ -2787,6 +2834,21 @@
             {
                 "text": "Continue",
                 "entry": 275
+            }
+        ]
+    },
+    "292": {
+        "description": "The star flies into the bolt and spins away with a whine. The bolt is thrown off course and explodes harmlessly with a bang. You cirde Runeweaver, looking for an opening.",
+        "loot_remove": [
+            [
+                "Shuriken",
+                1
+            ]
+        ],
+        "options": [
+            {
+                "text": "Continue",
+                "entry": "276"
             }
         ]
     },
@@ -3413,6 +3475,41 @@
             }
         ]
     },
+    "365": {
+        "description": "The throwing star misses and embeds itself in the wooden wall of the hut, as the globe of energy hits you and explodes. The blast sears you and throws you backwards a few paces.",
+        "modify_endurance": -6,
+        "damage_followup": "You snarl in rage as you circle Runeweaver.",
+        "options": [
+            {
+                "text": "Continue",
+                "entry": "276"
+            }
+        ]
+    },
+    "366": {
+        "description": "You try to take the circlet from the Barbarian's head but burn yourself when you touch it. You see from the eldritch characters carved upon it that it was forged deep in the Rift by Dark Elves. No one of true heart may touch it.\n\nYou spend the night in the hut and regain some Endurance. You leave the useless treasures behind; they would encumber you on your journey. You do decide to take 5 gold pieces from Olvar: that could prove useful and at daybreak set out once more on your mission.\n\nLater in the day you descend from the heights of Fortune Pass.",
+        "loot_add": [
+            [
+                "Gold coin",
+                5
+            ]
+        ],
+        "modify_endurance": 3,
+        "options": [
+            {
+                "text": "Head northeast to the shores of the Sea of the Star and Druath Glennan?",
+                "entry": 219
+            },
+            {
+                "text": "Head due north towards the City of Far Snows?",
+                "entry": 313
+            },
+            {
+                "text": "Turn east through the Trollfens to the City of Ionalbion to take ship across the Sea of the Star?",
+                "entry": 59
+            }
+        ]
+    },
     "368": {
         "description": "The Hall of Webs is an archng corridor, like a humpback bridge, which connects the upper floor of the dwellings to the refectory where the monks take their meals. The door opens to reveal a room dimly lit by two flickering candles. Forewarned, you notice the glint of many threads as slender as a spider's web criss-crossing the floor. Some of them, you guess, will be attached to bells or traps which will give you away or kill you. Bending down, you do a handstand and walk carefully into the room on your hands. You are able to balance on one arm whilst with the other you delicately test the floor ahead for strands of web.\n\nIt takes you half an hour to slowly cross the room but you manage it without breaking any of the strands. You reach the door and, neatly flipping onto your feet, open it soundlessly. You are on the balcony above the refectory and the dining hail. Crouching behind the balcony, you overhear the information you need, as the monks drink wine late into the night. It seems Yaemon has left for Mortavalon, accompanied by Honoric, Marshal of the Legion of the Sword of Doom a ten-day since.\n\n Before you leave, you catch sight of a scroll that details some of the kicks, punches and throws used in the Way of the Mantis, the fighting style of the monks who worship Vile. You learn some useful techniques. They are skilled in punching. You also notice that they have no knowledge of the Forked lightning Strike. This may be useful to you whenever you must fight a monk who worships Vile.\n\nYou manage to get out the way you came without difficulty and lie low in a burnt-out bakery for the rest of the night. In the morning, you leave Doomover, intent on catching up with Yaemon and Honoric.",
         "player_modifier": [
@@ -3765,6 +3862,54 @@
             {
                 "text": "Enter the cave?",
                 "entry": 275
+            }
+        ]
+    },
+    "47b": {
+        "description": "You decide to continue on your journey, immediately.",
+        "loot_add": [
+            [
+                "Gold coin",
+                5
+            ]
+        ],
+        "options": [
+            {
+                "text": "Head northeast to the shores of the Sea of the Star and Druath Glennan?",
+                "entry": 219
+            },
+            {
+                "text": "Head due north towards the City of Far Snows?",
+                "entry": 313
+            },
+            {
+                "text": "Turn east through the Trollfens to the City of Ionalbion to take ship across the Sea of the Star?",
+                "entry": 59
+            }
+        ]
+    },
+    "78b": {
+        "description": "You hastily flick a Shuriken at the globe of energy flying towards you.",
+        "player_defence_roll": 7,
+        "options": [
+            {
+                "text": "Continue",
+                "entry": "292"
+            },
+            {
+                "text": "Continue",
+                "entry": "365"
+            }
+        ]
+    },
+    "78c": {
+        "description": "The globe of energy hits you and explodes. The blast sears you and throws you backwards a few paces.",
+        "modify_endurance": -6,
+        "damage_followup": "You snarl in rage as you circle Runeweaver.",
+        "options": [
+            {
+                "text": "Continue",
+                "entry": "276"
             }
         ]
     },
