@@ -225,5 +225,19 @@
         "damage_mod": 0,
         "effects": [],
 	"player_damage_mod": -1
+    },
+    "Runeweaver": {
+        "name": "Runeweaver",
+        "action_desc": "Runeweaver",
+        "endurance": 10,
+        "damage": [
+            1,
+            1
+        ],
+        "defence_punch": 5,
+        "defence_kick": 6,
+        "defence_throw": 5,
+        "damage_mod": 0,
+        "effects": []
     }
 }
