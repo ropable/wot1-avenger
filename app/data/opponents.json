@@ -239,5 +239,19 @@
         "defence_throw": 5,
         "damage_mod": 0,
         "effects": []
+    },
+    "Snow Giant": {
+        "name": "Snow Giant",
+        "action_desc": "the Snow Giant",
+        "endurance": 22,
+        "damage": [
+            1,
+            3
+        ],
+        "defence_punch": 5,
+        "defence_kick": 6,
+        "defence_throw": 6,
+        "damage_mod": 0,
+        "effects": []
     }
 }

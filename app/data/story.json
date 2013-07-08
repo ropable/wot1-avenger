@@ -2781,6 +2781,166 @@
             }
         ]
     },
+"111": {
+    "description": "The Snow Giant falls onto the ice with a crack, unmoving. Its blood stains the frosty surface a rosy pink. Panting for breath, you look around and see that the knight lies dead, poisoned by the Cobra Man who is chasing the man in blue and gold robes.\n\nYou move to the moat side of the ice and manage to break a small ice-floe away from its edge. You give it a great heave towards the castle and jump on to it. Looking into the moat you can see it is infested with Floating Mouths, voracious fish that are all teeth and elastic belly.\n\nAs you float gently across, the man in blue and gold robes grabs a long pole and, using magic, rises gently into the air, to the applause of the crowd. He pushes himself towards the castle with the pole, and you arrive at the other side of the moat together.",
+    "options": [
+        {
+            "text": "Continue",
+            "entry": 372
+        }
+    ]
+},
+"160": {
+    "description": "The white-furred giant swoops to sweep you to the ground with its great curved talons. You drive your fist towards its groin.",
+    "image": "252.png",
+    "player_defence": 6,
+    "victory": 111,
+    "options": [
+        {
+            "text": "Use the Forked Lightning Strike kick?",
+            "entry": 184
+        },
+        {
+            "text": "Slide beneath its flailing arms and use the Dragon's Tail throw?",
+            "entry": 202,
+            "type": "offence",
+            "action": "throw"
+        },
+        {
+            "text": "Punch again?",
+            "entry": 160,
+            "type": "offence",
+            "action": "punch",
+            "inner_force": true
+        }
+    ]
+},
+"184": {
+    "description": "You lash your left foot at the great mould of white fur twice in quick succession, aiming for its side and temple, but almost lose your footing.",
+    "image": "252.png",
+    "fate_roll": true,
+    "options": [
+        {
+            "text": "Fate smiles on you!",
+            "entry": "184b",
+            "type": "offence",
+            "action": "kick"
+        },
+        {
+            "text": "Fate turns her back on you!",
+            "entry": 146,
+            "type": "offence",
+            "action": "punch"
+        }
+    ]
+},
+"184b": {
+    "description": "Your stance steady, you lash your foot at the beast's head.",
+    "image": "252.png",
+    "player_defence": 5,
+    "victory": 111,
+    "options": [
+        {
+            "text": "Slide beneath its flailing arms and use the Dragon's Tail throw?",
+            "entry": 202,
+            "type": "offence",
+            "action": "throw"
+        },
+        {
+            "text": "Use the Iron Fist punch?",
+            "entry": 160,
+            "type": "offence",
+            "action": "punch",
+            "inner_force": true
+        },
+        {
+            "text": "Kick again?",
+            "entry": 184
+        }
+    ]
+},
+"146": {
+    "description": "You lose your balance as your loot slips on the treacherous ice and slide across the shiny surface as the talons of the Snow Giant descend upon you.",
+    "image": "252.png",
+    "modify_endurance": -6,
+    "damage_followup": "You somehow manage to regain your feet as the crowd howls with blood-lust, and attack again using the Iron Fist punch, striking upwards from your crouched position at the white hulk.",
+    "player_defence": 6,
+    "options": [
+        {
+            "text": "Use the Forked Lightning Strike kick?",
+            "entry": 184
+        },
+        {
+            "text": "Slide beneath its flailing arms and use the Dragon's Tail throw?",
+            "entry": 202,
+            "type": "offence",
+            "action": "throw"
+        },
+        {
+            "text": "Punch again?",
+            "entry": 160,
+            "type": "offence",
+            "action": "punch",
+            "inner_force": true
+        }
+    ]
+},
+"202": {
+    "description": "The crowd gasps as you slide beneath the grasp of the white furred colossus and wrapping your legs around its, twist your body in an effort to throw it to the ground. Though surer-footed in these conditions than most, the Snow Giant still finds the ice slippery, but its legs are as wide as your chest.",
+    "image": "252.png",
+    "player_defence": 7,
+    "options": [
+        {
+            "text": "Use the Forked Lightning Strike kick?",
+            "entry": 184
+        },
+        {
+            "text": "Use the Iron Fist punch?",
+            "entry": 160,
+            "type": "offence",
+            "action": "punch",
+            "inner_force": true
+        }
+    ]
+},
+    "252": {
+    "description": "The ice is treacherous and only your fine sense of balance allows you to keep your footing as the Snow Giant bears down on you, waving its black talons. You cannot see its eyes but from its aggressive bearing you realise you must fight the white-furred colossus.",
+    "image": "252.png",
+    "opponents": ["Snow Giant"],
+    "options": [
+        {
+            "text": "Try the Forked Lightning Strike kick?",
+            "entry": 184
+        },
+        {
+            "text": "Dart forward and use the Iron Fist punch?",
+            "entry": 160,
+            "type": "offence",
+            "action": "punch",
+            "inner_force": true
+        },
+        {
+            "text": "Launch yourself into a slide across the ice and use the Dragon's Tail throw?",
+            "entry": 202,
+            "type": "offence",
+            "action": "throw"
+        }
+    ]
+},
+    "261": {
+    "description": "The floor of the arena is divided into sections. In the centre a huge Hobgoblin, brandishing a trident, stands at the top of a miniature castle which is surrounded by a large moat. The cirde outside the moat is divided into four sectors by fences of iron spikes. The sector to your left is a small plain of grass, to your right is a frozen lake, created magically. Beyond the plain is a lurid green swamp and between swamp and ice is a desert of sand dunes. You are standing on a platform between the grass and ice.\n\nAt the opposite side of the arena a man in silver armour, his face hidden by his visor, stands on a similar platform. Between you both, to your left is a Dark Elf, waving her blacksteel sword defiantly and at the edge of the arena to your right stands a young man in flowing blue and gold robes.\n\nOn the ice-lake stands a Snow Giant, ten feet tall, and two roaring lions roam the plain. You can see nothing but a boat in the swamp and in the desert waits a man with the swaying head and neck of a cobra. As you look around you the platform begins to slide down towards the ground and you will soòn be within reach of the lions or the Snow Giant. Indeed, they can now move freely into each other's area.\n\nThe walls of the arena are sheer and lined with the spears of soldiers. The man in armour steps onto the dunes as the Dark Elf wades into the swamp. The man in the blue and gold robes waits, still.",
+    "image": "261.png",
+    "options": [
+        {
+            "text": "Move to the plain and take your chances with the lions?",
+            "entry": 243
+        },
+        {
+            "text": "Step onto the ice lake?",
+            "entry": 252
+        }
+    ]
+},
     "276": {
         "description": "The warrior-magician hefts his sword normally now, poised to thrust or parry. Perhaps there is no magic left in his sword, you wonder as you decide how to open your attack.",
         "opponents": [
