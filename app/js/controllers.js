@@ -151,6 +151,7 @@ function NewGameCtrl($scope, $http, localStorageService, Story, Items, Opponents
         gameState.currentEntry = '275';
         gameState.endurance = 20;
         // Get starting items.
+        gameState.items = [];
         angular.forEach(itemsjson, function(item) {
             if (item.start) {
                 item.count = 1;
@@ -525,8 +526,8 @@ function StoryCtrl($scope, $http, localStorageService, gameState, Story, Items, 
                 });
             });
         };
-        // Some sequences require that specific items are held away from the player temporarily
-        // (until combat is finished, etc).
+        // Some sequences require that specific items are held away from the
+        // player temporarily (until combat is finished, etc).
         // In hindsight, I should have used this to handle shuriken :/
         if (gameState.entry.loot_hold) {
             angular.forEach(gameState.entry.loot_hold, function(loot) {
@@ -591,10 +592,26 @@ function StoryCtrl($scope, $http, localStorageService, gameState, Story, Items, 
         persistGameState(gameState, localStorageService);
     };
 
+    $scope.useItem = function(item) {
+        // Use inventory items: typically healing items which can only
+        // be used outside combat.
+        // TODO: add an 'in combat' flag to entries.
+        if (item.endurance) {
+            var total = gameState.endurance + item.endurance;
+            if (total > 20) {
+                gameState.endurance = 20;
+            } else {
+                gameState.endurance += item.endurance;
+            };
+            item.count -= 1;
+        };
+    };
+
     $scope.blockAttack = function(action) {
         // Handle blocking: the action array contains the action text plus the damage taken.
         // action: [actionText, true, damage, player_defence]
-        // Test if the block in successful (player_defence). If so, reverse the damage and update the action text.
+        // Test if the block in successful (player_defence). If so, reverse the damage and
+        // update the action text.
         if (dieRoll(2) < action[3]) {
             // Success!
             if (gameState.endurance <= 0) {  // We blocked a potentially fatal attack.

@@ -53,7 +53,8 @@
     },
     "Healing potion": {
         "name": "Healing potion",
-        "desc": "A small bottle of clear blue liquid, able to restore up to ten Endurance points."
+        "desc": "[Click to use] A small bottle of clear blue liquid, able to restore up to ten Endurance points.",
+        "endurance": 10
     },
     "Gauntlet of Striking": {
         "name": "Gauntlet of Striking",
@@ -70,6 +71,7 @@
     },
     "Healing herbs": {
         "name": "Healing herbs",
-        "desc": "A bag of herbs with a potent healing virtue, able to restore up to eight Endurance points."
+        "desc": "[Click to use] A bag of herbs with a potent healing virtue, able to restore up to eight Endurance points.",
+        "endurance": 8
     }
 }
