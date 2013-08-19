@@ -148,7 +148,7 @@ function NewGameCtrl($scope, $http, localStorageService, Story, Items, Opponents
     $scope.beginGame = function() {
         localStorageService.clearAll();
         // Set starting entry number.
-        gameState.currentEntry = '275';
+        gameState.currentEntry = '36';
         gameState.endurance = 20;
         // Get starting items.
         gameState.items = [];
@@ -450,6 +450,16 @@ function StoryCtrl($scope, $http, localStorageService, gameState, Story, Items, 
         // Note that might need to modify gameState.entryText if damage is dealt but the
         // player is still alive.
         if (gameState.entry.modify_endurance && !gameState.cheatMode) {
+            if (gameState.entry.modify_endurance > 0) {
+                // Add a notification.
+                $.pnotify({
+                    text: 'You have gained # endurance!'.replace('#', gameState.entry.modify_endurance)
+                });
+            } else {
+                $.pnotify({
+                    text: 'You have lost # endurance!'.replace('#', Math.abs(gameState.entry.modify_endurance))
+                });
+            };
             var total = gameState.endurance + gameState.entry.modify_endurance;
             if (total > 20) {
                 gameState.endurance = 20;
@@ -596,6 +606,7 @@ function StoryCtrl($scope, $http, localStorageService, gameState, Story, Items, 
         // Use inventory items: typically healing items which can only
         // be used outside combat.
         // TODO: add an 'in combat' flag to entries.
+        console.log('foo');
         if (item.endurance) {
             var total = gameState.endurance + item.endurance;
             if (total > 20) {
