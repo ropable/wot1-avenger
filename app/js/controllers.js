@@ -510,6 +510,10 @@ function StoryCtrl($scope, $http, localStorageService, gameState, Story, Items, 
         // Phat loot!
         if (gameState.entry.loot_add) {
             angular.forEach(gameState.entry.loot_add, function(loot) {
+                // Add a notification.
+                $.pnotify({
+                    text: 'You have gained a #'.replace('#', loot[0])
+                });
                 var owned = false;
                 // Find out if the loot exists in the inventory already.
                 // If so, increment the count.
@@ -530,6 +534,10 @@ function StoryCtrl($scope, $http, localStorageService, gameState, Story, Items, 
         if (gameState.entry.loot_remove) {
             angular.forEach(gameState.entry.loot_remove, function(loot) {
                 angular.forEach(gameState.items, function(item) {
+                // Add a notification.
+                $.pnotify({
+                    text: 'You have lost a #'.replace('#', loot[0])
+                });
                     if (item.name == loot[0]) {
                         item.count -= loot[1];
                     };
@@ -562,11 +570,14 @@ function StoryCtrl($scope, $http, localStorageService, gameState, Story, Items, 
         };
         // Losing all equipment (captured, etc).
         if (gameState.entry.lose_equipment) {
+            // Add a notification.
+            $.pnotify({text: 'You have lost all your equipment!'});
             gameState.lost_equipment = gameState.items;
             gameState.items = [];
         };
         // Regaining all equipment.
         if (gameState.entry.regain_equipment) {
+            $.pnotify({text: 'You have regained all your equipment!'});
             gameState.items = gameState.lost_equipment;
             gameState.lost_equipment = [];
         };
@@ -606,7 +617,6 @@ function StoryCtrl($scope, $http, localStorageService, gameState, Story, Items, 
         // Use inventory items: typically healing items which can only
         // be used outside combat.
         // TODO: add an 'in combat' flag to entries.
-        console.log('foo');
         if (item.endurance) {
             var total = gameState.endurance + item.endurance;
             if (total > 20) {
