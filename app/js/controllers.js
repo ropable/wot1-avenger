@@ -3,6 +3,7 @@
 /* Utility functions */
 var dieRoll = function(n) {
     // Return the total of nd6.
+    // We only roll d6 in this adventure.
     var total = 0;
     for (var i = 0; i < n; i++){
         total += Math.floor(Math.random() * 6 + 1);
@@ -12,11 +13,13 @@ var dieRoll = function(n) {
 
 var textMarkup = function(text) {
     // Accepts Markdown-formatted text string, returns HTML.
+    // Probably should have done an Angular directive for this.
     var converter = new Showdown.converter();
     return converter.makeHtml(text);
 };
 
 function capitaliseFirstLetter(string) {
+    // Accepts and returns a string with the first letter as a capital.
     return string.charAt(0).toUpperCase() + string.slice(1);
 };
 
@@ -55,6 +58,7 @@ var validEntryChoices = function(gameState) {
             if (gameState.cheatMode) {
                 // If we're cheating, enable all options always.
                 gameState.options.push(option);
+            // Otherwise, where options have a prerequesite, test if this is met.
             } else if (option.prereq && option.prereq[0] == 'skill') {
                 // Iterate over the chosenSkills array
                 angular.forEach(gameState.skills, function(skill) {
@@ -76,13 +80,14 @@ var validEntryChoices = function(gameState) {
                     prereq_met = true;
                 };
             } else {
-                // No prerequesites.
+                // No prerequesites - push the option into the array.
                 gameState.options.push(option);
             };
         });
     };
-    // Handle "Boolean options" - i.e. those with a prereqisite that allows an action.
-    // This aims to be a little slicker than simply adding both options if the prereq is met.
+    // Handle "Boolean options" - i.e. those with a prereqisite that allows one action.
+    // This aims to be a little slicker than simply adding both options if the prereq is met,
+    // given that the second option is always a negative consequence.
     // Assumes two options, and the first is always the one with the prereqisite.
     // If the prereq was met (or we're cheating), both options should be in the array now.
     if (gameState.entry.boolean_option && prereq_met) {
@@ -113,6 +118,7 @@ var readGameState = function(gameState, localStorageService) {
 
 /* Controllers */
 function NewGameCtrl($scope, $http, localStorageService, Story, Items, Opponents, $location, gameState) {
+    // Controller for the "new game" page.
     var storyjson = Story.get();
     var itemsjson = Items.get();
     var opponentsjson = Opponents.get();
@@ -127,6 +133,7 @@ function NewGameCtrl($scope, $http, localStorageService, Story, Items, Opponents
     $scope.selectedCount = 0;
 
     $scope.selectSkill = function($event, skill) {
+        // Alter the scope to modify the form used to choose starting skills.
         var checkbox = event.target;
         if (checkbox.checked) {
             // Add the skill to the chosenSkills array.
@@ -142,10 +149,12 @@ function NewGameCtrl($scope, $http, localStorageService, Story, Items, Opponents
     };
 
     $scope.isSelected = function(skill) {
+        // Returns true if a skill's form index is in the chosenSkills array.
         return $scope.chosenSkills.indexOf(skill) >= 0;
     };
 
     $scope.beginGame = function() {
+        // Clear local storage, set starting values, then initiate the first entry.
         localStorageService.clearAll();
         // Set starting entry number.
         gameState.currentEntry = '36';
@@ -185,6 +194,7 @@ function NewGameCtrl($scope, $http, localStorageService, Story, Items, Opponents
 //NewGameCtrl.$inject = [];
 
 function StoryCtrl($scope, $http, localStorageService, gameState, Story, Items, Opponents, Notes) {
+    // Controller for the "in progress" page.
     var storyjson = Story.get();
     var opponentsjson = Opponents.get();
     var itemsjson = Items.get();
