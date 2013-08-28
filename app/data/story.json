@@ -32,6 +32,33 @@
             }
         ]
     },
+    "134": {
+    "description": "As you near the sunken platform that separates the swamp from the desert near the arena wall, there is a bubbling in the mire ahead of you. You change direction and, planting your foot on a mossy hummock, launch yourself into the air and flip over the high fence of iron spikes drawing another gasp from the crowd. You land on your feet and survey the arena for a moment.\n\nThe Dark Elf and the Shaggoth arc nowhere to be seen. The man in blue and gold robes has slain the Snow Giant but the knight in armour lies in an awkward position on the dunes with the Cobra Man towering over him. A long thin pole is propped up in a dune near the knight's body. You decide to attack the Cobra Man to gain the pole, hoping to vault across the moat.\n\nThe Cobra Man's head sways hypnòtically above yours; he is waiting to strike.",
+    "opponents": ["Cobra Man"],
+    "options": [
+        {
+            "text": "Use the Tiger's Paw chop?",
+            "entry": 42,
+            "type": "offence",
+            "action": "punch",
+            "inner_force": true
+        },
+        {
+            "text": "Use the Winged Horse kick?",
+            "entry": 25,
+            "type": "offence",
+            "action": "kick",
+            "inner_force": true
+        },
+        
+        {
+            "text": "Use the Teeth of the Tiger throw?",
+            "entry": 61,
+            "type": "offence",
+            "action": "throw"
+        }
+    ]
+},
     "4": {
         "description": "The priests rush to the edge of the river and one of them catches sight of you and points. They begin to throw off their chainmail.",
         "options": [
