@@ -9,12 +9,21 @@ learn AngularJS in greater detail.
 
 # COPYRIGHT
 
-This project is based upon a copyrighted work to which I make no assertion of ownership. The author
-is [NAME](URL) and the illustrator is [NAME](URL). While the software portions of the project were written by
-myself, the setting, fiction and illustrations are intellectual property of their respective copyright
+This project is based upon a copyrighted work called [Avenger](http://www.goodreads.com/book/show/1029651.Avenger_)
+to which I make no assertion of ownership. The authors
+are [Mark Smith](http://www.goodreads.com/author/show/40911.Mark_Smith) and Jamie Thompson. While
+the software portions of the project were written by myself, the setting, fiction and illustrations
+are intellectual property of their respective copyright
 holders. I have duplicated these elements as part of the project on the basis that the book is
-relatively obscure and long out of print. This project is also entirely noncommercial in nature,
-with the intent of preserving this work for future audiences as well as being a learning activity.
+relatively obscure and long out of print. This is obviously a complete infringement of copyright,
+however I'm hoping that the copyright holder(s) will forgive me on the following basis:
+
+1. This project is entirely noncommercial in nature;
+2. I haven't advertised or promoted it anywhere;
+3. It was created with the intent of preserving this work for future audiences
+4. It was undertaken as a learning activity.
+
+Doesn't really count as "fair use", but hope springs eternal eh?
 
 The copyright holder needs only to send a request to <ashley@ropable.com>, and I will remove the
 application and project from public view.
