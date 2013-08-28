@@ -157,7 +157,7 @@ function NewGameCtrl($scope, $http, localStorageService, Story, Items, Opponents
         // Clear local storage, set start values, then initiate the first entry.
         localStorageService.clearAll();
         // Set starting entry number.
-        gameState.currentEntry = '36';
+        gameState.currentEntry = '134';
         gameState.endurance = 20;
         // Get start items.
         gameState.items = [];
@@ -272,6 +272,7 @@ function StoryCtrl($scope, $http, localStorageService, gameState, Story, Items, 
         if (option.type == 'offence') {  // Offence can be punch, kick or throw.
             // TODO: allow player to choose a target if several exist.
             var target = gameState.currentOpponents[0];
+            var hitOpponent = false;
             // Decrement combat timer, if required.
             if (gameState.combatTimer) {
                 gameState.combatTimer -= 1;
@@ -279,6 +280,7 @@ function StoryCtrl($scope, $http, localStorageService, gameState, Story, Items, 
             if (option.action == 'punch') {
                 // Check 2d6 + attack modifer against target defence.
                 if ((dieRoll(2) + gameState.punch + gameState.attackModifierTemp) > target.defence_punch || gameState.cheatMode) {
+                    hitOpponent = true;
                     var damage = dieRoll(1);
                     // Handle Inner Force modifer.
                     if (useInnerForce) {
@@ -303,6 +305,7 @@ function StoryCtrl($scope, $http, localStorageService, gameState, Story, Items, 
             } else if (option.action == 'kick') {
                 // Check 2d6 + attack modifer against target defence.
                 if ((dieRoll(2) + gameState.kick + gameState.attackModifierTemp) > target.defence_kick || gameState.cheatMode) {
+                    hitOpponent = true;
                     var damage = dieRoll(1) + 2;  // Kicks do more damage.
                     // Handle Inner Force modifer.
                     if (useInnerForce) {
@@ -323,6 +326,7 @@ function StoryCtrl($scope, $http, localStorageService, gameState, Story, Items, 
                 };
             } else if (option.action == 'throw') {
                 if ((dieRoll(2) + gameState.throw) > target.defence_throw || gameState.cheatMode) {
+                    hitOpponent = true;
                     // Occasionally, throws can result in your one-shotting opponents.
                     if (gameState.entry.instakill_throw) {
                         gameState.actions.push([gameState.entry.instakill_desc]);
@@ -392,6 +396,11 @@ function StoryCtrl($scope, $http, localStorageService, gameState, Story, Items, 
             // Opponent offence.
             var hasBlocked = false;
             angular.forEach(gameState.currentOpponents, function(o) {
+                // Handle the stupid Cobra Man's instant-kill attack.
+                if (o.effects.indexOf('instakill_on_miss') > -1 && !hitOpponent) {
+                    gameState.options = [{"text": "Continue", "entry": "412"}];
+                };
+                //
                 actionText = '';
                 if (o.effects.indexOf('thrown') > -1) {  // Thrown opponents can't attack.
                     o.effects.splice(o.effects.indexOf('thrown'), 1);
