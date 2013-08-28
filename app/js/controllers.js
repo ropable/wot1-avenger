@@ -133,7 +133,7 @@ function NewGameCtrl($scope, $http, localStorageService, Story, Items, Opponents
     $scope.selectedCount = 0;
 
     $scope.selectSkill = function($event, skill) {
-        // Alter the scope to modify the form used to choose starting skills.
+        // Alter the scope to modify the form used to choose start skills.
         var checkbox = event.target;
         if (checkbox.checked) {
             // Add the skill to the chosenSkills array.
@@ -154,13 +154,14 @@ function NewGameCtrl($scope, $http, localStorageService, Story, Items, Opponents
     };
 
     $scope.beginGame = function() {
-        // Clear local storage, set starting values, then initiate the first entry.
+        // Clear local storage, set start values, then initiate the first entry.
         localStorageService.clearAll();
         // Set starting entry number.
         gameState.currentEntry = '36';
         gameState.endurance = 20;
-        // Get starting items.
+        // Get start items.
         gameState.items = [];
+        // TODO: create a conf file for start variables.
         angular.forEach(itemsjson, function(item) {
             if (item.start) {
                 item.count = 1;
@@ -248,18 +249,23 @@ function StoryCtrl($scope, $http, localStorageService, gameState, Story, Items, 
         };
         if (gameState.entry.damage_player && !gameState.cheatMode) {
             angular.forEach(gameState.entry.damage_player, function(damage) {
+                var note = 'You have lost {0} {1}!';
                 // Damage might be random, or fixed.
                 if (damage[1] == 'random') {
                     var dam = dieRoll(damage[2][0]) + damage[2][1];
                 } else {
                     var dam = damage[2];
                 };
+                note = note.replace('{0}', dam);
                 // Damage might be to endurance, or combat modifiers.
                 if (damage[0] == 'endurance') {
                     gameState.endurance -= dam;
+                    note = note.replace('{1}', 'endurance');
                 } else if (damage[0] == 'kick') {
                     gameState.kick -= dam;
+                    note = note.replace('{1}', 'kick modifier');
                 };
+                $.pnotify({text: note});
             });
         };
         // COMBAT!
