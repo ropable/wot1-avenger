@@ -32,33 +32,6 @@
             }
         ]
     },
-    "134": {
-    "description": "As you near the sunken platform that separates the swamp from the desert near the arena wall, there is a bubbling in the mire ahead of you. You change direction and, planting your foot on a mossy hummock, launch yourself into the air and flip over the high fence of iron spikes drawing another gasp from the crowd. You land on your feet and survey the arena for a moment.\n\nThe Dark Elf and the Shaggoth arc nowhere to be seen. The man in blue and gold robes has slain the Snow Giant but the knight in armour lies in an awkward position on the dunes with the Cobra Man towering over him. A long thin pole is propped up in a dune near the knight's body. You decide to attack the Cobra Man to gain the pole, hoping to vault across the moat.\n\nThe Cobra Man's head sways hypnòtically above yours; he is waiting to strike.",
-    "opponents": ["Cobra Man"],
-    "options": [
-        {
-            "text": "Use the Tiger's Paw chop?",
-            "entry": 42,
-            "type": "offence",
-            "action": "punch",
-            "inner_force": true
-        },
-        {
-            "text": "Use the Winged Horse kick?",
-            "entry": 25,
-            "type": "offence",
-            "action": "kick",
-            "inner_force": true
-        },
-        
-        {
-            "text": "Use the Teeth of the Tiger throw?",
-            "entry": 61,
-            "type": "offence",
-            "action": "throw"
-        }
-    ]
-},
     "4": {
         "description": "The priests rush to the edge of the river and one of them catches sight of you and points. They begin to throw off their chainmail.",
         "options": [
@@ -166,6 +139,25 @@
             }
         ]
     },
+    "13": {
+        "description": "You try to leap up and lock your legs around the Cobra Man's neck as he strikes to twist and throw him to the ground, but his speed still surprises you.",
+        "options": [
+            {
+                "text": "Use the Winged Horse kick?",
+                "entry": 25,
+                "type": "offence",
+                "action": "kick",
+                "inner_force": true
+            },
+            {
+                "text": "Use the Tiger's Paw chop?",
+                "entry": 42,
+                "type": "offence",
+                "action": "punch",
+                "inner_force": true
+            }
+        ]
+    },
     "16": {
         "description": "You walk to the barracks and join a queue of people, some young and fit, others older, looking a little down on their luck. You are chosen with a few of the others to demonstrate your skill with the sword, which you manage adequately but not well, never having been trained in sword play. You are grouped together and given drill practice for some hours before being marched to your night barracks. You manage to discover that the Legion of the Sword of Doom is going to attack the people of the Spires of Foreshadowing but that there is plenty of time to be trained for battle, because its leader, Honoric, has left the city and journeyed north.\n\nAs you all settle down to sleep, they begin to talk of pillaging the Spires and the loot that they will bring home. The barracks are guarded in case any of the new recruits think better of joining up but you decide that there is nothing more of interest here and try to desert in the quiet hours before dawn. You wrap your black Ninja headgear around your head until only the slits of your eyes are visible and don your black costume.",
         "options": [
@@ -269,6 +261,32 @@
             {
                 "text": "Kick again?",
                 "entry": 23,
+                "type": "offence",
+                "action": "kick",
+                "inner_force": true
+            }
+        ]
+    },
+    "25": {
+        "description": "The Cobra Man's strike is as fast as your own as you turn sideways on and drive your heel towards his chest.",
+        "victory": 394,
+        "options": [
+            {
+                "text": "Use the Tiger's Paw chop?",
+                "entry": 42,
+                "type": "offence",
+                "action": "punch",
+                "inner_force": true
+            },
+            {
+                "text": "Try the Teeth of the Tiger throw?",
+                "entry": 13,
+                "type": "offence",
+                "action": "throw"
+            },
+            {
+                "text": "Kick again?",
+                "entry": 25,
                 "type": "offence",
                 "action": "kick",
                 "inner_force": true
@@ -403,6 +421,32 @@
                 "entry": 23,
                 "type": "offence",
                 "action": "kick",
+                "inner_force": true
+            }
+        ]
+    },
+    "42": {
+        "description": "As the Cobra Man's lidless eyes watch, warily waiting for you to commit yourself, you drive the back of your hand towards the swaying neck. You will do well to beat the snake man's whip-like strike.",
+        "victory": 394,
+        "options": [
+            {
+                "text": "Use the Winged Horse kick?",
+                "entry": 25,
+                "type": "offence",
+                "action": "kick",
+                "inner_force": true
+            },
+            {
+                "text": "Try the Teeth of the Tiger throw?",
+                "entry": 13,
+                "type": "offence",
+                "action": "throw"
+            },
+            {
+                "text": "Punch again?",
+                "entry": 42,
+                "type": "offence",
+                "action": "punch",
                 "inner_force": true
             }
         ]
@@ -1482,6 +1526,34 @@
             {
                 "text": "Do not take this risk and abandon the chance to find Togawa, if he still lives?",
                 "entry": 113
+            }
+        ]
+    },
+    "134": {
+        "description": "As you near the sunken platform that separates the swamp from the desert near the arena wall, there is a bubbling in the mire ahead of you. You change direction and, planting your foot on a mossy hummock, launch yourself into the air and flip over the high fence of iron spikes drawing another gasp from the crowd. You land on your feet and survey the arena for a moment.\n\nThe Dark Elf and the Shaggoth arc nowhere to be seen. The man in blue and gold robes has slain the Snow Giant but the knight in armour lies in an awkward position on the dunes with the Cobra Man towering over him. A long thin pole is propped up in a dune near the knight's body. You decide to attack the Cobra Man to gain the pole, hoping to vault across the moat.\n\nThe Cobra Man's head sways hypnòtically above yours; he is waiting to strike.",
+        "opponents": [
+            "Cobra Man"
+        ],
+        "options": [
+            {
+                "text": "Use the Tiger's Paw chop?",
+                "entry": 42,
+                "type": "offence",
+                "action": "punch",
+                "inner_force": true
+            },
+            {
+                "text": "Use the Winged Horse kick?",
+                "entry": 25,
+                "type": "offence",
+                "action": "kick",
+                "inner_force": true
+            },
+            {
+                "text": "Use the Teeth of the Tiger throw?",
+                "entry": 13,
+                "type": "offence",
+                "action": "throw"
             }
         ]
     },
@@ -4056,6 +4128,15 @@
             }
         ]
     },
+    "394": {
+        "description": "The Cobra Man lies spread-eagled on the sand, dead. The crowd roars with approval, as you pluck the pole from the nearby dune. You grab one end and, holding it out before you, sprint to the edge of the desert. Planting the pole in the sands, you sail over the wide moat which you notice is infested with Floating Mouths, voracious fish that are all mouth and elastic belly.\n\nYou land on the wall which is the lowest part of the castle as the man dressed in blue and gold floats across the moat on a small ice floe which has broken away from the edge of the ice lake.",
+        "options": [
+            {
+                "text": "Continue",
+                "entry": 372
+            }
+        ]
+    },
     "395": {
         "description": "The monk is also an expert in unarmed combat and tensed for an attack from his dark assailant. He defends against your Winged Horse kick as you grunt with an explosion of Inner Force.",
         "opponent_defence_roll": 6,
@@ -4218,6 +4299,24 @@
             }
         ]
     },
+    "412": {
+        "description": "The Cobra Man's strike is blindingly fast and his fangs sink into your arm, pumping a deadly venom into your veins.",
+        "boolean_option": true,
+        "options": [
+            {
+                "prereq": [
+                    "skill",
+                    "Immunity to Poisons"
+                ],
+                "text": "[Immunity to Poisons] Continue",
+                "entry": "412a"
+            },
+            {
+                "text": "Continue",
+                "entry": "412b"
+            }
+        ]
+    },
     "414": {
         "description": "You stare up into the night sky until you can see in the dark as if you were an owl. Then squeezing through the narrowest of gaps between two buildings you make your way towards the Hall of Webs which is in fact, a large hump-back bridge, thirty feet up and completely endosed. It connects the upper floor of the sleeping quarters to the balcony of the refectory where the monks eat their meals. Standing below the window in the centre of the arch, you fit your Cat’s Claws to your hands and feet and take the small grappling hook and rope from one of the inner pockets of your costume. You fling the padded hook into the open window and pull the rope taut before climbing it hand over hand, like a monkey.\n\nYou are just below the window when you see a man's hands on the hook above you.",
         "options": [
@@ -4252,6 +4351,41 @@
             {
                 "text": "Enter the cave?",
                 "entry": 275
+            }
+        ]
+    },
+    "412a": {
+        "description": "The Cobra Man's venom has no effect on you, though his fangs tear your flesh open. You launch into your next attack.",
+        "modify_endurance": -2,
+        "options": [
+            {
+                "text": "Use the Winged Horse kick?",
+                "entry": 25,
+                "type": "offence",
+                "action": "kick",
+                "inner_force": true
+            },
+            {
+                "text": "Use the Tiger's Paw chop?",
+                "entry": 42,
+                "type": "offence",
+                "action": "punch",
+                "inner_force": true
+            },
+            {
+                "text": "Use the Teeth of the Tiger throw?",
+                "entry": 13,
+                "type": "offence",
+                "action": "throw"
+            }
+        ]
+    },
+    "412b": {
+        "description": "You find it suddenly difficult to breathe. You fall back onto the sand and die as the roaring of blood in your ears mingles with the roar of the crowd. Your adventure is over.",
+        "options": [
+            {
+                "text": "Continue",
+                "entry": "death"
             }
         ]
     },
