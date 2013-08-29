@@ -397,48 +397,49 @@ function StoryCtrl($scope, $http, localStorageService, gameState, Story, Items, 
             var hasBlocked = false;
             angular.forEach(gameState.currentOpponents, function(o) {
                 // Handle the stupid Cobra Man's instant-kill attack.
-                if (o.effects.indexOf('instakill_on_miss') > -1 && !hitOpponent) {
+                if (o.name == 'Cobra Man' && !hitOpponent) {
                     gameState.options = [{"text": "Continue", "entry": "412"}];
-                };
-                //
-                actionText = '';
-                if (o.effects.indexOf('thrown') > -1) {  // Thrown opponents can't attack.
-                    o.effects.splice(o.effects.indexOf('thrown'), 1);
                 } else {
-                    // Check 2d6 against player_defence.
-                    var defence;
-                    if (gameState.entry.player_defence instanceof Array) {
-                        // Count opponents. Use this count to obtain the defence value.
-                        defence = gameState.entry.player_defence[gameState.currentOpponents.length - 1];
+                    // Handle EVERYONE ELSE. OH GOD I SHOULD BREAK THIS FUNCTION UP NOW. CBF.
+                    actionText = '';
+                    if (o.effects.indexOf('thrown') > -1) {  // Thrown opponents can't attack.
+                        o.effects.splice(o.effects.indexOf('thrown'), 1);
                     } else {
-                        defence = gameState.entry.player_defence;
-                    };
-                    if (dieRoll(2) > defence && !gameState.cheatMode) {
-                        var damage = (dieRoll(o.damage[0]) + o.damage[1]);
-                        actionText += '{0} hits you for {1} damage!'.replace('{0}', o.action_desc);
-                        actionText = actionText.replace('{1}', damage.toString());
-                        actionText = capitaliseFirstLetter(actionText);
-                        gameState.endurance -= damage;
-                        // Not all attacks can be blocked.
-                        // Use unblockable_attack = true if once-off, else set 'unblockable' in the
-                        // opponent effects array.
-                        var blockable = true;
-                        if (o.effects.indexOf('unblockable') > -1 || gameState.entry.unblockable_attack) {
-                            blockable = false;
-                        };
-                        // Push to actions to allow for blocking: [actionText, true, damage, defence]
-                        // Player may only try to block the first successful hit.
-                        // TODO: allow selective blocking.
-                        if (!hasBlocked && blockable) {
-                            gameState.actions.push([actionText, true, damage, defence]);
+                        // Check 2d6 against player_defence.
+                        var defence;
+                        if (gameState.entry.player_defence instanceof Array) {
+                            // Count opponents. Use this count to obtain the defence value.
+                            defence = gameState.entry.player_defence[gameState.currentOpponents.length - 1];
                         } else {
+                            defence = gameState.entry.player_defence;
+                        };
+                        if (dieRoll(2) > defence && !gameState.cheatMode) {
+                            var damage = (dieRoll(o.damage[0]) + o.damage[1]);
+                            actionText += '{0} hits you for {1} damage!'.replace('{0}', o.action_desc);
+                            actionText = actionText.replace('{1}', damage.toString());
+                            actionText = capitaliseFirstLetter(actionText);
+                            gameState.endurance -= damage;
+                            // Not all attacks can be blocked.
+                            // Use unblockable_attack = true if once-off, else set 'unblockable' in the
+                            // opponent effects array.
+                            var blockable = true;
+                            if (o.effects.indexOf('unblockable') > -1 || gameState.entry.unblockable_attack) {
+                                blockable = false;
+                            };
+                            // Push to actions to allow for blocking: [actionText, true, damage, defence]
+                            // Player may only try to block the first successful hit.
+                            // TODO: allow selective blocking.
+                            if (!hasBlocked && blockable) {
+                                gameState.actions.push([actionText, true, damage, defence]);
+                            } else {
+                                gameState.actions.push([actionText]);
+                            };
+                            hasBlocked = true;
+                        } else {
+                            actionText += '{0} tries to hit you...but misses!'.replace('{0}', o.action_desc);
+                            actionText = capitaliseFirstLetter(actionText);
                             gameState.actions.push([actionText]);
                         };
-                        hasBlocked = true;
-                    } else {
-                        actionText += '{0} tries to hit you...but misses!'.replace('{0}', o.action_desc);
-                        actionText = capitaliseFirstLetter(actionText);
-                        gameState.actions.push([actionText]);
                     };
                 };
             });  // End opponent offence.
@@ -482,7 +483,9 @@ function StoryCtrl($scope, $http, localStorageService, gameState, Story, Items, 
                 });
             } else {
                 $.pnotify({
-                    text: 'You have lost # endurance!'.replace('#', Math.abs(gameState.entry.modify_endurance))
+                    text: 'You have lost # endurance!'.replace('#', Math.abs(gameState.entry.modify_endurance)),
+                    type: 'error',
+                    icon: false
                 });
             };
             var total = gameState.endurance + gameState.entry.modify_endurance;
