@@ -32,6 +32,17 @@
             }
         ]
     },
+    "3": {
+        "description": "The hook catches the castle wall and you leap to wards the far side of the moat. You hit the water with a splash and begin pulling yourself up to the wall as fast as you can. The water boils around you as the Floating Mouths streak towards their prey and two are still fixed to you as you pull yourself out. They tear at your flesh.",
+        "modify_endurance": -3,
+        "damage_followup": "You sweep them away and, standing up, look around. The Dark Elf is nowhere to be seen, lost in the swamp, and the knight lies spreadeagled on the sand but the man in blue and gold robes is floating across the moat on a small ice floe.",
+        "options": [
+            {
+                "text": "Continue",
+                "entry": 372
+            }
+        ]
+    },
     "4": {
         "description": "The priests rush to the edge of the river and one of them catches sight of you and points. They begin to throw off their chainmail.",
         "options": [
@@ -341,6 +352,20 @@
             }
         ]
     },
+    "33": {
+        "description": "You leap from the boat, high into the air and arc gracefully towards the far side as the crowd gasp in awe.",
+        "fate_roll": true,
+        "options": [
+            {
+                "text": "Fate smiles on you!",
+                "entry": 382
+            },
+            {
+                "text": "Fate turn her back on you! You fall short, into the moat.",
+                "entry": 64
+            }
+        ]
+    },
     "34": {
         "description": "Crash! The Captain’s head hits the deck on the way down and his skull is staved in before the waves engulf him. The news spreads quickly through the reavers and they break off the battle, jumping back to the Watery Death and begin fighting in earnest to decide who shall become the new tyrant captain.\n\nYou dive from the stern castle and swim strongly towards the Aquamarin which is already under way. Your lungs bursting, you catch onto a moving oar at last, and haul yourself up over the side.",
         "options": [
@@ -569,6 +594,20 @@
             }
         ]
     },
+    "57": {
+        "description": "You hurl your grappling hook and rope at the castle wall.",
+        "fate_roll": true,
+        "options": [
+            {
+                "text": "Fate smiles on you!",
+                "entry": 3
+            },
+            {
+                "text": "Fate turn her back on you! The hook misses and you sink into the water before you can retrieve it.",
+                "entry": 64
+            }
+        ]
+    },
     "58": {
         "description": "The buccaneer Captain falls to the planks, dead. Two of his men are on the stairway behind you but seeing that you have killed the man they feared single-handed, they back away, calling the news to the other reavers. The pirates abandon the Aquamarin, returning to the Watery Grave, and begin fighting in earnest to deade who shall become the new tyrant captain.\n\nYou dive from the stern castle into the sea and swim strongly towards the Aquamarin, which is already under way. Your lungs bursting, you catch onto a moving oar at last, and haul yourself up over the side.",
         "options": [
@@ -612,6 +651,15 @@
                 "type": "offence",
                 "action": "punch",
                 "inner_force": true
+            }
+        ]
+    },
+    "64": {
+        "description": "As soon as you hit the water it seems to boil around you as the Floating Mouths race to latch onto their prey. You struggle, but it is useless. Within a minute your skeleton has been stripped bare of its flesh.\n\nYour adventure ends here.",
+        "options": [
+            {
+                "text": "Continue",
+                "entry": "death"
             }
         ]
     },
@@ -726,6 +774,31 @@
                 "type": "offence",
                 "action": "kick",
                 "inner_force": true
+            }
+        ]
+    },
+    "73": {
+        "description": "You row the boat across the slime-covered swamp towards the moat, but from the moment that you climbed into it water has been pouring in through the cracks. As you float out across the moat, the boat begins to sink. To your horror you see that the water is infested with Floating Mouths, voracious fish, all teeth and elastic belly.",
+        "options": [
+            {
+                "prereq": [
+                    "skill",
+                    "Climbing"
+                ],
+                "text": "[Climbing] Try to throw your grappling hook onto the wall of the miniature castle and hope to climb up the rope?",
+                "entry": 57
+            },
+            {
+                "prereq": [
+                    "skill",
+                    "Acrobatics"
+                ],
+                "text": "[Acrobatics] Attempt an enormous leap to the far side of the moat?",
+                "entry": 33
+            },
+            {
+                "text": "Dive into the moat and strike out for the castle?",
+                "entry": 64
             }
         ]
     },
@@ -4102,6 +4175,15 @@
                 "entry": 345,
                 "type": "offence",
                 "action": "throw"
+            }
+        ]
+    },
+    "382": {
+        "description": "Your magnificent leap is enough to carry you to the island and you land nimbly on your feet, as the crowd cheers loudly. You look around. The Dark Elf is nowhere to be seen, lost in the swamp, and the knight lies spread-eagled on the sand but the man in blue and gold robes is floating across the moat on a small ice floe.",
+        "options": [
+            {
+                "text": "Continue",
+                "entry": 372
             }
         ]
     },
