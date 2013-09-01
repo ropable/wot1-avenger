@@ -263,5 +263,19 @@
         "defence_throw": 7,
         "damage_mod": 0,
         "effects": ["instakill_on_miss"]
+    },
+    "Hobgoblin": {
+        "name": "Hobgoblin",
+        "action_desc": "the Hobgoblin",
+        "endurance": 18,
+        "damage": [
+            1,
+            1
+        ],
+        "defence_punch": 5,
+        "defence_kick": 6,
+        "defence_throw": 6,
+        "damage_mod": 0,
+        "effects": []
     }
 }
