@@ -73,5 +73,9 @@
         "name": "Healing herbs",
         "desc": "[Click to use] A bag of herbs with a potent healing virtue, able to restore up to eight Endurance points.",
         "endurance": 8
+    },
+    "Essence of Firenewt": {
+        "name": "Essence of Firenewt",
+        "desc": "A small vial of highly-potent Firenewt serum."
     }
 }

@@ -157,7 +157,7 @@ function NewGameCtrl($scope, $http, localStorageService, Story, Items, Opponents
         // Clear local storage, set start values, then initiate the first entry.
         localStorageService.clearAll();
         // Set starting entry number.
-        gameState.currentEntry = '134';
+        gameState.currentEntry = '326';
         gameState.endurance = 20;
         // Get start items.
         gameState.items = [];
@@ -479,7 +479,9 @@ function StoryCtrl($scope, $http, localStorageService, gameState, Story, Items, 
             if (gameState.entry.modify_endurance > 0) {
                 // Add a notification.
                 $.pnotify({
-                    text: 'You have gained # endurance!'.replace('#', gameState.entry.modify_endurance)
+                    text: 'You have gained # endurance!'.replace('#', gameState.entry.modify_endurance),
+                    type: 'success',
+                    icon: false
                 });
             } else {
                 $.pnotify({
@@ -540,7 +542,9 @@ function StoryCtrl($scope, $http, localStorageService, gameState, Story, Items, 
             angular.forEach(gameState.entry.loot_add, function(loot) {
                 // Add a notification.
                 $.pnotify({
-                    text: 'You have gained a #'.replace('#', loot[0])
+                    text: 'You have gained a #'.replace('#', loot[0]),
+                    type: 'success',
+                    icon: false
                 });
                 var owned = false;
                 // Find out if the loot exists in the inventory already.

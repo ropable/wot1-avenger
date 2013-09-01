@@ -2966,6 +2966,34 @@
             }
         ]
     },
+    "253": {
+        "description": "Your punch is so powerful that despite the magical field of force which protects him, the magician folds and a Winged Horse kick sends him flying through the air into the moat. The water boils as the Floating Mouths latch onto their prey. Within a minute his flesh has been stripped to the bone.\n\nYou climb up towards the Hobgoblin in his tower. The beast is showing off to the crowd, confident of another victory, beating his chest which is twice as broad as yours and twirling the trident in one hand. The tower is roughly built, with many hand-holds and you move around it, keeping the Hobgoblin confused as to your precise position. Then, holding an outcrop of stone with your hands you swing up into the tower behind him. He whirls around and you attack him with blinding speed.",
+        "opponents": [
+            "Hobgoblin"
+        ],
+        "options": [
+            {
+                "text": "Use the Leaping Tiger kick?",
+                "entry": 281,
+                "type": "offence",
+                "action": "kick",
+                "inner_force": true
+            },
+            {
+                "text": "Attack with the Tiger's Paw chop?",
+                "entry": 293,
+                "type": "offence",
+                "action": "punch",
+                "inner_force": true
+            },
+            {
+                "text": "Try the Whirlpool throw?",
+                "entry": 267,
+                "type": "offence",
+                "action": "throw"
+            }
+        ]
+    },
     "254": {
         "description": "As you leave the forbidding towered walls of Doomover behind, the sun climbs in the sky, ripening the corn and barley which ru sties in the breeze. The fields do not stretch for far and you are soon on the edge of a low plain, the Plain of Feet, on which several thousand of the Legion of the Sword of Doom are practising for the forthcoming war, smart and efficient. The smooth plain gradually gives way to a wilderness of trees and vines.",
         "options": [
@@ -3148,6 +3176,26 @@
             }
         ]
     },
+    "267": {
+        "description": "The Hobgoblin tries to shovel you up on the end of his wickedly barbed trident as you dance sideways and try to grab its shaft so that you can whirl his heavy body over your hip.",
+        "player_defence": 7,
+        "options": [
+            {
+                "text": "Use the Leaping Tiger kick?",
+                "entry": 281,
+                "type": "offence",
+                "action": "kick",
+                "inner_force": true
+            },
+            {
+                "text": "Use the Tiger's Paw chop?",
+                "entry": 293,
+                "type": "offence",
+                "action": "punch",
+                "inner_force": true
+            }
+        ]
+    },
     "268": {
         "description": "Your three assailants lie around you, dead or unconscious. There is an awed silence in the tavern and nobody will meet your eye. Realising that word will spread that a monk who does not fight in the style of the Scarlet Mantis is in Doomover, you decide to leave the tavern and the city as soon as possible. A young soldier follows you as you leave but you give him the slip in a maze of back streets and make your way quickly to the city gate. You pass through before word comes to stop all strangers. Once safely  away from the city walls, you climb into a tree where you can sleep, hidden.",
         "options": [
@@ -3165,6 +3213,25 @@
             {
                 "text": "Continue",
                 "entry": 251
+            }
+        ]
+    },
+    "272": {
+        "description": "The crowd cheer as you throw the Hobgoblin's trident into the moat, and the castle itself begins to sink into the ground. Searching the vile body of the swart beast you find a phial marked 'Magic Potion'; the Hobgoblin's prize for winning in the arena, it had been his most prized possession. Removing the stopper, you detect the unmistakable odour of Essence of Firenewt, not a magic potion at all. The Hobgoblin had been tricked, but you may find a use for it and decide to keep it.\n\nThe castle disappears from the view of the ecstatic populace of Mortavalon, whose blood-lust you have temporarily sated, and a passage leads you to the street outside. A press of people gathers round you. An aristocrat's butler offers you a job as a bodyguard as you are both showered with rose-blooms.\n\nYou try to get away from these unwanted attentions but a man tugs at your iron sleeve. You turn, ready to Cobra Strike, but he says, 'Do you come from the Island of Tranquil Dreams?'",
+        "loot_add": [
+            [
+                "Essence of Firenewt",
+                1
+            ]
+        ],
+        "options": [
+            {
+                "text": "Admit that you do?",
+                "entry": 242
+            },
+            {
+                "text": "Say that you have never heard of such an island?",
+                "entry": 255
             }
         ]
     },
@@ -3269,6 +3336,33 @@
                 "entry": 345,
                 "type": "offence",
                 "action": "throw"
+            }
+        ]
+    },
+    "281": {
+        "description": "The Hobgoblin tries to transfix you with his wickedly barbed trident as you jump into the air and lash out with the ball of your foot, hoping to take him in the throat.",
+        "player_defence": 8,
+        "victory": 272,
+        "options": [
+            {
+                "text": "Try a Tiger's Paw chop?",
+                "entry": 293,
+                "type": "offence",
+                "action": "punch",
+                "inner_force": true
+            },
+            {
+                "text": "Try the Whirlpool throw?",
+                "entry": 267,
+                "type": "offence",
+                "action": "throw"
+            },
+            {
+                "text": "Use the Leaping Tiger kick again?",
+                "entry": 281,
+                "type": "offence",
+                "action": "kick",
+                "inner_force": true
             }
         ]
     },
@@ -3384,6 +3478,33 @@
             {
                 "text": "Continue",
                 "entry": "276"
+            }
+        ]
+    },
+    "293": {
+        "description": "As the Hobgoblin whirls the butt of the trident towards your side, you chop the side of your hand down into his warty shoulder.",
+        "victory": 272,
+        "player_defence": 8,
+        "options": [
+            {
+                "text": "Use the Leaping Tiger kick?",
+                "entry": 281,
+                "type": "offence",
+                "action": "kick",
+                "inner_force": true
+            },
+            {
+                "text": "Try the Whirlpool throw?",
+                "entry": 267,
+                "type": "offence",
+                "action": "throw"
+            },
+            {
+                "text": "Use the Tiger's Paw chop again?",
+                "entry": 293,
+                "type": "offence",
+                "action": "punch",
+                "inner_force": true
             }
         ]
     },
@@ -3544,6 +3665,15 @@
                 "type": "offence",
                 "action": "punch",
                 "inner_force": true
+            }
+        ]
+    },
+    "311": {
+        "description": "The small dart speeds past his ear, and the magician's eyes widen in surprise. As you prepare this time to kick the magician he points his finger at you and speaks words which seem to leech you of your strength. You totter feebly as the Hobgoblin bounds down from his castle tower.\n\nThe magidan retreats and watches as the Hobgoblin advances on you, waving his trident. You are too weak even to run and he drives the trident's barbs into your stomach, before lifting you on the tines trailing you in the moat. The water boils as the Floating Mouths come to feed and within minutes your flesh has been stripped to the bone.",
+        "options": [
+            {
+                "text": "Continue",
+                "entry": "death"
             }
         ]
     },
@@ -3728,6 +3858,20 @@
             }
         ]
     },
+    "326": {
+        "description": "You slam your fist towards the magician's midriff, but he touches the golden disk which hangs at his chest and the air around him takes on a greenish tinge. He has created some sort of magical shield, and it slows your blow.",
+        "opponent_defence_roll": 6,
+        "options": [
+            {
+                "text": "Continue",
+                "entry": 253
+            },
+            {
+                "text": "Continue",
+                "entry": "311a"
+            }
+        ]
+    },
     "329": {
         "description": "You make an 'O' shape with your tongue and place one of the poison needles carefully within it in one deft movement. You exhale and spit it out. The needle has imbedded itself in the monk's eye before he realises what you are doing. The poison takes effect. He doubles up, convulsing in the muddy road and dies. Wasting no time, you strip him of his scarlet uniform and put it on over your Ninja costume.\n\nWalking with calm assurance you enter the sleeping quarters of the monastery unchallenged and make your way to the Hall of Webs.",
         "options": [
@@ -3828,6 +3972,34 @@
             }
         ]
     },
+    "338": {
+        "description": "The needle buries itself in the magician's cheek and he claps a hand to it as the deadly poison takes effect. He begins to rock on his feet and then topples into the moat. The crowd are hushed, for they were not able to see the needle and they think you are a warlock. The water boils as the Floating Mouths latch onto their prey. Within a minute his flesh has been stripped to the bone.\n\nYou climb up towards the Hobgoblin in his tower. The beast is showing off to the crowd, confident of another victory, beating his chest which is twice as broad as yours and twisting the trident in one hand. The tower is roughly built, with many hand-holds and you move around it, keeping the Hobgoblin confused as to your precise position. Then, holding an outcrop of stone with your hands, you swing up into the tower behind him. He whirls and you attack him with blinding speed.",
+        "opponents": [
+            "Hobgoblin"
+        ],
+        "options": [
+            {
+                "text": "Use the Leaping Tiger kick?",
+                "entry": 281,
+                "type": "offence",
+                "action": "kick",
+                "inner_force": true
+            },
+            {
+                "text": "Attack with the Tiger's Paw chop?",
+                "entry": 293,
+                "type": "offence",
+                "action": "punch",
+                "inner_force": true
+            },
+            {
+                "text": "Try the Whirlpool throw?",
+                "entry": 267,
+                "type": "offence",
+                "action": "throw"
+            }
+        ]
+    },
     "341": {
         "description": "You strike north from Doomover until you come to a marshland called the Greenfen. You skirt this, crossing the river which flows out of the dank mires and trot for a few days, hunting and foraging at need and sleeping in trees. After several days you turn north east and warily cross the track which leads north from Mortavalon to the city of Sundial and climb into the wild and windswept hills known as the Barrow Swales, heading for the dty of Fiendil.\n\nOn a day which dawns strangely cold, a mist lies heavily around the hills and you find yourself in a narrow gully. A boulder thuds dully towards you from higher up the, hill but you leap agilely out of its way, to be faced by a great Two-headed Giant waving a thorny club, which looks like the trunk of a small tree. The club whistles through the air towards you and you duck low beneath it. The Giant roars in frustration.",
         "image": "341.png",
@@ -3916,6 +4088,23 @@
             {
                 "text": "Continue",
                 "entry": 254
+            }
+        ]
+    },
+    "351": {
+        "description": "Seeing that you will not clasp his hand, the magician begins to chant a spell.",
+        "options": [
+            {
+                "prereq": [
+                    "skill",
+                    "Poison Needles"
+                ],
+                "text": "[Poison Needles] Use a poison needle?",
+                "entry": 389
+            },
+            {
+                "text": "Attack him with the Iron Fist punch?",
+                "entry": 326
             }
         ]
     },
@@ -4010,6 +4199,36 @@
             }
         ]
     },
+    "363": {
+        "description": "As you grasp his hand it tingles and then a shock of electricity galvanises your body.",
+        "modify_endurance": -7,
+        "damage_followup": "You overcome the pain which would have crippled most people - your training has often brought worse - and use the Iron Fist punch, striking him in the abdomen. Then, spinning, you use the Winged Horse kick, hammering your foot into his face and catapulting him into the moat. The water boils as the Floating Mouths latch onto their prey. Within a minute his flesh has been stripped to the bone.\n\nYou climb up towards the Hobgoblin in his tower. The beast is showing off to the crowd, confident of another victory, beating his chest which is twice as broad as yours, and twirling the trident in one hand. The tower is roughly built with many hand-holds, and you move around it, keeping the Hobgoblin confused as to your precise position. Then, holding an outcrop of stone with your hands, you swing up into the tower behind, him. He whirls round and you attack him with blinding speed.",
+        "opponents": [
+            "Hobgoblin"
+        ],
+        "options": [
+            {
+                "text": "Use the Leaping Tiger kick?",
+                "entry": 281,
+                "type": "offence",
+                "action": "kick",
+                "inner_force": true
+            },
+            {
+                "text": "Attack with the Tiger's Paw chop?",
+                "entry": 293,
+                "type": "offence",
+                "action": "punch",
+                "inner_force": true
+            },
+            {
+                "text": "Try the Whirlpool throw?",
+                "entry": 267,
+                "type": "offence",
+                "action": "throw"
+            }
+        ]
+    },
     "365": {
         "description": "The throwing star misses and embeds itself in the wooden wall of the hut, as the globe of energy hits you and explodes. The blast sears you and throws you backwards a few paces.",
         "modify_endurance": -6,
@@ -4065,6 +4284,20 @@
             {
                 "text": "Continue",
                 "entry": 19
+            }
+        ]
+    },
+    "372": {
+        "description": "The robed man steps towards you. He is young, no older than yourself, and his eyes twinkle merrily. A golden disk hangs in front of his chest on a necklace of coral. The Hobgoblin watches, thumping his trident in the castle tower. The young man speaks.\n\n'Greetings, fellow combatant. I will not ask what crime you have committed that the people of Mortavalon sent you into the arena. Instead let me make a suggestion to you. I am a magician, my spells are potent and deadly.'\n\nYou notice that his golden and blue robes are unruffled as he continues, 'I have killed the Giant of the Snows and I could kill you but them I would have to kill that too,' he points at the Hobgoblin, 'and if I died, not one of us would have survived. Let us make peace and kill that foul beast together, then let the crowd decide which of us shall live. Here, clasp my hand on it.'\n\nHe offers his hand.",
+        "image": "372.png",
+        "options": [
+            {
+                "text": "Accept his hand, either to throw him into the moat or to join him?",
+                "entry": 363
+            },
+            {
+                "text": "Attack him in some other way?",
+                "entry": 351
             }
         ]
     },
@@ -4207,6 +4440,20 @@
             {
                 "text": "Vault from the horse and run into a cave which you see in the hillside above you?",
                 "entry": 275
+            }
+        ]
+    },
+    "389": {
+        "description": "In one swift movement you place a Poison Needle on your tongue and then spit it towards the magician's face. He tries to dodge it.",
+        "opponent_defence_roll": 4,
+        "options": [
+            {
+                "text": "Continue",
+                "entry": 338
+            },
+            {
+                "text": "Continue",
+                "entry": 311
             }
         ]
     },
@@ -4433,6 +4680,15 @@
             {
                 "text": "Enter the cave?",
                 "entry": 275
+            }
+        ]
+    },
+    "311a": {
+        "description": "Your punch is stopped short by the magical shield. As you prepare this time to kick the magician he points his finger at you and speaks words which seem to leech you of your strength. You totter feebly as the Hobgoblin bounds down from his castle tower.\n\nThe magidan retreats and watches as the Hobgoblin advances on you, waving his trident. You are too weak even to run and he drives the trident's barbs into your stomach, before lifting you on the tines trailing you in the moat. The water boils as the Floating Mouths come to feed and within minutes your flesh has been stripped to the bone.",
+        "options": [
+            {
+                "text": "Continue",
+                "entry": "death"
             }
         ]
     },
