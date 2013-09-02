@@ -132,6 +132,10 @@ function NewGameCtrl($scope, $http, localStorageService, Story, Items, Opponents
     $scope.chosenSkills = [];
     $scope.selectedCount = 0;
 
+    // Function to push/pop skills from the chosenSkills array in gameState
+    // when that skill in selected/deselected on the "New Game" page.
+    // Also updates the scope variable chosenSkills, which governs whether
+    // the skills checkboxes are enabled or not.
     $scope.selectSkill = function($event, skill) {
         // Alter the scope to modify the form used to choose start skills.
         var checkbox = event.target;
@@ -153,6 +157,7 @@ function NewGameCtrl($scope, $http, localStorageService, Story, Items, Opponents
         return $scope.chosenSkills.indexOf(skill) >= 0;
     };
 
+    // Function to reset the gameState and redirect to the starting entry page.
     $scope.beginGame = function() {
         // Clear local storage, set start values, then initiate the first entry.
         localStorageService.clearAll();
@@ -203,6 +208,12 @@ function StoryCtrl($scope, $http, localStorageService, gameState, Story, Items, 
     readGameState(gameState, localStorageService);
     $scope.gameState = gameState;
 
+    // Function to handle selection of the next entry option.
+    // TODO: break this up into several functions (as for validEntryChoices).
+    // TODO: function to handle modifying the player's endurance.
+    // TODO: function to alter the player's inventory.
+    // TODO: function to handle the player attacking an opponent.
+    // TODO: function to handle an opponent attacking the player.
     $scope.chooseEntry = function(option, useInnerForce) {
         // Set gameState to the new entry.
         gameState.currentEntry = option.entry;
@@ -524,13 +535,13 @@ function StoryCtrl($scope, $http, localStorageService, gameState, Story, Items, 
                 entryText = gameState.entry.description + '\n\nYou are hit for {0} damage!'.replace('{0}', damage);
             };
         };
-        // Handle player death.
-        // Use "damage_followup".
+        // Handle player death following damage (replace entry options).
+        // Add "damage_followup" to the entry text if the player is still alive.
         if (gameState.endurance <= 0) {
             gameState.options = [{"text": "Continue", "entry": 'death'}];
             gameState.endurance = 0;
             gameState.inProgress = false;
-        } else {  // Player is still alive - we may need to alter the entry text.
+        } else {  // Player is still alive - alter the entry text if req'd.
             if (gameState.entry.damage_followup) {
                 entryText = entryText + '\n\n' + gameState.entry.damage_followup;
             };
