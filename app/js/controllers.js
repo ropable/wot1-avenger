@@ -162,7 +162,7 @@ function NewGameCtrl($scope, $http, localStorageService, Story, Items, Opponents
         // Clear local storage, set start values, then initiate the first entry.
         localStorageService.clearAll();
         // Set starting entry number.
-        gameState.currentEntry = '326';
+        gameState.currentEntry = '272';
         gameState.endurance = 20;
         // Get start items.
         gameState.items = [];
@@ -520,6 +520,19 @@ function StoryCtrl($scope, $http, localStorageService, gameState, Story, Items, 
             } else {
                 gameState.innerForce = total;
             };
+            if (gameState.entry.modify_inner_force > 0) {
+                $.pnotify({
+                    text: 'You have gained # Inner Force!'.replace('#', gameState.entry.modify_inner_force),
+                    type: 'success',
+                    icon: false
+                });
+            } else {
+                $.pnotify({
+                    text: 'You have lost # Inner Force!'.replace('#', gameState.entry.modify_inner_force),
+                    type: 'error',
+                    icon: false
+                });
+            };
         };
         var entryText = gameState.entryText;
         // Handle player defence against basic injury (may result in death).
@@ -635,10 +648,6 @@ function StoryCtrl($scope, $http, localStorageService, gameState, Story, Items, 
             angular.forEach(gameState.entry.event_add, function(evt) {
                 gameState.events.push(evt);
             });
-        };
-        // Remove Inner Force.
-        if (gameState.entry.inner_force_remove) {
-            gameState.innerForce -= gameState.entry.inner_force_remove;
         };
         // Alter player modifiers.
         if (gameState.entry.player_modifier) {

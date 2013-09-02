@@ -2352,6 +2352,19 @@
             }
         ]
     },
+    "200": {
+        "description": "You step through the doorway of the Volunteer Inn and are surprised to see a wheel-shaped room, airy and light with a circular bar at its centre. There are ten tables with chairs screwed into the floor around them but perhaps because of the sound the door makes, everyone seems to be looking at you, and all conversation ceases. A man dressed in robes which bear the symbol of a ten-spoked wheel greets you as Avenger and invites you to join him. You sit opposite him and demand how he knows your name.\n\nHe replies, 'We who follow Fate may often know what will come to pass. Our leader, Whimsical, foresees the arrival of all strangers.'\n\n'But surely,' you ask, 'With such power he could rule the Manmarch?'\n\n'We only see what we are fated to see and it is not Whimsical's fate to rule the Manmarch.'\n\nYou tell him that there is a conspiracy amongst the followers of evil gods to enslave their fellow men. The priest replies that he knows this and when you demand what the followers of Fate plan to do, he merely spreads his hands and says, 'What will be, will be, and you cannot change it.' He goes on, however, to say that he realises that the Spires of Foreshadowing with its great cathedral to Fate will fall first if the evil ones have their way, and he says that he is on your side. He even asks you to become a Tool of Fate and to join the elite band of heroes who are fated to do great deeds in her service, and to embrace the worship of Fate.\n\n'For she is above other gods, Keeper of the Balance, without which all things would perish.'\n\nYou have heard of the elite few who serve Fate as her Tools, this is indeed an honour. One of the drinkers leaves the inn as he invites you to go with him to Fiendil's cathedral to Fate.",
+        "options": [
+            {
+                "text": "Embrace the worship of Fate?",
+                "entry": 100
+            },
+            {
+                "text": "Politely decline the priest's offer?",
+                "entry": 76
+            }
+        ]
+    },
     "201": {
         "description": "You use the side of your hand to chop the quarrel aside before it hits you and then roll out of the torchlight. You lie low, motionless, until you hear a shout from a side street. 'Stop thief,' someone cries, as a man carrying a dagger runs into the torchlight. He squeals in fright as the gateguards charge after hun and you slip unnoticed out of the dty gate at the first ray of dawn.",
         "options": [
@@ -2723,6 +2736,19 @@
             }
         ]
     },
+    "234": {
+        "description": "'Oh, but you are expected. Whimsical himself already knows of you, but not the Vile ones, it is not fated that they should know...' He pauses, '...yet.'\n\n'Who is Whimsical?' you ask.\n\n'The Theocrat of Fate, the ruler of Fiendil. You know so little stranger. Here is a golden touch for you, go to the Volunteer.' He points dówn the main street. 'You will hear something there to your advantage. Oh, we knew you were coming all right.'\n\nHe breaks into a peal of laughter. Not wishing to draw further attention to yourself you hurry along the main street, Dreamer’s Saunter. Fifty yards down the street hangs the sign of the Volunteer, a young warrior on bended knee receiving a sword from a man in golden robes, wearing a smiling golden mask.",
+        "options": [
+            {
+                "text": "Take the old hermit's advice and go in?",
+                "entry": 200
+            },
+            {
+                "text": "Continue on down Dreamer's Saunter?",
+                "entry": 185
+            }
+        ]
+    },
     "235": {
         "description": "You gather grapes and nuts aplenty, living off the land as you jog through the wilderness, checking your position by the position and height of the sun. You cover the ground quickly and are soon in a range of low hills crowned with cypress trees and, climbing up into one, you pass an untroubled and restful night.",
         "modify_endurance": 2,
@@ -2817,6 +2843,15 @@
                 "type": "offence",
                 "action": "kick",
                 "inner_force": true
+            }
+        ]
+    },
+    "242": {
+        "description": "He tells you that he is a monk who worships Kwon and invites you to go with him to his monastery in the Gardens of Redemption. The temple is set in a rose garden and you are happy to find a safe haven where you may meditate and seek help. You kneel at prayer in the bare temple and, beside you, the monk intones the psalm of Kwon the Redeemer.",
+        "options": [
+            {
+                "text": "Continue",
+                "entry": 221
             }
         ]
     },
@@ -3007,6 +3042,19 @@
             }
         ]
     },
+    "255": {
+        "description": "The man turns aside, as if he had made a mistake, and you make your way out of the press of bodies as quickly as you can. You have become well known in Mortavalon, your exploits in the arena are on everyone's lips and you decide that it is prudent to leave this city, with its pre-occupation with violent death.\n\nYou leave by the northern arch, disguised as someone who works the land. The gateguards ask you where you are going, 'It is the day of the games, a holiday,' but you ignore them and they let you go.",
+        "options": [
+            {
+                "text": "Strike north-east across the wastelands to the city of Fiendil?",
+                "entry": 260
+            },
+            {
+                "text": "Head due north to Storm Giant’s Causeway, in the Mountains of Vision?",
+                "entry": 81
+            }
+        ]
+    },
     "256": {
         "description": "You step forward onto your right foot then bring your left foot up, spin to the right and lash your left heel high into the air at one of your attackers' heads.",
         "image": "176.png",
@@ -3084,6 +3132,20 @@
             {
                 "text": "Finish him off with a kick to the head?",
                 "entry": 222
+            }
+        ]
+    },
+    "260": {
+        "description": "The journey across the wastelands takes four days. For much of the way you follow the banks of the river of Fortune which is joined by a little-trodden track stretching from Fiendil to Greyguilds-on-the-Moor, the City of Learning far to the south. It rains on the third day and for the first time you notice that the climate is much cooler than that of the islands in the Endless Sea.\n\nAt last, as the mountains loom ahead, you see the city of Fiendil in a verdant valley. The city walls are ill-kempt, in places even breached, and there are no guards at the gate, only an old man in a wine-stained toga, sitting on a stone block which was once part of the battlements of the gate-tower.\n\nYou are about to pass him by when he calls softly to you, 'Avenger, well-met in Fiendil, you have travelled far from the Island of Tranquil Dreams.' He is weak with age and seems to hold no threat for you, save that somehow he knows who you are. There is no-one else in sight.",
+        "modify_endurance": 6,
+        "options": [
+            {
+                "text": "Implore him to say nothing about you to anyone?",
+                "entry": 234
+            },
+            {
+                "text": "Kill him with a deft chop to the head?",
+                "entry": 114
             }
         ]
     },
@@ -4469,7 +4531,7 @@
     "395": {
         "description": "The monk is also an expert in unarmed combat and tensed for an attack from his dark assailant. He defends against your Winged Horse kick as you grunt with an explosion of Inner Force.",
         "opponent_defence_roll": 6,
-        "inner_force_remove": 1,
+        "modify_inner_force": -1,
         "options": [
             {
                 "text": "You hit the monk!",
