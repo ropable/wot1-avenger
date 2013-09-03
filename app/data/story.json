@@ -60,6 +60,17 @@
             }
         ]
     },
+    "5": {
+        "description": "You lie in the murk of the swamp and the Troll stench washes over you as it bends down and picks you up in its claws. It handles you roughly as it prepares to eat you.",
+        "modify_endurance": -2,
+        "damage_followup": "As you near its gaping maw, you smash your iron sleeves into its face. You see the black blood spurting from its eye begin to dwindle to a trickle as the squashed eye remoulds itself. But it drops you in surprise and you flee as fast as you can.",
+        "options": [
+            {
+                "text": "Continue",
+                "entry": 14
+            }
+        ]
+    },
     "6": {
         "description": "You pass through the archway of purple-black glass and on into the city of Doomover itself. You cannot remember ever having seen so many buildings, solid and tall, their roofs of sloping slates, not thatch, and there are shops everywhere, selling fish, wine, and grain and there is even a slave market. Near the Obsidian Gate a town-crier begins to ring his bell.\n\nHe is dressed in orange and green to attract attention, and he begins to shout loudly about a brave adventurer who lived in Doomover who has reaped rich rewards and found a secret way into the death-city of Mortavalon, having entered a cave in the hills which encircle that city. Next he proclaims loudly that the army is paying well for recruits, that there is no war but men are needed for manoeuvres on the Plain of Feet. There are rows of barracks not far from the harbour.",
         "options": [
@@ -166,6 +177,20 @@
                 "type": "offence",
                 "action": "punch",
                 "inner_force": true
+            }
+        ]
+    },
+    "14": {
+        "description": "In your haste you stray perilously close to the edge of the track. The treacherous swamp is all around you, hidden in the mist.",
+        "fate_roll": true,
+        "options": [
+            {
+                "text": "Fate smiles on you!",
+                "entry": 417
+            },
+            {
+                "text": "Fate turns her back on you!",
+                "entry": 404
             }
         ]
     },
@@ -339,6 +364,24 @@
             }
         ]
     },
+    "30": {
+        "description": "A huge Troll, its warted skin green and slimy, bursts out of the mist and pulls up in front of you. You kick and punch it for all you are worth but as fast as you inflict wounds they heal again, magically, the torn flesh crawling across the bones to re-knit together, leaving only purple scars. The Troll claws you and it seems that you will lose this battle.",
+        "modify_endurance": -4,
+        "options": [
+            {
+                "prereq": [
+                    "skill",
+                    "Feigning Death"
+                ],
+                "text": "[Feigning Death] Pretend to be dead?",
+                "entry": 5
+            },
+            {
+                "text": "Turn and flee as fast as you can?",
+                "entry": 14
+            }
+        ]
+    },
     "32": {
         "description": "Togawa nods. 'What are your weapons?' he demands.",
         "options": [
@@ -447,6 +490,19 @@
                 "type": "offence",
                 "action": "kick",
                 "inner_force": true
+            }
+        ]
+    },
+    "41": {
+        "description": "You make no sound and using the Ninja catwalk you cause your tracks to appear as though you were heading in the opposite direction out of the swamp. But the huge beast tracks you by smell alone and the great splashing of its lumbering strides increases pace.",
+        "options": [
+            {
+                "text": "Throw caution to the wind and run faster?",
+                "entry": 14
+            },
+            {
+                "text": "Stand and fight?",
+                "entry": 30
             }
         ]
     },
@@ -614,6 +670,19 @@
             {
                 "text": "Continue",
                 "entry": 26
+            }
+        ]
+    },
+    "59": {
+        "description": "You trot steadily on for two days, keeping the saw-toothed Mountains of Vision on your right before coming to a dank land of mists, the Trollfens. They are an enormous expanse of marshland and in the mist you have no way of knowing how long it would take to skirt them to the south. You decide to continue across them, following the tracks made by a small animal.\n\nAs you trudge across the wet ground the mist grows deeper and then a huge dark shape looms towards you, the slopping of its great feet in the mud deadened by the mist. It stops and sniffs loudly.",
+        "options": [
+            {
+                "text": "Move carefully but quickly onwards?",
+                "entry": 41
+            },
+            {
+                "text": "Wait for it to find you?",
+                "entry": 30
             }
         ]
     },
@@ -817,7 +886,7 @@
         ]
     },
     "76": {
-        "description": "The priest is not affronted by your refusal to worship his goddess. Instead he takes you to his house, near the great domed cathedral and a meal is served to you both. He tells you that the evil men whom you seek are even now nearing the city of Druath Glennan, on the northern coast of the Sea of the Star. As it is late, you stay in his house for the night. \n\nWhen you awaken, you notice that one of your Shuriken lies on a chair beside your bed. There are no scratches or signs of use but a magical rune has been etched upon it, with acid. The priest tells you over breakfast that he has enchanted the throwing star and says that he will pray that Fate will smile upon you.\n\nYou take your leave of the priest and make for the north gate. Not far from his house you find yourself in a narrow alley when a runaway ox-cart róunds the corner suddenly and bears down on you.",
+        "description": "The priest is not affronted by your refusal to worship his goddess. Instead he takes you to his house, near the great domed cathedral and a meal is served to you both. He tells you that the evil men whom you seek are even now nearing the city of Druath Glennan, on the northern coast of the Sea of the Star. As it is late, you stay in his house for the night. \n\nWhen you awaken, you notice that one of your Shuriken lies on a chair beside your bed. There are no scratches or signs of use but a magical rune has been etched upon it, with acid. The priest tells you over breakfast that he has enchanted the throwing star and says that he will pray that Fate will smile upon you.\n\nYou take your leave of the priest and make for the north gate. Not far from his house you find yourself in a narrow alley when a runaway ox-cart rounds the corner suddenly and bears down on you.",
         "modify_endurance": 3,
         "loot_remove": [
             [
@@ -1178,6 +1247,15 @@
             }
         ]
     },
+    "100": {
+        "description": "As you kneel before the great altar in the vast vaults of the domed cathedral, Fate accepts you as her reverencer. At the same time, your own god, Kwon, renounces you, and your Inner Force is stripped away, leaving you weakened. This does not worry you, for now you know that it was fated that this should come to pass and that it would be pointless to regret.\n\nYour quest to kill Yaemon seems unimportant and you idle your days in the dreamy city of Fiendil as a priest in the cathedral, until one day even the calm folk of the city seem agitated. A great darkness, a long night without days, is followed by news that the dread Legion of the Sword of Doom and the monks of the Scarlet Mantis have sacked the Spires of Foreshadowing and now march on Fiendil. It is too late. Kwon is incarcerated in Inferno but your failure does not trouble you.",
+        "options": [
+            {
+                "text": "Continue",
+                "entry": "death"
+            }
+        ]
+    },
     "103": {
         "description": "You turn and run but as they finish their fell incantation your movements slow, your limbs feel as heavy as lead and it is only by a great effort of will that, quivering with the strain, you can get them to move at all. You stagger to the river and duck out of sight in some bullrushes.",
         "options": [
@@ -1336,6 +1414,19 @@
             {
                 "text": "Forge on through Fortune Pass?",
                 "entry": 70
+            }
+        ]
+    },
+    "114": {
+        "description": "He sees the deadly intent in your eyes an instant before your blow lands, but accepts death stoically. His neck is broken, but he still manages to speak, apparently resigned to it all.\n\n'It was fated that you should kill me thus, Avenger.' It seems, however, that Fate is displeased. The hermit revered her and she turns her back on you for the callous act which she knew you would commit. You almost feel your luck change.\n\nYou cannot help quietly cursing the pointlessness of it all as you walk on into the city. The people smile at you as you go by, something no-one has done in the other cities. They seem to float past you with the uncaring calmness of those who accept that their destiny has already been decided.",
+        "player_modifier": [
+            "fate",
+            -2
+        ],
+        "options": [
+            {
+                "text": "Continue",
+                "entry": 185
             }
         ]
     },
@@ -2256,6 +2347,15 @@
             }
         ]
     },
+    "190": {
+        "description": "The floorboards come up easily, revealing black dirt below. There is a layer of breathable air at floor level below the smoke and you set to work burrowing into the earth. When you have made a hole large enough to crouch in, you cover yourself with earth, poking your breathing tube through it for what little air you can get, using your control of breathing to minimize your needs. You sweat and gasp for breath but the soil protects you from the fire, which dies away when it has consumed the wooden room.\n\nYou lie still as a party of monks come to investigate. It seems they had ringed the place waiting for you to emerge but now they think you are dead. You overhear them talking about the imminent arrival at Quench-heart Keep of Yaemon, accompanied by Honoric of the Legion of the Sword of Doom and Manse the Deathmage, a most powerftil sorcerer and a follower of Nemesis, the Supreme Principle of Evil, and how they will be pleased that you are dead.\n\nWhen they have left, you leave your hole and take the road past the Hydra’s Heads Inn out of the city and towards the Goblin’s Teeth Mountains before which lies Quench-heart Keep.",
+        "options": [
+            {
+                "text": "Continue",
+                "entry": 179
+            }
+        ]
+    },
     "191": {
         "description": "After the ceremony you all file out of the temple onto the golden sands and there is a frugal feast of rice and fruits shared by the villagers and the monks. You eat sparingly and take your leave early, wishing to meditate before you sleep. Relaxed from the meditation which frees your spirit from the shackles of your aching body your eyes close as soon as you lay yourself down on the straw-filled sacking that is your bed. You drift into a deep but troubled sleep.\n\nYou see a sleek-oared ship setting sail from the Land of Plenty. A tall, resolute-looking man is on the high stern castle, his legs braced against the swell. He wears a thick cloak of dark green against the weather and the sun flashes so vividly on the buckle of his sword belt that you believe this is not a dream but a vision. A sailor calls him by name, 'Glaivas', and he turns to look at you but then the vision fades and the brilliant blue sky is replaced by sombre purple clouds against which a large and dark castle looms. Three turrets on a great black Keep seem to pierce the douds. You are walking towards it, bent on completing a difficult and important mission.\n\nWhen ou awake you remember the dreams as if they were pictures painted on the wall of your monastic cell, but your sleep has at least restored any Endurance you lost in your contest with Gorobei. You are walking towards the Temple when there is a commotion on the beach and two fishermen run up to you with the news that a ship is riding at anchor offshore. A man rows himself to the beach and steps out, as the Grandmasters walk to the strand to greet him. He introduces himself as Glaivas and, bowing respectfully, he asks to talk to the Grandmaster of Grandmasters.\n\n'You may address us all,' says the Grandmaster of the Dawn, 'for we have no secrets on the Island of Tranquil Dreams.'\n\n'Not since you lost the Scrolls of Kettsuin,' Glaivas returns darkly.\n\n'What do you know of the Scrolls of Kettsuin?', asks the Grandmaster. The monks wait tensely as Glaivas looks around carefully before replying.\n\n'The Scrolls of Kettsuin hold the secret to the Word of Power which will bind Kwon himself in Inferno if it is spoken at the Pillars of Change in the great snow-wastes of the north. Yaemon, Grandmaster of Flame, of the order of the Scarlet Mantis stole it from you many years ago and he has deciphered the Word. It is the month of All-Mother Splendour and for three days the moon will turn red during the Great Conjunction of the Planets - something that occurs only once every five hundred years. If the Word is spoken by the Pillars of Change at this time your God, Kwon, will be imprisoned in the bottomless pit of fire, leaving the monks who worship Vile free to spread their dominion over the lands of men.'\n\nAt the mention of Yaemon's name there is uproar but as Glaivas continues an unnatural quiet descends.\n\n'Yaemon is preparing to set out even now from the city of Doomover on the long journey to the Ice Wastes. Though a Ranger long used to patrolling the wilderness on the edge of the Rift, I am no match for such as he. Is there one among you who will try to stop him?'\n\nAs Glaivas spoke you felt the burning need to be revenged on Yaemon flare within your breast. Your dream of Glaivas, for it was he you saw astride the deck of the ship which now rides at anchor near the sands, has convinced you that you are destined for this quest and you step forward saying, 'I  shall stop him.'\n\n'You are young,' says Glaivas, 'Can you succeed where I, a Ranger Lord, would fail?'\n\n'I am Ninja,' you reply.\n\nGlaivas starts. The Grandmaster of the Dawn sighs and says, 'Yes, I rename you Avenger, for if anyone can succeed, and you must for the sake of all mankind, it will be you.' With that he turns towards the Temple, and prayer.\n\nThe city of Doomover lies on the western coast of the Manmarch and Glaivas gifts you a map which shows the many cities and strange lands which stretch north to the snow wastes. You spend the rest of the day preparing, lacing the iron sleeves to your dark hued costume and gathering together the tools of the Ninja, before spending some hours in quiet meditation. You board Glaivas' ship in time to sail on the evening tide. You must find Yaemon and kill him before he reaches the Pillars of Change or all will be lost.",
         "modify_endurance": 20,
@@ -2423,6 +2523,15 @@
             }
         ]
     },
+    "205": {
+        "description": "Your costume catches fire as you leap through the flames and you cannot breathe, the fire is taking all of the oxygen. You collapse to the floor and the fire rages all around you. A falling beam mercifully releases you from the searing agony. When the fire dies there is nothing left of you but a blackened skeleton.",
+        "options": [
+            {
+                "text": "Continue",
+                "entry": "death"
+            }
+        ]
+    },
     "206": {
         "description": "The barman had mixed Spirits-of-Ra into the mead and it was stronger than you realized. The alcohol passes into your bloodstream quickly and you stand up to leave but pass out. You wake up in the morning, lying muddied in the gutter. Some of your gold coins have been taken, but you had hidden five upon your person, which you still have. If you had an Opal ring, you notice that has also been stolen.\n\nYou decide to head north in case Yaemon arrives at the Pillars of Change before you, and leave the city on the road to Mortavalon.",
         "loot_remove": [
@@ -2566,6 +2675,19 @@
             {
                 "text": "Continue",
                 "entry": 85
+            }
+        ]
+    },
+    "219": {
+        "description": "The sea breeze carries the salt spray of the sea to you as you trot along the eastern coast of the Sea of the Star. To save time you decide to swim across the narrow eastern point of the star-shaped sea and the chill water is invigorating. At last you enter the narrow cobbled streets of the city of Druath Glennan. The houses are tall and thin, built of dark brick save for the wooden balconies which almost touch above, making the streets dark and gloomy.\n\nYou are glad to have disguised yourself as a fisherman since the guards are unmistakedly in the pay of the monks who worship Vile. Their red-shuttered monastery runs along one side of the Square of the Gods, faced by a temple to the All-Mother. You notice a poor house in one of the dingy side streets and, changing into the guise of a beggar, you fall in with the drunkards who are supported there by the priestesses of the All-Mother. You are planning to reconnoitre the monastery to Vile, hoping that Yaemon is within, when you overhear one of the beggars telling the story of how he lost his arm.\n\nThere is a grimy and bloody bandage hanging loosely from his shoulder. It seems he was once a sweeper in the monastery, but was thrown out because of his drinking. Hearing through the grapevine that Yaemon, Grandmaster of Flame, was visiting the monastery, he foolishly decided to throw himself before the arch monk and beg for his job again. Yaemon, surprisingly, received him but sneeringly told him that even the gutter was too good a place for him.\n\nHe had a friend with him, 'A wicked looking man, with a wicked heart. He had the most hideous, soulless red eyes....Manse the Deathmage, they called him. Anyway, just for sport he said he would punish me, and before I know it my arm drops off. I would have bled to death if it hadn't been for the priestesses.'\n\nHe gets little sympathy; one of them, his voice slurred by drink, asks him what he expects if he mixes with Yaemon, Grandmaster of Flame, and the Deathmage, the most powerful sorcerer on Orb. You gather from their conversation that Yaemon had been waiting with Honoric, leader of the Legion of the Sword of Doom, for Manse the Deathmage to join them in Druath Glennan. Now they have set out for a castle called Quench-heart Keep, near the Goblins Teeth Mountains. As it is now late, you decide to stay in the poor-house and set off in the morning.\n\nYou are awakened in the night by the smell of acrid smoke. The room in which you are sleeping is on fire and a sheet of flame blocks the doorway and fills the hallway beyond. There are no windows through which to escape. The room is filling with smoke. What will you do?",
+        "options": [
+            {
+                "text": "Leap through the solid wall of flame?",
+                "entry": 205
+            },
+            {
+                "text": "Tear up the loose floorboards?",
+                "entry": 190
             }
         ]
     },
@@ -3756,6 +3878,15 @@
                 "type": "offence",
                 "action": "kick",
                 "inner_force": true
+            }
+        ]
+    },
+    "313": {
+        "description": "It is many days march across the snow wastes and not knowing exactly where the city lies, you curse the barren emptiness for there is no clue as to which way to turn. At last you sight the white domes and ice-houses of the City of Far Snows on the eve of a night on which the moon turns red, a night which has no end.\n\nYou are too late. The eternal darkness has come and Kwon has been imprisoned in Inferno. Your Inner Force drains away and there is nothing you can do to stop the rise of evil. You have failed.",
+        "options": [
+            {
+                "text": "Continue",
+                "entry": "death"
             }
         ]
     },
