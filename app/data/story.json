@@ -4065,6 +4065,15 @@
             }
         ]
     },
+    "327": {
+        "description": "You punch again and again but the Shaggoth seems unmoved. It loops its tentacles around you and begins to descend into the swamp once more. You are pulled down with it and slime fills your lungs. It will plant its children in your body, and when they grow, you will be their food.",
+        "options": [
+            {
+                "text": "Continue",
+                "entry": "death"
+            }
+        ]
+    },
     "329": {
         "description": "You make an 'O' shape with your tongue and place one of the poison needles carefully within it in one deft movement. You exhale and spit it out. The needle has imbedded itself in the monk's eye before he realises what you are doing. The poison takes effect. He doubles up, convulsing in the muddy road and dies. Wasting no time, you strip him of his scarlet uniform and put it on over your Ninja costume.\n\nWalking with calm assurance you enter the sleeping quarters of the monastery unchallenged and make your way to the Hall of Webs.",
         "options": [
@@ -4240,6 +4249,20 @@
             }
         ]
     },
+    "343": {
+        "description": "You unleash a tremendous punch at the heaving green sack that is the body of the Shaggoth, screaming as the Inner Force leaves you. It is racked with a quivering and its tentacles fall from you as it sinks soundlessly into the bubbling swamp. Seeing this, the Troll behind you shambles away from you and you continue your difficult journey.\n\nBy nightfall you are through the fens and you continue by the light of the moon. At sunup you must decide which way to turn.",
+        "modify_inner_force": -1,
+        "options": [
+            {
+                "text": "Go to Ionalbion on the southern coast of the Sea of the Star to take ship to Druath Glennan?",
+                "entry": 294
+            },
+            {
+                "text": "Strike north towards the City of Far Snows?",
+                "entry": 313
+            }
+        ]
+    },
     "344": {
         "description": "The Barbarian falls at last, a mass of broken bones. At the end it seemed that he would fight on for ever, but his battle cries will no longer trouble the world of Orb.",
         "options": [
@@ -4389,6 +4412,16 @@
             {
                 "text": "Jump to the Reavers' ship to attack the pirate Captain?",
                 "entry": 352
+            }
+        ]
+    },
+    "362": {
+        "description": "There is nothing you can do as the surface of the swamp doses above you. Not even the Troll who chased you dares to save you for his supper.",
+        "boolean_option": true,
+        "options": [
+            {
+                "text": "Continue",
+                "entry": "death"
             }
         ]
     },
@@ -4622,6 +4655,24 @@
             }
         ]
     },
+    "385": {
+        "description": "You drag your grappling hook and rope from a pocket of your costume which is now filled with slime and hurl the hook at a gnarled stump at the edge of the path. At the second attempt it holds and, looking warily for the beast tracking you to reappear, you pull yourself out of the quagmire. As you free the hook and replace it, you catch sight of the dark hulk of the beast behind you on the path, a huge warty Troll, but it doesn’t advance.\n\nSuddenly the swamp erupts into the air before you and rasping fibrous tentacles slither around you. A misshapen growth like a green boulder, a Shaggoth, is attacking you. You dodge one of its tentacles and punch the heaving green mass ofiits body. Your fist sinks in, to little effect.\n\nDo you have any Inner Force left?",
+        "boolean_option": true,
+        "options": [
+            {
+                "prereq": [
+                    "inner_force",
+                    1
+                ],
+                "text": "Continue",
+                "entry": 343
+            },
+            {
+                "text": "Continue",
+                "entry": 327
+            }
+        ]
+    },
     "387": {
         "description": "The mail-clad rider stiffens as you chop his neck and rolls sideways off his horse. You balance on your hands and move yourself forwards into the saddle, grabbing the reins as the horse bolts. You are an accomplished horseman and you manage to turn the frightened beast towards the hills that circle Mortavalon.\n\nThe others thunder after you, and are still behind you as you enter the hills. They begin to shout a fell incantation and you feel a sluggishness overcome you.",
         "image": "223.png",
@@ -4714,6 +4765,24 @@
             {
                 "text": "Continue",
                 "entry": 254
+            }
+        ]
+    },
+    "404": {
+        "description": "Your last step took you from the path, headlong into the swamp. You begin to sink inexorably, churning the mud which bubbles around you. Calmly, you cease moving, slowing your rate of descent.\n\nDo you have the skill of Climbing?",
+        "boolean_option": true,
+        "options": [
+            {
+                "prereq": [
+                    "skill",
+                    "Climbing"
+                ],
+                "text": "[Climbing] Continue",
+                "entry": 385
+            },
+            {
+                "text": "Continue",
+                "entry": 362
             }
         ]
     },
@@ -4860,6 +4929,24 @@
             {
                 "text": "Continue",
                 "entry": 289
+            }
+        ]
+    },
+    "417": {
+        "description": "You run on and suddenly cannot hear the splashing of the pursuing beast any more. The swamp erupts into the air before you and rasping fibrous tentacles slither round you. A mis-shapen growth like a green boulder, a Shaggoth, is attacking you. You dodge one of its tentacles and punch the heaving green mass of its body. Your fist sinks in, to little effect.\n\nDo you have any Inner Force left?",
+        "boolean_option": true,
+        "options": [
+            {
+                "prereq": [
+                    "inner_force",
+                    1
+                ],
+                "text": "Continue",
+                "entry": 343
+            },
+            {
+                "text": "Continue",
+                "entry": 327
             }
         ]
     },
