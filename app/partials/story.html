@@ -8,7 +8,7 @@
             <div class="row">
                 <h4 ng-show="gameState.currentEntry != 'death'">{{gameState.currentEntry}}</h4>
                 <h4 ng-show="gameState.currentEntry == 'death'">You have died</h4>
-                <img ng-show="gameState.hasEntryImage" src="img/{{gameState.entry.image}}" class="pull-right"/>
+                <img ng-show="gameState.hasEntryImage" ng-src="img/{{gameState.entry.image}}" class="pull-right"/>
                 <div ng-bind-html-unsafe="gameState.entryText"></div>
             </div>
             <!-- This is where attack and response text is displayed -->

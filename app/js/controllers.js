@@ -162,7 +162,7 @@ function NewGameCtrl($scope, $http, localStorageService, Story, Items, Opponents
         // Clear local storage, set start values, then initiate the first entry.
         localStorageService.clearAll();
         // Set starting entry number.
-        gameState.currentEntry = '14';
+        gameState.currentEntry = '1';
         gameState.endurance = 20;
         // Get start items.
         gameState.items = [];
@@ -589,13 +589,16 @@ function StoryCtrl($scope, $http, localStorageService, gameState, Story, Items, 
         };
         if (gameState.entry.loot_remove) {
             angular.forEach(gameState.entry.loot_remove, function(loot) {
-                angular.forEach(gameState.items, function(item) {
                 // Add a notification.
                 $.pnotify({
                     text: 'You have lost a #'.replace('#', loot[0])
                 });
+                angular.forEach(gameState.items, function(item) {
                     if (item.name == loot[0]) {
                         item.count -= loot[1];
+                        if (item.count < 0) {
+                            item.count = 0;  // Set item count to 0 if we've managed to go below that somehow.
+                        };
                     };
                 });
             });
