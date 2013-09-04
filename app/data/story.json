@@ -3692,6 +3692,21 @@
             }
         ]
     },
+    "294": {
+        "description": "The seaweed cracks underfoot as you approach the city of Ionalbion, perched on white cliffs above the Sea of the Star. Flocks of sheep flee from you as you climb the rolling downlands outside the land gate. The guards bear a token you do not recognise, a dancing sword with a scroll wrapped around its blade. The street stretches towards the sea gate and the harbour.\n\nYou pass a fountain in the shape of a dolphin where a young woman sells flowers made of coloured marzipan outside one of the many scroll shops. Guessing that most travellers would pass by the fountain, you ask her if she has noticed anyone unusual in the past tenday. She replies in a guttural version of the common-tongue that, although she sits by the fountain every day, she has seen no one unusual. You decide to go straight to the harbour, where a number of long low-sided biremes are tied up.\n\nA placard advertises that 'the Porpoise sails for Druath Glennan at high tide. The fare is two pieces of gold. You board the ship as they are about to cast off, paying the gold to a cabin boy.",
+        "loot_remove": [
+            [
+                "Gold coin",
+                2
+            ]
+        ],
+        "options": [
+            {
+                "text": "Continue",
+                "entry": 337
+            }
+        ]
+    },
     "295": {
         "description": "You grab the Two-headed Giant around the thighs, but it weighs well over a ton and you find yourself unable to throw it. The monster drops its colossal club and grabs you, throwing you to the rock under foot and trampling you. Your head splits like a ripe melon as the force of its heel grinds downwards. You have failed your mission.",
         "image": "341.png",
