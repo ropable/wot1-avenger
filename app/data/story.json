@@ -3769,6 +3769,21 @@
             }
         ]
     },
+    "300": {
+        "description": "The roof of the shack leaks and the smell of damp is everywhere but the old woman who lives there with her imbecile son asks no questions and feeds you some hot gruel. You thank her and leave two pieces of gold beneath a jar in the pantry, where she will later come across them, before settling down to wait.]n]nIt is after dusk when there is a fluttering outside the cobweb strewn window. You throw it open and Deirdra’s white dove flies in, dropping a piece of paper from its beak into your lap before fluttering away over the city wails. The note reads:\n\n> Make ail haste to Quench-heart Keep. Your quarry has left the monastery of Vile within the city to stay at the Keep before crossing the snows to the Pillars of Change.\n\nYou ask the woman the way but she grows terrified at the mention of the castle, imploring you not to go there. 'I must,' you insist and at length she directs you to walk north west across the Wold, towards the Goblin Teeth Mountains. You skirt the city and strike out across country at a sign which advertises a tavern called the Hydra's Heads.",
+        "loot_remove": [
+            [
+                "Gold coin",
+                2
+            ]
+        ],
+        "options": [
+            {
+                "text": "Continue",
+                "entry": 300
+            }
+        ]
+    },
     "302": {
         "description": "The Barbarian's voice rises to a shriek of battle lust as he swipes at you, berserk. He cares nothing for your attacks so long as his sword tastes your blood. He cuts his sword down towards your head, but you sidestep to the right, twist and lash your foot towards his face as his sword whistles down past your back.",
         "image": "251.png",
@@ -4186,6 +4201,15 @@
             {
                 "text": "Continue",
                 "entry": 93
+            }
+        ]
+    },
+    "337": {
+        "description": "The ship is rowed oüt of the harbour and the sail unfurled. You stand at the rail looking back at the receding cliffs. There is only one other passenger, a woman swathed against the sea breeze in ermine who seems to fascinate the crew. She seeks you out, introducing herself as Dierdra, and looking around you see that her face is painted so that she resembles an exquisite cat. You have never seen such face paint and the unnaturalness disturbs you.\n\nShesmiles and asks if you find the journey tedious. You do not reply but she goes on, 'I would not bother, myself, if I were not going to entertain someone who interests me.'\n\nYou begin to talk to her for some time, and she tells you that she is a singer, but it is when she talks of those who are to be her audience that you become most interested. From her description it can only be Yaemon, Grandmaster of Flame, the man you have sworn to kill. She talks too, of the man called Manse the Deathmage, a black sorcerer who reveres Nemesis, and can summon beings from the elemental planes to fight his enemies. She does not seem perturbed at the idea of meeting such people but soon her pleasantly lilting voice has you spellbound.\n\nBefore you realise what you are doing you have told her of your quest. Sick with fear you wait to see her reaction as the spell of enchantment is broken. She smiles and says that she is not really a singer at all, but an enchantress and swears by all that is good that she will help you. She turns away and coos softly twice. A white dove appears in the sky behind you and flies down to land on her outstretched hand.\n\nAs the ship glides into the harbour at Druath Glennan she tells you to visit the house of a poor family outside the city wall and wait there for word from her. Unsure whether you are doing as she bids you because you trust her, or because she has enchanted you, you disembark from the ship and walk towards the tumbledown shack that seems to cower in the shadow beneath the city wall.",
+        "options": [
+            {
+                "text": "Continue",
+                "entry": 300
             }
         ]
     },

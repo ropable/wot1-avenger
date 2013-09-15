@@ -162,7 +162,7 @@ function NewGameCtrl($scope, $http, localStorageService, Story, Items, Opponents
         // Clear local storage, set start values, then initiate the first entry.
         localStorageService.clearAll();
         // Set starting entry number.
-        gameState.currentEntry = '1';
+        gameState.currentEntry = '294';
         gameState.endurance = 20;
         // Get start items.
         gameState.items = [];
@@ -208,6 +208,12 @@ function StoryCtrl($scope, $http, localStorageService, gameState, Story, Items, 
     readGameState(gameState, localStorageService);
     $scope.gameState = gameState;
 
+    // Function to handle reverting to the previous entry
+    $scope.lastEntry = function() {
+        gameState = JSON.parse(gameState.lastEntry);
+        gameState.lastEntry = null;
+    };
+
     // Function to handle selection of the next entry option.
     // TODO: break this up into several functions (as for validEntryChoices).
     // TODO: function to handle modifying the player's endurance.
@@ -215,6 +221,9 @@ function StoryCtrl($scope, $http, localStorageService, gameState, Story, Items, 
     // TODO: function to handle the player attacking an opponent.
     // TODO: function to handle an opponent attacking the player.
     $scope.chooseEntry = function(option, useInnerForce) {
+        // Pickle the current gameState and place it in lastEntry.
+        gameState.lastEntry = null;
+        gameState.lastEntry = JSON.stringify(gameState);
         // Set gameState to the new entry.
         gameState.currentEntry = option.entry;
         gameState.entry = storyjson[option.entry.toString()];
