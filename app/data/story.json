@@ -84,6 +84,23 @@
             }
         ]
     },
+    "7": {
+        "description": "You spend the next day in lonely vigil, but no one leaves the castle. It is still a tenday before the moon will turn red at the conjunction of the planets and you can see preparations begin in the outer bailey. Yaemon, Honoric and Manse the Deathmage will set out for the Pillars of Change on the morrow. Your prayers to Kwon for a stormy moonless night are answered and you decide that on this night you will complete your mission or die honourably in the attempt.\n\nThe wind and the rain and the darkness will make it possible for you to pass into the castle as if invisible. You prepare yourself in silent meditation, and don your Ninja costume before staring up into the darkness until your night vision is as acute as an owl’s.",
+        "options": [
+            {
+                "prereq": [
+                    "skill",
+                    "Climbing"
+                ],
+                "text": "[Climbing] Scale the castle wall?",
+                "entry": 392
+            },
+            {
+                "text": "Raise the grille outside the moat and drop to the tunnel below?",
+                "entry": 402
+            }
+        ]
+    },
     "8": {
         "description": "The Barbarian tenses as you place the needle on your rolled tongue and spit it out in one fluid motion. The needle pierces his cheek. He has an iron constitution and although a look of agony twists his features, his system overcomes the virulent poison.\n\nAs you pause in astonishment, he strikes at you and his sword cleaves the air towards your shoulder. You try to bring your left forearm up to sweep aside the blade.",
         "image": "251.png",
@@ -613,6 +630,21 @@
             }
         ]
     },
+    "52": {
+        "description": "You empty the Essence of Firenewt powder on the surface of the moat and it stimulates the bullfrogs to recommence their croaking.",
+        "loot_remove": [
+            [
+                "Essence of Firenewt",
+                1
+            ]
+        ],
+        "options": [
+            {
+                "text": "Continue",
+                "entry": 74
+            }
+        ]
+    },
     "53": {
         "description": "'Look around you,' says Togawa, 'is this my home?' You stare at him, nonplussed.\n\n'No,' he goes on, 'my home is my body and your home is your body.'",
         "options": [
@@ -964,6 +996,15 @@
             }
         ]
     },
+    "79": {
+        "description": "Your attempt to infiltrate the castle seems to be going well as, after many adventures, you cross from the wall of the Inner Bailey to the Great Keep. But for all your stealth a keen-eyed guard has glimpsed you in the light of the full moon. Men pour from the Keep towards you and you turn to run, only to find your way blocked by Honoric and the Captain of the Guard.\n\nYou fell the Captain but the guards are soon upon you and you are unable to block their thrusts and parry the mighty sweep of Honoric’s sword at the same time. Your head sails cleanly from yourshoulders and Honoric remains undefeated.",
+        "options": [
+            {
+                "text": "Continue",
+                "entry": "death"
+            }
+        ]
+    },
     "80": {
         "image": "1.png",
         "description": "You step forward to attack but then somersault suddenly, landing at Gorobei's side as his fist flails the air at the spot from which you leapt. He turns but you have surprised him and will find it easier to attack him than if you merely stood before him to trade blows.",
@@ -1116,6 +1157,20 @@
                 "type": "offence",
                 "action": "kick",
                 "inner_force": true
+            }
+        ]
+    },
+    "91": {
+        "description": "The rain abates slightly as you strike your way slowly across the moat. You hear the grating of a guard’s heel on gravel as he turns to look out over the water, worried by the sudden silence of the bullfrogs. You slip below the surface.",
+        "fate_roll": true,
+        "options": [
+            {
+                "text": "Fate smiles on you!",
+                "entry": 74
+            },
+            {
+                "text": "Fate turns her back on you!",
+                "entry": 108
             }
         ]
     },
@@ -1837,6 +1892,19 @@
             }
         ]
     },
+    "145": {
+        "description": "You conceal yourself in a hole in the ground, watching the gatehouse and wait for darkness to fall. The moon is white and full and the night is still. There is not even enough breeze to spread the banners atop the three towers.",
+        "options": [
+            {
+                "text": "Choose this night to attempt to kill Yaemon, Honoric and Manse the Deathmage?",
+                "entry": 79
+            },
+            {
+                "text": "Wait to see if the weather conditions change tomorrow night?",
+                "entry": 7
+            }
+        ]
+    },
     "146": {
         "description": "You lose your balance as your loot slips on the treacherous ice and slide across the shiny surface as the talons of the Snow Giant descend upon you.",
         "image": "252.png",
@@ -2013,6 +2081,23 @@
             {
                 "text": "Follow the winding river Fortune up into Fortune Pass and cross the mountains that way?",
                 "entry": 70
+            }
+        ]
+    },
+    "162": {
+        "description": "When you tell the guard in the castle gatehouse that you are a minstrel and juggler he says that there is to be a banquet tomorrow night for honoured guests, and asks you where you last performed.",
+        "options": [
+            {
+                "text": "Reply with ‘Ionalbion’?",
+                "entry": 104
+            },
+            {
+                "text": "Reply with ‘Mortavalon’?",
+                "entry": 354
+            },
+            {
+                "text": "Reply with ‘Druath Glennan’?",
+                "entry": 124
             }
         ]
     },
@@ -2251,6 +2336,19 @@
             {
                 "text": "Continue",
                 "entry": 191
+            }
+        ]
+    },
+    "179": {
+        "description": "On your way to Quench-heart Keep, you come across the tracks of three horses and a camp. You quicken your pace, hoping to catch them before they gain the safety of the castle. Following the tracks across the Wold leads you towards the Goblin’s Teeth Mountains, jagged and black, and before them stands a great castle, built out of the same sombre stone. The gatehouse is flanked by two stout posts which have been driven into the ground.\n\nTwo Iron-maidens, metal cages lined with spikes in the shape of a sarcophagus, sway gently in the wind. The corpse inside one is shrunken and rotted but the other holds an emaciated man whose beard and hair have grown down to his waist. He is too mad even to plead for help from strangers.\n\nThree horsemen enter the gatehouse some way ahead of you, a man in a scarlet robe flanked by two men in black, both tall but one is thin where the other is built like a bear. For the first time you have sighted your quarry. The Great Keep itself rises high above the walls, surmounted by three towers, each of which flies a banner. The most northerly boasts a Scarlet Mantis, the west tower, a silver sword hanging by a needle thread, the Sword of Doom and the third the black whirlpool symbol of Nemesis.\n\nAs you approach the gatehouse, two soldiers drag a screaming man to a grille outside the moat.\n\n‘Feeding time,’ says one and they laugh as they raise the grille and throw their prisoner down to whatever lurks in the castle dungeons.",
+        "options": [
+            {
+                "text": "Wait for dark before trying to enter the castle?",
+                "entry": 145
+            },
+            {
+                "text": "Try to pass yourself off as a minstrel, one of the Seven Ways of Going, so that you can reconnoitre the castle first?",
+                "entry": 162
             }
         ]
     },
@@ -4740,6 +4838,24 @@
             }
         ]
     },
+    "392": {
+        "description": "You approach the castle at a spot where the nearest towers on either side are a hundred feet apart. You can hear the pacing of a guard on the battlements, above the croaking of bullfrogs. You ease yourself soundlessly into the chill moat as the rain thrashes the surface around you. The noise of the bullfrogs is surprisingly loud and it is noticeable when they stop their croaking suddenly. Do you have some Essence of Firenewt?",
+        "boolean_option": true,
+        "options": [
+            {
+                "prereq": [
+                    "item",
+                    "Essence of Firenewt"
+                ],
+                "text": "Continue",
+                "entry": 52
+            },
+            {
+                "text": "Continue",
+                "entry": 91
+            }
+        ]
+    },
     "394": {
         "description": "The Cobra Man lies spread-eagled on the sand, dead. The crowd roars with approval, as you pluck the pole from the nearby dune. You grab one end and, holding it out before you, sprint to the edge of the desert. Planting the pole in the sands, you sail over the wide moat which you notice is infested with Floating Mouths, voracious fish that are all mouth and elastic belly.\n\nYou land on the wall which is the lowest part of the castle as the man dressed in blue and gold floats across the moat on a small ice floe which has broken away from the edge of the ice lake.",
         "options": [
@@ -4795,6 +4911,23 @@
                 "entry": 345,
                 "type": "offence",
                 "action": "throw"
+            }
+        ]
+    },
+    "402": {
+        "description": "You lift the grille at the moat’s edge and lower yourself into the wide rock-hewn tunnel beneath, gambling that your mission will be completed before the guards notice that the grille is out of place. Your feet are deep in slime and squealing sewer rats brush your ankles in the darkness. You feel your way slowly and stop dead as you sense something ahead of you. It has sensed you, and an ear-splitting roar echoes around the cavern which is its home.",
+        "options": [
+            {
+                "prereq": [
+                    "skill",
+                    "Climbing"
+                ],
+                "text": "[Climbing] Leave the tunnel and scale the castle wall?",
+                "entry": 392
+            },
+            {
+                "text": "Continue along the tunnel towards it?",
+                "entry": 383
             }
         ]
     },
