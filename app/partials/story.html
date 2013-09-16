@@ -8,7 +8,7 @@
             <div class="row">
                 <h4 ng-show="gameState.currentEntry != 'death'">{{gameState.currentEntry}}</h4>
                 <h4 ng-show="gameState.currentEntry == 'death'">You have died</h4>
-                <p ng-show="gameState.entryCount > 0"><a href="" ng-click="previousEntry()">Go to previous entry...</a></p>
+                <p ng-show="gameState.entryCount > 0"><a href="" ng-click="previousEntry()">Back to previous entry...</a></p>
                 <img ng-show="gameState.hasEntryImage" ng-src="img/{{gameState.entry.image}}" class="pull-right"/>
                 <div ng-bind-html-unsafe="gameState.entryText"></div>
             </div>
