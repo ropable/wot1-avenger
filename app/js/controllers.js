@@ -210,7 +210,7 @@ function StoryCtrl($scope, $http, localStorageService, gameState, Story, Items, 
     var history = []; // Stores a history of serialised gameState objects.
 
     // Function to handle reverting to the previous entry in the history array.
-    $scope.lastEntry = function() {
+    $scope.previousEntry = function() {
         gameState = JSON.parse(history.pop());
         $scope.gameState = gameState;
     };
@@ -222,9 +222,9 @@ function StoryCtrl($scope, $http, localStorageService, gameState, Story, Items, 
     // TODO: function to handle the player attacking an opponent.
     // TODO: function to handle an opponent attacking the player.
     $scope.chooseEntry = function(option, useInnerForce) {
-        console.log(option);
         // Pickle the current gameState and push it into the history array.
         history.push(JSON.stringify(gameState));
+        gameState.entryCount = history.length;
         // Set gameState to the new entry.
         gameState.currentEntry = option.entry;
         gameState.entry = storyjson[option.entry.toString()];
