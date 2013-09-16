@@ -25,7 +25,7 @@ wot1app.factory('gameState', function($http) {
     var gameState = {};
     gameState.inProgress = false;
     gameState.currentEntry = null;
-    gameState.lastEntry = null;  // Store the gameState of the previous entry.
+    gameState.entryCount = 0;
     gameState.cheatMode = true;
     gameState.entry = null;
     gameState.entryText = null;
