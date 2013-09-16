@@ -381,6 +381,15 @@
             }
         ]
     },
+    "28": {
+        "description": "He catches the wire which bites into his mail gauntlet and shouts the alarm. You kill him quickly but not before the crossbow bolt of another guard has tumbled you to your death on the grass below.",
+        "options": [
+            {
+                "text": "Continue",
+                "entry": "death"
+            }
+        ]
+    },
     "30": {
         "description": "A huge Troll, its warted skin green and slimy, bursts out of the mist and pulls up in front of you. You kick and punch it for all you are worth but as fast as you inflict wounds they heal again, magically, the torn flesh crawling across the bones to re-knit together, leaving only purple scars. The Troll claws you and it seems that you will lose this battle.",
         "modify_endurance": -4,
@@ -903,6 +912,27 @@
             }
         ]
     },
+    "74": {
+        "description": "You haul yourself soundlessly from the moat and begin the difficult climb up the castle wall, using your Cat’s Claws to cling onto every available crevice. You are about to peer over the battlements when the slow footsteps of a patrolling guard pass overhead. You cling motionless, flattening yourself against the wall as, unaccountably, he pauses above you to survey the moat. Your arms are aching with the strain when, after ten minutes, he walks away towards the nearest tower and you cross the battlements.\n\nUsing the grappling hook and rope you descend quickly to the Castle Bailey below. The hook falls free at a shake of the rope and you catch it. Looking around you realise that you have only penetrated into the outer courtyard, another wall stands between you ,and the inner Bailey which surrounds the Great Keep. There is a narrow hole in the wall used for the passing of arms and food when the gate in the wall is shut.",
+        "options": [
+            {
+                "prereq": [
+                    "skill",
+                    "Escapology"
+                ],
+                "text": "[Escapology] Try to wriggle through it?",
+                "entry": 277
+            },
+            {
+                "prereq": [
+                    "skill",
+                    "Climbing"
+                ],
+                "text": "[Climbing] Scale the wall of the Inner Bailey?",
+                "entry": 38
+            }
+        ]
+    },
     "75": {
         "description": "You climb to the ceiling using your Cat's Claws and noiselessly open a trapdoor that leads to the roof. You climb out under the eaves and onto the slates of the barracks roof before jumping down to the street below.",
         "fate_roll": true,
@@ -1403,6 +1433,15 @@
                 "entry": 87,
                 "type": "offence",
                 "action": "throw"
+            }
+        ]
+    },
+    "108": {
+        "description": "You use your breathing tube for air but after ten minutes in the freezing moat, decide to risk crawling out to begin your climb. The grappling hook, its prongs muted with felt, lodges fast, and you move up to the battlements swiftly and soundlessly. As you peep your head above the battlements a strange terror grips you and for an instant you are frozen in fear.\n\nIt is long enough for Honoric to bury his Eldritch Sword  Sorcerak in your head, and you tumble backwards into the moat, dead. One of the guards had heard you in the moat when the frogs stopped their croaking.",
+        "options": [
+            {
+                "text": "Continue",
+                "entry": "death"
             }
         ]
     },
@@ -4444,6 +4483,15 @@
             }
         ]
     },
+    "349": {
+        "description": "You slide beneath its feet but cannot move its colossal legs. Instead it collapses on top of you, driving the breath from your body and crushing your ribcage. The beast, whose sense of smell is acute, lunges and impales you on its horn with its massively powerful arms. You are still twitching feebly as it begins to feed on the entrails which have spilled from your body.",
+        "options": [
+            {
+                "text": "Continue",
+                "entry": "death"
+            }
+        ]
+    },
     "351": {
         "description": "Seeing that you will not clasp his hand, the magician begins to chant a spell.",
         "options": [
@@ -4519,6 +4567,15 @@
             {
                 "text": "Investigate the cave?",
                 "entry": 275
+            }
+        ]
+    },
+    "358": {
+        "description": "The monster crouches as you climb the side of the cavern, burying your Cat’s Claws into cracks in the roof of the cavern. It is shackled to the wall by links of heavy chain with enough slack to cross to your side of the cavern. Suddenly the beast, whose sense of smell is acute, lunges towards you, ripping you down from the ceiling and impaling you on its horn with its massively powerful arms. You are still twitching feebly as it begins to feed on the entrails which have spilled from your body.",
+        "options": [
+            {
+                "text": "Continue",
+                "entry": "death"
             }
         ]
     },
@@ -4780,6 +4837,23 @@
             {
                 "text": "Continue",
                 "entry": 372
+            }
+        ]
+    },
+    "383": {
+        "description": "As you edge forward a cavern opens out around you and you can see the vague outline of what looks like one of the Elder Gods, in the light of a single smoking torch. A great horn protrudes from its head and it stoops, almost brushing the tip against the fifteen foot high ceiling. Its outline is strangely jagged and thé smell of putrefaction suggests that its thick hide is sloughing off in great dead patches.\n\nIf it is truly one of the Elder Gods you know that it will be immensely strong even if weakened by its existence in this dank pit of slime. The half-eaten corpse of the unfortunate who was fed to the beast as you arrived at Quench-heart Keep lies before you, its face a mask of horror.",
+        "options": [
+            {
+                "prereq": [
+                    "skill",
+                    "Climbing"
+                ],
+                "text": "[Climbing] Crawl across the ceiling in the darkness away from the torch?",
+                "entry": 358
+            },
+            {
+                "text": "Step forward, ready to give battle?",
+                "entry": 373
             }
         ]
     },
