@@ -32,6 +32,15 @@
             }
         ]
     },
+    "2": {
+        "description": "The guard walking the rounds of the Inner Bailey does not notice as, with the faintest scraping you force an entry at the window of a store-room. The room opens out onto a spiral staircase which is lit with torches fixed in brackets on the outside wall.\n\nHalfway up your keen sight notices a network of fine threads stretched across the staircase and connected to wires which disappear through holes in the inner wall. You stand on your hands and ‘walk’ up the staircase, feeling for the near invisible threads as you go and straining your ears for the slightest sound. At last you are past them.",
+        "options": [
+            {
+                "text": "Continue",
+                "entry": 399
+            }
+        ]
+    },
     "3": {
         "description": "The hook catches the castle wall and you leap to wards the far side of the moat. You hit the water with a splash and begin pulling yourself up to the wall as fast as you can. The water boils around you as the Floating Mouths streak towards their prey and two are still fixed to you as you pull yourself out. They tear at your flesh.",
         "modify_endurance": -3,
@@ -255,6 +264,19 @@
             }
         ],
         "description": "You step forward as if to punch, then, leaping in the air you lash the ball of your foot toward Gorobei's head with a speed that defies belief. Gorobei, although not quick, knows your style of combat."
+    },
+    "18": {
+        "description": "There is the merest death rattle as the wire dissects his windpipe and you lower his body gently to the floor, before re-fixing the grappling hook and sliding down to the grass of the Inner Bailey which surrounds the Great Keep.",
+        "options": [
+            {
+                "text": "Climb to the top of the Keep?",
+                "entry": 174
+            },
+            {
+                "text": "Climb the Keep up to the first row of windows and force an entry there?",
+                "entry": 2
+            }
+        ]
     },
     "19": {
         "description": "The Aquamarin’s huge oars are each manned by two. At your side a rower, until recently free but now roped by the reavers to the oar shaft, stares blankly at you. You can tell by the white scars on his back that he is one of the two who has been in slave galleys before. His upper body is huge, his chest unnaturally deep and his legs squat and tapering to small feet, giving him the appearance of a toad. He tells you that he had been enslaved as a boy and knows no other life than that of the oar deck. He groans quietly at the savage twist of Fate that has befallen him and tells you that he was the only one on his last slave ship to live longer than a year.\n\nThe buccaneers appoint an Overseer and two whip hands to patrol the Aquamarin's oar deck. It seems they are going to sell her and her crew at some lawless port.",
@@ -494,6 +516,20 @@
             {
                 "text": "Continue",
                 "entry": "death"
+            }
+        ]
+    },
+    "38": {
+        "description": "Once again you use the grappling hook and skim quickly and soundlessly up the wall. At the top you see a guard who has heard the dull thud of the felt-covered hook as it fell atop the wall. You climb sideways from the hook using convenient hand-holds where the concrete has been washed from between the stones and vault over the wall at his side, your Garotte-wire ready between your teeth. He whirls round as you try to throw the wire over his head.",
+        "opponent_defence_roll": 4,
+        "options": [
+            {
+                "text": "Your attack succeeds!",
+                "entry": 18
+            },
+            {
+                "text": "Your attack fails!",
+                "entry": 28
             }
         ]
     },
@@ -2317,6 +2353,36 @@
             }
         ]
     },
+    "174": {
+        "description": "You climb like a spider up the wall of the Great Keep, flattening yourself against the stones and clinging motionless each time the guard, walking his rounds of the Inner Bailey, is below you. The wind and the rain cover the faint scraping of your Cat’s Claws as you bury them in the loose mortar that holds the stones together, and you are invisible in the darkness.\n\nAt last you are at the battlements and you peep out over the flat roof of the Keep. The three turrets, surprisingly large now that you are so close, still boast their flags which are faintly illuminated by the glow of a charcoal brazier. With his back to this stove is the Captain of the Guard, clad in black armour.\n\nEvery now and then he patrols the battlements from one turret to another, before returning to warm himself at the brazier. He has taken his helmet off and is standing in the glow of the charcoals.",
+        "image": "399.png",
+        "options": [
+            {
+                "text": "Wait till he is beside the low battlements and attempt to throw him over the side?",
+                "entry": 331
+            },
+            {
+                "prereq": [
+                    "item",
+                    "Shuriken"
+                ],
+                "text": "Use a Shuriken, aiming at his head?",
+                "entry": 269
+            },
+            {
+                "text": "Creep up behind him and use your Garotte-wire?",
+                "entry": 247
+            },
+            {
+                "prereq": [
+                    "skill",
+                    "Poison Needles"
+                ],
+                "text": "[Poison Needles] Use a Poison Needle?",
+                "entry": 230
+            }
+        ]
+    },
     "175": {
         "description": "The Captain shouts for help as the Shuriken is caught in the blankets and he throws them at you as you leap to attack. You cast them aside and duck a cutlass swipe before hearing a sound behind you. You whirl and block but are too late to catch the throwing knife of the Reaver's first mate. It lodges in your heart and you know no more.",
         "options": [
@@ -3606,6 +3672,19 @@
             }
         ]
     },
+    "277": {
+        "description": "You fit yourself into the hole which passes through the ten foot thick wall just before another soldier passes by on his round of the inner courtyard. Mercifully he doesn’t notice your black-garbed form in the darkness of the hole. You lie still for half an hour until you have timed how long his round takes and then try to move on, only to find you have become wedged. Dislocating your shoulder allows you to squeeze through.\n\nYou dart to the Great Keep and begin the climb to its roof, hanging motionless by the Cat’s Claws each time the guard’s beat takes him below you..",
+        "options": [
+            {
+                "text": "Continue outside the Keep until you reach the roof?",
+                "entry": 174
+            },
+            {
+                "text": "Force entry at one of the lower windows?",
+                "entry": 2
+            }
+        ]
+    },
     "279": {
         "description": "The monk falls to the ground helplessly coughing blood, but there is no respite for you as the second monk bows to you before preparing to attack. You decide to change your tactics.",
         "opponents": [
@@ -4721,6 +4800,33 @@
             }
         ]
     },
+    "373": {
+        "description": "The huge monster lumbers towards you and you can see that it resembles a great hairless ape. It is chained at the anide with massive iron links, so that it can only reach the entrance to the cavern. The great areas of hanging skin reveal enormous black muscles taut with power.",
+        "image": "373.png",
+        "opponents": [
+            "Elder God"
+        ],
+        "options": [
+            {
+                "text": "Use the Winged Horse kick?",
+                "entry": 333,
+                "type": "offence",
+                "action": "kick",
+                "inner_force": true
+            },
+            {
+                "text": "Use the Iron Fist punch?",
+                "entry": 321,
+                "type": "offence",
+                "action": "punch",
+                "inner_force": true
+            },
+            {
+                "text": "Use the Dragon's Tail throw?",
+                "entry": 349
+            }
+        ]
+    },
     "374": {
         "description": "One of the monks tries to punch you, but you lean back out of range, turn and dive your foot towards his head.",
         "player_defence": [
@@ -4985,6 +5091,36 @@
                 "entry": 345,
                 "type": "offence",
                 "action": "throw"
+            }
+        ]
+    },
+    "399": {
+        "description": "As you mount the staircase you see the open door to the Banqueting Hall and creep past the locked doors of the dreaming household. At last the moist wind is about you again as you peep out over the top step onto the flat roof of the Keep. The three turrets, surprisingly large now that you are so close, still boast their flags which are faintly illuminated by the glow of a charcoal brazier.\n\nWith his back to this stove is the Captain of the Guard, clad in black armour. Every now and then he patrols the battlements from one turret to another before returning to warm himself at the brazier. He has taken his helmet off and is standing in the glow of the charcoals.",
+        "image": "399.png",
+        "options": [
+            {
+                "text": "Wait till he is beside the low battlements and attempt to throw him over the side?",
+                "entry": 331
+            },
+            {
+                "prereq": [
+                    "item",
+                    "Shuriken"
+                ],
+                "text": "Use a Shuriken, aiming at his head?",
+                "entry": 269
+            },
+            {
+                "text": "Creep up behind him and use your Garotte-wire?",
+                "entry": 247
+            },
+            {
+                "prereq": [
+                    "skill",
+                    "Poison Needles"
+                ],
+                "text": "[Poison Needles] Use a Poison Needle?",
+                "entry": 230
             }
         ]
     },

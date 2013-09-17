@@ -162,7 +162,7 @@ function NewGameCtrl($scope, $http, localStorageService, Story, Items, Opponents
         // Clear local storage, set start values, then initiate the first entry.
         localStorageService.clearAll();
         // Set starting entry number.
-        gameState.currentEntry = '179';
+        gameState.currentEntry = '383';
         gameState.endurance = 20;
         // Get start items.
         gameState.items = [];
@@ -236,6 +236,7 @@ function StoryCtrl($scope, $http, localStorageService, gameState, Story, Items, 
         validEntryChoices(gameState);
         // Add any new opponents.
         angular.forEach(gameState.entry.opponents, function(o) {
+            console.log(opponentsjson);
             if (o in opponentsjson) {
                 gameState.currentOpponents.push(opponentsjson[o]);
             };
