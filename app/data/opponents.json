@@ -291,5 +291,19 @@
         "defence_throw": 12,
         "damage_mod": 0,
         "effects": []
+    },
+    "Torturer": {
+        "name": "Torturer",
+        "action_desc": "the Torturer",
+        "endurance": 15,
+        "damage": [
+            1,
+            1
+        ],
+        "defence_punch": 6,
+        "defence_kick": 5,
+        "defence_throw": 6,
+        "damage_mod": 0,
+        "effects": []
     }
 }
