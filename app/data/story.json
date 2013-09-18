@@ -2954,6 +2954,15 @@
             }
         ]
     },
+    "224": {
+        "description": "The evil Torturer is thrown into the water by your killing blow, where he bobs gently, face downwards. The prisoners implore you to release them and seizing the opportunity to create a diversion, you do so, asking only that they wait to the count of two hundred before following you out of the chamber.",
+        "options": [
+            {
+                "text": "Continue",
+                "entry": 270
+            }
+        ]
+    },
     "225": {
         "description": "You give the barman two pieces of gold for the room and go upstairs. You sleep lightly, senses alert and you are ready when three drunken soldiers burst in. It is the work of a few moments to knock two of them unconscious with deft kicks and the third goggles in surprise and then runs from the room. You sleep little for the rest of the night. In the morning you leave the city, on the road to Mortavalon.",
         "loot_remove": [
@@ -3136,6 +3145,34 @@
             }
         ]
     },
+    "238": {
+        "description": "As you strike with the side of your hand the Torturer blocks, his axe swinging by the thong from his wrist. He is a keen fist-fighter.",
+        "image": "309.png",
+        "player_defence": 7,
+        "victory": 224,
+        "options": [
+            {
+                "text": "Use the Leaping Tiger kick?",
+                "entry": 249,
+                "type": "offence",
+                "action": "kick",
+                "inner_force": true
+            },
+            {
+                "text": "Use the Teeth of the Tiger throw?",
+                "entry": 259,
+                "type": "offence",
+                "action": "throw"
+            },
+            {
+                "text": "Punch again?",
+                "entry": 238,
+                "type": "offence",
+                "action": "punch",
+                "inner_force": true
+            }
+        ]
+    },
     "239": {
         "description": "As you spring towards Olvar, he nods at you and a lightning bolt stabs with a crack from the gem at his forehead. You try to leap above the lancing bolt.",
         "image": "251.png",
@@ -3248,6 +3285,34 @@
                 "entry": 248,
                 "type": "offence",
                 "action": "punch",
+                "inner_force": true
+            }
+        ]
+    },
+    "249": {
+        "description": "The Torturer is not used to an opponent who kicks with such deadly power and breath-taking speed.",
+        "image": "309.png",
+        "player_defence": 7,
+        "victory": 224,
+        "options": [
+            {
+                "text": "Use a Tiger’s Paw chop?",
+                "entry": 238,
+                "type": "offence",
+                "action": "punch",
+                "inner_force": true
+            },
+            {
+                "text": "Use the Teeth of the Tiger throw?",
+                "entry": 259,
+                "type": "offence",
+                "action": "throw"
+            },
+            {
+                "text": "Kick again?",
+                "entry": 249,
+                "type": "offence",
+                "action": "kick",
                 "inner_force": true
             }
         ]
@@ -3457,6 +3522,27 @@
             {
                 "text": "Finish him off with a kick to the head?",
                 "entry": 222
+            }
+        ]
+    },
+    "259": {
+        "description": "The Torturer is taken by surprise at your amazing leap, he almost drops the axe which swings by its thong from his wrist as he tries to throw your leg back from his head.",
+        "image": "309.png",
+        "player_defence": 7,
+        "options": [
+            {
+                "text": "Use the Leaping Tiger kick?",
+                "entry": 249,
+                "type": "offence",
+                "action": "kick",
+                "inner_force": true
+            },
+            {
+                "text": "Use the Tiger's Paw chop?",
+                "entry": 238,
+                "type": "offence",
+                "action": "punch",
+                "inner_force": true
             }
         ]
     },
@@ -3766,6 +3852,16 @@
             }
         ]
     },
+    "282": {
+        "description": "In the wink of an eye you have buried a throwing star in the Torturer’s back and disappeared below the inky black water. Staring out from beneath the surface, you see the Torturer turn in pain and then threaten the boy with the red hot iron and the boy points to the water. The enraged Torturer turns his hooded face towards the water and, seizing his axe, runs screaming to the pool.\n\nYou erupt from the water and unleash another Shuriken, which takes him in the arm before he hits the surface. As he gasps in pain, you use the Tiger’s Paw to knock the axe from his grasp and wrestle with him as you sink into the black depths. He is strong but no match for you underwater. You have trained for this and use repeated Cobra Strikes to pummel him into helplessness, the water barely lessening the speed of your blows.\n\nThe Torturer floats lifeless to the surface and you drag yourself, gasping, into the torture chamber. There are several prisoners and they implore you to release them. Seizing the opportunity to create a diversion, you do so, asking only that they wait to the count of two hundred before following you out of the chamber.",
+        "image": "309.png",
+        "options": [
+            {
+                "text": "Continue",
+                "entry": 270
+            }
+        ]
+    },
     "283": {
         "description": "The road winds down from the hills and you see the city of Mortavalon, nestling in a bowl of green pastures and cornfields. The entrance to the city is through a large triumphal arch dedicated to a victory won by the Empire hunters who follow the god of Empire, Moraine, against the Soldiers of Fate.\n\nIt is evening and you fall in with a group of peasants who have been working the land. Explaining that you are a stranger you ask them about their city. It seems that the largest temple is to the god, Death, but the priests seldom interfere in daily life, as long as no-one quibbles over the occasional disappearance. They practise child-sacrifice. Tomorrow is to be a holiday for there is a combat in the arena. It seems they are looking for a champion who may win a fabulous fortune.",
         "options": [
@@ -3863,6 +3959,37 @@
             {
                 "text": "Continue",
                 "entry": 275
+            }
+        ]
+    },
+    "291": {
+        "description": "The brazier splutters in the wash of water that sprays the chamber as you leap behind the Torturer. He blindly whips the red-hot iron round behind him and is lucky to catch you with it. It bites agonisingly into your flesh.",
+        "image": "309.png",
+        "opponents": [
+            "Torturer"
+        ],
+        "modify_endurance": -2,
+        "damage_followup": "You spring back from the iron as he lets it fall and pulls the axe from his belt. He grins murderously at you.",
+        "options": [
+            {
+                "text": "Wipe the grin from his face with a Leaping Tiger kick?",
+                "entry": 249,
+                "type": "offence",
+                "action": "kick",
+                "inner_force": true
+            },
+            {
+                "text": "Throw a Tiger’s Paw chop?",
+                "entry": 238,
+                "type": "offence",
+                "action": "punch",
+                "inner_force": true
+            },
+            {
+                "text": "Use the Teeth of the Tiger throw?",
+                "entry": 259,
+                "type": "offence",
+                "action": "throw"
             }
         ]
     },
@@ -4076,7 +4203,7 @@
         "options": [
             {
                 "prereq": [
-                    "skill",
+                    "item",
                     "Shuriken"
                 ],
                 "text": "Hurl a Shuriken at him before ducking back under the surface?",
