@@ -4070,6 +4070,24 @@
             }
         ]
     },
+    "309": {
+        "description": "You have slain an immortal, delivering Orb from one of the beasts which roamed the world before man came from the stars. Breathing deeply but silently, you pass by the fallen hulk to the edge of the inky black underground river which fills the castle moat. The only way onwards is to plunge into the icy waters. You slip into the water and dive down into the chill depths and find that your head hits rock above you before you have surfaced.\n\nYou swim powerfully along the underwater tunnel for a minute before light shimmering above lets you know that you can surface at Last. As you do so, a man’s screaming fills your ears. A young boy chained to the wall goggles wide-eyed at you, but says nothing. You have surfaced in the torture chamber of Quench-heart Keep.\n\nA ducking stool hangs above you and the insomniac Torturer is still at work, applying a red-hot iron to the flesh of a man who hangs by chains from the roof. The Torturer has a large axe in his belt and his broad, heavily-muscled back runs with sweat in the heat of a brazier filled with glowing coals. He wears heavy spiked bracelets of leather and the black hood of an executioner.",
+        "image": "309.png",
+        "options": [
+            {
+                "prereq": [
+                    "skill",
+                    "Shuriken"
+                ],
+                "text": "Hurl a Shuriken at him before ducking back under the surface?",
+                "entry": 282
+            },
+            {
+                "text": "Leap out of the water and attack him?",
+                "entry": 291
+            }
+        ]
+    },
     "310": {
         "description": "Your clenched fist audibly parts the air as you drive it towards the Ogre's body. He tries to crush you with his spiked hammer.",
         "image": "232.png",
@@ -4216,6 +4234,32 @@
             }
         ]
     },
+    "321": {
+        "description": "As you step forward to punch, the beast lowers its head to charge you, bellowing ferociously. You are meeting the giant immortal head on.",
+        "image": "373.png",
+        "player_defence": 7,
+        "victory": 309,
+        "options": [
+            {
+                "text": "Use the Winged Horse kick?",
+                "entry": 333,
+                "type": "offence",
+                "action": "kick",
+                "inner_force": true
+            },
+            {
+                "text": "Use the Dragon's Tail throw?",
+                "entry": 349
+            },
+            {
+                "text": "Punch again?",
+                "entry": 321,
+                "type": "offence",
+                "action": "punch",
+                "inner_force": true
+            }
+        ]
+    },
     "322": {
         "description": "Without warning, you raise your hands and try to chop them together on either side of your opponent's neck.\n\nHe counters your double Tiger's Paw chop so swiftly that you may not block, as he ducks down and Cobra Strike kicks upwards toward your solar plexus.",
         "unblockable_attack": true,
@@ -4351,6 +4395,32 @@
             {
                 "text": "Kick again?",
                 "entry": 332,
+                "type": "offence",
+                "action": "kick",
+                "inner_force": true
+            }
+        ]
+    },
+    "333": {
+        "description": "The beast tries to grab you in a crushing embrace but you somersault towards it under its grasping hands, and roll to your feet, delivering a Winged Horse kick as you do so.",
+        "image": "373.png",
+        "player_defence": 7,
+        "victory": 309,
+        "options": [
+            {
+                "text": "Use the Iron Fist punch?",
+                "entry": 321,
+                "type": "offence",
+                "action": "punch",
+                "inner_force": true
+            },
+            {
+                "text": "Use the Dragon's Tail throw?",
+                "entry": 349
+            },
+            {
+                "text": "Kick again?",
+                "entry": 333,
                 "type": "offence",
                 "action": "kick",
                 "inner_force": true
