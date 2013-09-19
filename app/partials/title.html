@@ -1,4 +1,4 @@
-<div class="jumbotron masthead">
+<div class="jumbotron masthead" ng-controller="TitleCtrl">
     <div class="container">
         <h2>The Way of the Tiger</h2>
         <p><img src="img/tiger.png" /></p>
@@ -7,8 +7,7 @@
         <h3>Illustrations by Bob Harvey</h3>
         <ul class="masthead-links">
             <li><a href="#/new-game">Start a new game</a></li>
-            <li ng-show="gameState.inProgress=true"><a href="#/story">Continue game</a></li>
-            <li>Load a saved game</li>
+            <li ng-show="gameState.inProgress"><a href="#/story">Continue game</a></li>
             <li><a href="#/background">Background</a></li>
             <li>Instructions</li>
             <li>Copyright/About</li>
