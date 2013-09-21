@@ -160,7 +160,7 @@ function NewGameCtrl($scope, $http, localStorageService, Story, Items, Opponents
         // Clear local storage, set start values, then initiate the first entry.
         localStorageService.clearAll();
         // Set starting entry number.
-        gameState.currentEntry = '309';
+        gameState.currentEntry = '162';
         gameState.endurance = 20;
         // Get start items.
         gameState.items = [];

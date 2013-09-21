@@ -220,6 +220,15 @@
             }
         ]
     },
+    "15": {
+        "description": "You take your leave of the soldier and walk quickly away from the castle.",
+        "options": [
+            {
+                "text": "Continue",
+                "entry": 145
+            }
+        ]
+    },
     "16": {
         "description": "You walk to the barracks and join a queue of people, some young and fit, others older, looking a little down on their luck. You are chosen with a few of the others to demonstrate your skill with the sword, which you manage adequately but not well, never having been trained in sword play. You are grouped together and given drill practice for some hours before being marched to your night barracks. You manage to discover that the Legion of the Sword of Doom is going to attack the people of the Spires of Foreshadowing but that there is plenty of time to be trained for battle, because its leader, Honoric, has left the city and journeyed north.\n\nAs you all settle down to sleep, they begin to talk of pillaging the Spires and the loot that they will bring home. The barracks are guarded in case any of the new recruits think better of joining up but you decide that there is nothing more of interest here and try to desert in the quiet hours before dawn. You wrap your black Ninja headgear around your head until only the slits of your eyes are visible and don your black costume.",
         "options": [
@@ -311,6 +320,19 @@
             {
                 "text": "Continue",
                 "entry": 275
+            }
+        ]
+    },
+    "22": {
+        "description": "The guard hesitates, then says, ‘Wait here while I fetch the necessary papers, you will need a pass.’ With that he signals another soldier to take over and walks under the portcullis into the castle bailey.",
+        "options": [
+            {
+                "text": "Await his return?",
+                "entry": 31
+            },
+            {
+                "text": "Leave in case he is preparing a trap?",
+                "entry": 15
             }
         ]
     },
@@ -427,6 +449,15 @@
             {
                 "text": "Turn and flee as fast as you can?",
                 "entry": 14
+            }
+        ]
+    },
+    "31": {
+        "description": "You wait for the guard to reappear when there is a faint grating noise behind you. You spin in time to see Honoric and Manse the Deathmage stepping out from a secret doorway and go for a throwing star, but Manse casts a spell and your body is gripped by a trembling palsy.\n\nYou are powerless to resist as Honoric deftly cleaves your head from your shoulders with a sword.",
+        "options": [
+            {
+                "text": "Continue",
+                "entry": "death"
             }
         ]
     },
@@ -1390,6 +1421,15 @@
             }
         ]
     },
+    "104": {
+        "description": "'Ah, yes,' says the guard, 'It is a fair city. I sailed there once in a ship. In you go then...'\n\nYou thank him and walk under the portcullis into the bailey beyond.",
+        "options": [
+            {
+                "text": "Continue",
+                "entry": 112
+            }
+        ]
+    },
     "105": {
         "description": "The Shuriken findš its mark. The guard throws his hand to his throat and screams before collapsing to the floor, dead. Realising the alarm may have been given, you run out of the barracks towards the city gate, leaving your throwing star behind.",
         "loot_remove": [
@@ -1534,6 +1574,16 @@
             }
         ]
     },
+    "112": {
+        "description": "You saunter across the courtyard towards the Bailiff’s office. The two men in black travelling robes, Honoric and Manse the Deathmage, are talking to the Captain of the Guard and a group of his men. You stop to watch at a distance as Honoric, a powerfully built man with an arrogant and cruel look about him, borrows the Captain’s weapon and invites the soldiers to attack him.\n\nSeveral do so at once but there is no way past his flashing sword. He disarms three of them, then beats the rest back - all they can do is fend off his blows and you know that he could kill them at will. Seeing this display, Manse grimaces sourly and, pointing, turns the sword which Honoric is holding into a tulip.\n\nThe Captain of the Guard cannot resist chuckling at the sight of this huge man, the Marshal of the Legion of the Sword of Doom, clutching a tulip with which to belabour the soldiers. Honoric turns red with rage and, flinging the flower down, he draws his own great black sword. A chill of horror grips you and the guards cower as a pall of fear descends upon the castle. The wicked blade smokes slightly and the tulip has turned back into a sword.\n\n‘Where is your magic now, Deathmage? Your spells will not work with Sorcerak unsheathed,’ says Honoric. The Deathmage’s eyes narrow and his pallid pinched face seems to whiten still further as he mouths another spell. Nothing happpens and Honoric turns on his heel and walks towards the Keep, sheathing Sorcerak as he goes.\n\nAs he opens the gate which leads to the Inner Bailey you catch sight of a tower at the back of the castle which seems part derelict. It would make an easy climb. The Bailiff tells you that they have hired ‘a real Bard’ for tomorrow but when he has heard you sing and seen you juggle, he says that you can do a turn at dinner that evening.",
+        "image": "112.png",
+        "options": [
+            {
+                "text": "Continue",
+                "entry": 99
+            }
+        ]
+    },
     "113": {
         "description": "You scramble back down the scree slopes to the floor of Fortune Pass.",
         "options": [
@@ -1673,6 +1723,23 @@
             {
                 "text": "Continue",
                 "entry": "death"
+            }
+        ]
+    },
+    "124": {
+        "description": "‘Ah ha, I was in Druath as well. A shame I missed you, where did you sing?’",
+        "options": [
+            {
+                "text": "Reply 'The Alimother hostel'?",
+                "entry": 48
+            },
+            {
+                "text": "Reply 'The Hydra’s Heads'?",
+                "entry": 22
+            },
+            {
+                "text": "Reply 'In the Main Square'?",
+                "entry": 62
             }
         ]
     },
@@ -4830,6 +4897,19 @@
                 "type": "offence",
                 "action": "punch",
                 "inner_force": true
+            }
+        ]
+    },
+    "354": {
+        "description": "The guard hesitates, then says, ‘Wait here while I fetch the necessary papers, you will need a pass.’ With that he signals another soldier to take over and walks under the portcullis into the castle bailey.\n\nAs you stare at his receding back you reflect that Mortavalon is hundreds of miles to the south, a long way to have come since your last performance. But, then, perhaps you can say that you are travelling home to the City of Far Snows.",
+        "options": [
+            {
+                "text": "Await the guard’s return?",
+                "entry": 31
+            },
+            {
+                "text": "Leave in case he is preparing a trap?",
+                "entry": 15
             }
         ]
     },
