@@ -695,6 +695,15 @@
             }
         ]
     },
+    "48": {
+        "description": "‘You were entertaining the poor for no reward? No wonder I didn’t see your act. On you go then,’ and he waves you into the castle bailey, a courtyard surrounded by high walls on all sides.",
+        "options": [
+            {
+                "text": "Continue",
+                "entry": 112
+            }
+        ]
+    },
     "50": {
         "description": "The girl takes your hand in hers and leads you to the marble slab. The old man explains that he must let some of your blood into the silver chalice if he is to show you the future. He cuts a vein in your arm and the blood pumps into the ewer. You look at him in alarm as he lets it flow until you have lost half a pint and your arm begins to tingle. Then he seals the wound with a spell.\n\nThe girl pours a green potion into the ewer. You feel faint and obey him when he tells you to look at a mirror which hangs on the wall above you. He begins to chant and produces a crystal prism which he holds over the ewer. The blood and potion bubble and the Seer's chanting grows louder. A picture forms in the mirror of two men leaving a city on horseback. The larger is dressed in black plate mail and carries a black shield upon which is emblazoned a silver sword hanging from a silver thread, the Sword of Doom. His face is arrogant and cruel. The other is dressed in the clothes of a martial monk, scarlet with a thin black belt. They are riding towards you in silence and the monk's piercing black eyes gaze unwavering, into yours.\n\nThe Seer informs you that the vision shows Yaemon Grandmaster of Flame, riding with Honoric, Marshal of the Legion of the Sword of Doom, north from Mortavalon. He tells you that they are travelling to the Pillars of Change, each to speak a word which will imprison a god and a goddess in Inferno. Honoric seeks to rule the whole of the Manmarch. You fall into a trance and when you wake up you find yourself outside Doomover, walking on the road to Mortavalon.\n\nYou wonder what the Seer may have done whilst you were entranced. Has he told anyone of your vision? At any rate, the vision suggested that Honoric and Yaemon were far ahead. You realise that you must travel to Mortavalon to find out where Yaemon and Honoric are.",
         "image": "36.png",
@@ -805,6 +814,19 @@
             }
         ],
         "description": "You raise your foot as if to kick Gorobei in the chest, but spin to his side instead and take hold of his arm to throw him over your hip. You rapidly learn your mistake, however, as your grip slides on the oil which covers him and he uses his skill as a wrestler to grab you and lock your arm behind your back whilst he grips you around the throat. His strength is enormous. You try to somersault backwards over him and break the grip but he is ready for you and pins you to the floor before delivering a heavy blow."
+    },
+    "62": {
+        "description": "The guard hesitates, then says, ‘Wait here while I fetch the necessary papers. You will need a pass.’ With that he signals another soldier to take over and walks under the portcullis into the castle bailey.",
+        "options": [
+            {
+                "text": "Await his return?",
+                "entry": 31
+            },
+            {
+                "text": "Leave in case he is preparing a trap?",
+                "entry": 15
+            }
+        ]
     },
     "63": {
         "description": "You leap feet-first at one of the priests, trying to wrap your feet around his head, before twisting to throw him to the ground.",
@@ -1257,6 +1279,15 @@
             }
         ]
     },
+    "88": {
+        "description": "Only Yaemon notices you slipping the needle into your mouth and when you turn and spit the needle at him he snaps his fingers up and deftly catches it between finger and thumb, inches before his face.\n\n‘Kill him,’ he says, and Manse the Deathmage, eager to show off his skill, obliges. He holds his hand out towards you as if he were cupping an orange and beckons slightly. To your horror your heart bursts out from your chest and flies into his hand. He squeezes the stifi pulsing organ and the floor is drenched with your blood as you fall dead.",
+        "options": [
+            {
+                "text": "Continue",
+                "entry": "death"
+            }
+        ]
+    },
     "91": {
         "description": "The rain abates slightly as you strike your way slowly across the moat. You hear the grating of a guard’s heel on gravel as he turns to look out over the water, worried by the sudden silence of the bullfrogs. You slip below the surface.",
         "fate_roll": true,
@@ -1396,6 +1427,23 @@
             {
                 "text": "Continue",
                 "entry": "death"
+            }
+        ]
+    },
+    "99": {
+        "description": "You are watched constantly but find time to examine the lock of the gateway that leads to the Inner Bailey and to find a hole in the wall, used for passing food and arms through when the gate is shut. When it is time, you are taken into the Keep itself. The main hail has a large spiral staircase which leads to the castle roof and thence to the three turrets.\n\nYou are ushered into the parlour before dinner to entertain Yaemon and Honoric; Manse the Death-mage is nowhere to be seen. Yaemon watches you intently but Honoric is at ease, pouring wine from a flagon into a golden goblet. The Captain of the castle and his lady sit between them.\n\nYou sing a Manmarcher song of brave deeds in battle and lost loves and your juggling raises polite applause. As soon as your act is finished the Captain signals and your escort, two guards, usher you out of the parlour, just as Manse enters from the door opposite.",
+        "options": [
+            {
+                "prereq": [
+                    "skill",
+                    "Poison Needles"
+                ],
+                "text": "[Poison Needles] Use a Poison Needle against Yaemon?",
+                "entry": 88
+            },
+            {
+                "text": "Allow the guards to escort you out?",
+                "entry": 418
             }
         ]
     },
@@ -1877,6 +1925,20 @@
             }
         ]
     },
+    "132": {
+        "description": "The rain abates slightly as you stroke your way slowly across the moat. You hear the grating of a guard’s heel on gravel as he turns to look out over the water, worried by the sudden silence of the bullfrogs. You slip below the surface.",
+        "fate_roll": true,
+        "options": [
+            {
+                "text": "Fate smiles on you!",
+                "entry": 120
+            },
+            {
+                "text": "Fate turns her back on you!",
+                "entry": 108
+            }
+        ]
+    },
     "133": {
         "description": "The rock-face towers above you and you realise that it will be a dangerous climb. If you wish to go on, you will be in the hands of Fate.",
         "options": [
@@ -1966,6 +2028,15 @@
             {
                 "text": "Continue",
                 "entry": 175
+            }
+        ]
+    },
+    "138": {
+        "description": "As you steal towards the castle moat in the moonlight on this still night, your acute sense of hearing picks up a stifled shout from the castle battlement. You have been spotted. You lie low for a time but as soon as you hear the yapping of hounds, decide to run away to the woods. You use your knowledge of woodcraft to throw the dogs off the scent and return to the castle the following day.",
+        "options": [
+            {
+                "text": "Continue",
+                "entry": 166
             }
         ]
     },
@@ -2073,6 +2144,15 @@
             }
         ]
     },
+    "147": {
+        "description": "You empty the Essence of Firenewt powder on the surface of the moat, and it stimulates the bullfrogs to recommence their croaking.",
+        "options": [
+            {
+                "text": "Continue",
+                "entry": 120
+            }
+        ]
+    },
     "149": {
         "description": "The Efreet towers above you, flame licking across its ruby flesh. It reaches for you, and fire pours down its arm.",
         "image": "213.png",
@@ -2158,6 +2238,24 @@
             {
                 "text": "Continue",
                 "entry": 26
+            }
+        ]
+    },
+    "156": {
+        "description": "You skirt the castle until you are an unseen shadow in the darkness below the derelict northern tower. You can see that the cracks which have appeared due to the subsidence of its foundations will make it easy to climb to one of its windows, but above the croaking of bullfrogs you can hear the pacing of guards somewhere within.\n\nYou ease yourself soundlessly into the chill moat as the rain thrashes the surface around you. The noise of the bullfrogs is surprisingly loud and it is noticeable when they stop their croaking suddenly.",
+        "boolean_option": true,
+        "options": [
+            {
+                "prereq": [
+                    "item",
+                    "Essence of Firenewt"
+                ],
+                "text": "Use your Essence of Firenewt",
+                "entry": 147
+            },
+            {
+                "text": "Continue",
+                "entry": 132
             }
         ]
     },
@@ -2304,6 +2402,27 @@
                 ],
                 "text": "[Poison Needles] Use a poisoned needle?",
                 "entry": 106
+            }
+        ]
+    },
+    "166": {
+        "description": "You spend the next day in lonely vigil but no-one leaves the castle, it is still a tenday before the moon will turn red at the conjunction of the planets and you can see preparations begin in the Outer Bailey. Yaemon, Honoric and Manse the Deathmage will set out for the Pillars of Change on the morrow. Your prayers to Kwon for a stormy moonless night are answered and you decide that on this night you will complete your mission or die honourably in the attempt.\n\nThe wind and the rain and the darkness will make it possible for you to pass into the castle as if invisible. You prepare yourself in silent meditation, and don your ninja costume before staring up into the darkness until your night vision is as acute as an owl's.",
+        "options": [
+            {
+                "prereq": [
+                    "skill",
+                    "Climbing"
+                ],
+                "text": "[Climbing] Scale the castle wall?",
+                "entry": 392
+            },
+            {
+                "text": "Try the easy climb in through the derelict tower?",
+                "entry": 156
+            },
+            {
+                "text": "Raise the grille outside the moat and drop to the tunnel below?",
+                "entry": 402
             }
         ]
     },
@@ -5606,6 +5725,24 @@
             {
                 "text": "Continue",
                 "entry": 327
+            }
+        ]
+    },
+    "418": {
+        "description": "After sketching a map of the castle from memory you conceal yourself in a hole in the ground, watching the gatehouse and wait for darkness to fall. The moon is white and full and the night is still. There is not even enough breeze to spread the banners atop the three towers.",
+        "image": "418.png",
+        "options": [
+            {
+                "text": "Choose this night to attempt to scale the derelict tower?",
+                "entry": 138
+            },
+            {
+                "text": "Raise the grille outside the moat and drop to the tunnel below?",
+                "entry": 402
+            },
+            {
+                "text": "Decide to wait to see if the weather conditions change tomorrow night?",
+                "entry": 166
             }
         ]
     },
