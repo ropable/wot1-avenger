@@ -2736,6 +2736,15 @@
             }
         ]
     },
+    "188": {
+        "description": "With the speed of a cobra you chop both hands across the path of the twin crossbow bolts, crossing them in front of your chest and the bolts hurtle to the walls on either side of you. You move silently to the spiral staircase and wait to check that no one has heard the clattering of the iron bolts. Satisfied, you glide up the staircase.",
+        "options": [
+            {
+                "text": "Continue",
+                "entry": 399
+            }
+        ]
+    },
     "190": {
         "description": "The floorboards come up easily, revealing black dirt below. There is a layer of breathable air at floor level below the smoke and you set to work burrowing into the earth. When you have made a hole large enough to crouch in, you cover yourself with earth, poking your breathing tube through it for what little air you can get, using your control of breathing to minimize your needs. You sweat and gasp for breath but the soil protects you from the fire, which dies away when it has consumed the wooden room.\n\nYou lie still as a party of monks come to investigate. It seems they had ringed the place waiting for you to emerge but now they think you are dead. You overhear them talking about the imminent arrival at Quench-heart Keep of Yaemon, accompanied by Honoric of the Legion of the Sword of Doom and Manse the Deathmage, a most powerftil sorcerer and a follower of Nemesis, the Supreme Principle of Evil, and how they will be pleased that you are dead.\n\nWhen they have left, you leave your hole and take the road past the Hydra’s Heads Inn out of the city and towards the Goblin’s Teeth Mountains before which lies Quench-heart Keep.",
         "options": [
@@ -2841,6 +2850,15 @@
             }
         ]
     },
+    "198": {
+        "description": "Two crossbow bolts discharge from a trap in the wall and one of them pierces your windpipe. You sink gurgling to the floor and your lungs fill with blood. You drown in your own life-blood in the hallway of Quench-heart Keep.",
+        "options": [
+            {
+                "text": "Continue",
+                "entry": "death"
+            }
+        ]
+    },
     "200": {
         "description": "You step through the doorway of the Volunteer Inn and are surprised to see a wheel-shaped room, airy and light with a circular bar at its centre. There are ten tables with chairs screwed into the floor around them but perhaps because of the sound the door makes, everyone seems to be looking at you, and all conversation ceases. A man dressed in robes which bear the symbol of a ten-spoked wheel greets you as Avenger and invites you to join him. You sit opposite him and demand how he knows your name.\n\nHe replies, 'We who follow Fate may often know what will come to pass. Our leader, Whimsical, foresees the arrival of all strangers.'\n\n'But surely,' you ask, 'With such power he could rule the Manmarch?'\n\n'We only see what we are fated to see and it is not Whimsical's fate to rule the Manmarch.'\n\nYou tell him that there is a conspiracy amongst the followers of evil gods to enslave their fellow men. The priest replies that he knows this and when you demand what the followers of Fate plan to do, he merely spreads his hands and says, 'What will be, will be, and you cannot change it.' He goes on, however, to say that he realises that the Spires of Foreshadowing with its great cathedral to Fate will fall first if the evil ones have their way, and he says that he is on your side. He even asks you to become a Tool of Fate and to join the elite band of heroes who are fated to do great deeds in her service, and to embrace the worship of Fate.\n\n'For she is above other gods, Keeper of the Balance, without which all things would perish.'\n\nYou have heard of the elite few who serve Fate as her Tools, this is indeed an honour. One of the drinkers leaves the inn as he invites you to go with him to Fiendil's cathedral to Fate.",
         "options": [
@@ -2938,6 +2956,24 @@
             {
                 "text": "Continue",
                 "entry": 65
+            }
+        ]
+    },
+    "207": {
+        "description": "You step towards the staircase, hoping to find your way to the turrets atop the Keep, but a flagstone settles slightly underfoot and there is a click from the wall to your right. Do you have the skill of Arrow Cutting?",
+        "boolean_option": true,
+        "options": [
+            {
+                "prereq": [
+                    "skill",
+                    "Arrow Cutting"
+                ],
+                "text": "[Arrow Cutting] Continue",
+                "entry": 188
+            },
+            {
+                "text": "Continue",
+                "entry": 198
             }
         ]
     },
@@ -3046,6 +3082,15 @@
             {
                 "text": "Continue",
                 "entry": 65
+            }
+        ]
+    },
+    "215": {
+        "description": "As you carefully inspect the ground over which you will tread on your way to the staircase which may lead up to the turrets, you notice that the large flagstone before you is raised slightly above the others. Scanning the walls around you, you see a crack outlining one of the blocks of stone. Edging this open reveals a twin-crossbow trap which you deftly disarm by lifting the iron bolts from their place, before crossing to the staircase. You glide up it without a sound.",
+        "options": [
+            {
+                "text": "Continue",
+                "entry": 399
             }
         ]
     },
@@ -3861,6 +3906,24 @@
             {
                 "text": "Continue",
                 "entry": 254
+            }
+        ]
+    },
+    "270": {
+        "description": "A steep stairway winds up from the torture chamber, past empty cells. You emerge into a hallway within the Great Keep itself. A spiral stairway winds upwards from the opposite side of the stone hall way. Do you have the skill of Picking Locks?",
+        "boolean_option": true,
+        "options": [
+            {
+                "prereq": [
+                    "skill",
+                    "Picking Locks"
+                ],
+                "text": "[Picking Locks] Continue",
+                "entry": 215
+            },
+            {
+                "text": "Continue",
+                "entry": 207
             }
         ]
     },
@@ -4683,6 +4746,15 @@
             {
                 "text": "Continue",
                 "entry": 368
+            }
+        ]
+    },
+    "331": {
+        "description": "As the wind whistles around the turrets of the Great Keep there is a sudden keening howl. For an instant the hairs on the back of your neck prickle with fear, until you realise that it is only the wind howling through an arrow-slit in one of the turrets. The Captain looks startled and you choose this moment to steal up behind him as he moves towards the edge of the roof.\n\nYou use the Winged Horse kick to tumble him over the battlements and he is falling long before he has realised what has happened. When he does ht lets out a piercing shriek of alarm and calls ‘Intruder’, before hitting the flagstones below with a crash.\n\nAs you pull back from the edge and make for one of the turrets, light floods the roof area and, looking up, you see Manse the Death-mage. There is a twisted smile on his face as he casts a spell which sends you into a helpless shaking fit. Honoric bursts from the door of his turret and you are helpless as the Marshal of the Legion of the Sword of Doom cuts your head cleanly from your shoulders.",
+        "options": [
+            {
+                "text": "Continue",
+                "entry": "death"
             }
         ]
     },
