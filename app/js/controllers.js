@@ -192,6 +192,7 @@ function NewGameCtrl($scope, $http, localStorageService, Story, Items, Opponents
         angular.forEach(gameState.entry.opponents, function(o) {
             if (o in opponentsjson) {
                 gameState.currentOpponents.push(opponentsjson[o]);
+                gameState.inCombat = true;
             }
         });
         gameState.inProgress = true;
@@ -241,6 +242,7 @@ function StoryCtrl($scope, $http, localStorageService, gameState, Story, Items, 
         angular.forEach(gameState.entry.opponents, function(o) {
             if (o in opponentsjson) {
                 gameState.currentOpponents.push(opponentsjson[o]);
+                gameState.inCombat = true;
             }
         });
         // Add new allies.
@@ -274,7 +276,7 @@ function StoryCtrl($scope, $http, localStorageService, gameState, Story, Items, 
         }
         if (gameState.entry.damage_player && !gameState.cheatMode) {
             angular.forEach(gameState.entry.damage_player, function(damage) {
-                var note = 'You have lost {0} {1}!';
+                var note = 'You have lost {0} from your {1}!';
                 // Damage might be random, or fixed.
                 var dam = 0;
                 if (damage[1] === 'random') {
@@ -283,11 +285,8 @@ function StoryCtrl($scope, $http, localStorageService, gameState, Story, Items, 
                     dam = damage[2];
                 }
                 note = note.replace('{0}', dam);
-                // Damage might be to endurance, or combat modifiers.
-                if (damage[0] === 'endurance') {
-                    gameState.endurance -= dam;
-                    note = note.replace('{1}', 'endurance');
-                } else if (damage[0] === 'kick') {
+                // Damage might be to any of the player's combat modifiers.
+                if (damage[0] === 'kick') {
                     gameState.kick -= dam;
                     note = note.replace('{1}', 'kick modifier');
                 }
@@ -419,6 +418,7 @@ function StoryCtrl($scope, $http, localStorageService, gameState, Story, Items, 
                 gameState.options = [{"text": "Continue", "entry": gameState.entry.victory}];
                 gameState.actions.push(['You have won this combat!']);
                 gameState.allies = [];
+                gameState.inCombat = false;
             }
             // Opponent offence.
             var hasBlocked = false;
@@ -455,7 +455,6 @@ function StoryCtrl($scope, $http, localStorageService, gameState, Story, Items, 
                             }
                             // Push to actions to allow for blocking: [actionText, true, damage, defence]
                             // Player may only try to block the first successful hit.
-                            // TODO: allow selective blocking.
                             if (!hasBlocked && blockable) {
                                 gameState.actions.push([actionText, true, damage, defence]);
                             } else {
@@ -611,64 +610,64 @@ function StoryCtrl($scope, $http, localStorageService, gameState, Story, Items, 
                     text: 'You have lost a #'.replace('#', loot[0])
                 });
                 angular.forEach(gameState.items, function(item) {
-                    if (item.name == loot[0]) {
+                    if (item.name === loot[0]) {
                         item.count -= loot[1];
                         if (item.count < 0) {
                             item.count = 0;  // Set item count to 0 if we've managed to go below that somehow.
-                        };
-                    };
+                        }
+                    }
                 });
             });
-        };
+        }
         // Some sequences require that specific items are held away from the
         // player temporarily (until combat is finished, etc).
         // In hindsight, I should have used this to handle shuriken :/
         if (gameState.entry.loot_hold) {
             angular.forEach(gameState.entry.loot_hold, function(loot) {
                 angular.forEach(gameState.items, function(item) {
-                    if (item.name == loot) {
+                    if (item.name === loot) {
                         gameState.held_loot.push(item);
                         item.count = 0;
-                    };
+                    }
                 });
             });
-        };
+        }
         // Restore those items.
         if (gameState.entry.loot_held_restore) {
             angular.forEach(gameState.held_loot, function(loot) {
                 angular.forEach(gameState.items, function(item) {
-                    if (item.name == loot) {
+                    if (item.name === loot) {
                         item.count = loot.count;
-                    };
+                    }
                 });
             });
             gameState.held_loot = [];
-        };
+        }
         // Losing all equipment (captured, etc).
         if (gameState.entry.lose_equipment) {
             // Add a notification.
             $.pnotify({text: 'You have lost all your equipment!'});
             gameState.lost_equipment = gameState.items;
             gameState.items = [];
-        };
+        }
         // Regaining all equipment.
         if (gameState.entry.regain_equipment) {
             $.pnotify({text: 'You have regained all your equipment!'});
             gameState.items = gameState.lost_equipment;
             gameState.lost_equipment = [];
-        };
+        }
         // Notes
         if (gameState.entry.note_add) {
             angular.forEach(gameState.entry.note_add, function(note) {
                 gameState.notes.push(notesjson[note]);
             });
-        };
+        }
         // Events
         if (gameState.entry.event_add) {
             angular.forEach(gameState.entry.event_add, function(evt) {
                 gameState.events.push(evt);
             });
-        };
+        }
         // Alter player modifiers.
         if (gameState.entry.player_modifier) {
             if (gameState.entry.player_modifier[0] === "fate") {
@@ -688,15 +687,16 @@ function StoryCtrl($scope, $http, localStorageService, gameState, Story, Items, 
     $scope.useItem = function(item) {
         // Use inventory items: typically healing items which can only
         // be used outside combat.
-        // TODO: add an 'in combat' flag to entries.
-        if (item.endurance) {
-            var total = gameState.endurance + item.endurance;
-            if (total > 20) {
-                gameState.endurance = 20;
-            } else {
-                gameState.endurance += item.endurance;
+        if (!gameState.inCombat) {
+            if (item.endurance) {
+                var total = gameState.endurance + item.endurance;
+                if (total > 20) {
+                    gameState.endurance = 20;
+                } else {
+                    gameState.endurance += item.endurance;
+                }
+                item.count -= 1;
             }
-            item.count -= 1;
         }
     };
 

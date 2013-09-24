@@ -21,7 +21,8 @@ angular.module('wot1app.services', ['ngResource'])
 
 
 wot1app.factory('gameState', function($http) {
-    // TODO: gameState should persist data via localstorage, unless initialised.
+    // gameState should persist data via localstorage, unless initialised.
+    // The values below are initial values.
     var gameState = {};
     gameState.inProgress = false;
     gameState.currentEntry = null;
@@ -52,5 +53,6 @@ wot1app.factory('gameState', function($http) {
     gameState.lost_shuriken = 0;
     gameState.held_loot = [];
     gameState.allies = [];
+    gameState.inCombat = false;
     return gameState;
 });
