@@ -2630,6 +2630,23 @@
             }
         ]
     },
+    "178": {
+        "description": "The Captain ducks but he is too late, gurgling helplessly as you draw the wire ever tighter until it slices through his windpipe, before lowering his corpse gently to the floor. You notice that each of the three turrets has an archway leading to a spiral staircase.\n\nWhich turret will you climb?",
+        "options": [
+            {
+                "text": "Climb the one flying the Sword of Doom flag?",
+                "entry": 320
+            },
+            {
+                "text": "Climb the one flying the Scarlet Mantis?",
+                "entry": 148
+            },
+            {
+                "text": "Climb the one flying the Black Whirlpool?",
+                "entry": 130
+            }
+        ]
+    },
     "179": {
         "description": "On your way to Quench-heart Keep, you come across the tracks of three horses and a camp. You quicken your pace, hoping to catch them before they gain the safety of the castle. Following the tracks across the Wold leads you towards the Goblin’s Teeth Mountains, jagged and black, and before them stands a great castle, built out of the same sombre stone. The gatehouse is flanked by two stout posts which have been driven into the ground.\n\nTwo Iron-maidens, metal cages lined with spikes in the shape of a sarcophagus, sway gently in the wind. The corpse inside one is shrunken and rotted but the other holds an emaciated man whose beard and hair have grown down to his waist. He is too mad even to plead for help from strangers.\n\nThree horsemen enter the gatehouse some way ahead of you, a man in a scarlet robe flanked by two men in black, both tall but one is thin where the other is built like a bear. For the first time you have sighted your quarry. The Great Keep itself rises high above the walls, surmounted by three towers, each of which flies a banner. The most northerly boasts a Scarlet Mantis, the west tower, a silver sword hanging by a needle thread, the Sword of Doom and the third the black whirlpool symbol of Nemesis.\n\nAs you approach the gatehouse, two soldiers drag a screaming man to a grille outside the moat.\n\n‘Feeding time,’ says one and they laugh as they raise the grille and throw their prisoner down to whatever lurks in the castle dungeons.",
         "options": [
@@ -2745,6 +2762,23 @@
             }
         ]
     },
+    "189": {
+        "description": "Even in the difficult conditions of darkness, wind and rain, the light from the brazier is enough for you to tear the Captain’s throat out with your Shuriken, at a range of thirty feet. He collapses with a clatter of armour but his cry of pain was strangled at its source.\n\nEach of the three turrets has an archway leading to a spiral staircase. Which turret will you climb?",
+        "options": [
+            {
+                "text": "Climb the one flying the Sword of Doom flag?",
+                "entry": 320
+            },
+            {
+                "text": "Climb the one flying the Scarlet Mantis?",
+                "entry": 148
+            },
+            {
+                "text": "Climb the one flying the Black Whirlpool?",
+                "entry": 130
+            }
+        ]
+    },
     "190": {
         "description": "The floorboards come up easily, revealing black dirt below. There is a layer of breathable air at floor level below the smoke and you set to work burrowing into the earth. When you have made a hole large enough to crouch in, you cover yourself with earth, poking your breathing tube through it for what little air you can get, using your control of breathing to minimize your needs. You sweat and gasp for breath but the soil protects you from the fire, which dies away when it has consumed the wooden room.\n\nYou lie still as a party of monks come to investigate. It seems they had ringed the place waiting for you to emerge but now they think you are dead. You overhear them talking about the imminent arrival at Quench-heart Keep of Yaemon, accompanied by Honoric of the Legion of the Sword of Doom and Manse the Deathmage, a most powerftil sorcerer and a follower of Nemesis, the Supreme Principle of Evil, and how they will be pleased that you are dead.\n\nWhen they have left, you leave your hole and take the road past the Hydra’s Heads Inn out of the city and towards the Goblin’s Teeth Mountains before which lies Quench-heart Keep.",
         "options": [
@@ -2852,6 +2886,15 @@
     },
     "198": {
         "description": "Two crossbow bolts discharge from a trap in the wall and one of them pierces your windpipe. You sink gurgling to the floor and your lungs fill with blood. You drown in your own life-blood in the hallway of Quench-heart Keep.",
+        "options": [
+            {
+                "text": "Continue",
+                "entry": "death"
+            }
+        ]
+    },
+    "199": {
+        "description": "It is a difficult throw at this range in the wind and swirling rain, at a target lit only by the charcoal brazier. The throwing star clangs as it penetrates the armour on his back, but the captain’s wound is only a light one. He shouts the alarm as you close to attack and he moves behind the brazier which he throws over.\n\nYou leap above the glowing coals as a black-robed figure appears in the air above you. It is Manse the Deathmage and you dimly see the twisted smile on his face as he casts a spell which sends you into a helpless shaking fit. Honoric bursts from the archway of his turret and you are helpless as the Marshal of the Legion of the Sword of Doom snatches the sword from the Captain’s hand and cuts your head cleanly from your shoulders.",
         "options": [
             {
                 "text": "Continue",
@@ -2995,6 +3038,15 @@
             }
         ]
     },
+    "209": {
+        "description": "The Captain of the Guard ducks and drives his elbow back into your stomach. You leap back and he throws the brazier of coals onto the ground. You leap above the glowing coals as a black-robed figure appears in the air above you. It is Manse the Death-mage and you dimly see the twisted smile on his face as he casts a spell which sends you into a helpless shaking fit. Honoric bursts from the door of his turret and you are helpless as the Marshal of the Legion of the Sword of Doom snatches the sword from the Captain’s hand and cuts your head cleanly from your shoulders.",
+        "options": [
+            {
+                "text": "Continue",
+                "entry": "death"
+            }
+        ]
+    },
     "210": {
         "description": "On the morning of the third day out from Mortavaion you are high up in Fortune Pass, the air is crisp and scented with mountain heather. Mount Gwalodrun rises to a jagged peak before you. You climb up the scree slope at its base, slipping backwards whenever the pebbles avalanche, until you reach a belt of pines. At the tree line the mountainside becomes sheer and dangerous.",
         "boolean_option": true,
@@ -3109,6 +3161,41 @@
             {
                 "text": "Continue",
                 "entry": 85
+            }
+        ]
+    },
+    "218": {
+        "description": "It is a difficult throw at this range in the wind and swirling rain, at a target lit only by the charcoal brazier. The throwing star whirs past his head and away, landing outside the castle walls. The Captain of the Guard has not noticed it.",
+        "loot_remove": [
+            [
+                "Shuriken",
+                1
+            ]
+        ],
+        "options": [
+            {
+                "text": "Wait til he is beside the low battlements and throw him over?",
+                "entry": 331
+            },
+            {
+                "text": "Creep up behind and garotte him?",
+                "entry": 247
+            },
+            {
+                "prereq": [
+                    "skill",
+                    "Poison Needles"
+                ],
+                "text": "[Poison Needles] Use a Poison Needle?",
+                "entry": 230
+            },
+            {
+                "prereq": [
+                    "item",
+                    "Shuriken"
+                ],
+                "text": "Wait until he comes closer and try again with another Shuriken?",
+                "entry": "218a"
             }
         ]
     },
@@ -3235,6 +3322,23 @@
             {
                 "text": "Enter the cave?",
                 "entry": 275
+            }
+        ]
+    },
+    "230": {
+        "description": "As the wind whistles around the turrets of the Great Keep there is a sudden keening howl. For an instant the hairs on the back of your neck prickle with fear, until you realise that it is only the wind howling through an arrow slit in one of the turrets.\n\nThe Captain looks startled and you choose this moment to pop up your head and blow a needle towards him through the swirling rain. He is lit only by the glow of the charcoal brazier, but the needle flies true to its target. He collapses to the floor with a clatter of armour as the wind howls again. You notice that each of the three turrets has an archway leading to a spiral staircase.\n\nWhich turret will you climb?",
+        "options": [
+            {
+                "text": "Climb the one flying the Sword of Doom flag?",
+                "entry": 320
+            },
+            {
+                "text": "Climb the one flying the Scarlet Mantis?",
+                "entry": 148
+            },
+            {
+                "text": "Climb the one flying the Black Whirlpool?",
+                "entry": 130
             }
         ]
     },
@@ -3485,6 +3589,23 @@
                 "type": "offence",
                 "action": "punch",
                 "inner_force": true
+            }
+        ]
+    },
+    "247": {
+        "description": "As the wind whistles around the turrets of the Great Keep there is a sudden keening howl. For an instant the hairs on the back of your neck prickle with fear, until you realise that it is nothing but the wind howling through an arrow-slit in one of the turrets. The Captain looks startled and you choose this moment to steal up behind him. He is alert and seems to sense you at the final moment, as you lower the Garotte-wire over his head.",
+        "variable_attack_roll": [
+            2,
+            6
+        ],
+        "options": [
+            {
+                "text": "Continue",
+                "entry": 209
+            },
+            {
+                "text": "Continue",
+                "entry": 178
             }
         ]
     },
@@ -3906,6 +4027,28 @@
             {
                 "text": "Continue",
                 "entry": 254
+            }
+        ]
+    },
+    "269": {
+        "description": "Leaping onto the flat roof of the Great Keep, you send a throwing star whistling towards the Captain's head.",
+        "variable_attack_roll": [
+            2,
+            6,
+            9
+        ],
+        "options": [
+            {
+                "text": "Continue",
+                "entry": 218
+            },
+            {
+                "text": "Continue",
+                "entry": 199
+            },
+            {
+                "text": "Continue",
+                "entry": 189
             }
         ]
     },
@@ -5567,7 +5710,7 @@
         "image": "399.png",
         "options": [
             {
-                "text": "Wait till he is beside the low battlements and attempt to throw him over the side?",
+                "text": "Wait til he is beside the low battlements and attempt to throw him over the side?",
                 "entry": 331
             },
             {
@@ -5828,6 +5971,23 @@
             {
                 "text": "Enter the cave?",
                 "entry": 275
+            }
+        ]
+    },
+    "218a": {
+        "description": "You send another throwing star whistling towards the Captain.",
+        "variable_attack_roll": [
+            2,
+            7
+        ],
+        "options": [
+            {
+                "text": "Continue",
+                "entry": 199
+            },
+            {
+                "text": "Continue",
+                "entry": 189
             }
         ]
     },

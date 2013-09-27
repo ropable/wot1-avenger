@@ -53,6 +53,17 @@ var validEntryChoices = function(gameState) {
         } else {
             gameState.options.push(gameState.entry.options[1]);
         }
+    // Handle attack rolls with 2+ outcomes.
+    } else if (gameState.entry.variable_attack_roll) {
+        var roll = dieRoll(2);
+        var a = gameState.entry.variable_attack_roll;
+        var opt;
+        for (var i = 0; i < a.length; i++) {
+            if (roll >= a[i]) {
+                opt = gameState.entry.options[i];
+            }
+        }
+        gameState.options.push(opt);
     } else {
         angular.forEach(gameState.entry.options, function(option) {
             if (gameState.cheatMode) {
@@ -165,7 +176,7 @@ function NewGameCtrl($scope, $http, localStorageService, Story, Items, Opponents
         // Clear local storage, set start values, then initiate the first entry.
         localStorageService.clearAll();
         // Set starting entry number.
-        gameState.currentEntry = '162';
+        gameState.currentEntry = '399';
         gameState.endurance = 20;
         // Get start items.
         gameState.items = [];
