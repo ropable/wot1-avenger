@@ -2153,6 +2153,15 @@
             }
         ]
     },
+    "148": {
+        "description": "You walk silently to the archway at the bottom of the turret, above which flies the Scarlet Mantis banner and stepping carefully you glide up the stone steps, feeling for traps as you go.",
+        "options": [
+            {
+                "text": "Continue",
+                "entry": 361
+            }
+        ]
+    },
     "149": {
         "description": "The Efreet towers above you, flame licking across its ruby flesh. It reaches for you, and fire pours down its arm.",
         "image": "213.png",
@@ -4001,6 +4010,20 @@
             }
         ]
     },
+    "265": {
+        "description": "You jump up and swing from the hole which leads to the attic, then squeeze through onto the planks beyond. Testing for loose boards, you crawl carefully to a crack in the ceiling. A single candle burning in the chamber below gives just enough light to see by.\n\nHonoric is asleep, his arrogant features seem less cruel than in his waking hours and his mouth is open as he snores gently. His great sword lies unsheathed beside him. You cannot spot any traps in the chamber.",
+        "image": "265.png",
+        "options": [
+            {
+                "text": "Pour your single dose of Blood of Nil poison down a waxed string into Honoric’s mouth?",
+                "entry": 229
+            },
+            {
+                "text": "Get back down to the staircase and go in through the door after oiling its hinges?",
+                "entry": 274
+            }
+        ]
+    },
     "267": {
         "description": "The Hobgoblin tries to shovel you up on the end of his wickedly barbed trident as you dance sideways and try to grab its shaft so that you can whirl his heavy body over your hip.",
         "player_defence": 7,
@@ -4110,6 +4133,15 @@
             {
                 "text": "Spend the day in a hostel practising the Way of the Tiger?",
                 "entry": 303
+            }
+        ]
+    },
+    "274": {
+        "description": "The door swings open easily on its oiled hinges and you glide silently into the chamber. You feel the shadow of fear which comes from Honoric’s sword, Sorcerak which suddenly speaks his name. Amazingly, he is awake immediately, rolling off the far side of the bed as he clutches the talking sword. You hurdle the bed but he is ready for you and he shouts out loud as a battle royal begins.\n\nHe grunts with pain as you lash your foot into his side, but he is a hard man and his skill with the sword is breathtaking. He shears clean through your sleeve irons and your left arm is broken and useless but you reply with a great punch which knocks him backwards. Fear shows on Honoric’s face as he comprehends your deadliness, but he attacks with new ferocity.\n\nWithout warning you are felled by a blow from behind and, looking up, you see Yaemon’s impassive face as Honoric’s blade pierces your heart, ending your life.",
+        "options": [
+            {
+                "text": "Continue",
+                "entry": "death"
             }
         ]
     },
@@ -4750,6 +4782,19 @@
                 "type": "offence",
                 "action": "kick",
                 "inner_force": true
+            }
+        ]
+    },
+    "320": {
+        "description": "You cross the roof of the Great Keep until you are below the turret which flies the flag of the Sword of Doom, then climb upwards, silent as a mouse. The staircase within is lit by several torches fixed in brass brackets on the wall and at its top is a heavy oak door. Above the door is a narrow space, just large enough for you to crawl through, which leads to a dank attic.",
+        "options": [
+            {
+                "text": "Carefully oil the hinges of the door before opening it?",
+                "entry": 274
+            },
+            {
+                "text": "Examine the attic to see if you can spy on the occupant of the chamber beyond?",
+                "entry": 265
             }
         ]
     },
