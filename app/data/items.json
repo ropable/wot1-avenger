@@ -76,6 +76,10 @@
     },
     "Essence of Firenewt": {
         "name": "Essence of Firenewt",
-        "desc": "A small vial of highly-potent Firenewt powder."
+        "desc": "A small vial of highly-potent Firenewt serum."
+    },
+    "Sorcerak": {
+        "name": "Sorcerak",
+        "desc": "The black, fear-inducing blade of Honoric, Marshall of the Legion of Doom."
     }
 }

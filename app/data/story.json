@@ -148,6 +148,15 @@
             }
         ]
     },
+    "9": {
+        "description": "Although the hooded cobra can strike faster than the eye can see, you are faster still. You grab its neck in one hand and slice off its head with a Shuriken held in the other. Manse is on his back but he can still cast spells and his Eldritch words ring in your brain as the force of his magic is again brought to bear.\n\nHe clenches his fist and it is as if iron bars were pressing on you from all sides. His pallid face quivers with effort as he clenches the fist ever tighter, until your ribcage collapses. He opens his hand and you fall lifeless to the floor. You have failed your mission.",
+        "options": [
+            {
+                "text": "Continue",
+                "entry": "death"
+            }
+        ]
+    },
     "10": {
         "description": "He looks at you and nods, apparently satisfied. You sleep the night in the strange monk's cave. He has few possessions and says he has not seen another human being in years, except in sleep. It seems he feeds on air for he has nothing to offer you other than cool and refreshing mountain rain-water. In the morning he claims that he has, somehow, seen Yaemon, Grandmaster of Flame, journeying north with Hononic, servant of Vasch-Ro, Marshal of the Legion of the Sword of Doom, from the city of Doomover.\n\n'And they journey to meet a third,' he says, 'Manse the Deathmage, who reverences Nemesis. A most powerful and evil sorcerer. This unholy affiance must be stopped. Of all the evil gods, only the followers of Vile, Vasch-Ro and Nemesis have the discipline to act in alliance. Nemesis is the greatest of the evil gods. Never before have three such powerful and evil men trusted each other.'\n\n'It is the conjunction of the planets,' you reply. Togawa pulls a bag of herbs from a crack in the rock.\n\n'These have healing virtue,' he says. You take them and may use them at any time when you are not being attacked to restore up to 8 Endurance points, once only.\n\nYou thank him and are about to ask him if he will accompany you when he lies down on the cave floor and goes to sleep. Sensing that there is no further help to be gained, you begin the climb down Mount Gwalodrun to the pass below. A day later you enter the foothills of Fortune Pass.",
         "loot_add": [
@@ -800,6 +809,15 @@
             {
                 "text": "Wait for it to find you?",
                 "entry": 30
+            }
+        ]
+    },
+    "60": {
+        "description": "The throwing star hangs in the air before him, locked in his magical field of force which glows as it absorbs the impact. As you leap to the attack his spell is finished and flame wells up within you. Smoke pours from your mouth and nose as your lungs and other internal organs catch fire. The Deathmage has cast the spell of The Inner Fire upon you, known only to the most powerful of evil sorcerers and you have been cremated from within.",
+        "options": [
+            {
+                "text": "Continue",
+                "entry": "death"
             }
         ]
     },
@@ -2051,6 +2069,15 @@
             }
         ]
     },
+    "140": {
+        "description": "Your heart palpitates wildly, then explodes from your chest and flies into the Deathmage’s outstretched hand. He squeezes the still pulsing organ and the steps above you are drenched with your blood. You fall back dead and roll head over heels to the roof of the Great Keep below. Without protection from the infernal sorcery of Manse, you could not stand against him.",
+        "options": [
+            {
+                "text": "Continue",
+                "entry": "death"
+            }
+        ]
+    },
     "142": {
         "description": "The bolt of lightning catches you in the side, charring your flesh and jolting you as if you had been hit by a battering ram and you are sent hurtling to the far wall.",
         "image": "251.png",
@@ -2247,6 +2274,25 @@
             {
                 "text": "Continue",
                 "entry": 26
+            }
+        ]
+    },
+    "154": {
+        "description": "The oak door grates slightly on its hinges as you enter Honoric’s chamber. The fumes of poison curl like a snake from his mouth and, overcoming the fear that emanates from the black blade, you grab it and leave the chamber as quickly as you can, taking care not to breathe until you are safely outside. You tie the great sword to your back and climb out of the turret window. Which turret will you climb to now?",
+        "loot_add": [
+            [
+                "Sorcerak",
+                1
+            ]
+        ],
+        "options": [
+            {
+                "text": "Climb that which flies the flag of the Scarlet Mantis?",
+                "entry": 361
+            },
+            {
+                "text": "Climb the one that boasts the Black Whirlpool banner?",
+                "entry": 141
             }
         ]
     },
@@ -3173,6 +3219,15 @@
             }
         ]
     },
+    "217": {
+        "description": "You climb down from the attic and walk away from Honoric’s death chamber down the staircase to the roof of the Great Keep below and climb the stair case of the turret which flies the banner of the Scarlet Mantis.",
+        "options": [
+            {
+                "text": "Continue",
+                "entry": 397
+            }
+        ]
+    },
     "218": {
         "description": "It is a difficult throw at this range in the wind and swirling rain, at a target lit only by the charcoal brazier. The throwing star whirs past his head and away, landing outside the castle walls. The Captain of the Guard has not noticed it.",
         "loot_remove": [
@@ -3331,6 +3386,29 @@
             {
                 "text": "Enter the cave?",
                 "entry": 275
+            }
+        ]
+    },
+    "229": {
+        "description": "You unfurl the length of waxed string until it dangles just above the mouth of the Marshal of the Legion of Doom. You uncork the gourd which holds the Blood of Nil, mouth of the Void, the most virulent poison known. It steams as the black beads run down the string and drop into Honoric’s open mouth. He goes rigid and you know that he is helpless, dying of suffocation as his chest is paralyzed.\n\nYou have assassinated the Marshal of the Legion of Doom, one of the most powerful men on Orb.",
+        "loot_remove": [
+            [
+                "Blood of Nil",
+                1
+            ]
+        ],
+        "options": [
+            {
+                "text": "Go down into the chamber and take the smoking sword, Sorcerak?",
+                "entry": 154
+            },
+            {
+                "text": "Leave without it, and cross the Keep roof to the turret which boasts the Black Whirlpool flag?",
+                "entry": 130
+            },
+            {
+                "text": "Leave without it, and cross the Keep roof to the turret with the Scarlet Mantis flag?",
+                "entry": 217
             }
         ]
     },
@@ -4764,6 +4842,15 @@
             }
         ]
     },
+    "317": {
+        "description": "The door swings open easily on its oiled hinges and you glide silently into the chamber. You feel the shadow of fear which comes from Honoric’s sword Sorcerak which suddenly speaks his name. Amazingly, he is awake immediately, rolling off the far side of the bed as he dutches the sword. You hurdle the bed but he is ready for you and he shouts out loud as battle royal begins. He grunts with pain as you lash your foot into his side, but he is a hard man and his skill with the sword is breathtaking.\n\nHe shears clean through your sleeve irons and your left arm is broken and useless but you reply with a great punch which knocks him backwards. Fear shows on Honoric’s face as he comprehends your deadliness, but he attacks with new ferocity. Without warning you are felled by a blow from behind and, looking up you see Yaemon’s impassive face as Honoric’s blade pierces your heart, ending your life.",
+        "options": [
+            {
+                "text": "Continue",
+                "entry": "death"
+            }
+        ]
+    },
     "318": {
         "description": "The Barbarian has worked himself into a berserk frenzy of battle lust, cleaving the air with mighty sweeps of his sword, heedless of pain, wanting only your blood. The Dragon's Tail takes him by surprise as you try and sweep his legs from under him. His defence is weak as his sword cuts the air above you.",
         "image": "251.png",
@@ -5205,6 +5292,15 @@
             }
         ]
     },
+    "348": {
+        "description": "You cross the roof of the Great Keep and enter the turret which boasts the Scarlet Mantis banner. Gliding silently up the dark staircase, you feel your way carefully, testing for traps. There are none and soon your ear is at the door to the chamber at the top of the stone steps. You can hear nothing inside the room and you oil the hinges of the oak door before sliding it gently open.\n\nYaemon, Grandmaster of Flame of the order of the Scarlet Mantis is within, meditating cross-legged on the floor. He is wearing the scarlet fighting dress of a martial arts monk, and a black cotton belt. A shout of surprise escapes him as he stands up. Then his face stern and impassive once more, he bows to you.\n\n‘Welcome, Ninja, you are Avenger. I killed your spiritual father,’ he says. You bow in turn and leap to the attack. Yaemon proves himself to be a peerless fighter, kicking, punching and blocking with dazzling speed and power, but your controlled hatred spurs you to great feats. Yaemon is hard-pressed until you hear footsteps on the staircase below. Honoric has answered Yaemon’s shout and he bursts in behind you waving his smoking blade, Sorcerak.\n\nYou resist the fear which emanates from the Eldritch Sword but you are no match for them both, for they are two of the greatest warriors Orb has ever known. At the last Yaemon’s fist smashes into your temple, just as Sorcerak severs your neck and your head bounces around the room, like a bladder-ball. You have failed and no-one can stop these men now. Evil will rule the world.",
+        "options": [
+            {
+                "text": "Continue",
+                "entry": "death"
+            }
+        ]
+    },
     "349": {
         "description": "You slide beneath its feet but cannot move its colossal legs. Instead it collapses on top of you, driving the breath from your body and crushing your ribcage. The beast, whose sense of smell is acute, lunges and impales you on its horn with its massively powerful arms. You are still twitching feebly as it begins to feed on the entrails which have spilled from your body.",
         "options": [
@@ -5344,6 +5440,19 @@
             }
         ]
     },
+    "361": {
+        "description": "All is dark on the inside of the turret, but as you look up to the door at its top you see a red eye hanging disembodied in space. It glows, and the white of the eye is horribly bloodshot. As you watch, it blinks and then suddenly disappears.",
+        "options": [
+            {
+                "text": "Listen at the chamber door?",
+                "entry": 364
+            },
+            {
+                "text": "Cross the roof of the Great Keep to the turret with the Black Whirlpool flag?",
+                "entry": 130
+            }
+        ]
+    },
     "362": {
         "description": "There is nothing you can do as the surface of the swamp doses above you. Not even the Troll who chased you dares to save you for his supper.",
         "boolean_option": true,
@@ -5381,6 +5490,15 @@
                 "entry": 267,
                 "type": "offence",
                 "action": "throw"
+            }
+        ]
+    },
+    "364": {
+        "description": "You can hear nothing inside the room and you oil the hinges of the oak door before sliding it gently open. Yaemon, Grandmaster of Flame of the order of the Scarlet Mantis is within, meditating cross-legged on the floor. He is wearing the scarlet fighting dress of a martial arts monk, and a black cotton belt. His face is stern and impassive as he stands and bows to you.\n\n‘Welcome, Ninja, you are Avenger and I killed your spiritual father,’ he says. You bow in turn and leap to the attack.\n\nYaemon proves himself to be a peerless fighter, kicking, punching and blocking with dazzling speed and power, but your controlled hatred spurs you to great feats. Yaemon is hard-pressed until you hear footsteps on the staircase below. The red eye was a spell cast by Manse the Deathmage. He saw you through the disembodied eye and summoned the guards, who burst into the chamber behind you. You turn to block a sword thrust but Yaemon throws you to the ground and one of the soldiers pins you to the floorboards with his sword. You have failed your mission.",
+        "options": [
+            {
+                "text": "Continue",
+                "entry": "death"
             }
         ]
     },
@@ -5567,6 +5685,15 @@
             }
         ]
     },
+    "379": {
+        "description": "You leap back but stumble down the stairs and the now huge green gem tumbles down on top of you. You find yourself inside it and it carries you down the staircase, rolling out across the roof of the Great Keep. Through the glassy green wall you see Yaemon appear as Manse follows you out onto the Keep’s roof. The gem begins to contract and you shrink with it until you are the size of an ant.\n\nManse the Deathmage smiles as he picks the gem up from the floor and you hear him remarking to Yaemon that he will have you mounted in a ring. You will live for a long time, a miniature madman on the hand of the Deathmage.",
+        "options": [
+            {
+                "text": "Continue",
+                "entry": "death"
+            }
+        ]
+    },
     "380": {
         "description": "The arrow reaches you as you are in mid-air between the rigging and the deck but you whip your hand up and snatch it out of the air inches before your chest, and throw it aside. The Ogre, enraged, raises its spiked hammer to smash you.",
         "image": "232.png",
@@ -5646,6 +5773,15 @@
             }
         ]
     },
+    "386": {
+        "description": "You can hear nothing inside the room and you oil the hinges of the oak door before sliding it gently open. Yaemon, Grandmaster of Flame of the order of the Scarlet Mantis is within, meditating cross-legged on the floor, He is wearing the scarlet fighting dress of a martial arts monk, and a black cotton belt. His face is stem and impassive as he stands and bows to you.\n\n‘Welcome, Ninja. You are Avenger and I killed your spiritual father,’ he says. You bow in turn and leap to the attack.\n\nYaemon proves himself to be a peerless fighter, kicking, punching and blocking with dazzling speed and power, but your controlled hatred spurs you to great feats. Yaemon is hard-pressed until you hear footsteps on the staircase below. The red eye was a spell cast by Manse the Deathmage. He saw you through the disembodied eye and he enters the chamber behind you. You turn to aim a kick at him but he lets a green gem fall to the floor between you. He speaks an arcane word of power and the gem expands until you find yourself inside it.You cannot break out and the gem begins to contract, you shrink with it until you are the size of an ant.\n\nManse the Deathmage smiles as he picks the gem up from the floor and you hear him remarking to Yaemon that he will have you mounted in a ring. You will live for a long time, a miniature madman on the hand of the Deathmage.",
+        "options": [
+            {
+                "text": "Continue",
+                "entry": "death"
+            }
+        ]
+    },
     "387": {
         "description": "The mail-clad rider stiffens as you chop his neck and rolls sideways off his horse. You balance on your hands and move yourself forwards into the saddle, grabbing the reins as the horse bolts. You are an accomplished horseman and you manage to turn the frightened beast towards the hills that circle Mortavalon.\n\nThe others thunder after you, and are still behind you as you enter the hills. They begin to shout a fell incantation and you feel a sluggishness overcome you.",
         "image": "223.png",
@@ -5671,6 +5807,15 @@
             {
                 "text": "Continue",
                 "entry": 311
+            }
+        ]
+    },
+    "391": {
+        "description": "The venom of the hooded cobra is deadly and you die within minutes, your body draped across that of the Deathmage. You have failed to avenge the death of your spiritual father and Yaemon will speak the word of power at the Pillars of Change that will bind your god, Kwon, in Inferno.",
+        "options": [
+            {
+                "text": "Continue",
+                "entry": "death"
             }
         ]
     },
@@ -5747,6 +5892,19 @@
                 "entry": 345,
                 "type": "offence",
                 "action": "throw"
+            }
+        ]
+    },
+    "397": {
+        "description": "All is dark on the inside of the turret, but as you look up to the door at its top you see a red eye, hanging disembodied in space. It glows and the white of the eye is horribly bloodshot. As you watch it blinks and then suddenly disappears.",
+        "options": [
+            {
+                "text": "Listen at the chamber door?",
+                "entry": 386
+            },
+            {
+                "text": "Cross the roof of the Great Keep to the turret with the Black Whirlpool flag?",
+                "entry": 130
             }
         ]
     },
