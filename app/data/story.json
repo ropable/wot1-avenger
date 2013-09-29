@@ -1474,6 +1474,35 @@
             }
         ]
     },
+    "101": {
+        "description": "As you pass through the archway at the bottom of the steps you see Yaemon on the roof of the Great Keep. He bears the Mantis tattoo on his forehead and wears the scarlet jacket and loose trousers of the Order of the Scarlet Mantis. He is in his middle years but his body is supple and powerful. The corded muscles on his forearms ripple as he clenches his fists. He bows to you and then says, ‘You have been at your work, Ninja.’\n\nYou return his bow saying, ‘My tasks are not yet done.’\n\nHe smiles and replies, ‘I killed your spiritual father, as I had killed your real father when you were but a babe-in-arms. Now, I shall kill you.’\n\nNo-one has ever spoken to you of the death of your father but Yaemon’s words only cause the desire for revenge to flare stronger within you. You master your anger and calm yourself, ready to give battle. Yaemon has been Grandmaster of the Flame for longer than your lifetime. You could not fear to meet a more experienced adept at the deadly Way of the Mantis. His body is at a peak of perfection and his will is strong.\n\nYou move towards him realising that this will be a battle like no other.",
+        "image": "101.png",
+        "opponents": [
+            "Yaemon"
+        ],
+        "options": [
+            {
+                "text": "Run to attack?",
+                "entry": 89
+            },
+            {
+                "prereq": [
+                    "skill",
+                    "Poison Needles"
+                ],
+                "text": "[Poison Needles] Close and use a Poison Needle?",
+                "entry": 69
+            },
+            {
+                "prereq": [
+                    "item",
+                    "Shuriken"
+                ],
+                "text": "Unleash a stream of Shuriken?",
+                "entry": 51
+            }
+        ]
+    },
     "103": {
         "description": "You turn and run but as they finish their fell incantation your movements slow, your limbs feel as heavy as lead and it is only by a great effort of will that, quivering with the strain, you can get them to move at all. You stagger to the river and duck out of sight in some bullrushes.",
         "options": [
@@ -1915,6 +1944,25 @@
             }
         ]
     },
+    "130": {
+        "description": "You pass through the archway which leads to the tower topped by the banner of the Black Whirlpool. The spiral staircase is lit by an ominous green luminescence and you see a red eye, hanging disembodied in space at the top of the stone steps. It glows and the white of the eye is horribly bloodshot. It blinks once, then disappears as the door to the chamber above flies open.\n\nManse the Deathmage towers above you at the top of the staircase, his unnatural white pallor turned ghastly green in the luminescence. His eyes glow bloodshot-red and he carries a blackwood staff topped with the head and neck of a hooded cobra of carven jade. Before you can move he points a long finger at you and says coldly, ‘DIE!’\n\nDo you have the Amulet of Protection from the Finger of Death?",
+        "image": "130.png",
+        "boolean_option": true,
+        "options": [
+            {
+                "prereq": [
+                    "item",
+                    "Crystal Amulet"
+                ],
+                "text": "Continue",
+                "entry": 102
+            },
+            {
+                "text": "Continue",
+                "entry": 140
+            }
+        ]
+    },
     "131": {
         "description": "The fiery elemental being is cumbersome and you can scarcely miss, your only worry is that it may not feel pain from your blow. If you hit it, your fist is burned by the flames which lick across its body.\n\nAs you punch, the Efreet tries to drive its flaming fist down into your chest.",
         "image": "213.png",
@@ -2075,6 +2123,22 @@
             {
                 "text": "Continue",
                 "entry": "death"
+            }
+        ]
+    },
+    "141": {
+        "description": "You cross the roof of the Great Keep and enter the turret which flies the flag of the Black Whirlpool. With Sorcerak at your back you climb to the top of the turret. The staircase is lit by an ominous green luminescence and you see a red eye, hanging disembodied in space at the top of the stone steps. It glows and the white of the eye is horribly bloodshot. It seems to pop suddenly and disappears as you climb the last steps and throw open the door at their top.\n\nManse the Deathmage, still clad in his black cloak which accentuates the pallor of his features, rises from the bed as you enter. The fear which emanates from the Eldritch blade of Sorcerak sets his white hair on end. He mouths a spell, but nothing happens. You throw Sorcerak to the floor before him and he shrinks back. His eyes glow red like the one which you saw outside his chamber.\n\nHis voice is a low hiss as he threatens ‘Kill me and that fell sword will take your soul.’ You ignore him and he tries one last spell as you advance, but Sorcerak dispels the magic as a bolt of fire leaves his mouth and you throw him easily to the floor. He is not strong and struggles ineffectually as you grind your heel into his neck. It snaps like a twig. Never again will Manse the Deathmage offer up children for sacrifice to his god Nemesis.\n\nWith Honoric’s sword you have rid Orb of its most powerful black magician. Leaving Sorcerak to smoke on the floor of the chamber you descend the staircase of the turret intent on finding Yaemon and avenging your spiritual father.",
+        "image": "141.png",
+        "loot_remove": [
+            [
+                "Sorcerak",
+                1
+            ]
+        ],
+        "options": [
+            {
+                "text": "Continue",
+                "entry": 305
             }
         ]
     },
@@ -4682,6 +4746,15 @@
             {
                 "text": "Continue",
                 "entry": 70
+            }
+        ]
+    },
+    "305": {
+        "description": "Honoric and Manse the Deathmage both lie dead, but your mission is not yet completed. It still remains for you to avenge your spiritual father and kill Yaemon, Grandmaster of Flame, of the order of the Scarlet Mantis. If you fail he will speak the word of power at the Pillars of Change that will bind Kwon in Inferno. You walk down to the roof of the Great Keep.",
+        "options": [
+            {
+                "text": "Continue",
+                "entry": 101
             }
         ]
     },
