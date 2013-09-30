@@ -443,6 +443,20 @@
             }
         ]
     },
+    "29": {
+        "description": "You leap above the now huge gem which tumbles down the staircase behind you and lash out at the Deathmage with a Winged Horse kick before you land. He is hurled to the floor like a rag doll. As he falls he throws down his snake-staff which transforms into a living cobra, its hood spread as it slithers towards you, ready to strike.",
+        "image": "141.png",
+        "options": [
+            {
+                "text": "Ignore it and leap onto the Deathmage to try to finish him off?",
+                "entry": 400
+            },
+            {
+                "text": "Try to grab the snake’s neck before it can strike?",
+                "entry": 9
+            }
+        ]
+    },
     "30": {
         "description": "A huge Troll, its warted skin green and slimy, bursts out of the mist and pulls up in front of you. You kick and punch it for all you are worth but as fast as you inflict wounds they heal again, magically, the torn flesh crawling across the bones to re-knit together, leaving only purple scars. The Troll claws you and it seems that you will lose this battle.",
         "modify_endurance": -4,
@@ -710,6 +724,20 @@
             {
                 "text": "Continue",
                 "entry": 112
+            }
+        ]
+    },
+    "49": {
+        "description": "The magical field of force glows, but your throwing star carries such force that it passes through, knocking Manse to the floor. As he falls he throws down his snake-staff which transforms into a living cobra, its hood spread as it slithers towards you ready to strike.",
+        "image": "141.png",
+        "options": [
+            {
+                "text": "Ignore it and leap onto the Deathmage to try to finish him off?",
+                "entry": 400
+            },
+            {
+                "text": "Try to grab the snake’s neck before it can strike?",
+                "entry": 9
             }
         ]
     },
@@ -991,6 +1019,24 @@
                 "type": "offence",
                 "action": "kick",
                 "inner_force": true
+            }
+        ]
+    },
+    "72": {
+        "description": "His delicate hand makes a pass through the air and a faintly glowing shield forms before him. You hurl the Shuriken with all your force, hoping to penetrate his aura of enchantment.",
+        "image": "141.png",
+        "variable_attack_roll": [
+            2,
+            7
+        ],
+        "options": [
+            {
+                "text": "Your attack fails!",
+                "entry": 60
+            },
+            {
+                "text": "Your attack succeeds!",
+                "entry": 49
             }
         ]
     },
@@ -1306,6 +1352,16 @@
             }
         ]
     },
+    "90": {
+        "description": "His delicate hands make a pass through the air and a faintly glowing shield forms before him, blocking the needle. He begins another spell, his glowing eyes smouldering with hatred and you decide to attack him hand to hand.",
+        "image": "141.png",
+        "options": [
+            {
+                "text": "Continue",
+                "entry": 413
+            }
+        ]
+    },
     "91": {
         "description": "The rain abates slightly as you strike your way slowly across the moat. You hear the grating of a guard’s heel on gravel as he turns to look out over the water, worried by the sudden silence of the bullfrogs. You slip below the surface.",
         "fate_roll": true,
@@ -1500,6 +1556,38 @@
                 ],
                 "text": "Unleash a stream of Shuriken?",
                 "entry": 51
+            }
+        ]
+    },
+    "102": {
+        "description": "The Amulet shatters, the shards twinkling as they tumble down the staircase like the pieces of a smashed vase. The Deathmage is surprised that you have withstood his infernal sorcery, but he begins another spell. His arcane words conjure visions of primordial evils and the malevolence of long forgotten gods.",
+        "image": "130.png",
+        "loot_remove": [
+            [
+                "Crystal Amulet",
+                1
+            ]
+        ],
+        "options": [
+            {
+                "prereq": [
+                    "skill",
+                    "Poison Needles"
+                ],
+                "text": "[Poison Needles] Use a Poison Needle?",
+                "entry": 102
+            },
+            {
+                "prereq": [
+                    "item",
+                    "Shuriken"
+                ],
+                "text": "Hurl a Shuriken?",
+                "entry": 72
+            },
+            {
+                "text": "Leap to the attack?",
+                "entry": 413
             }
         ]
     },
@@ -6011,6 +6099,24 @@
             }
         ]
     },
+    "400": {
+        "description": "Using the Iron Fist you smash Manse’s head so hard that it almost flies off his shoulders. As you hear the crack as his neck breaks you feel the fangs of the cobra in your neck. The venom courses into your veins.",
+        "boolean_option": true,
+        "options": [
+            {
+                "prereq": [
+                    "skill",
+                    "Immunity to Poisons"
+                ],
+                "text": "[Immunity to Poisons] Continue",
+                "entry": 246
+            },
+            {
+                "text": "Continue",
+                "entry": 391
+            }
+        ]
+    },
     "402": {
         "description": "You lift the grille at the moat’s edge and lower yourself into the wide rock-hewn tunnel beneath, gambling that your mission will be completed before the guards notice that the grille is out of place. Your feet are deep in slime and squealing sewer rats brush your ankles in the darkness. You feel your way slowly and stop dead as you sense something ahead of you. It has sensed you, and an ear-splitting roar echoes around the cavern which is its home.",
         "options": [
@@ -6174,6 +6280,25 @@
             {
                 "text": "Continue",
                 "entry": "412b"
+            }
+        ]
+    },
+    "413": {
+        "description": "As you leap up the final few stairs, he steps back and his purple lips part in a grin as he lets a small green gem tumble to the floor. It expands rapidly, threatening to engulf you.\n\nAre you an Acrobat?",
+        "image": "141.png",
+        "boolean_option": true,
+        "options": [
+            {
+                "prereq": [
+                    "skill",
+                    "Acrobatics"
+                ],
+                "text": "Continue",
+                "entry": 29
+            },
+            {
+                "text": "Continue",
+                "entry": 379
             }
         ]
     },
