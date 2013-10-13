@@ -2223,7 +2223,9 @@
                 1
             ]
         ],
-        "event_add": ["killed_manse"],
+        "event_add": [
+            "killed_manse"
+        ],
         "options": [
             {
                 "text": "Continue",
@@ -2484,6 +2486,24 @@
             {
                 "text": "Pick yourself up and stagger towards the river.",
                 "entry": 103
+            }
+        ]
+    },
+    "158": {
+        "description": "You unfurl the length of waxed string until it dangles just above the mouth of the Marshal of the Legion of Doom. You uncork the gourd which holds the Blood of Nil, mouth of the Void, the most virulent poison known. It steams as the black beads run down the string and drop into Honoric’s open mouth. He goes rigid and you know that he is helpless, dying of suffocation as his chest is paralyzed.\n\nYou have assassinated the Marshal of the Legion of Doom, one of the most powerful men on Orb.",
+        "loot_remove": [
+            [
+                "Blood of Nil",
+                1
+            ]
+        ],
+        "event_add": [
+            "killed_honoric"
+        ],
+        "options": [
+            {
+                "text": "Continue",
+                "entry": 305
             }
         ]
     },
@@ -3550,7 +3570,9 @@
                 1
             ]
         ],
-        "event_add": ["killed_honoric"],
+        "event_add": [
+            "killed_honoric"
+        ],
         "options": [
             {
                 "text": "Go down into the chamber and take the smoking sword, Sorcerak?",
@@ -5197,6 +5219,20 @@
             }
         ]
     },
+    "328": {
+        "description": "You jump up and swing into the hole which leads to the attic, and squeeze through onto the planks beyond. Testing for loose boards, you crawl carefully to a crack in the ceiling. A single candle burning in the chamber below gives just enough light to see by.\n\nHonoric is asleep, his arrogant features seem less cruel than in his waking hours and his mouth is open as he snores gently. His great sword lies unsheathed beside him. You cannot spot any traps in the chamber.",
+        "image": "265.png",
+        "options": [
+            {
+                "text": "Pour your single dose of Blood of Nil poison down a waxed string into Honoric’s mouth?",
+                "entry": 158
+            },
+            {
+                "text": "Get back down to the staircase and go in through the door after oiling its hinges?",
+                "entry": 274
+            }
+        ]
+    },
     "329": {
         "description": "You make an 'O' shape with your tongue and place one of the poison needles carefully within it in one deft movement. You exhale and spit it out. The needle has imbedded itself in the monk's eye before he realises what you are doing. The poison takes effect. He doubles up, convulsing in the muddy road and dies. Wasting no time, you strip him of his scarlet uniform and put it on over your Ninja costume.\n\nWalking with calm assurance you enter the sleeping quarters of the monastery unchallenged and make your way to the Hall of Webs.",
         "options": [
@@ -5366,6 +5402,19 @@
                 "entry": 267,
                 "type": "offence",
                 "action": "throw"
+            }
+        ]
+    },
+    "339": {
+        "description": "You enter the turret and glide soundlessly upwards. The staircase is lit by several torches fixed in brass brackets on the wall and, wary of traps, you make no more noise than a cat stalking a bird. At the top of the turret beyond a single window is a heavy oak door. Above the door is a narrow space, just large enough for you to crawl through, which leads to a dank attic.",
+        "options": [
+            {
+                "text": "Carefully oil the hinges of the door before opening it?",
+                "entry": 317
+            },
+            {
+                "text": "Examine the attic to see if you can spy on the occupant of the chamber beyond?",
+                "entry": 328
             }
         ]
     },
@@ -5729,6 +5778,24 @@
             {
                 "text": "Continue",
                 "entry": 368
+            }
+        ]
+    },
+    "370": {
+        "description": "Have you used that most deadly poison, the Blood of Nil?",
+        "boolean_option": true,
+        "options": [
+            {
+                "prereq": [
+                    "item",
+                    "Blood of Nil"
+                ],
+                "text": "I have not used it.",
+                "entry": 348
+            },
+            {
+                "text": "I have used it.",
+                "entry": 305
             }
         ]
     },
@@ -6122,7 +6189,9 @@
     },
     "400": {
         "description": "Using the Iron Fist you smash Manse’s head so hard that it almost flies off his shoulders. As you hear the crack as his neck breaks you feel the fangs of the cobra in your neck. The venom courses into your veins.",
-        "event_add": ["killed_manse"],
+        "event_add": [
+            "killed_manse"
+        ],
         "boolean_option": true,
         "options": [
             {
