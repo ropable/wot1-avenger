@@ -3831,6 +3831,25 @@
             }
         ]
     },
+    "246": {
+        "description": "You are immune to the toxic venom of the hooded cobra but not to the magicks which bound it within the Serpent Staff. Its jaw tightens inexorably in your neck and you tug wildly as its fangs near your jugular vein. In desperation, you rip its head from your neck, scattering its brains and gouging your own flesh horribly.",
+        "modify_endurance": -4,
+        "damage_followup": "You bandage your neck using a strip of lining from your costume and catch your breath, before deciding which turret to enter next.",
+        "options": [
+            {
+                "prereq": [
+                    "event_false",
+                    "killed_honoric"
+                ],
+                "text": "Enter the turret which flies the Sword of Doom banner?",
+                "entry": 339
+            },
+            {
+                "text": "Enter the turrent which boasts the Scarlet Mantis flag?",
+                "entry": 370
+            }
+        ]
+    },
     "247": {
         "description": "As the wind whistles around the turrets of the Great Keep there is a sudden keening howl. For an instant the hairs on the back of your neck prickle with fear, until you realise that it is nothing but the wind howling through an arrow-slit in one of the turrets. The Captain looks startled and you choose this moment to steal up behind him. He is alert and seems to sense you at the final moment, as you lower the Garotte-wire over his head.",
         "variable_attack_roll": [
