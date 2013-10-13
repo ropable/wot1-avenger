@@ -88,6 +88,7 @@ var validEntryChoices = function(gameState) {
             } else if (option.prereq && option.prereq[0] === 'inner_force') {
                 if (gameState.innerForce > 0) {
                     gameState.options.push(option);
+                    gameState.innerForce -= 1;
                     prereq_met = true;
                 }
             } else if (option.prereq && option.prereq[0] === 'event') {
@@ -147,7 +148,6 @@ function NewGameCtrl($scope, $http, localStorageService, Story, Items, Opponents
     // Controller for the "new game" page.
     var storyjson = Story.get();
     var itemsjson = Items.get();
-    console.log(itemsjson);
     var opponentsjson = Opponents.get();
     // Get JSON for available skills to choose.
     $http.get('data/skills.json').success(function(data) {
@@ -647,7 +647,6 @@ function StoryCtrl($scope, $http, localStorageService, gameState, Story, Items, 
                 // We don't already own this.
                 if (!owned) {
                     var newitem = itemsjson[loot[0]];
-                    console.log(newitem);
                     newitem.count = loot[1];
                     gameState.items.push(newitem);
                 }
