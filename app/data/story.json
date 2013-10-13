@@ -2223,6 +2223,7 @@
                 1
             ]
         ],
+        "event_add": ["killed_manse"],
         "options": [
             {
                 "text": "Continue",
@@ -3549,6 +3550,7 @@
                 1
             ]
         ],
+        "event_add": ["killed_honoric"],
         "options": [
             {
                 "text": "Go down into the chamber and take the smoking sword, Sorcerak?",
@@ -6120,6 +6122,7 @@
     },
     "400": {
         "description": "Using the Iron Fist you smash Manse’s head so hard that it almost flies off his shoulders. As you hear the crack as his neck breaks you feel the fangs of the cobra in your neck. The venom courses into your veins.",
+        "event_add": ["killed_manse"],
         "boolean_option": true,
         "options": [
             {
