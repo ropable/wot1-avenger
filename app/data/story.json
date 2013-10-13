@@ -7637,5 +7637,9 @@
     "death": {
         "description": "You have died before completing your quest and recovering the Scrolls of Kettsuin.\n\n[Start a new game](#/new-game).",
         "options": []
+    },
+    "complete": {
+        "description": "Congratulations, you have successfully completed your quest to recover the Scrolls of Kettsuin and avenge your spirtual father.\n\n[Start a new game](#/new-game).",
+        "options": []
     }
 }
