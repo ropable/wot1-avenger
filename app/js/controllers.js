@@ -182,7 +182,7 @@ function NewGameCtrl($scope, $http, localStorageService, Story, Items, Opponents
         // Clear local storage, set start values, then initiate the first entry.
         localStorageService.clearAll();
         // Set starting entry number.
-        gameState.currentEntry = '400';
+        gameState.currentEntry = '101';
         gameState.endurance = 20;
         // Get start items.
         gameState.items = [];
@@ -252,6 +252,7 @@ function StoryCtrl($scope, $http, localStorageService, gameState, Story, Items, 
         gameState.entryText = textMarkup(gameState.entry.description);
         gameState.hasEntryImage = 'image' in gameState.entry;
         var actionText = '';
+        var entryText = gameState.entryText;
         gameState.actions = [];
         // Set options for which the prerequisites are met.
         validEntryChoices(gameState);
@@ -286,7 +287,30 @@ function StoryCtrl($scope, $http, localStorageService, gameState, Story, Items, 
                         } else {
                             dam = damage[2];
                         }
+                        if (useInnerForce) {  // Player used Inner Force.
+                            dam *= 2;
+                        }
                         opp.endurance -= dam;
+                        $.pnotify({
+                            text: 'You dealt # damage!'.replace('#', dam),
+                            type: 'success',
+                            icon: false
+                        });
+                        // Target's endurance is reduced to 0 or less.
+                        if (opp.endurance <= 0) {
+                            gameState.currentOpponents.splice(0, 1);
+                        }
+                        // DRY fail - this is repeated below.
+                        if (gameState.currentOpponents.length === 0) {
+                            gameState.options = [{"text": "Continue", "entry": gameState.entry.victory}];
+                            gameState.actions.push(['You have won this combat!']);
+                            gameState.allies = [];
+                            gameState.inCombat = false;
+                        }
+                        if (gameState.entry.damage_opponent_followup) {
+                            entryText = entryText + '\n\n' + gameState.entry.damage_opponent_followup;
+                            //gameState.entryText = textMarkup(entryText);
+                        }
                     }
                 });
             });
@@ -307,7 +331,10 @@ function StoryCtrl($scope, $http, localStorageService, gameState, Story, Items, 
                     gameState.kick -= dam;
                     note = note.replace('{1}', 'kick modifier');
                 }
-                $.pnotify({text: note});
+                $.pnotify({
+                    text: note,
+                    icon: false
+                });
             });
         }
         // COMBAT!
@@ -386,10 +413,6 @@ function StoryCtrl($scope, $http, localStorageService, gameState, Story, Items, 
                     actionText = 'You try to throw {0}...and fail!'.replace('{0}', target.action_desc);
                     gameState.actions.push([actionText]);
                 }
-            }
-            // Subtract Inner Force.
-            if (useInnerForce && !gameState.cheatMode) {
-                gameState.innerForce -= 1;
             }
             gameState.attackModifierTemp = 0;  // Always resets, after an attack.
             // Target's endurance is reduced to 0 or less.
@@ -503,6 +526,10 @@ function StoryCtrl($scope, $http, localStorageService, gameState, Story, Items, 
             }
         }  // End player offence.
         // HANDLING EVENTS BEGINS HERE.
+        // Subtract Inner Force.
+        if (useInnerForce && !gameState.cheatMode) {
+            gameState.innerForce -= 1;
+        }
         // Entries may occasionally manually remove opponents.
         if (gameState.entry.opponent_remove) {
             for (var i = 0; i < gameState.currentOpponents.length; i++) {
@@ -567,7 +594,6 @@ function StoryCtrl($scope, $http, localStorageService, gameState, Story, Items, 
                 });
             }
         }
-        var entryText = gameState.entryText;
         // Handle player defence against basic injury (may result in death).
         if (gameState.entry.player_defence_vs_injury) {
             var d = gameState.entry.player_defence_vs_injury;

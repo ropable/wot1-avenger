@@ -314,9 +314,9 @@
             1,
             1
         ],
-        "defence_punch": 6,
-        "defence_kick": 5,
-        "defence_throw": 6,
+        "defence_punch": 8,
+        "defence_kick": 8,
+        "defence_throw": 8,
         "damage_mod": 0,
         "effects": []
     }
