@@ -90,6 +90,12 @@ var validEntryChoices = function(gameState) {
                     gameState.options.push(option);
                     prereq_met = true;
                 }
+            } else if (option.prereq && option.prereq[0] === 'event_false') {
+                // Option is allowed only if defined event is not in gameState.
+                if (!_.contains(gameState.events, option.prereq[1])) {
+                    gameState.options.push(option);
+                    prereq_met = true;
+                }
             } else {
                 // No prerequesites - push the option into the array.
                 gameState.options.push(option);
@@ -176,7 +182,7 @@ function NewGameCtrl($scope, $http, localStorageService, Story, Items, Opponents
         // Clear local storage, set start values, then initiate the first entry.
         localStorageService.clearAll();
         // Set starting entry number.
-        gameState.currentEntry = '265';
+        gameState.currentEntry = '400';
         gameState.endurance = 20;
         // Get start items.
         gameState.items = [];
