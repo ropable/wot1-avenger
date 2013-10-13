@@ -1028,6 +1028,21 @@
             }
         ]
     },
+    "68": {
+        "description": "He is much too quick for you to use the Teeth of the Tiger throw.",
+        "options": [
+            {
+                "text": "Try to use the Whirlpool throw as he runs in?",
+                "entry": 367,
+                "inner_force": true
+            },
+            {
+                "text": "Try the Dragon’s Tail throw?",
+                "entry": 319,
+                "inner_force": true
+            }
+        ]
+    },
     "69": {
         "description": "As fast as you are able, you place a needle on your tongue as you somersault forwards through the air to bring yourself within range. As you land on your feet, you spit hard and the needle arrows towards Yaemon. He makes no attempt to move, but then, to your amazement, he blows the small dart aside, inches from his face.\n\nThen he crouches and leaps high into the air towards you, his left leg extended in a flying Winged Horse kick aimed at your head. He gives a great shout and you realise he is using Inner Force.",
         "boolean_option": true,
@@ -2538,6 +2553,26 @@
             }
         ]
     },
+    "155": {
+        "description": "You face him sideways on, legs apart, knees slightly bent and your fists poised as he closes with you.",
+        "options": [
+            {
+                "text": "Use the Cobra Strike punch?",
+                "entry": 340,
+                "inner_force": true
+            },
+            {
+                "text": "Use the Iron Fist punch?",
+                "entry": 330,
+                "inner_force": true
+            },
+            {
+                "text": "Use the Tiger's Paw chop?",
+                "entry": 410,
+                "inner_force": true
+            }
+        ]
+    },
     "156": {
         "description": "You skirt the castle until you are an unseen shadow in the darkness below the derelict northern tower. You can see that the cracks which have appeared due to the subsidence of its foundations will make it easy to climb to one of its windows, but above the croaking of bullfrogs you can hear the pacing of guards somewhere within.\n\nYou ease yourself soundlessly into the chill moat as the rain thrashes the surface around you. The noise of the bullfrogs is surprisingly loud and it is noticeable when they stop their croaking suddenly.",
         "boolean_option": true,
@@ -2754,6 +2789,10 @@
         "description": "You hurtle through the air to the ground and roll. Coming up on your feet, you flip forwards head over heels into1 the air and twist so that you land facing Yaemon, who is springing to his feet. Seizing your chance, you cartwheel some way towards him and then turn into a head over heel flip to bring yourself within range, taking Yaemon by surprise.",
         "options": [
             {
+                "prereq": [
+                    "event_false",
+                    "broken_arm"
+                ],
                 "text": "Try a punch?",
                 "entry": 266
             },
@@ -4957,6 +4996,25 @@
             }
         ]
     },
+    "301": {
+        "description": "You step to the right and with your legs apart and your knees bent slightly, cleave the air with your left arm driving from your hip in towards Yaemon’s throat. Ready for you this time, he reacts with lightning reflexes. He leans back and whips the palm of his left hand up and across. He slams into the inside of your wrist whilst his right hand slams into your left tricep, just above your elbow. The pain is excrudating as your arm is forced against its joint and snaps with a crack.",
+        "modify_endurance": -8,
+        "event_add": [
+            "broken_arm"
+        ],
+        "damage_followup": "You will be unable to punch again during this combat. As you stagger backwards in agony, you desperately try to overcome the pain in time to deal with Yaemon’s next attack. You look up to see him leaping through the air towards you, his left leg extended in a Flying Winged Horse kick aimed at your head. You have no choice but to try and block it.",
+        "player_defence_roll": 7,
+        "options": [
+            {
+                "text": "You succeed!",
+                "entry": 411
+            },
+            {
+                "text": "You fail!",
+                "entry": 24
+            }
+        ]
+    },
     "302": {
         "description": "The Barbarian's voice rises to a shriek of battle lust as he swipes at you, berserk. He cares nothing for your attacks so long as his sword tastes your blood. He cuts his sword down towards your head, but you sidestep to the right, twist and lash your foot towards his face as his sword whistles down past your back.",
         "image": "251.png",
@@ -5206,6 +5264,42 @@
                 "type": "offence",
                 "action": "kick",
                 "inner_force": true
+            }
+        ]
+    },
+    "319": {
+        "description": "As you are about to drop to the ground and sweep his legs from under him, Yaemon unleashes a Winged Horse kick at your head. Acting instinctively, your hands close around his foot. Using a variation of the Dragon’s Tail throw, you hook the heel of your right foot around his other ankle and pull it from under him. He falls to the ground and sits up, preparing to twist aside. Still holding his leg, you drive the ball of your right foot into his face with a shout.",
+        "damage_opponent": [
+            [
+                "Yaemon",
+                "fixed",
+                6
+            ]
+        ],
+        "victory": 420,
+        "damage_opponent_followup": "As the top half of his body is driven back to the ground he uses this momentum to wrench his foot from your grasp and somersault backwards, using his hands to propel him into the air and flips onto his feet. Almost immediately, he executes a scissor-kick, his left foot lashes at your groin and his right foot whips straight up at your head, taking him into the air.\n\nYou step back onto your left foot, with your knees slightly bent and drive the palm of your right hand down in a straight arm block, stopping short Yaemon’s kick to the groin, and then bring your arm up across your chest sweeping the kick to your face aside and leaving yourself ready to counter-attack.",
+        "options": [
+            {
+                "text": "Try the Dragon’s Tail throw again?",
+                "entry": 245,
+                "inner_force": true
+            },
+            {
+                "text": "Try the Whirlpool throw?",
+                "entry": 367,
+                "inner_force": true
+            },
+            {
+                "text": "Attack with a kick?",
+                "entry": 390
+            },
+            {
+                "prereq": [
+                    "event_false",
+                    "broken_arm"
+                ],
+                "text": "Attack with a punch?",
+                "entry": 266
             }
         ]
     },
@@ -5740,6 +5834,10 @@
         "description": "As he flies towards you, you flip backwards into a handstand and then bounce backwards onto your feet again several times, moving out of range of Yaemon’s attack. As he is coming down, you reverse direction and flip towards him with great speed, coming to a stop before him, just as he lands agilely on his feet. You have the chance to attack.",
         "options": [
             {
+                "prereq": [
+                    "event_false",
+                    "broken_arm"
+                ],
                 "text": "Punch at him?",
                 "entry": 266
             },
@@ -5977,6 +6075,26 @@
             {
                 "text": "Turn east through the Trollfens to the City of Ionalbion to take ship across the Sea of the Star?",
                 "entry": 59
+            }
+        ]
+    },
+    "367": {
+        "description": "You lash your left arm out in an attempt to catch Yaemon’s wrist, but he reacts almost instantaneously. Stepping back and grabbing your arm, he spins you so that your back is facing him. He heaves your forearm up between your shoulder blades in a painful arm-lock, whilst his other arm snakes around your head.\n\nKnowing you have only an instant before your neck is broken, you drop into a crouch and jump, bringing your legs up and over Yaemon’s head, to land behind him, breaking his hold. However, as your feet hit the ground, he spins around and whips the top of his right foot up in a sweeping arc from right to left. The blow lands on the side of your head with devastating effect as he screams with the power of Inner Force.",
+        "modify_endurance": -10,
+        "damage_followup": "Your reflexes take over and you roll with the blow, cartwheeling away to Yaemon’s side. As you come to a stop, feeling slightly groggy, he is upon you again, with a flurry of blows.",
+        "boolean_option": true,
+        "options": [
+            {
+                "prereq": [
+                    "skill",
+                    "Acrobatics"
+                ],
+                "text": "[Acrobatics] Continue",
+                "entry": 181
+            },
+            {
+                "text": "Continue",
+                "entry": "367a"
             }
         ]
     },
@@ -6731,6 +6849,20 @@
             {
                 "text": "Enter the cave?",
                 "entry": 275
+            }
+        ]
+    },
+    "367a": {
+        "description": "You will try to try to defend against his multiple attacks.",
+        "player_defence_roll": 7,
+        "options": [
+            {
+                "text": "You succeed!",
+                "entry": 118
+            },
+            {
+                "text": "You fail!",
+                "entry": 308
             }
         ]
     },
