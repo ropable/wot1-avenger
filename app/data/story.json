@@ -2594,6 +2594,15 @@
             }
         ]
     },
+    "159": {
+        "description": "The force of his throw sends you head over heels through the air and you crash to the ground on your back, stunned. An instant later, Yaemon has dropped to one knee beside you and he drives one fist and then the other in quick succession at your temple, giving a shout as he unleashes his Inner Force. Your skull cracks and you die instantly.",
+        "options": [
+            {
+                "text": "Continue",
+                "entry": "death"
+            }
+        ]
+    },
     "160": {
         "description": "The white-furred giant swoops to sweep you to the ground with its great curved talons. You drive your fist towards its groin.",
         "image": "252.png",
@@ -2738,6 +2747,23 @@
             {
                 "text": "Raise the grille outside the moat and drop to the tunnel below?",
                 "entry": 402
+            }
+        ]
+    },
+    "167": {
+        "description": "You hurtle through the air to the ground and roll. Coming up on your feet, you flip forwards head over heels into1 the air and twist so that you land facing Yaemon, who is springing to his feet. Seizing your chance, you cartwheel some way towards him and then turn into a head over heel flip to bring yourself within range, taking Yaemon by surprise.",
+        "options": [
+            {
+                "text": "Try a punch?",
+                "entry": 266
+            },
+            {
+                "text": "Try a kick?",
+                "entry": 390
+            },
+            {
+                "text": "Try a throw?",
+                "entry": 401
             }
         ]
     },
@@ -5349,6 +5375,31 @@
             }
         ]
     },
+    "330": {
+        "description": "You drive your right fist toward Yaemon’s head but he steps towards you and to the right with legs apart and knees bent, sweeping the side of his left hand up into the inside of your right wrist, pushing your punch past him and twists his right fist up into your midriff with a shout. You double up.",
+        "modify_endurance": -4,
+        "damage_followup": "He pulls back his fist and then passes it through the air at your head. You react fast, however, and literally sit down hard as his arm whistles past overhead and then somersault backwards out of range. Rolling into a headstand, you flip to your feet and turn to face Yaemon. He snarls in frustration at your narrow escape. You can attack again.",
+        "options": [
+            {
+                "text": "Use the Cobra Strike punch?",
+                "entry": 340,
+                "inner_force": true
+            },
+            {
+                "text": "Use the Tiger's Paw chop?",
+                "entry": 410,
+                "inner_force": true
+            },
+            {
+                "text": "Attack with a kick?",
+                "entry": 390
+            },
+            {
+                "text": "Use a throw?",
+                "entry": 401
+            }
+        ]
+    },
     "331": {
         "description": "As the wind whistles around the turrets of the Great Keep there is a sudden keening howl. For an instant the hairs on the back of your neck prickle with fear, until you realise that it is only the wind howling through an arrow-slit in one of the turrets. The Captain looks startled and you choose this moment to steal up behind him as he moves towards the edge of the roof.\n\nYou use the Winged Horse kick to tumble him over the battlements and he is falling long before he has realised what has happened. When he does ht lets out a piercing shriek of alarm and calls ‘Intruder’, before hitting the flagstones below with a crash.\n\nAs you pull back from the edge and make for one of the turrets, light floods the roof area and, looking up, you see Manse the Death-mage. There is a twisted smile on his face as he casts a spell which sends you into a helpless shaking fit. Honoric bursts from the door of his turret and you are helpless as the Marshal of the Legion of the Sword of Doom cuts your head cleanly from your shoulders.",
         "options": [
@@ -6537,6 +6588,26 @@
             {
                 "text": "Continue",
                 "entry": 289
+            }
+        ]
+    },
+    "410": {
+        "description": "You bring your hand across from left bright in a vicious chop at his neck. Unfortunately he is too fast for you and he catches your wrist and delivers a deft snap-kick to your stomach.",
+        "modify_endurance": -2,
+        "damage_followup": "He places the sole of his foot onto your stomach and falls backwards, bringing you with him, straightens his leg and sends you sailing over him. Are you an Acrobat?",
+        "boolean_option": true,
+        "options": [
+            {
+                "prereq": [
+                    "skill",
+                    "Acrobatics"
+                ],
+                "text": "[Acrobatics] Continue",
+                "entry": 167
+            },
+            {
+                "text": "Continue",
+                "entry": 159
             }
         ]
     },
