@@ -828,6 +828,26 @@
             }
         ]
     },
+    "54": {
+        "description": "You twist on your left foot, bringing your right ankle in a whipping arc aimed at Yaemon’s head. This time he is ready for you and ducks again under your flailing foot. As you come round to face him, he hops up, and drives his right foot into your groin followed by his left up into your face in a quick scissor kick. You drop to your back on the floor like a sack of potatoes, stunned.",
+        "modify_endurance": -8,
+        "damage_followup": "He grabs your wrist from the ground and turns his back to you, straddling your arm with his legs. He twists around and sits beside you, one calf across your neck. You cry out in pain and he begins to exact a terrible pressure on your arm in an attempt to break it. You resist, but realise that the arm-lock gives him the advantage.\n\nWith remarkable dexterity, you put your weight on your shoulder blades and swing both your feet back over your head at Yaemon. He is forced to release you to block your attack and as he does so, you whip your feet back. With the palms of your hands on the ground behind your head, you push hard, flipping to your feet before Yaemon can act. You leap out of range and turn to face him as he rises to his feet. Still somewhat groggy you shake your head to clear it, in time to see Yaemon leap towards you and unleash a flurry of attacks.",
+        "boolean_option": true,
+        "options": [
+            {
+                "prereq": [
+                    "skill",
+                    "Acrobatics"
+                ],
+                "text": "[Acrobatics] Continue",
+                "entry": 181
+            },
+            {
+                "text": "Continue",
+                "entry": "54a"
+            }
+        ]
+    },
     "55": {
         "description": "Your last blow sends one of them collapsing backwards towards the river. You have pummelled them all to death. The wagons are nowhere to be seen, but you notice that one of them is wearing an Amulet. The Amulet is a bright crystal set in a gold disk which carries an inscription, as well as magical runes: 'My wearer can withstand the Finger of Death'. You slip the Amulet around your neck.\n\nSearching their bodies, you find a battered scroll case and, muttering a prayer to Kwon to protect you from curses, you open it. The papyrus inside identifies its bearer as a priest of Nemesis, 'The Supreme Principle of Evil, he who would return all to The Darkness.' It carries a description of you. It was no accident that they attacked you, word has somehow travelled ahead of you for their temple to Nemesis is in Mortavalon.\n\nYou walk on into the hills which encircle Mortavalon, puzzling as to who could have contacted the temple to Nemesis about you and why, until, turning a bend in the hills, you notice a cave overhung by rock in the hillside above you.",
         "loot_add": [
@@ -1352,6 +1372,26 @@
             {
                 "text": "Continue",
                 "entry": 66
+            }
+        ]
+    },
+    "84": {
+        "description": "You turn sideways and unleash a Winged Horse kick straight at his head, with a cry. Yaemon, anticipating your move, drops onto his back and lashes the ball of his foot into your groin as your kick whips out over his head. You double up in pain as he wraps his feet around your neck and twists savagely, cartwheeing through the air in a variation of the Teeth of the Tiger throw. In agony you cannot control yourself and you fall awkwardly in a heap.",
+        "modify_endurance": -6,
+        "damage_followup": "You spring to your feet as fast as you can, leaping out of range of Yaemon’s attempted chop. However, as you come to a halt, he leaps into the air towards you, his left leg extended in a flying Winged Horse kick.",
+        "boolean_option": true,
+        "options": [
+            {
+                "prereq": [
+                    "skill",
+                    "Acrobatics"
+                ],
+                "text": "[Acrobatics] Continue",
+                "entry": 350
+            },
+            {
+                "text": "Continue",
+                "entry": "84a"
             }
         ]
     },
@@ -1960,6 +2000,27 @@
             }
         ]
     },
+    "118": {
+        "description": "He chops his right hand at the left side of your neck. You bring your leg up in an arc from left to right, sweeping his arm aside, but he pulls it back and chops again at the other side of your neck. Giving ground fast, you twist your arm up across your chest to take the blow on your forearm. With unrelenting rapidity, Yaemon closes his hand into a fist and snaps his arm straight, trying to drive his knuckles into the bridge of your nose. You are hard pressed, but you manage to bring your forearm back and across the top of your head just in time to intercept the blow.\n\nBarely moments later, he whiplashes the side of his right foot at your throat in a Winged Horse kick but, with a speed born of desperation, you manage to slap his foot aside with your left hand. The force of the kick spins him around, and you take the chance to leap back out of range, whilst the sound of his shouts echo into the night. Yaemon is turning to face you and you seize the opportunity to counter attack.",
+        "options": [
+            {
+                "prereq": [
+                    "event_false",
+                    "broken_arm"
+                ],
+                "text": "Attack with a punch?",
+                "entry": 266
+            },
+            {
+                "text": "Attack with a kick?",
+                "entry": 390
+            },
+            {
+                "text": "Try and throw him?",
+                "entry": 401
+            }
+        ]
+    },
     "119": {
         "description": "Flame ripples across its massive frame as the Elemental being tries to grab you. You kick with all your might, hoping to make some impression on the fiery colossus. Even if you manage to hit it, the flames sear your foot.\n\nAs you kick, the Efreet tries to knock you to the ground with both its huge fists.",
         "image": "213.png",
@@ -2468,6 +2529,26 @@
                 "type": "offence",
                 "action": "kick",
                 "inner_force": true
+            }
+        ]
+    },
+    "150": {
+        "description": "You are looking sideways at Yaemon. You hop crab-like into range and unleash another Forked Lightning Strike kick, driving your foot at his groin. Yaemon is not so easily fooled a second time and he leaps high over your first strike and, still in the air, kicks you in the face before you can finish your Forked Lightning Strike. You stagger back and he lands in front of you. Placing his left hand on your chest, he hooks his left leg around yours and pushes. You fall flat on your back and he drops to one knee beside you, simultaneously chopping his right hand down onto your chest with a shout of Inner Force, cracking your ribs.",
+        "modify_endurance": -11,
+        "damage_followup": "You realise that you have only seconds before Yaemon finishes you, and the fear of death gives you the strength to roll aside and out of his reach. As quick as you can, you spring to your feet but he is upon you again with a flurry of attacks.",
+        "boolean_option": true,
+        "options": [
+            {
+                "prereq": [
+                    "skill",
+                    "Acrobatics"
+                ],
+                "text": "[Acrobatics] Continue",
+                "entry": 181
+            },
+            {
+                "text": "Continue",
+                "entry": "150a"
             }
         ]
     },
@@ -3046,6 +3127,27 @@
             {
                 "text": "Continue",
                 "entry": "death"
+            }
+        ]
+    },
+    "181": {
+        "description": "You leap high to the side and, cartwheeling in the air, land some feet beyond Yaemon just as he was about to chop at you. Somewhat surprised by your athletic powers, he turns to face you as you flip towards him head over heels several times and leap to the attack.",
+        "options": [
+            {
+                "prereq": [
+                    "event_false",
+                    "broken_arm"
+                ],
+                "text": "Attack with a punch?",
+                "entry": 266
+            },
+            {
+                "text": "Attack with a kick?",
+                "entry": 390
+            },
+            {
+                "text": "Try and throw him?",
+                "entry": 401
             }
         ]
     },
@@ -3714,6 +3816,42 @@
             }
         ]
     },
+    "228": {
+        "description": "You drop to the ground in a slide and, before Yaemon knows what is happening, hook your legs around his, twist savagely and bring him toppling to the floor. Unable to use his legs, he is unable to break his fall adequately and he slams into the castle roof with a cry.",
+        "damage_opponent": [
+            [
+                "Yaemon",
+                "fixed",
+                2
+            ]
+        ],
+        "victory": 420,
+        "damage_opponent_followup": "He recovers quickly and as you bring your knees up to your chest and snap your legs straight, flipping to land nimbly on your feet, he is on his feet ahead of you. But you still have the initiative.",
+        "options": [
+            {
+                "text": "Try the Dragon’s Tail throw again?",
+                "entry": 245,
+                "inner_force": true
+            },
+            {
+                "text": "Try the Whirlpool throw?",
+                "entry": 367,
+                "inner_force": true
+            },
+            {
+                "prereq": [
+                    "event_false",
+                    "broken_arm"
+                ],
+                "text": "Attack with a punch?",
+                "entry": 266
+            },
+            {
+                "text": "Attack with a kick?",
+                "entry": 390
+            }
+        ]
+    },
     "229": {
         "description": "You unfurl the length of waxed string until it dangles just above the mouth of the Marshal of the Legion of Doom. You uncork the gourd which holds the Blood of Nil, mouth of the Void, the most virulent poison known. It steams as the black beads run down the string and drop into Honoric’s open mouth. He goes rigid and you know that he is helpless, dying of suffocation as his chest is paralyzed.\n\nYou have assassinated the Marshal of the Legion of Doom, one of the most powerful men on Orb.",
         "loot_remove": [
@@ -3938,6 +4076,47 @@
             }
         ]
     },
+    "240": {
+        "description": "With incredible speed you spin to the right on the ball of your left foot, and whip your right heel around in an arc, as if your leg were a chain and your foot a heavy metal ball. It smashes into the side of Yaemon’s face with a crack, spinning his head around, the force of the blow sends him whirling away, barely able to remain on his feet.",
+        "damage_opponent": [
+            [
+                "Yaemon",
+                "fixed",
+                8
+            ]
+        ],
+        "victory": 420,
+        "damage_opponent_followup": "You leap head-first towards him and somersault in the air, so that both your feet are hurtling towards him in a drop-kick. At the last instant he recovers and brings his right forearm across his face, sweeping your legs aside and down. You land nimbly with your back to him, and acting quickly, whip your left foot up in an arc from left to right. This time Yaemon ducks and, as you turn to face him, you drive a Leaping Tiger kick at his face.\n\nYaemon, under pressure, rears back, avoiding your foot by inches, and somersaults backwards onto his hands and then to his feet, repeating these flips until he is well out of range. You pursue him, and when he comes to a halt you are ready to attack again.",
+        "options": [
+            {
+                "text": "Use Kwon’s Flail again?",
+                "entry": 54,
+                "inner_force": true
+            },
+            {
+                "text": "Try the Forked Lightning Strike kick?",
+                "entry": 306,
+                "inner_force": true
+            },
+            {
+                "text": "Try the Winged Horse kick?",
+                "entry": 84,
+                "inner_force": true
+            },
+            {
+                "prereq": [
+                    "event_false",
+                    "broken_arm"
+                ],
+                "text": "Attack with a punch?",
+                "entry": 266
+            },
+            {
+                "text": "Try a throw?",
+                "entry": 401
+            }
+        ]
+    },
     "241": {
         "description": "You wait for Runeweaver to lunge at you, then sidestep to the right and try to grab his wrist, twist into him and throw him over your hip.",
         "player_defence": 7,
@@ -4003,6 +4182,30 @@
                 "entry": 244,
                 "type": "offence",
                 "action": "punch",
+                "inner_force": true
+            }
+        ]
+    },
+    "245": {
+        "description": "You drop to the ground and try to catch his legs between yours and topple him over, but he is ready for you this time. He leaps straight up and comes down on you, stamping on your midriff with a cry as he uses Inner Force. Your ribs crack like bamboo.",
+        "modify_endurance": -10,
+        "damage_followup": "He flips off you and spins in the air to land behind you facing your head. You manage to overcome your pain and, looking up and to the rear, clap your hands together with the speed and force of a bear trap around Yaemon’s foot as he tries to kick you again. For a moment you think you have him, but he follows his kick through, pushing off with his other leg and, using your grip as a stepping stone, hurls himself the length of your body, pulling his leg from your grasp.\n\nYou bring your knees up to your chest and snap your legs straight, using this momentum to flip to your feet just in time to see Yaemon twisting in the air to land facing you once more. You have the initiative.",
+        "options": [
+            {
+                "prereq": [
+                    "event_false",
+                    "broken_arm"
+                ],
+                "text": "Attack with a punch?",
+                "entry": 266
+            },
+            {
+                "text": "Attack with a kick?",
+                "entry": 390
+            },
+            {
+                "text": "Try the Whirlpool throw?",
+                "entry": 367,
                 "inner_force": true
             }
         ]
@@ -4640,6 +4843,53 @@
             }
         ]
     },
+    "278": {
+        "description": "You lash the ball of your right foot straight at Yaemon’s stomach, but he hops back on both feet and catches your foot. He heaves upwards and you are sent into the air; but you use this throw to your advantage, and whip your left foot up into his face as you somersault backwards through the air. He cries out in pain.",
+        "damage_opponent": [
+            [
+                "Yaemon",
+                "fixed",
+                2
+            ]
+        ],
+        "victory": 420,
+        "damage_opponent_followup": "He is enraged and just as you land nimbly on your feet he is up beside you. He twists to the side and whips the top of his right foot into your solar plexus, then up to your face and down to your ribcage again, in quick succession, with three clipped shouts.",
+        "modify_endurance": -8,
+        "damage_followup": "His last blow hurls you flat on your back. As your head clears, you look up to see Yaemon above you, legs astride your torso, his fist driving down at your face. Desperately, you slap it aside with your right hand, and bring it back across your chest to defied another vicious chop to your neck. It takes only a split second to snake your left hand around his leg and heave, bringing him down to the ground.\n\nQuickly you disengage and spring to your feet, as does Yaemon. He is moments behind you, and you may launch an attack.",
+        "options": [
+            {
+                "text": "Try the Winged Horse kick?",
+                "entry": 84,
+                "inner_force": true
+            },
+            {
+                "text": "Try the Forked Lightning Strike kick?",
+                "entry": 306,
+                "inner_force": true
+            },
+            {
+                "prereq": [
+                    "event",
+                    "learned_kwons_flail"
+                ],
+                "text": "Try Kwon’s Flail?",
+                "entry": 240,
+                "inner_force": true
+            },
+            {
+                "prereq": [
+                    "event_false",
+                    "broken_arm"
+                ],
+                "text": "Attack with a punch?",
+                "entry": 266
+            },
+            {
+                "text": "Try a throw?",
+                "entry": 401
+            }
+        ]
+    },
     "279": {
         "description": "The monk falls to the ground helplessly coughing blood, but there is no respite for you as the second monk bows to you before preparing to attack. You decide to change your tactics.",
         "opponents": [
@@ -5080,6 +5330,56 @@
             }
         ]
     },
+    "306": {
+        "description": "Yaemon steps forward and launches a Leaping Tiger kick at your face but you step aside and turn sideways away from his kick. Yaemon’s strike whistles past your back as you drive the side of your foot at Yaemon’s stomach and then whip it up to his head. He reacts quickly and blocks your first strike with his forearm, but your second strike takes him by surprise and slams into his face. His head swings back as he staggers, momentarily stunned.",
+        "damage_opponent": [
+            [
+                "Yaemon",
+                "fixed",
+                6
+            ]
+        ],
+        "victory": 420,
+        "damage_opponent_followup": "He is recovering and you may follow up your attack.",
+        "options": [
+            {
+                "text": "Try the Forked Lightning Strike again?",
+                "entry": 150,
+                "inner_force": true
+            },
+            {
+                "text": "Try the Leaping Tiger kick?",
+                "entry": 278,
+                "inner_force": true
+            },
+            {
+                "text": "Try the Winged Horse kick?",
+                "entry": 84,
+                "inner_force": true
+            },
+            {
+                "prereq": [
+                    "event",
+                    "learned_kwons_flail"
+                ],
+                "text": "Try Kwon’s Flail?",
+                "entry": 240,
+                "inner_force": true
+            },
+            {
+                "prereq": [
+                    "event_false",
+                    "broken_arm"
+                ],
+                "text": "Attack with a punch?",
+                "entry": 266
+            },
+            {
+                "text": "Try a throw?",
+                "entry": 401
+            }
+        ]
+    },
     "307": {
         "description": "You enter the Black Sword tavern, a long drinking hail with a blazing fire, even at Harvest time, the month of All-Mother Splendour. There are forty or so drinkers, all men and mostly soldiers. There is not a single sailor to be seen even though you are still close to the harbour. The soldiers have brought their weapons into the tavern but many have loosened or discarded parts of their armour in the sweltering heat. The reek of stale sweat is overpowering. A man who must weigh twenty stones or more ambles up and down the long bar, slamming mugs of mead on the counter and pocketing silver.\n\nYou buy a mugful and listen to the conversations. They are shouting from table to table about the campaign they are going to fight against the people of the Spires of Foreshadowing. At one table a man of twenty-five or so is particularly loud. He demands mead and two of the soldiers with him grab his mug, fighting for the privilege of buying his drink. He ignores this and, spotting you, challenges you to a drinking bout.",
         "image": "176.png",
@@ -5091,6 +5391,29 @@
             {
                 "text": "Decline?",
                 "entry": 186
+            }
+        ]
+    },
+    "308": {
+        "description": "He chops his right hand at the left side of your neck. You bring your leg up in an arc from left to right, sweeping his arm aside but he pulls it back and chops again at the other side of your neck, stunning you. With unrelenting ferocity, Yaemon closes his hand into a fist and snaps his arm straight, bringing his knuckles down sharply on the bridge of your nose and pain washes over you. Barely moments later he slams his foot into your head in a Winged Horse kick, and you are lifted off your feet and hurled backwards, your arms spread wide.",
+        "modify_endurance": -10,
+        "damage_followup": "As the sound of his shouts echo into the night, you manage to break your fall with your arms as you land flat on your back. At the last instant your head clears in time to see Yaemon’s foot stamping down at your head and you roll aside and away, springing to your feet, out of range. Warily you circle him and then charge in to the attack.",
+        "options": [
+            {
+                "prereq": [
+                    "event_false",
+                    "broken_arm"
+                ],
+                "text": "Attack with a punch?",
+                "entry": 266
+            },
+            {
+                "text": "Attack with a kick?",
+                "entry": 390
+            },
+            {
+                "text": "Try and throw him?",
+                "entry": 401
             }
         ]
     },
@@ -6412,6 +6735,35 @@
             }
         ]
     },
+    "390": {
+        "description": "Which kick will you try?",
+        "options": [
+            {
+                "text": "Try the Winged Horse?",
+                "entry": 84,
+                "inner_force": true
+            },
+            {
+                "text": "Try the Forked Lightning Strike?",
+                "entry": 306,
+                "inner_force": true
+            },
+            {
+                "text": "Try the Leaping Tiger?",
+                "entry": 278,
+                "inner_force": true
+            },
+            {
+                "prereq": [
+                    "event",
+                    "learned_kwons_flail"
+                ],
+                "text": "Try Kwon’s Flail?",
+                "entry": 240,
+                "inner_force": true
+            }
+        ]
+    },
     "391": {
         "description": "The venom of the hooded cobra is deadly and you die within minutes, your body draped across that of the Deathmage. You have failed to avenge the death of your spiritual father and Yaemon will speak the word of power at the Pillars of Change that will bind your god, Kwon, in Inferno.",
         "options": [
@@ -6558,6 +6910,21 @@
             {
                 "text": "Continue",
                 "entry": 391
+            }
+        ]
+    },
+    "401": {
+        "description": "Yaemon is too quick for you to have any hope with the Teeth of the Tiger.",
+        "options": [
+            {
+                "text": "Try the Whirlpool throw?",
+                "entry": 367,
+                "inner_force": true
+            },
+            {
+                "text": "Try the Dragon’s Tail throw?",
+                "entry": 228,
+                "inner_force": true
             }
         ]
     },
@@ -6849,6 +7216,66 @@
             {
                 "text": "Enter the cave?",
                 "entry": 275
+            }
+        ]
+    },
+    "420": {
+        "description": "Yaemon falls mortally hurt to the stone roof of the Great Keep. The wind howls and there is a clap of thunder. His face is suddenly lit up in a flare of lightning and, strangely, he is smiling, calm in the face of death. He raises his voice above the sound of the driving rain.‘You are truly formidable, Ninja. I have fought many great warriors. Your Manmarcher father was one but I triumphed over him as I did over all the others.’\n\nYou are about to ask him who your father was when he is racked by a fit of coughing which robs him of his last breath. Yaemon is dead and you have succeeded in your mission. Your fame, as Avenger, will spread through the lands of Orb on the wings of fear, for you have killed three tyrants so powerful that they could hold the gods to ransom.\n\nYaemon’s scarlet jacket, now drenched with rain and sweat, has fallen open to reveal a waxed parchment, the Scrolls of Kettsuin. You are about to open this when a wondrous feeling of peace overwhelms you and the voice of your god, Kwon, sounds all around you. ‘The Grandmaster of the Dawn named you well, Avenger, for now it is Yaemon and not I who will languish in the lake of boiling blood in Inferno. If you had failed, the Doom Legion and the monks of the Scarlet Mantis would have swept across the Manmarch aided by the priests who revere Nemesis and all mankind would have lived in terror under the evil overlords you have slain.’\n\nYour wounds are healed as if by a miracle, and new strength floods into your body as the god gives you Inner Force. You feel dazed and awed by what is happening and the sense of Kwon’s goodness fills your soul with enlightenment. ‘There is little time now, Avenger, for the gods of evil move against us. You must return the Scrolls of Kettsuin to their rightful place at the Temple of the Rock on the Island of Tranquil Dreams, but your journey will be beset with dangers. I will aid you; choose a skill from the Way of the Tiger which you have not yet mastered and I will grant you its knowledge. It shall be as if you had practised it from your birthing.’\n\nThe god continues, ‘I will aid you, but once, at a time of great danger. If you truly have need of me, say only 'Kwon, redeem me', and I shall be your salvation. I will watch over you, Avenger, for it is my hope that one day you will join me in the Garden of the Gods.’\n\nAs Kwon’s presence leaves, you cannot stop yourself calling out, ‘Who was my real father?’\n\nIt is as if the wind itself speaks to you as the voice of Kwon fades, ‘It is not yet time, Avenger.’\n\nYou shiver, noticing the coldness of the rain for the first time. Kwon has departed and you are alone once more. With a shock you hear men’s cries and the sound of mail-shod feet on the staircase, of the Keep...",
+        "modify_endurance": 20,
+        "modify_inner_force": 5,
+        "loot_add": [
+            [
+                "Scrolls of Kettsuin",
+                1
+            ]
+        ],
+        "event_add": ["killed_yaemon"],
+        "options": [
+            {
+                "text": "Continue",
+                "entry": "complete"
+            }
+        ]
+    },
+    "54a": {
+        "description": "You must try to block his attacks.",
+        "player_defence_roll": 7,
+        "options": [
+            {
+                "text": "You succeed!",
+                "entry": 118
+            },
+            {
+                "text": "You fail!",
+                "entry": 308
+            }
+        ]
+    },
+    "150a": {
+        "description": "Still slightly stunned, you must try to block his flurry of attacks.",
+        "player_defence_roll": 6,
+        "options": [
+            {
+                "text": "You succeed!",
+                "entry": 118
+            },
+            {
+                "text": "You fail!",
+                "entry": 308
+            }
+        ]
+    },
+    "84a": {
+        "description": "You twist desperately, trying to avoid the attack.",
+        "player_defence_roll": 7,
+        "options": [
+            {
+                "text": "You succeed!",
+                "entry": 411
+            },
+            {
+                "text": "You fail!",
+                "entry": 24
             }
         ]
     },

@@ -81,5 +81,9 @@
     "Sorcerak": {
         "name": "Sorcerak",
         "desc": "The black, fear-inducing blade of Honoric, Marshall of the Legion of Doom."
+    },
+    "Scrolls of Kettsuin": {
+        "name": "Scrolls of Kettsuin",
+        "desc": "The sacred scrolls of Kwon, holding the secret Word of Power."
     }
 }

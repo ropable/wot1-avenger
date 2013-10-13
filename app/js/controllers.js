@@ -90,6 +90,12 @@ var validEntryChoices = function(gameState) {
                     gameState.options.push(option);
                     prereq_met = true;
                 }
+            } else if (option.prereq && option.prereq[0] === 'event') {
+                // Option is allowed only if defined event is present in gameState.
+                if (_.contains(gameState.events, option.prereq[1])) {
+                    gameState.options.push(option);
+                    prereq_met = true;
+                }
             } else if (option.prereq && option.prereq[0] === 'event_false') {
                 // Option is allowed only if defined event is not in gameState.
                 if (!_.contains(gameState.events, option.prereq[1])) {
@@ -141,6 +147,7 @@ function NewGameCtrl($scope, $http, localStorageService, Story, Items, Opponents
     // Controller for the "new game" page.
     var storyjson = Story.get();
     var itemsjson = Items.get();
+    console.log(itemsjson);
     var opponentsjson = Opponents.get();
     // Get JSON for available skills to choose.
     $http.get('data/skills.json').success(function(data) {
@@ -307,9 +314,8 @@ function StoryCtrl($scope, $http, localStorageService, gameState, Story, Items, 
                             gameState.allies = [];
                             gameState.inCombat = false;
                         }
-                        if (gameState.entry.damage_opponent_followup) {
+                        if (gameState.entry.damage_opponent_followup && gameState.inCombat) {
                             entryText = entryText + '\n\n' + gameState.entry.damage_opponent_followup;
-                            //gameState.entryText = textMarkup(entryText);
                         }
                     }
                 });
@@ -641,6 +647,7 @@ function StoryCtrl($scope, $http, localStorageService, gameState, Story, Items, 
                 // We don't already own this.
                 if (!owned) {
                     var newitem = itemsjson[loot[0]];
+                    console.log(newitem);
                     newitem.count = loot[1];
                     gameState.items.push(newitem);
                 }
