@@ -373,6 +373,21 @@
             }
         ]
     },
+    "24": {
+        "description": "As his foot nears your head you try and drive the palm of your right hand up onto his ankle and force his leg over your head, but you have misjudged it and your arm cleaves the air past his leg. His foot slams into your face. The power of his Inner Force is stunning and blood spurts from your shattered nose and mangled lips.",
+        "modify_endurance": -10,
+        "damage_followup": "The force of the blow sends you flying backwards. Using all of your will power, you suppress the pain and flip backwards onto your feet as Yaemon runs at you to attack again. You have no time to kick.",
+        "options": [
+            {
+                "text": "Punch at him?",
+                "entry": 155
+            },
+            {
+                "text": "Throw him?",
+                "entry": 68
+            }
+        ]
+    },
     "25": {
         "description": "The Cobra Man's strike is as fast as your own as you turn sideways on and drive your heel towards his chest.",
         "victory": 394,
@@ -609,6 +624,29 @@
             }
         ]
     },
+    "40": {
+        "description": "Your aim is slightly off and the Shuriken whistle past Yaemon’s head. As the first disappear into the night, Yaemon whips his hand up and adroitly plucks the last one out of the air and sends it spinning back at you with a quick flick of his wrist.\n\nIt takes all of your skill to sweep it aside at the last moment with your forearm and it ricochets away with a whine. Yaemon was not expecting you to parry your own Shuriken and you have a moment within which to act.",
+        "loot_remove": [
+            [
+                "Shuriken",
+                5
+            ]
+        ],
+        "options": [
+            {
+                "prereq": [
+                    "skill",
+                    "Poison Needles"
+                ],
+                "text": "[Poison Needles] Use a Poison Needle?",
+                "entry": 69
+            },
+            {
+                "text": "Close with Yaemon and attack?",
+                "entry": 89
+            }
+        ]
+    },
     "41": {
         "description": "You make no sound and using the Ninja catwalk you cause your tracks to appear as though you were heading in the opposite direction out of the swamp. But the huge beast tracks you by smell alone and the great splashing of its lumbering strides increases pace.",
         "options": [
@@ -749,6 +787,20 @@
             {
                 "text": "Continue",
                 "entry": 65
+            }
+        ]
+    },
+    "51": {
+        "description": "With lightning speed your hands flash through the air in rapid succession and your Shuriken fly towards Yaemon.",
+        "opponent_defence_roll": 6,
+        "options": [
+            {
+                "text": "Continue",
+                "entry": 40
+            },
+            {
+                "text": "Continue",
+                "entry": 378
             }
         ]
     },
@@ -973,6 +1025,24 @@
                 "type": "offence",
                 "action": "kick",
                 "inner_force": true
+            }
+        ]
+    },
+    "69": {
+        "description": "As fast as you are able, you place a needle on your tongue as you somersault forwards through the air to bring yourself within range. As you land on your feet, you spit hard and the needle arrows towards Yaemon. He makes no attempt to move, but then, to your amazement, he blows the small dart aside, inches from his face.\n\nThen he crouches and leaps high into the air towards you, his left leg extended in a flying Winged Horse kick aimed at your head. He gives a great shout and you realise he is using Inner Force.",
+        "boolean_option": true,
+        "options": [
+            {
+                "prereq": [
+                    "skill",
+                    "Acrobatics"
+                ],
+                "text": "[Acrobatics] Continue",
+                "entry": 350
+            },
+            {
+                "text": "Continue",
+                "entry": "69a"
             }
         ]
     },
@@ -1349,6 +1419,23 @@
             {
                 "text": "Continue",
                 "entry": "death"
+            }
+        ]
+    },
+    "89": {
+        "description": "You cartwheel toward Yaemon and launch into the attack.",
+        "options": [
+            {
+                "text": "Punch?",
+                "entry": 266
+            },
+            {
+                "text": "Kick?",
+                "entry": 390
+            },
+            {
+                "text": "Throw?",
+                "entry": 401
             }
         ]
     },
@@ -4297,6 +4384,26 @@
             }
         ]
     },
+    "266": {
+        "description": "Which punch will you try?",
+        "options": [
+            {
+                "text": "The Cobra Strike?",
+                "entry": 340,
+                "inner_force": true
+            },
+            {
+                "text": "The Iron Fist?",
+                "entry": 330,
+                "inner_force": true
+            },
+            {
+                "text": "The Tiger's Paw?",
+                "entry": 410,
+                "inner_force": true
+            }
+        ]
+    },
     "267": {
         "description": "The Hobgoblin tries to shovel you up on the end of his wickedly barbed trident as you dance sideways and try to grab its shaft so that you can whirl his heavy body over your hip.",
         "player_defence": 7,
@@ -5418,6 +5525,43 @@
             }
         ]
     },
+    "340": {
+        "description": "As you step forward, Yaemon lashes his fist out towards your head, but you drop to one knee and drive a straight fingered jab up into his midriff, just under his rib-cage. He grunts in pain and doubles up. You spring to your feet, whipping your elbow up, so that your right hand rests on your right shoulder, cracking him sharply under the jaw.",
+        "damage_opponent": [
+            [
+                "Yaemon",
+                "fixed",
+                4
+            ]
+        ],
+        "victory": 420,
+        "damage_opponent_followup": "His head snaps back but he executes a backward flip, bringing his feet up towards your face which you just manage to avoid, and then up over his head, and lands safely some feet away. However, you are close behind him and may attack again.",
+        "options": [
+            {
+                "text": "Try the Cobra Strike again?",
+                "entry": 301,
+                "inner_force": true
+            },
+            {
+                "text": "Use the Iron Fist?",
+                "entry": 330,
+                "inner_force": true
+            },
+            {
+                "text": "Use the Tiger's Paw?",
+                "entry": 410,
+                "inner_force": true
+            },
+            {
+                "text": "Use a kick?",
+                "entry": 390
+            },
+            {
+                "text": "Use a throw?",
+                "entry": 401
+            }
+        ]
+    },
     "341": {
         "description": "You strike north from Doomover until you come to a marshland called the Greenfen. You skirt this, crossing the river which flows out of the dank mires and trot for a few days, hunting and foraging at need and sleeping in trees. After several days you turn north east and warily cross the track which leads north from Mortavalon to the city of Sundial and climb into the wild and windswept hills known as the Barrow Swales, heading for the dty of Fiendil.\n\nOn a day which dawns strangely cold, a mist lies heavily around the hills and you find yourself in a narrow gully. A boulder thuds dully towards you from higher up the, hill but you leap agilely out of its way, to be faced by a great Two-headed Giant waving a thorny club, which looks like the trunk of a small tree. The club whistles through the air towards you and you duck low beneath it. The Giant roars in frustration.",
         "image": "341.png",
@@ -5538,6 +5682,23 @@
             {
                 "text": "Continue",
                 "entry": "death"
+            }
+        ]
+    },
+    "350": {
+        "description": "As he flies towards you, you flip backwards into a handstand and then bounce backwards onto your feet again several times, moving out of range of Yaemon’s attack. As he is coming down, you reverse direction and flip towards him with great speed, coming to a stop before him, just as he lands agilely on his feet. You have the chance to attack.",
+        "options": [
+            {
+                "text": "Punch at him?",
+                "entry": 266
+            },
+            {
+                "text": "Throw him?",
+                "entry": 401
+            },
+            {
+                "text": "Kick him?",
+                "entry": 390
             }
         ]
     },
@@ -5931,6 +6092,29 @@
                 "type": "offence",
                 "action": "punch",
                 "inner_force": true
+            }
+        ]
+    },
+    "378": {
+        "description": "The Shuriken speed toward Yaemon’s throat but with astounding timing he turns sideways and, raising his right forearm in front of his chest, passes his right hand up, down and up through the air in a rapid flailing motion. He uses the back of his hand and the heel of his palm to deflect the Shuriken without touching their blades, and they whir away into the night.\n\nAmazed as you are, you know you must act before he has finished concentrating on your stars.",
+        "loot_remove": [
+            [
+                "Shuriken",
+                5
+            ]
+        ],
+        "options": [
+            {
+                "prereq": [
+                    "skill",
+                    "Poison Needles"
+                ],
+                "text": "[Poison Needles] Use a Poison Needle?",
+                "entry": 69
+            },
+            {
+                "text": "Run to the attack?",
+                "entry": 89
             }
         ]
     },
@@ -6356,6 +6540,19 @@
             }
         ]
     },
+    "411": {
+        "description": "As his foot nears your head you drive the palm of your right hand up onto his ankle, forcing his leg higher and he sails over your head. As you turn, he somersaults backwards to land safely on his feet and spins to face you. He runs at you to attack again. You have no time to kick.",
+        "options": [
+            {
+                "text": "Punch at him?",
+                "entry": 155
+            },
+            {
+                "text": "Throw him?",
+                "entry": 68
+            }
+        ]
+    },
     "412": {
         "description": "The Cobra Man's strike is blindingly fast and his fangs sink into your arm, pumping a deadly venom into your veins.",
         "boolean_option": true,
@@ -6463,6 +6660,20 @@
             {
                 "text": "Enter the cave?",
                 "entry": 275
+            }
+        ]
+    },
+    "69a": {
+        "description": "You have no option but to try and block Yaemon's brutal kick.",
+        "player_defence_roll": 8,
+        "options": [
+            {
+                "text": "You succeed!",
+                "entry": 411
+            },
+            {
+                "text": "You fail!",
+                "entry": 24
             }
         ]
     },
