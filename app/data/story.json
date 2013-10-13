@@ -172,6 +172,15 @@
             }
         ]
     },
+    "11": {
+        "description": "The Shuriken only wounds the first guard and he cries the alarm. You see magical lights appearing around the castle like Will-O’-the-Wisps and decide to climb back down the tower, cross the moat once more and try to enter the castle through the grille that leads to an underground tunnel.",
+        "options": [
+            {
+                "text": "Continue",
+                "entry": 398
+            }
+        ]
+    },
     "12": {
         "description": "You swim upstream but as you go they begin chanting again, and as their spell takes effect you find you cannot move your limbs. You float gently downstream, into their welcoming arms and they bind you securely.",
         "loot_remove": [
@@ -2049,6 +2058,27 @@
             }
         ]
     },
+    "120": {
+        "description": "You raise yourself soundlessly from the moat and make the easy climb to the top of the crumbling tower, lashed by wind and rain. As you peer over the battlements you can see two guards standing by a fire which has been lit under a large tarred sheet of canvas. The fire is some way from the top of the staircase leading to the Inner Bailey which surrounds the Great Keep. You duck below the battlement again and hang, as the clouds break allowing the moon to shine through.\n\nFive minutes later the moon is again hidden and you creep soundlessly over the battlements onto the tower roof.",
+        "options": [
+            {
+                "text": "Hurl a Shuriken at one of the guards and run forwards to garotte the second?",
+                "entry": 11
+            },
+            {
+                "text": "Throw a small rock into the fire?",
+                "entry": 355
+            },
+            {
+                "prereq": [
+                    "item",
+                    "Flash powder"
+                ],
+                "text": "Throw some flash powder into the fire?",
+                "entry": 415
+            }
+        ]
+    },
     "121": {
         "description": "You grab the small boat as the Shaggoth sinks slowly into the mire, dragging the struggling Dark Elf with it. She gives vent to a bubbling scream as she sinks slowly beneath the surface. To your dismay the boat is full of cracks and holes and has let in a great deal of swampy water.",
         "image": "172.png",
@@ -2069,6 +2099,19 @@
             {
                 "text": "Continue",
                 "entry": "death"
+            }
+        ]
+    },
+    "123": {
+        "description": "The priests rush to the river’s edge and stare into the water at the point where the boulder splashed. The sluggishness wears off and you glide through the bullrushes and away, as they peer in. One is casting away his chainmail ready to explore the depths of the river as you vanish into the hills that ring the city of Mortavalon. You rejoin the road and, rounding a corner espy a cave overhung with rock in the hillside above you.",
+        "options": [
+            {
+                "text": "Continue straight on to Mortavalon?",
+                "entry": 283
+            },
+            {
+                "text": "Enter the cave?",
+                "entry": 275
             }
         ]
     },
@@ -6120,6 +6163,15 @@
             }
         ]
     },
+    "346": {
+        "description": "After a short while fiddling with a small piece of wire, the lock slides back and you step through the gate into the hallway of the Keep. When you hear footsteps approaching inside, you quickly close the gate. Without a moment’s hesitation you cross to the far comer of the wall and, jumping up, wedge yourself between the ceiling and the two walls. You hang there for twenty minutes while the Bailiff and a guard who have appeared below you plan a raid on the wine-cellar.\n\nAt last they disappear and, dropping to the floor, you massage life back into your numb limbs, before climbing the spiral staircase, which is at the opposite side of the hall. Half way up, yoúr keen sight notices a network of fine threads stretched across the staircase and connected to wires which disappear through holes in the inner wall. You stand on youz hands and ‘walk’ up the staircase, feeling for the near invisible threads as you go and straining your ears for the slightest sound. At last you are past them.",
+        "options": [
+            {
+                "text": "Continue",
+                "entry": 399
+            }
+        ]
+    },
     "347": {
         "description": "The Shuriken hurtles towards him, glinting in the moonlight. He tries to dodge aside but it catches him in the arm, instead of the throat as you had intended. He cries the alarm and falls back, clutching his arm. You will not be able to retrieve the Shuriken. You decide that to remain would imperil your mission and lose yourself quickly in the side streets, lying low in a burnt-out bakery for the night. You reflect that the monk may have recognised you were a Ninja and decide to leave Doomover, intent on making sure that Yaemon does not arrive at the Pillars of Change before you. Using the disguise of a beggar, you leave the city in the morning.",
         "loot_remove": [
@@ -6249,6 +6301,23 @@
             {
                 "text": "Leave in case he is preparing a trap?",
                 "entry": 15
+            }
+        ]
+    },
+    "355": {
+        "description": "The guards look into the blazing fire which blinds them to everything else around them. One of them mutters, ‘Just a log settling in the fire,’ whilst you steal silently past them and down the stairway to the Inner Bailey below. A guard is doing the rounds of the inner courtyard but you wait until he is out of sight on the other side of the Great Keep, and glide across the grass like a shade, to a small gate that leads into the Keep itself.",
+        "options": [
+            {
+                "prereq": [
+                    "skill",
+                    "Picking Locks"
+                ],
+                "text": "[Picking Locks] Try to open the locked gate?",
+                "entry": 346
+            },
+            {
+                "text": "Look for a way inside the Keep.",
+                "entry": 381
             }
         ]
     },
@@ -6431,6 +6500,15 @@
             {
                 "text": "Continue",
                 "entry": 368
+            }
+        ]
+    },
+    "369": {
+        "description": "You place your heel against the gate-lock, and the breath hisses from your lungs as you let the Inner Force explode from you. The lock snaps with a crack and the gate swings open. You step into the Keep and, when you hear footsteps approaching inside, you quickly close the gate. Without a moment’s hesitation you cross to the far corner of the wall and, jumping up, wedge yourself between the ceiling and the two walls. You hang there for twenty minutes while the Bailiff and a guard who have appeared below you plan a raid on the wine-cellar.\n\nAt last they disappear and, dropping to the floor, you massage life back into your numb limbs, before climbing the spiral staircase which is at the opposite side of the hail. Half-way up your keen sight notices a network of fine threadš stretched across the staircase and connected to wires which disappear through holes in the inner wall. You stand on your hands and ‘walk’ up the staircase, feeling for the near invisible threads as you go and straining your ears for the slightest sound. At last you are past them.",
+        "options": [
+            {
+                "text": "Continue",
+                "entry": 399
             }
         ]
     },
@@ -6645,6 +6723,39 @@
             }
         ]
     },
+    "381": {
+        "description": "You must find a way into the Keep.",
+        "options": [
+            {
+                "prereq": [
+                    "skill",
+                    "Climbing"
+                ],
+                "text": "[Climbing] Climb up the side of the Keep to its roof?",
+                "entry": 174
+            },
+            {
+                "prereq": [
+                    "skill",
+                    "Climbing"
+                ],
+                "text": "[Climbing] Climb up the Keep and force an entry at one of the lower windows?",
+                "entry": 2
+            },
+            {
+                "prereq": [
+                    "inner_force",
+                    1
+                ],
+                "text": "Use your Inner Force to try to force the lock open?",
+                "entry": 369
+            },
+            {
+                "text": "Leave the Inner Bailey and try the grille at the moat?",
+                "entry": 393
+            }
+        ]
+    },
     "382": {
         "description": "Your magnificent leap is enough to carry you to the island and you land nimbly on your feet, as the crowd cheers loudly. You look around. The Dark Elf is nowhere to be seen, lost in the swamp, and the knight lies spread-eagled on the sand but the man in blue and gold robes is floating across the moat on a small ice floe.",
         "options": [
@@ -6721,6 +6832,15 @@
             }
         ]
     },
+    "388": {
+        "description": "The poison has no effect and you manage to descend in safety to the metal grille through which you saw a man being dropped when you first arrived at Quench-heart Keep.",
+        "options": [
+            {
+                "text": "Continue",
+                "entry": 398
+            }
+        ]
+    },
     "389": {
         "description": "In one swift movement you place a Poison Needle on your tongue and then spit it towards the magician's face. He tries to dodge it.",
         "opponent_defence_roll": 4,
@@ -6788,6 +6908,23 @@
             {
                 "text": "Continue",
                 "entry": 91
+            }
+        ]
+    },
+    "393": {
+        "description": "As you sneak past the guards, still warming themselves by the fire under the canvas awning, you trigger a trap and a poison needle sticks up into the sole of your foot.",
+        "options": [
+            {
+                "prereq": [
+                    "skill",
+                    "Immunity to Poisons"
+                ],
+                "text": "[Immunity to Poisons] Continue",
+                "entry": 388
+            },
+            {
+                "text": "Continue",
+                "entry": "393a"
             }
         ]
     },
@@ -6859,6 +6996,23 @@
             {
                 "text": "Cross the roof of the Great Keep to the turret with the Black Whirlpool flag?",
                 "entry": 130
+            }
+        ]
+    },
+    "398": {
+        "description": "You drop to the wide rock-hewn tunnel beneath, gambling that your mission will be completed before the guards notice that the grille is out of place. Your feet are deep in slime and squealing sewer rats brush your ankles in the darkness. You feel your way slowly and stop dead as you sense something ahead of you. It has sensed you and an ear-splitting roar echoes around the cavern which is its home.",
+        "options": [
+            {
+                "text": "Continue along the tunnel towards it?",
+                "entry": 383
+            },
+            {
+                "prereq": [
+                    "skill",
+                    "Climbing"
+                ],
+                "text": "[Climbing] Leave the tunnel and scale the castle wall?",
+                "entry": 392
             }
         ]
     },
@@ -7159,6 +7313,15 @@
             }
         ]
     },
+    "415": {
+        "description": "The guards are both blinded by the flash but cry the alarm. You see magical lights appearing around the castle like Will-O’-The-Wisps and decide to climb back down the tower, cross the moat once more and try to enter the castle through the grille that leads to an underground tunnel.",
+        "options": [
+            {
+                "text": "Continue",
+                "entry": 398
+            }
+        ]
+    },
     "416": {
         "description": "The hub of the wheel catches you and throws you hard against a wall.",
         "modify_endurance": -4,
@@ -7229,11 +7392,22 @@
                 1
             ]
         ],
-        "event_add": ["killed_yaemon"],
+        "event_add": [
+            "killed_yaemon"
+        ],
         "options": [
             {
                 "text": "Continue",
                 "entry": "complete"
+            }
+        ]
+    },
+    "393a": {
+        "description": "You fall helpless to the floor, your muscles locked in a spasm. One of the guards runs you through with his sword so that he can claim that he has been vigilant enough to slay you. You have failed your mission.",
+        "options": [
+            {
+                "text": "Continue",
+                "entry": "death"
             }
         ]
     },
