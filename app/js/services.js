@@ -23,36 +23,36 @@ angular.module('wot1app.services', ['ngResource'])
 wot1app.factory('gameState', function($http) {
     // gameState should persist data via localstorage, unless initialised.
     // The values below are initial values.
-    var gameState = {};
-    gameState.inProgress = false;
-    gameState.currentEntry = null;
-    gameState.entryCount = 0;
-    gameState.cheatMode = true;
-    gameState.entry = null;
-    gameState.entryText = null;
-    gameState.hasEntryImage = false;
-    gameState.actionText = null;
-    gameState.actions = [];
-    gameState.options = [];
-    gameState.punch = 0;
-    gameState.kick = 0;
-    gameState.throw = 0;
-    gameState.fate = 0;
-    gameState.innerForce = 5;
-    gameState.endurance = 20;
-    gameState.shuriken = 5;
-    gameState.items = [];
-    gameState.skills = [];
-    gameState.notes = [];
-    gameState.events = [];
-    gameState.currentOpponents = [];
-    gameState.actionText = null;
-    gameState.attackModifierTemp = 0;
-    gameState.combatTimer = null;
-    gameState.lost_equipment = [];
-    gameState.lost_shuriken = 0;
-    gameState.held_loot = [];
-    gameState.allies = [];
-    gameState.inCombat = false;
+    var gameState = {
+        inProgress: false,
+        currentEntry: null,
+        entryCount: 0,
+        cheatMode: true,
+        entry: null,
+        entryText: null,
+        hasEntryImage: false,
+        actionText: null,
+        actions: [],
+        options: [],
+        punch: 0,
+        kick: 0,
+        throw: 0,
+        fate: 0,
+        innerForce: 5,
+        endurance: 20,
+        shuriken: 5,
+        items: [],
+        skills: [],
+        notes: [],
+        events: [],
+        currentOpponents: [],
+        attackModifierTemp: 0,
+        combatTimer: null,
+        lost_equipment: [],
+        lost_shuriken: 0,
+        held_loot: [],
+        allies: [],
+        inCombat: false
+    };
     return gameState;
 });
