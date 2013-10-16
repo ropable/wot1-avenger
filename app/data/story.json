@@ -537,6 +537,7 @@
     },
     "34": {
         "description": "Crash! The Captain’s head hits the deck on the way down and his skull is staved in before the waves engulf him. The news spreads quickly through the reavers and they break off the battle, jumping back to the Watery Death and begin fighting in earnest to decide who shall become the new tyrant captain.\n\nYou dive from the stern castle and swim strongly towards the Aquamarin which is already under way. Your lungs bursting, you catch onto a moving oar at last, and haul yourself up over the side.",
+        "reset_combat_timer": true,
         "options": [
             {
                 "text": "Contine",
@@ -732,6 +733,7 @@
     "45": {
         "description": "You duck the Captain’s swirling morning star, then dodge as he tries to surprise you by driving the heavy gold rings on his left fist into your face. Before you can attack him again a chain net descends upon you and you fall, struggling, to the boards. Two buccaneers had seen you attacking their Captain and being his favourites, they rush to his aid, flinging a chain net from the stairway.\n\nThey tie you up and drag you back to the Aquamarin where your Ninja tools are taken and you are roped to an oar.",
         "lose_equipment": true,
+        "reset_combat_timer": true,
         "options": [
             {
                 "text": "Continue",
@@ -3269,11 +3271,11 @@
         "player_defence_roll": 6,
         "options": [
             {
-                "text": "Continue",
+                "text": "You suceed!",
                 "entry": 127
             },
             {
-                "text": "Continue",
+                "text": "You fail!",
                 "entry": 142
             }
         ]
@@ -3489,11 +3491,11 @@
         ],
         "options": [
             {
-                "text": "Continue",
+                "text": "You succeed!",
                 "entry": 406
             },
             {
-                "text": "Continue",
+                "text": "You fail!",
                 "entry": 85
             }
         ]
@@ -3680,11 +3682,11 @@
         ],
         "options": [
             {
-                "text": "Continue",
+                "text": "You succeed!",
                 "entry": 406
             },
             {
-                "text": "Continue",
+                "text": "You fail!",
                 "entry": 85
             }
         ]
@@ -3837,11 +3839,11 @@
         "player_defence_roll": 6,
         "options": [
             {
-                "text": "Continue",
+                "text": "You succeed!",
                 "entry": 406
             },
             {
-                "text": "Continue",
+                "text": "You fail!",
                 "entry": 85
             }
         ]
@@ -4110,11 +4112,11 @@
         "player_defence_roll": 5,
         "options": [
             {
-                "text": "Continue",
+                "text": "You succeed!",
                 "entry": 165
             },
             {
-                "text": "Continue",
+                "text": "You fail!",
                 "entry": 152
             }
         ]
@@ -7596,11 +7598,11 @@
         "player_defence_roll": 7,
         "options": [
             {
-                "text": "Continue",
+                "text": "You hit!",
                 "entry": "292"
             },
             {
-                "text": "Continue",
+                "text": "You miss!",
                 "entry": "365"
             }
         ]

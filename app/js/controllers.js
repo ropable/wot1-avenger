@@ -189,7 +189,7 @@ function NewGameCtrl($scope, $http, localStorageService, Story, Items, Opponents
         // Clear local storage, set start values, then initiate the first entry.
         localStorageService.clearAll();
         // Set starting entry number.
-        gameState.currentEntry = '101';
+        gameState.currentEntry = '1';
         gameState.endurance = 20;
         // Get start items.
         gameState.items = [];
@@ -277,6 +277,10 @@ function StoryCtrl($scope, $http, localStorageService, gameState, Story, Items, 
         // Set combat timer, if required.
         if (gameState.entry.combat_timer) {
             gameState.combatTimer = gameState.entry.combat_timer;
+        }
+        // Remove combat timer.
+        if (gameState.entry.reset_combat_timer) {
+            gameState.combatTimer = null;
         }
         // Apply any attack modifers gained/lost to gameState.
         if (gameState.entry.attack_modifier) {
