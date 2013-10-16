@@ -52,7 +52,15 @@ wot1app.factory('gameState', function($http) {
         lost_shuriken: 0,
         held_loot: [],
         allies: [],
-        inCombat: false
+        inCombat: false,
+        gameComplete: false,
+        punchesTotal: 0,
+        punchesHit: 0,
+        kicksTotal: 0,
+        kicksHit: 0,
+        throwsTotal: 0,
+        throwsHit: 0,
+        victoriesStat: []
     };
     return gameState;
 });

@@ -354,8 +354,10 @@ function StoryCtrl($scope, $http, localStorageService, gameState, Story, Items, 
                 gameState.combatTimer -= 1;
             }
             if (option.action === 'punch') {
+                gameState.punchesTotal += 1;
                 // Check 2d6 + attack modifer against target defence.
                 if ((dieRoll(2) + gameState.punch + gameState.attackModifierTemp) > target.defence_punch || gameState.cheatMode) {
+                    gameState.punchesHit += 1;
                     hitOpponent = true;
                     damage = dieRoll(1);
                     // Handle Inner Force modifer.
@@ -379,8 +381,10 @@ function StoryCtrl($scope, $http, localStorageService, gameState, Story, Items, 
                     gameState.actions.push([actionText]);
                 }
             } else if (option.action === 'kick') {
+                gameState.kicksTotal += 1;
                 // Check 2d6 + attack modifer against target defence.
                 if ((dieRoll(2) + gameState.kick + gameState.attackModifierTemp) > target.defence_kick || gameState.cheatMode) {
+                    gameState.kicksHit += 1;
                     hitOpponent = true;
                     damage = dieRoll(1) + 2;  // Kicks do more damage.
                     // Handle Inner Force modifer.
@@ -401,7 +405,9 @@ function StoryCtrl($scope, $http, localStorageService, gameState, Story, Items, 
                     gameState.actions.push([actionText]);
                 }
             } else if (option.action === 'throw') {
+                gameState.throwsTotal += 1;
                 if ((dieRoll(2) + gameState.throw) > target.defence_throw || gameState.cheatMode) {
+                    gameState.throwsHit += 1;
                     hitOpponent = true;
                     // Occasionally, throws can result in your one-shotting opponents.
                     if (gameState.entry.instakill_throw) {
@@ -425,7 +431,8 @@ function StoryCtrl($scope, $http, localStorageService, gameState, Story, Items, 
             if (gameState.currentOpponents.length > 0 && gameState.currentOpponents[0].endurance <= 0) {
                 // TODO: handle different targets.
                 // For now we just attack the first in line.
-                gameState.currentOpponents.splice(0, 1);
+                var defeated = gameState.currentOpponents.splice(0, 1);
+                gameState.victoriesStat.push(defeated[0].name);
             }
             // Allied offence.
             // Allies will attack the first living opponent in line, after the player.
