@@ -1,4 +1,4 @@
-# ABOUT
+# ABOUT THIS GAME
 
 Way of the Tiger: Avenger is an old-school choose your own adventure story, in the style of the old
 Fighting Fantasy game books. You play a Ninja, worshipper of Kwon, Supreme Master of Unarmed Combat.
@@ -9,7 +9,7 @@ Naijishi's assassin has stolen the Scrolls of Kettsuin, a guardian of the secret
 which could imprison Kwon in the Inferno forever, unleashing the forces of evil throughout the World
 of Orb. Your quest is to find the assassin before he reaches the Pillars of Change.
 
-# BACKGROUND
+# PROJECT BACKGROUND
 
 This project was started a means for myself to learn JavaScript and [AngularJS](http://angularjs.org/)
 to implement an interesting
@@ -27,8 +27,9 @@ are [Mark Smith](http://www.goodreads.com/author/show/40911.Mark_Smith) and Jami
 the software portions of the project were written by myself, the setting, fiction and illustrations
 are intellectual property of their respective copyright
 holders. I have duplicated these elements as part of the project on the basis that the book is
-relatively obscure and long out of print. This is obviously a complete infringement of copyright,
-however I'm hoping that the copyright holder(s) will forgive me on the following basis:
+relatively obscure and long out of print (the "Abandonware" argument). This is obviously
+a complete infringement of copyright, however I'm hoping that the copyright holder(s) will forgive me
+on the following basis:
 
 1. This project is entirely noncommercial in nature;
 2. I haven't advertised or promoted it anywhere;

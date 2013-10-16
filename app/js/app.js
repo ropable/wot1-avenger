@@ -7,6 +7,7 @@ var wot1app = angular.module('wot1', ['wot1app.services', 'LocalStorageModule'])
       when('/new-game', {templateUrl: 'partials/new_game.html', controller: NewGameCtrl}).
       when('/background', {templateUrl: 'partials/background.html'}).
       when('/instructions', {templateUrl: 'partials/instructions.html'}).
+      when('/about', {templateUrl: 'partials/about.html'}).
       when('/story', {templateUrl: 'partials/story.html', controller: StoryCtrl}).
       otherwise({redirectTo: '/title'});
 
