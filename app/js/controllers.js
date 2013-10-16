@@ -189,7 +189,7 @@ function NewGameCtrl($scope, $http, localStorageService, Story, Items, Opponents
         // Clear local storage, set start values, then initiate the first entry.
         localStorageService.clearAll();
         // Set starting entry number.
-        gameState.currentEntry = '1';
+        gameState.currentEntry = '101';
         gameState.endurance = 20;
         // Get start items.
         gameState.items = [];
@@ -554,6 +554,12 @@ function StoryCtrl($scope, $http, localStorageService, gameState, Story, Items, 
         // Some entries can result in instant victory, against all opponents.
         if (gameState.entry.instakill) {
             gameState.currentOpponents = [];
+        }
+        // Record enemies defeated outside combat.
+        if (gameState.entry.defeated_opponents) {
+            angular.forEach(gameState.entry.defeated_opponents, function(opponent) {
+                gameState.victoriesStat.push(opponent);
+            });
         }
         // Restore or reduce endurance.
         // Note that might need to modify gameState.entryText if damage is dealt but the
