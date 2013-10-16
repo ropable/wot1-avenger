@@ -8,7 +8,10 @@
             <div class="row">
                 <h4 ng-show="gameState.currentEntry != 'death' && gameState.currentEntry != 'complete'">{{gameState.currentEntry}}</h4>
                 <h4 ng-show="gameState.currentEntry == 'death'">You have died</h4>
-                <h4 ng-show="gameState.currentEntry == 'complete'">You have completed your adventure!</h4>
+                <div ng-show="gameState.currentEntry == 'complete'">
+                    <h4>You have completed your adventure!</h4>
+                    <p>During your adventure, you defeated or assassinated the following enemies:</p>
+                </div>
                 <p ng-show="gameState.entryCount > 0"><a href="" ng-click="previousEntry()">Back to previous entry...</a></p>
                 <img ng-show="gameState.hasEntryImage" ng-src="img/{{gameState.entry.image}}" class="pull-right"/>
                 <div ng-bind-html-unsafe="gameState.entryText"></div>
