@@ -1,4 +1,5 @@
 /* app css stylesheet */
+
 html {
     margin: 0;
     padding: 0;
@@ -6,6 +7,7 @@ html {
 
 body {
     background: #eee9df url('../img/washi.png') repeat;
+    font-family: 'Merriweather', serif;
 }
 
 /* Jumbotrons
@@ -21,10 +23,12 @@ body {
   text-shadow: 0 1px 3px rgba(0,0,0,.4), 0 0 30px rgba(0,0,0,.075);
 }
 .jumbotron h1 {
-  font-size: 80px;
-  font-weight: bold;
-  letter-spacing: -1px;
-  line-height: 1;
+    font-family: 'Shojumaru', cursive;
+    font-size: 80px;
+    line-height: 1;
+}
+.jumbotron h2 {
+    font-family: 'Shojumaru', cursive;
 }
 .jumbotron p {
   font-size: 24px;
@@ -43,6 +47,11 @@ body {
 .jumbotron a:hover {
   color: #000;
   text-shadow: 0 0 10px rgba(255,255,255,.25);
+}
+
+.navbar .brand {
+    font-family: 'Shojumaru', cursive;
+    color: #000;
 }
 
 /* Masthead
@@ -103,3 +112,12 @@ body {
   text-shadow: 0 0 10px rgba(255,255,255,.25);
 }
 
+.handwritten {
+    font-family: 'Loved by the King', cursive;
+    font-weight: 400;
+    font-size: 18px;
+}
+
+ul.handwritten {
+    list-style: none;
+}
