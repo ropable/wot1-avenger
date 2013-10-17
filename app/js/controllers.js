@@ -208,6 +208,7 @@ function NewGameCtrl($scope, $http, localStorageService, Story, Items, Opponents
         gameState.skills.push($scope.shurikenSkill[0]);
         gameState.entry = storyjson[gameState.currentEntry];
         gameState.entryText = textMarkup(gameState.entry.description);
+        gameState.entryHeading = gameState.currentEntry;
         gameState.hasEntryImage = 'image' in gameState.entry;
         // Set options for which the prerequisites are met.
         validEntryChoices(gameState);
@@ -258,6 +259,22 @@ function StoryCtrl($scope, $http, localStorageService, gameState, Story, Items, 
         gameState.entry = storyjson[option.entry.toString()];
         gameState.entryText = textMarkup(gameState.entry.description);
         gameState.hasEntryImage = 'image' in gameState.entry;
+        // Set entry heading text.
+        switch (gameState.currentEntry) {
+            case 'death':
+                gameState.entryHeading = 'You have died';
+                break;
+            case 'complete':
+                gameState.entryHeading = 'You have completed your adventure!';
+                break;
+            default:
+                gameState.entryHeading = gameState.currentEntry;
+        };
+        if (gameState.entryHeading === 'complete') {
+            gameState.gameComplete = true;
+        } else {
+            gameState.gameComplete = false;
+        };
         var actionText = '';
         var entryText = gameState.entryText;
         gameState.actions = [];

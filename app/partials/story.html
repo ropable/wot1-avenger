@@ -6,14 +6,12 @@
         </div>
         <div class="span8">
             <div class="row">
-                <h4 ng-show="gameState.currentEntry != 'death' && gameState.currentEntry != 'complete'">{{gameState.currentEntry}}</h4>
-                <h4 ng-show="gameState.currentEntry == 'death'">You have died</h4>
-                <h4 ng-show="gameState.currentEntry == 'complete'">You have completed your adventure!</h4>
-                <p ng-show="gameState.entryCount > 0"><a href="" ng-click="previousEntry()">Back to previous entry...</a></p>
-                <img ng-show="gameState.hasEntryImage" ng-src="img/{{gameState.entry.image}}" class="pull-right"/>
+                <h4>{{gameState.entryHeading}}</h4>
+                <p ng-cloak ng-show="gameState.entryCount > 0"><a href="" ng-click="previousEntry()">Back to previous entry...</a></p>
+                <img ng-cloak ng-show="gameState.hasEntryImage" ng-src="img/{{gameState.entry.image}}" class="pull-right"/>
                 <div ng-bind-html-unsafe="gameState.entryText"></div>
-                <div ng-show="gameState.currentEntry == 'complete'">
-                    <p>During your adventure, you defeated or assassinated the following enemies:</p>
+                <div ng-show="gameState.gameComplete">
+                    <ng-include src="'partials/complete.html'"></ng-include>
                 </div>
             </div>
             <!-- This is where attack and response text is displayed -->
@@ -21,15 +19,15 @@
                 <div ng-repeat="action in gameState.actions">
                     <span ng-bind-html-unsafe="action[0]"></span>
                     <!-- Conditional block choice -->
-                    <span ng-show="action[1]"><a href="" ng-click="blockAttack(action)">Try to block? (your defence: {{action[3]}})</a></span>
+                    <span ng-cloak ng-show="action[1]"><a href="" ng-click="blockAttack(action)">Try to block? (your defence: {{action[3]}})</a></span>
                 </div>
             </div>
             <div class="row">
-                <p ng-show="gameState.options.length > 1">Will you:</p>
+                <p ng-cloak ng-show="gameState.options.length > 1">Will you:</p>
                 <ul>
                     <li ng-repeat="option in gameState.options">
                         <a href="" ng-click="chooseEntry(option, false)">{{option.text}}</a>
-                        <a href="" ng-show="option.inner_force && gameState.innerForce > 0" ng-click="chooseEntry(option, true)">(use Inner Force)</a>
+                        <a href="" ng-cloak ng-show="option.inner_force && gameState.innerForce > 0" ng-click="chooseEntry(option, true)">(use Inner Force)</a>
                     </li>
                 </ul>
             </div>

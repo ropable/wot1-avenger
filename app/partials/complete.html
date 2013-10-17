@@ -1,0 +1,7 @@
+<p>During your adventure, you defeated or assassinated the following enemies:</p>
+<ul>
+    <li ng-repeat="opp in gameState.victoriesStat">{{opp}}</li>
+</ul>
+<p>You threw {{gameState.punchesTotal}} punches and hit with {{gameState.punchesHit}},
+threw {{gameState.kicksTotal}} kicks and hit with {{gameState.kicksHit}},
+and tried {{gameState.throwsTotal}} throws and succeeded at {{gameState.throwsHit}}.</p>
