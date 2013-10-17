@@ -30,6 +30,7 @@ wot1app.factory('gameState', function($http) {
         cheatMode: true,
         entry: null,
         entryText: null,
+        entryHeading: null,
         hasEntryImage: false,
         actionText: null,
         actions: [],
