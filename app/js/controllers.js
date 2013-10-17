@@ -165,7 +165,7 @@ function NewGameCtrl($scope, $http, localStorageService, Story, Items, Opponents
     // the skills checkboxes are enabled or not.
     $scope.selectSkill = function($event, skill) {
         // Alter the scope to modify the form used to choose start skills.
-        var checkbox = event.target;
+        var checkbox = $event.target;
         if (checkbox.checked) {
             // Add the skill to the chosenSkills array.
             $scope.chosenSkills.push(skill);
