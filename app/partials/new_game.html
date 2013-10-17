@@ -8,9 +8,9 @@
             <form class="newgameform">
                 <label ng-repeat="skill in skills" class="checkbox">
                     <!-- Display a checkbox select for each skill. Disable the unselected ones if three skills are selected. -->
-                    <input type="checkbox" value="{{skill.name}}" ng-checked="isSelected(skill)"
-                    ng-click="selectSkill($event, skill)" ng-model="skill.checked" ng-disabled="selectedCount>=3 && !skill.checked" />
-                        <a href="" data-toggle="tooltip" title="{{skill.desc}}">{{skill.name}}</a>
+                    <input type="checkbox" value="{{skill.name}}" ng-checked="isSelected(skill)" ng-click="selectSkill($event, skill)"
+                    ng-model="skill.checked" ng-disabled="selectedCount>=3 && !skill.checked" />
+                    <a href="" data-toggle="tooltip" title="{{skill.desc}}">{{skill.name}}</a>
                 </label>
                 <hr>
                 <label class="checkbox">
