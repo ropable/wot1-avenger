@@ -1,18 +1,18 @@
 <h4>Character</h4>
 <p ng-show="gameState.cheatMode" class="text-error">CHEAT MODE</p>
-<p>Endurance: {{gameState.endurance}}</p>
+<p>Endurance: <span class="handwritten">{{gameState.endurance}}</span></p>
 Combat ratings:
 <ul>
-    <li>Punch: {{gameState.punch}}</li>
-    <li>Kick: {{gameState.kick}}</li>
-    <li>Throw: {{gameState.throw}}</li>
-    <li>Fate: {{gameState.fate}}</li>
+    <li>Punch: <span class="handwritten">{{gameState.punch}}</span></li>
+    <li>Kick: <span class="handwritten">{{gameState.kick}}</span></li>
+    <li>Throw: <span class="handwritten">{{gameState.throw}}</span></li>
+    <li>Fate: <span class="handwritten">{{gameState.fate}}</span></li>
 </ul>
-<p>Inner Force: {{gameState.innerForce}}</p>
+<p>Inner Force: <span class="handwritten">{{gameState.innerForce}}</span></p>
 <!-- TODO: show totals for consumable items (e.g. Flash powder (2)) -->
 <div ng-show="gameState.items">
     Items:
-    <ul>
+    <ul class="handwritten">
         <li ng-repeat="item in gameState.items" ng-show="item.count>0">
         <a href="" data-toggle="tooltip" title="{{item.desc}}" ng-click="useItem(item)">{{item.name}}</a>
         <span ng-show="item.count > 1"> ({{item.count}})</span>
@@ -21,7 +21,7 @@ Combat ratings:
 </div>
 <div ng-show="gameState.skills">
     Skills:
-    <ul>
+    <ul class="handwritten">
         <li ng-repeat="skill in gameState.skills">
         <a href="" data-toggle="tooltip" title="{{skill.desc}}">{{skill.name}}</a>
         </li>
@@ -29,7 +29,7 @@ Combat ratings:
 </div>
 <div>
     Notes:
-    <ul>
+    <ul class="handwritten">
         <li ng-repeat="note in gameState.notes">
         <a href="" data-toggle="tooltip" title="{{note.text}}">{{note.name}}</a>
         </li>
