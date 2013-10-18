@@ -270,7 +270,7 @@ function StoryCtrl($scope, $http, localStorageService, gameState, Story, Items, 
             default:
                 gameState.entryHeading = gameState.currentEntry;
         };
-        if (gameState.entryHeading === 'complete') {
+        if (gameState.currentEntry === 'complete') {
             gameState.gameComplete = true;
         } else {
             gameState.gameComplete = false;
@@ -690,7 +690,8 @@ function StoryCtrl($scope, $http, localStorageService, gameState, Story, Items, 
             angular.forEach(gameState.entry.loot_remove, function(loot) {
                 // Add a notification.
                 $.pnotify({
-                    text: 'You have lost a #'.replace('#', loot[0])
+                    text: 'You have lost a #'.replace('#', loot[0]),
+                    icon: false
                 });
                 angular.forEach(gameState.items, function(item) {
                     if (item.name === loot[0]) {
