@@ -4282,11 +4282,11 @@
         ],
         "options": [
             {
-                "text": "Continue",
+                "text": "You fail!",
                 "entry": 209
             },
             {
-                "text": "Continue",
+                "text": "You succeed!",
                 "entry": 178
             }
         ]
@@ -4755,15 +4755,15 @@
         ],
         "options": [
             {
-                "text": "Continue",
+                "text": "You miss!",
                 "entry": 218
             },
             {
-                "text": "Continue",
+                "text": "You hit him, barely.",
                 "entry": 199
             },
             {
-                "text": "Continue",
+                "text": "You succeed!",
                 "entry": 189
             }
         ]
@@ -7492,11 +7492,11 @@
         ],
         "options": [
             {
-                "text": "Continue",
+                "text": "You him him, barely.",
                 "entry": 199
             },
             {
-                "text": "Continue",
+                "text": "You succeed!",
                 "entry": 189
             }
         ]
