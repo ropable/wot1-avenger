@@ -265,7 +265,7 @@ function StoryCtrl($scope, $http, localStorageService, gameState, Story, Items, 
                 gameState.entryHeading = 'You have died';
                 break;
             case 'complete':
-                gameState.entryHeading = 'You have completed your adventure!';
+                gameState.entryHeading = 'You have completed your quest!';
                 break;
             default:
                 gameState.entryHeading = gameState.currentEntry;
@@ -360,6 +360,7 @@ function StoryCtrl($scope, $http, localStorageService, gameState, Story, Items, 
                 }
                 $.pnotify({
                     text: note,
+                    type: 'error',
                     icon: false
                 });
             });
@@ -730,13 +731,21 @@ function StoryCtrl($scope, $http, localStorageService, gameState, Story, Items, 
         // Losing all equipment (captured, etc).
         if (gameState.entry.lose_equipment) {
             // Add a notification.
-            $.pnotify({text: 'You have lost all your equipment!'});
+            $.pnotify({
+                text: 'You have lost all your equipment!',
+                type: 'error',
+                icon: false
+            });
             gameState.lost_equipment = gameState.items;
             gameState.items = [];
         }
         // Regaining all equipment.
         if (gameState.entry.regain_equipment) {
-            $.pnotify({text: 'You have regained all your equipment!'});
+            $.pnotify({
+                text: 'You have regained all your equipment!',
+                type: 'success',
+                icon: false
+            });
             gameState.items = gameState.lost_equipment;
             gameState.lost_equipment = [];
         }

@@ -1,12 +1,8 @@
 /* app css stylesheet */
 
-html {
+html, body {
     margin: 0;
     padding: 0;
-    height: 100%;
-}
-
-body {
     height: 100%;
     background: #eee9df url('../img/washi.png') repeat;
     font-family: 'Merriweather', serif;
@@ -24,7 +20,7 @@ body {
 /* Set the fixed height of the footer here */
 #push,
 #footer {
-    height: 20px;
+    height: 30px;
 }
 
 /* Jumbotrons
@@ -137,4 +133,14 @@ body {
 
 ul.handwritten {
     list-style: none;
+}
+
+.pagearea {
+    position: relative;
+    padding: 20px;
+    margin: 0 auto;
+    background-color: #fff;
+    -webkit-box-shadow: 0 0 4px rgba(0, 0, 0, 0.2), inset 0 0 50px rgba(0, 0, 0, 0.1);
+    -moz-box-shadow: 0 0 4px rgba(0, 0, 0, 0.2), inset 0 0 50px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2), inset 0 0 50px rgba(0, 0, 0, 0.1);
 }

@@ -2423,7 +2423,7 @@
         ]
     },
     "141": {
-        "description": "You cross the roof of the Great Keep and enter the turret which flies the flag of the Black Whirlpool. With Sorcerak at your back you climb to the top of the turret. The staircase is lit by an ominous green luminescence and you see a red eye, hanging disembodied in space at the top of the stone steps. It glows and the white of the eye is horribly bloodshot. It seems to pop suddenly and disappears as you climb the last steps and throw open the door at their top.\n\nManse the Deathmage, still clad in his black cloak which accentuates the pallor of his features, rises from the bed as you enter. The fear which emanates from the Eldritch blade of Sorcerak sets his white hair on end. He mouths a spell, but nothing happens. You throw Sorcerak to the floor before him and he shrinks back. His eyes glow red like the one which you saw outside his chamber.\n\nHis voice is a low hiss as he threatens ‘Kill me and that fell sword will take your soul.’ You ignore him and he tries one last spell as you advance, but Sorcerak dispels the magic as a bolt of fire leaves his mouth and you throw him easily to the floor. He is not strong and struggles ineffectually as you grind your heel into his neck. It snaps like a twig. Never again will Manse the Deathmage offer up children for sacrifice to his god Nemesis.\n\nWith Honoric’s sword you have rid Orb of its most powerful black magician. Leaving Sorcerak to smoke on the floor of the chamber you descend the staircase of the turret intent on finding Yaemon and avenging your spiritual father.",
+        "description": "You cross the roof of the Great Keep and enter the turret which flies the flag of the Black Whirlpool. With Sorcerak at your back you climb to the top of the turret. The staircase is lit by an ominous green luminescence and you see a red eye, hanging disembodied in space at the top of the stone steps. It glows and the white of the eye is horribly bloodshot. It seems to pop suddenly and disappears as you climb the last steps and throw open the door at their top.\n\nManse the Deathmage, still clad in his black cloak which accentuates the pallor of his features, rises from the bed as you enter. The fear which emanates from the Eldritch blade of Sorcerak sets his white hair on end. He mouths a spell, but nothing happens. You throw Sorcerak to the floor before him and he shrinks back. His eyes glow red like the one which you saw outside his chamber.\n\nHis voice is a low hiss as he threatens ‘Kill me and that fell sword will take your soul.’ You ignore him and he tries one last spell as you advance, but Sorcerak dispels the magic as a bolt of fire leaves his mouth and you throw him easily to the floor. He is not strong and struggles ineffectually as you grind your heel into his neck. It snaps like a twig. Never again will Manse the Deathmage offer up children for sacrifice to his god Nemesis.\n\nWith Honoric’s sword you have rid Orb of its most powerful black magician. Leaving Sorcerak to smoke on the floor of the chamber, you descend the staircase of the turret intent on finding Yaemon and avenging your spiritual father.",
         "image": "141.png",
         "loot_remove": [
             [
@@ -2431,6 +2431,7 @@
                 1
             ]
         ],
+        "defeated_opponents": ["Manse the Deathmage"],
         "event_add": [
             "killed_manse"
         ],
@@ -2745,6 +2746,7 @@
                 1
             ]
         ],
+        "defeated_opponents": ["Honoric"],
         "event_add": [
             "killed_honoric"
         ],
@@ -3271,7 +3273,7 @@
         "player_defence_roll": 6,
         "options": [
             {
-                "text": "You suceed!",
+                "text": "You succeed!",
                 "entry": 127
             },
             {
@@ -3905,6 +3907,7 @@
                 1
             ]
         ],
+        "defeated_opponents": ["Honoric"],
         "event_add": [
             "killed_honoric"
         ],
@@ -4004,7 +4007,7 @@
         ]
     },
     "234": {
-        "description": "'Oh, but you are expected. Whimsical himself already knows of you, but not the Vile ones, it is not fated that they should know...' He pauses, '...yet.'\n\n'Who is Whimsical?' you ask.\n\n'The Theocrat of Fate, the ruler of Fiendil. You know so little stranger. Here is a golden touch for you, go to the Volunteer.' He points dówn the main street. 'You will hear something there to your advantage. Oh, we knew you were coming all right.'\n\nHe breaks into a peal of laughter. Not wishing to draw further attention to yourself you hurry along the main street, Dreamer’s Saunter. Fifty yards down the street hangs the sign of the Volunteer, a young warrior on bended knee receiving a sword from a man in golden robes, wearing a smiling golden mask.",
+        "description": "'Oh, but you are expected. Whimsical himself already knows of you, but not the Vile ones, it is not fated that they should know...' He pauses, '...yet.'\n\n'Who is Whimsical?' you ask.\n\n'The Theocrat of Fate, the ruler of Fiendil. You know so little, stranger. Here is a golden touch for you: go to the Volunteer.' He points down the main street. 'You will hear something there to your advantage. Oh, we knew you were coming all right.'\n\nHe breaks into a peal of laughter. Not wishing to draw further attention to yourself you hurry along the main street, Dreamer’s Saunter. Fifty yards down the street hangs the sign of the Volunteer, a young warrior on bended knee receiving a sword from a man in golden robes, wearing a smiling golden mask.",
         "options": [
             {
                 "text": "Take the old hermit's advice and go in?",
@@ -5200,7 +5203,7 @@
         ]
     },
     "294": {
-        "description": "The seaweed cracks underfoot as you approach the city of Ionalbion, perched on white cliffs above the Sea of the Star. Flocks of sheep flee from you as you climb the rolling downlands outside the land gate. The guards bear a token you do not recognise, a dancing sword with a scroll wrapped around its blade. The street stretches towards the sea gate and the harbour.\n\nYou pass a fountain in the shape of a dolphin where a young woman sells flowers made of coloured marzipan outside one of the many scroll shops. Guessing that most travellers would pass by the fountain, you ask her if she has noticed anyone unusual in the past tenday. She replies in a guttural version of the common-tongue that, although she sits by the fountain every day, she has seen no one unusual. You decide to go straight to the harbour, where a number of long low-sided biremes are tied up.\n\nA placard advertises that 'the Porpoise sails for Druath Glennan at high tide. The fare is two pieces of gold. You board the ship as they are about to cast off, paying the gold to a cabin boy.",
+        "description": "The seaweed cracks underfoot as you approach the city of Ionalbion, perched on white cliffs above the Sea of the Star. Flocks of sheep flee from you as you climb the rolling downlands outside the land gate. The guards bear a token you do not recognise, a dancing sword with a scroll wrapped around its blade. The street stretches towards the sea gate and the harbour.\n\nYou pass a fountain in the shape of a dolphin where a young woman sells flowers made of coloured marzipan outside one of the many scroll shops. Guessing that most travellers would pass by the fountain, you ask her if she has noticed anyone unusual in the past tenday. She replies in a guttural version of the common-tongue that, although she sits by the fountain every day, she has seen no one unusual. You decide to go straight to the harbour, where a number of long low-sided biremes are tied up.\n\nA placard advertises that the 'Porpoise' sails for Druath Glennan at high tide. The fare is two pieces of gold. You board the ship as they are about to cast off, paying the gold to a cabin boy.",
         "loot_remove": [
             [
                 "Gold coin",
@@ -5287,7 +5290,7 @@
         "options": [
             {
                 "text": "Continue",
-                "entry": 300
+                "entry": 179
             }
         ]
     },
@@ -5970,7 +5973,7 @@
         ]
     },
     "336": {
-        "description": "The Two-headed Giant crashes to the ground, cracking the rock. Saliva flecked with blood covers its lips. You move on, and in the mist see the cave which was its lair. Investigating carefully you find a selection of bones cracked open which have had the marrow sucked out of them, and a small sack full of copper pieces.\n\nThe Giant's treasure is worthless to you, too heavy to carry, but you do find a black leather gauntlet sewn with delicate silver thread. It carries the virtue of magic, a Gauntlet of Striking and you put it on. Add +1 to your Punch Modifier when using the Iron Fist, Tiger's Paw or Cobra Strike punches. You continue on through the hills as the mist lifts and head into the wild wastelands towards the city of Fiendil.",
+        "description": "The Two-headed Giant crashes to the ground, cracking the rock. Saliva flecked with blood covers its lips. You move on, and in the mist see the cave which was its lair. Investigating carefully you find a selection of bones cracked open which have had the marrow sucked out of them, and a small sack full of copper pieces.\n\nThe Giant's treasure is worthless to you, too heavy to carry, but you do find a black leather gauntlet sewn with delicate silver thread. It carries the virtue of magic, a Gauntlet of Striking, and you put it on. You continue on through the hills as the mist lifts and head into the wild wastelands towards the city of Fiendil.",
         "player_modifier": [
             "punch",
             1
@@ -5989,7 +5992,8 @@
         ]
     },
     "337": {
-        "description": "The ship is rowed oüt of the harbour and the sail unfurled. You stand at the rail looking back at the receding cliffs. There is only one other passenger, a woman swathed against the sea breeze in ermine who seems to fascinate the crew. She seeks you out, introducing herself as Dierdra, and looking around you see that her face is painted so that she resembles an exquisite cat. You have never seen such face paint and the unnaturalness disturbs you.\n\nShesmiles and asks if you find the journey tedious. You do not reply but she goes on, 'I would not bother, myself, if I were not going to entertain someone who interests me.'\n\nYou begin to talk to her for some time, and she tells you that she is a singer, but it is when she talks of those who are to be her audience that you become most interested. From her description it can only be Yaemon, Grandmaster of Flame, the man you have sworn to kill. She talks too, of the man called Manse the Deathmage, a black sorcerer who reveres Nemesis, and can summon beings from the elemental planes to fight his enemies. She does not seem perturbed at the idea of meeting such people but soon her pleasantly lilting voice has you spellbound.\n\nBefore you realise what you are doing you have told her of your quest. Sick with fear you wait to see her reaction as the spell of enchantment is broken. She smiles and says that she is not really a singer at all, but an enchantress and swears by all that is good that she will help you. She turns away and coos softly twice. A white dove appears in the sky behind you and flies down to land on her outstretched hand.\n\nAs the ship glides into the harbour at Druath Glennan she tells you to visit the house of a poor family outside the city wall and wait there for word from her. Unsure whether you are doing as she bids you because you trust her, or because she has enchanted you, you disembark from the ship and walk towards the tumbledown shack that seems to cower in the shadow beneath the city wall.",
+        "description": "The ship is rowed oüt of the harbour and the sail unfurled. You stand at the rail looking back at the receding cliffs. There is only one other passenger, a woman swathed against the sea breeze in ermine who seems to fascinate the crew. She seeks you out, introducing herself as Dierdra, and looking around you see that her face is painted so that she resembles an exquisite cat. You have never seen such face paint and the unnaturalness disturbs you.\n\nShe smiles and asks if you find the journey tedious. You do not reply but she goes on, 'I would not bother, myself, if I were not going to entertain someone who interests me.'\n\nYou begin to talk to her for some time, and she tells you that she is a singer, but it is when she talks of those who are to be her audience that you become most interested. From her description it can only be Yaemon, Grandmaster of Flame, the man you have sworn to kill. She talks too, of the man called Manse the Deathmage, a black sorcerer who reveres Nemesis, and can summon beings from the elemental planes to fight his enemies. She does not seem perturbed at the idea of meeting such people but soon her pleasantly lilting voice has you spellbound.\n\nBefore you realise what you are doing you have told her of your quest. Sick with fear you wait to see her reaction as the spell of enchantment is broken. She smiles and says that she is not really a singer at all, but an enchantress and swears by all that is good that she will help you. She turns away and coos softly twice. A white dove appears in the sky behind you and flies down to land on her outstretched hand.\n\nAs the ship glides into the harbour at Druath Glennan she tells you to visit the house of a poor family outside the city wall and wait there for word from her. Unsure whether you are doing as she bids you because you trust her, or because she has enchanted you, you disembark from the ship and walk towards the tumbledown shack that seems to cower in the shadow beneath the city wall.",
+        "image": "337.png",
         "options": [
             {
                 "text": "Continue",
@@ -6896,7 +6900,7 @@
         ]
     },
     "392": {
-        "description": "You approach the castle at a spot where the nearest towers on either side are a hundred feet apart. You can hear the pacing of a guard on the battlements, above the croaking of bullfrogs. You ease yourself soundlessly into the chill moat as the rain thrashes the surface around you. The noise of the bullfrogs is surprisingly loud and it is noticeable when they stop their croaking suddenly. Do you have some Essence of Firenewt?",
+        "description": "You approach the castle at a spot where the nearest towers on either side are a hundred feet apart. You can hear the pacing of a guard on the battlements, above the croaking of bullfrogs. You ease yourself soundlessly into the chill moat as the rain thrashes the surface around you. The noise of the bullfrogs is surprisingly loud and it is noticeable when they stop their croaking suddenly.\n\nDo you have some Essence of Firenewt?",
         "boolean_option": true,
         "options": [
             {
@@ -6904,7 +6908,7 @@
                     "item",
                     "Essence of Firenewt"
                 ],
-                "text": "Continue",
+                "text": "Use your Essence of Firenewt",
                 "entry": 52
             },
             {
@@ -7050,6 +7054,7 @@
     },
     "400": {
         "description": "Using the Iron Fist you smash Manse’s head so hard that it almost flies off his shoulders. As you hear the crack as his neck breaks you feel the fangs of the cobra in your neck. The venom courses into your veins.",
+        "defeated_opponents": ["Manse the Deathmage"],
         "event_add": [
             "killed_manse"
         ],
@@ -7344,7 +7349,7 @@
                     "inner_force",
                     1
                 ],
-                "text": "Continue",
+                "text": "Use your Inner Force!",
                 "entry": 343
             },
             {
@@ -7642,7 +7647,7 @@
         "options": []
     },
     "complete": {
-        "description": "Congratulations, you have successfully completed your quest to recover the Scrolls of Kettsuin and avenge your spirtual father.\n\n[Start a new game](#/new-game).",
+        "description": "Congratulations, you have successfully completed your quest to recover the Scrolls of Kettsuin and avenge your spirtual father!\n\n[Start a new game](#/new-game).",
         "options": []
     }
 }
