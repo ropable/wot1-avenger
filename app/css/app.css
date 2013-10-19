@@ -3,11 +3,28 @@
 html {
     margin: 0;
     padding: 0;
+    height: 100%;
 }
 
 body {
+    height: 100%;
     background: #eee9df url('../img/washi.png') repeat;
     font-family: 'Merriweather', serif;
+}
+
+/* Wrapper for page content to push down footer */
+#wrap {
+    min-height: 100%;
+    height: auto !important;
+    height: 100%;
+    /* Negative indent footer by it's height */
+    margin: 0 auto -20px;
+}
+
+/* Set the fixed height of the footer here */
+#push,
+#footer {
+    height: 20px;
 }
 
 /* Jumbotrons
