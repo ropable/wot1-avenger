@@ -1,14 +1,15 @@
 <div class="container" ng-controller="StoryCtrl">
     <ng-include src="'partials/navbar.html'"></ng-include>
-    <div class="row">
-        <div class="span2 charsheet">
+    <div class="row pagearea">
+    <div class="row-fluid">
+        <div class="span2">
             <ng-include src="'partials/charsheet.html'"></ng-include>
         </div>
         <div class="span8">
             <div class="row">
                 <h4>{{gameState.entryHeading}}</h4>
                 <p ng-cloak ng-show="gameState.entryCount > 0"><a href="" ng-click="previousEntry()">Back to previous entry...</a></p>
-                <img ng-cloak ng-show="gameState.hasEntryImage" ng-src="img/{{gameState.entry.image}}" class="pull-right"/>
+                <img ng-cloak ng-show="gameState.hasEntryImage" ng-src="img/{{gameState.entry.image}}" class="img-polaroid pull-right"/>
                 <div ng-show="gameState.gameComplete">
                     <ng-include src="'partials/complete.html'"></ng-include>
                 </div>
@@ -39,5 +40,6 @@
                 Endurance: {{o.endurance}}<br>
             </div>
         </div>
+    </div>
     </div>
 </div>

@@ -1,10 +1,11 @@
 <div class="container" ng-controller="NewGameCtrl">
     <ng-include src="'partials/navbar.html'"></ng-include>
-    <div class="row">
+    <div class="row pagearea">
+    <div class="row-fluid">
         <div class="span12">
             <h1>New game</h1>
-            <p>You begin the game with standard equipment and training.</p>
-            <p>Please choose three additional skills (hover for a description of each one), and then click "Begin":</p>
+            <p>You begin the game with extensive training in the Way of the Tiger, and standard Ninja tools and equipment.</p>
+            <p>Choose three specialist skills to assist you on your quest (hover for a description of each), and then click "Begin":</p>
             <form class="newgameform">
                 <label ng-repeat="skill in skills" class="checkbox">
                     <!-- Display a checkbox select for each skill. Disable the unselected ones if three skills are selected. -->
@@ -12,7 +13,7 @@
                     ng-model="skill.checked" ng-disabled="selectedCount>=3 && !skill.checked" />
                     <a href="" data-toggle="tooltip" title="{{skill.desc}}">{{skill.name}}</a>
                 </label>
-                <hr>
+                <br>
                 <label class="checkbox">
                     <input type="checkbox" ng-model="gameState.cheatMode" />Cheat mode? (All skills, invulnerability in combat)
                 </label>
@@ -23,5 +24,6 @@
             </form>
             <p ng-show="gameState.inProgress">Please note that you have a current game in progress.</p>
         </div>
+    </div>
     </div>
 </div>
