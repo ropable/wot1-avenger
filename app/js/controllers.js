@@ -139,10 +139,10 @@ var readGameState = function(gameState, localStorageService) {
 
 
 /* Controllers */
-function TitleCtrl($scope, gameState) {
+function GameStateCtrl($scope, gameState) {
     $scope.gameState = gameState;
 }
-//TitleCtrl.$inject = [];
+// GameStateCtrl.$inject = [];
 
 function NewGameCtrl($scope, $http, localStorageService, Story, Items, Opponents, $location, gameState) {
     // Controller for the "new game" page.
