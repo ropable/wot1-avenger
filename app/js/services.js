@@ -28,6 +28,7 @@ wot1app.factory('gameState', function($http) {
         currentEntry: null,
         entryCount: 0,
         cheatMode: true,
+        noUndo: false,
         entry: null,
         entryText: null,
         entryHeading: null,
