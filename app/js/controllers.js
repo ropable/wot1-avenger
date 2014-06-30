@@ -191,6 +191,7 @@ function NewGameCtrl($scope, $http, localStorageService, Story, Items, Opponents
         // Set starting entry number.
         gameState.currentEntry = '1';
         gameState.endurance = 20;
+        gameState.entryCount = 0;
         // Get start items.
         gameState.items = [];
         // TODO: create a conf file for start variables.

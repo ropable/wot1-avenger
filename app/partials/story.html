@@ -8,7 +8,7 @@
         <div class="span8">
             <div class="row">
                 <h4>{{gameState.entryHeading}}</h4>
-                <p ng-cloak ng-show="gameState.entryCount > 0"><a href="" ng-click="previousEntry()">Back to previous entry...</a></p>
+                <p ng-cloak ng-show="gameState.entryCount > 0 && !gameState.noUndo"><a href="" ng-click="previousEntry()">Back to previous entry...</a></p>
                 <img ng-cloak ng-show="gameState.hasEntryImage" ng-src="img/{{gameState.entry.image}}" class="img-polaroid pull-right"/>
                 <div ng-show="gameState.gameComplete">
                     <ng-include src="'partials/complete.html'"></ng-include>
